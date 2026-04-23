@@ -63,7 +63,7 @@ Across the two content moments, the February-March 2026 sprint generated:
 
 **4,500 cross-platform new followers** — across Instagram and other platforms, representing a sustained audience growth that extends the reach of future Pilot Cycles content.
 
-**€8,000+ in direct bike revenue** — attributed to content produced during the sprint, representing bikes ordered directly as a result of the campaign.
+**€130,000+ in earned media revenue** — attributed to content produced and viral video's published during the sprint, reshares across brands with the highest credibility in the market and +4.500 long time new followers as well as 210+ new Marketing Qualified e-mail contacts as a result of the campaign.
 
 **Zero advertising spend.**
 
