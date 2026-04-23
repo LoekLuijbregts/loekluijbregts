@@ -1,4 +1,4 @@
-# Pilot Cycles Case Study: 3.8 Million Impressions, 210+ Leads and €8,000 in Revenue — From Two Self-Initiated Trips
+# Pilot Cycles Case Study: 2 years of marketing in 6 weeks, 3.8 Million Impressions, +4.500 real followers, 210+ Marketing Leads — From Two Self-Initiated Trips
 
 **By Loek Luijbregts — Cycling Incubators B.V.**  
 [loekluijbregts.com](https://loekluijbregts.com) · [cyclingincubators.com](https://cyclingincubators.com)
