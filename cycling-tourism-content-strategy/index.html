@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cycling Tourism Content Strategy — Loek Luijbregts</title>
+<meta name="description" content="What works, what doesn't, and why authenticity is not optional. Nine years of cycling tourism content strategy across 30+ destinations.">
+<link rel="canonical" href="https://loekluijbregts.com/cycling-tourism-content-strategy">
+<meta name="author" content="Loek Luijbregts">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cycling Tourism Content Strategy — Loek Luijbregts">
+<meta property="og:description" content="What works, what doesn't, and why authenticity is not optional. Nine years of cycling tourism content strategy across 30+ destinations.">
+<meta property="og:url" content="https://loekluijbregts.com/cycling-tourism-content-strategy">
+<meta property="og:site_name" content="Loek Luijbregts">
+<meta name="twitter:card" content="summary_large_image">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300;1,600&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #f8f5f0;
+    --white: #ffffff;
+    --ink: #1c1814;
+    --ink-mid: #4a4540;
+    --ink-soft: #8a8480;
+    --orange: #d94f0a;
+    --border: #e8e3db;
+  }
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  nav {
+    position: sticky;
+    top: 0; z-index: 100;
+    padding: 22px 40px;
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(248,245,240,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-name {
+    font-family: "DM Mono", monospace;
+    font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--ink); text-decoration: none; opacity: 0.7;
+  }
+  .nav-right { display: flex; gap: 28px; align-items: center; }
+  .nav-link {
+    font-family: "DM Mono", monospace;
+    font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--ink-soft); text-decoration: none; transition: color 0.2s;
+  }
+  .nav-link:hover { color: var(--orange); }
+  .nav-cta {
+    font-family: "DM Mono", monospace;
+    font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--white); background: var(--orange);
+    text-decoration: none; padding: 10px 22px; border-radius: 2px;
+    transition: background 0.2s;
+  }
+  .nav-cta:hover { background: #c44008; }
+  main { max-width: 720px; margin: 0 auto; padding: 80px 32px 120px; }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: "DM Mono", monospace;
+    font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--ink-soft); text-decoration: none;
+    margin-bottom: 48px; transition: color 0.2s;
+  }
+  .back-link:hover { color: var(--orange); }
+  .eyebrow {
+    font-family: "DM Mono", monospace;
+    font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--ink-soft); margin-bottom: 20px;
+  }
+  h1 {
+    font-family: "Fraunces", serif;
+    font-weight: 400;
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+  }
+  .byline {
+    font-family: "DM Mono", monospace;
+    font-size: 11px; letter-spacing: 0.12em;
+    color: var(--ink-soft);
+    margin-bottom: 56px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--border);
+  }
+  .byline a { color: var(--ink-soft); text-decoration: none; }
+  .byline a:hover { color: var(--orange); }
+  .content h2 {
+    font-family: "Fraunces", serif;
+    font-weight: 400;
+    font-size: clamp(22px, 3vw, 30px);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin-top: 56px;
+    margin-bottom: 16px;
+  }
+  .content h3 {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    margin-top: 36px;
+    margin-bottom: 12px;
+  }
+  .content p {
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--ink-mid);
+    margin-bottom: 20px;
+  }
+  .content strong { color: var(--ink); font-weight: 500; }
+  .content ul, .content ol {
+    margin: 0 0 20px 24px;
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--ink-mid);
+  }
+  .content li { margin-bottom: 8px; }
+  .content hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 48px 0;
+  }
+  .content a { color: var(--orange); text-decoration: none; }
+  .content a:hover { text-decoration: underline; }
+  .cta-block {
+    margin-top: 64px;
+    padding: 40px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+  }
+  .cta-block p {
+    font-size: 15px;
+    color: var(--ink-soft);
+    margin-bottom: 4px;
+  }
+  .cta-block a { color: var(--orange); text-decoration: none; font-weight: 400; }
+  .cta-block a:hover { text-decoration: underline; }
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 48px 32px;
+    text-align: center;
+    font-family: "DM Mono", monospace;
+    font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  footer a { color: var(--ink-soft); text-decoration: none; }
+  footer a:hover { color: var(--orange); }
+  @media (max-width: 640px) {
+    nav { padding: 18px 20px; }
+    .nav-right { gap: 14px; }
+    .nav-link { display: none; }
+    main { padding: 48px 22px 80px; }
+    .cta-block { padding: 28px 22px; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-name">Loek Luijbregts</a>
+  <div class="nav-right">
+    <a href="/#proof" class="nav-link">Results</a>
+    <a href="/#fit" class="nav-link">Is this you?</a>
+    <a href="/writing" class="nav-link">Writing</a>
+    <a href="https://zcal.co/i/vcLERywI" target="_blank" rel="noopener" class="nav-cta">Free 30-min call</a>
+  </div>
+</nav>
+<main>
+  <a href="/writing" class="back-link">← Writing</a>
+  <div class="eyebrow">Essay — Earned media &amp; strategy</div>
+  <h1>Cycling tourism content strategy</h1>
+  <div class="byline">
+    By <a href="/">Loek Luijbregts</a> · Cycling Incubators B.V.
+  </div>
+  <div class="content">
+
+    <h2>The content problem in cycling tourism</h2>
+
+    <p>Cycling tourism destinations produce a lot of content. Route maps, promotional videos, social media posts, press releases, influencer partnerships, email newsletters. The volume is not the problem. The problem is that most of it does not reach the cyclists who would actually book a trip - and when it does reach them, it does not convince them to go.</p>
+
+    <p>The gap between what destinations produce and what committed cyclists respond to is not a production quality problem. It is not a budget problem. It is a fundamental misunderstanding of what the cycling tourism audience trusts, how they make decisions, and where they look for information when they are planning a ride.</p>
+
+    <p>This document addresses that gap directly - drawing on nine years of cycling tourism content strategy across more than 30 destinations in Europe, Africa, and the United States, and on evidence from campaigns that have generated more than 110 million earned views and more than one million Komoot route clicks.</p>
+
+    <h2>Understanding the cycling tourism audience</h2>
+
+    <p>The committed cycling tourist is not a general traveller who happens to ride a bike. They are a rider first - someone whose identity, community, and leisure time are organised around cycling. Travel is a consequence of cycling, not the reverse. They go to Luxembourg because of the gravel routes, not in spite of them. They go to Flanders because of the roads, the culture, and the specific experience of riding the same climbs as the classics. They go to Turkey because the cycling tourism marketing reached them in a context where they were already thinking about their next ride.</p>
+
+    <p>This identity-first orientation has direct implications for content strategy.</p>
+
+    <p><strong>They research from a cycling perspective.</strong> The platforms and publications they use to plan travel are cycling-specific: Komoot for route research, Strava for segment discovery, cycling media for destination editorial, creator networks for first-hand accounts. General tourism platforms are rarely the starting point for a committed cycling tourist's trip planning.</p>
+
+    <p><strong>They trust peer recommendation above advertising.</strong> Word of mouth from a rider in their community - someone who has actually ridden the destination and come back with an honest account - carries more weight than any advertising placement. Creator content that is authentic and honest functions as a proxy for peer recommendation.</p>
+
+    <p><strong>They want specific, accurate information.</strong> Elevation, surface type, distance, difficulty, seasonal conditions, points of resupply, accommodation options that understand cycling. Generic destination marketing copy does not help a cyclist plan a ride. Specific, accurate route information does.</p>
+
+    <p><strong>They are willing to travel for the right experience.</strong> Committed cycling tourists are not primarily price-sensitive. They will travel internationally, invest in equipment, and plan months in advance for a destination that genuinely offers what they are looking for.</p>
+
+    <h2>What actually works: the content principles</h2>
+
+    <h3>Principle 1: ride first, produce second</h3>
+
+    <p>The content that generates sustained engagement in cycling tourism is produced by someone who has actually ridden the routes. This is not a preference - it is a credibility requirement. Cycling audiences can identify content produced without genuine experience. The routes that are described inaccurately, the elevation profiles that do not match the riding, the surface conditions that are glossed over - these errors are caught and shared. They damage destination credibility in the community that matters most.</p>
+
+    <p>Riding first also produces better content. The detail that makes a route description genuinely useful - the short wall at kilometre 47 that comes without warning and breaks many riders, the cafe in the village at the top that is only open until noon, the gravel section that turns to mud after rain - is only available to someone who was there.</p>
+
+    <p>For Visit Luxembourg between 2021 and 2024, the route content strategy was built on this principle. Routes in each of Luxembourg's four regions were ridden specifically to produce accurate, detailed documentation. The strategic insight - that Luxembourg could sustain a dedicated cycling micro-holiday rather than a single day's riding - was not argued in marketing copy. It was demonstrated through four regions' worth of routes, each ridden and documented from the inside. The result was 90,000+ Komoot clicks from cyclists actively planning trips.</p>
+
+    <h3>Principle 2: specificity over superlatives</h3>
+
+    <p>"World-class cycling infrastructure" tells a cyclist nothing. "217 kilometres of signed gravel routes connecting four regions, with climbs averaging 8% and a maximum elevation of 560 metres" tells them everything they need to plan a trip.</p>
+
+    <p>The content that converts cycling tourism interest into actual visits is specific. Specific about the routes, the conditions, the difficulty, the timing, the logistics. Specificity is also the primary differentiator between content produced by someone who was there and content assembled from secondary sources.</p>
+
+    <h3>Principle 3: iPhone before production budget</h3>
+
+    <p>The most significant and consistently counter-intuitive finding across nine years of cycling tourism content is that production quality is inversely correlated with credibility at the high end. A perfectly lit, colour-graded, drone-assisted promotional video of a cycling destination typically underperforms a shakily filmed iPhone clip of a rider genuinely surprised by a climb, a view, or a moment on the road.</p>
+
+    <p>This is not a universal rule - production quality matters for certain formats and certain placements. But the instinct to solve reach and engagement problems with higher production budgets is almost always wrong in cycling. The audience is not responding to production values. They are responding to authenticity. An iPhone clip from inside a real experience carries more truth than a produced video from outside it, and cycling audiences can tell the difference.</p>
+
+    <h3>Principle 4: platform-specific distribution</h3>
+
+    <p><strong>Komoot</strong> is the primary route research platform for European cyclists. Routes published on Komoot with full documentation - elevation, surface, difficulty, points of interest - accumulate traffic over months and years as cyclists search for rides in a destination. The Zuiderwaterlinie bikepacking collection was organically promoted by Komoot as a flagship example of how the platform could be used to market lesser-known cycling destinations, contributing to more than one million combined Komoot route views across campaigns.</p>
+
+    <p><strong>Cycling media</strong> - Rouleur, Bicycling, GravelBike Magazine, GCN, Eurosport - reaches committed cyclists in an editorial context where they are already engaged. A placement in Rouleur or GCN reaches a concentrated audience that is significantly more valuable than equivalent reach through general travel media.</p>
+
+    <p><strong>Instagram</strong> functions as both a discovery and a credibility platform. Content that is produced authentically and posted consistently builds the community that amplifies future content.</p>
+
+    <p><strong>YouTube</strong> is the long-form storytelling channel. Multi-day adventure content, route documentaries, and destination overviews find audiences on YouTube that cannot be reached through short-form content. YouTube content also has a longer shelf life - a well-produced adventure video continues to generate views for years after publication.</p>
+
+    <p><strong>Email</strong> is the owned channel that connects all of the above. Email subscribers who have opted in to receive cycling tourism content are the most valuable audience a destination can build - not subject to algorithm changes or platform policy shifts.</p>
+
+    <h3>Principle 5: timing to ride planning cycles</h3>
+
+    <p>Cyclists plan rides seasonally. The research for a summer cycling holiday in Flanders or Luxembourg typically begins in late winter - January, February, March. Content published in this window, when riders are actively researching their summer plans, generates significantly more planning-intent engagement than the same content published in July, when most riders have already committed.</p>
+
+    <p>A content calendar built around the cycling planning cycle - producing and publishing destination content in the months before peak interest, not during or after it - consistently outperforms reactive content production.</p>
+
+    <h2>The Komoot opportunity</h2>
+
+    <p>Komoot deserves specific attention as a platform because it is the most underused high-value channel in European cycling tourism marketing.</p>
+
+    <p>Komoot has more than 30 million registered users globally, with particularly strong penetration among European cycling tourists. Unlike social media platforms, where content has a half-life of hours, route content on Komoot accumulates engagement over months and years. A well-documented route published on Komoot in 2021 is still generating clicks in 2026 - from cyclists who found it through search, through community sharing, or through Komoot's own editorial curation.</p>
+
+    <p>For cycling destinations that have not yet invested in Komoot route documentation, the opportunity is significant and relatively undercompeted. Most destinations have routes. Few have documented them with the accuracy and detail that Komoot's platform rewards and that cycling tourists require to plan a trip with confidence.</p>
+
+    <h2>Measurement: what actually matters</h2>
+
+    <p><strong>Impressions</strong> are the easiest metric to generate and the least meaningful. Ten million impressions from a general travel audience generates fewer cycling tourists than 100,000 impressions from committed cyclists on Komoot, Strava, or cycling media.</p>
+
+    <p><strong>Route clicks and downloads</strong> measure genuine planning intent. A cyclist who clicks on a route and downloads it to their device has moved from awareness to consideration.</p>
+
+    <p><strong>Email captures</strong> measure the conversion of content engagement to owned relationship. A cyclist who subscribes to receive more content from a destination has expressed sustained interest - the highest-value signal available in a content marketing context.</p>
+
+    <p><strong>Actual bookings and enquiries</strong> are the ultimate measure, and they are more attributable than most destination marketers assume. Tracking which content pieces precede booking enquiries - through UTM parameters, booking source questions, and lead attribution - connects content investment to commercial outcome.</p>
+
+    <h2>Summary</h2>
+
+    <p>Cycling tourism content strategy works when it starts from genuine experience, communicates with specificity, distributes through the channels where cyclists actually plan travel, and measures the outcomes that matter - not the ones that are easy to report.</p>
+
+    <p>Nine years. 30+ destinations. 110 million earned views. 1,000,000+ Komoot route clicks. Zero ad spend.</p>
+
+  </div>
+  <div class="cta-block">
+    <p><strong>Loek Luijbregts</strong> is the founder of Cycling Incubators - a fractional creative and marketing partner for cycling brands, destinations, and tourism boards.</p>
+    <p><a href="https://zcal.co/i/vcLERywI" target="_blank" rel="noopener">Book a free 30-minute call</a> · <a href="mailto:loek@cyclingincubators.com">loek@cyclingincubators.com</a> · <a href="https://cyclingincubators.com" target="_blank" rel="noopener">cyclingincubators.com</a></p>
+  </div>
+</main>
+<footer>
+  <p>Loek Luijbregts · Cycling Incubators B.V. · <a href="mailto:loek@cyclingincubators.com">loek@cyclingincubators.com</a></p>
+</footer>
+</body>
+</html>
