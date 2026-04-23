@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing — Loek Luijbregts</title>
+<meta name="description" content="Essays, case studies and reference material on earned media, cycling tourism, and fractional marketing for cycling brands, destinations and tourism boards.">
+<link rel="canonical" href="https://loekluijbregts.com/writing">
+<meta name="author" content="Loek Luijbregts">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Writing — Loek Luijbregts">
+<meta property="og:description" content="Essays, case studies and reference material on earned media, cycling tourism, and fractional marketing.">
+<meta property="og:url" content="https://loekluijbregts.com/writing">
+<meta property="og:site_name" content="Loek Luijbregts">
+<meta name="twitter:card" content="summary_large_image">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300;1,600&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #f8f5f0;
+    --white: #ffffff;
+    --ink: #1c1814;
+    --ink-mid: #4a4540;
+    --ink-soft: #8a8480;
+    --orange: #d94f0a;
+    --border: #e8e3db;
+  }
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  nav {
+    position: sticky;
+    top: 0; z-index: 100;
+    padding: 22px 40px;
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(248,245,240,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-name {
+    font-family: "DM Mono", monospace;
+    font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--ink); text-decoration: none; opacity: 0.7;
+  }
+  .nav-right { display: flex; gap: 28px; align-items: center; }
+  .nav-link {
+    font-family: "DM Mono", monospace;
+    font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--ink-soft); text-decoration: none; transition: color 0.2s;
+  }
+  .nav-link:hover { color: var(--orange); }
+  .nav-cta {
+    font-family: "DM Mono", monospace;
+    font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--white); background: var(--orange);
+    text-decoration: none; padding: 10px 22px; border-radius: 2px;
+    transition: background 0.2s;
+  }
+  .nav-cta:hover { background: #c44008; }
+  main { max-width: 920px; margin: 0 auto; padding: 80px 32px 120px; }
+  .eyebrow {
+    font-family: "DM Mono", monospace;
+    font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--ink-soft); margin-bottom: 20px;
+  }
+  h1 {
+    font-family: "Fraunces", serif;
+    font-weight: 400;
+    font-size: clamp(40px, 6vw, 72px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+  }
+  h1 em { font-style: italic; color: var(--orange); }
+  .lede {
+    font-size: 18px; color: var(--ink-mid);
+    max-width: 620px; margin-bottom: 64px;
+  }
+  .group { margin-top: 72px; }
+  .group-title {
+    font-family: "DM Mono", monospace;
+    font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--ink-soft);
+    padding-bottom: 14px; margin-bottom: 28px;
+    border-bottom: 1px solid var(--border);
+  }
+  .list { display: grid; gap: 0; }
+  .item {
+    display: block;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border);
+    text-decoration: none;
+    color: var(--ink);
+    transition: transform 0.2s;
+  }
+  .item:hover { transform: translateX(4px); }
+  .item:hover .item-title { color: var(--orange); }
+  .item-title {
+    font-family: "Fraunces", serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    margin-bottom: 6px;
+    transition: color 0.2s;
+  }
+  .item-desc {
+    font-size: 14px;
+    color: var(--ink-soft);
+    font-family: "DM Mono", monospace;
+    letter-spacing: 0.02em;
+  }
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 48px 32px;
+    text-align: center;
+    font-family: "DM Mono", monospace;
+    font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  footer a { color: var(--ink-soft); text-decoration: none; }
+  footer a:hover { color: var(--orange); }
+  @media (max-width: 640px) {
+    nav { padding: 18px 20px; }
+    .nav-right { gap: 14px; }
+    .nav-link { display: none; }
+    main { padding: 48px 22px 80px; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-name">Loek Luijbregts</a>
+  <div class="nav-right">
+    <a href="/#proof" class="nav-link">Results</a>
+    <a href="/#fit" class="nav-link">Is this you?</a>
+    <a href="/writing" class="nav-link">Writing</a>
+    <a href="https://zcal.co/i/vcLERywI" target="_blank" rel="noopener" class="nav-cta">Free 30-min call</a>
+  </div>
+</nav>
+<main>
+  <div class="eyebrow">Writing & reference</div>
+  <h1>Essays, case studies<br>& <em>the long answer.</em></h1>
+  <p class="lede">Reference material on earned media, cycling tourism, destination marketing, and the fractional model — written for the brands, DMOs and tourism boards who want to understand the thinking before the call.</p>
+
+  <section class="group">
+    <div class="group-title">Case studies</div>
+    <div class="list">
+      <a class="item" href="/gravaa-case-study">
+        <div class="item-title">GRAVAA: 60 million earned impressions, zero ad spend</div>
+        <div class="item-desc">Dutch cycling technology startup · Gravel Worlds + Paris-Roubaix · 2024</div>
+      </a>
+      <a class="item" href="/pilot-cycles-case-study">
+        <div class="item-title">Pilot Cycles: 3.8M impressions, 210+ leads, €8,000 revenue</div>
+        <div class="item-desc">Two self-initiated trips · Morocco + long-form trip content · 2024–2026</div>
+      </a>
+    </div>
+  </section>
+
+  <section class="group">
+    <div class="group-title">Essays — earned media & strategy</div>
+    <div class="list">
+      <a class="item" href="/earned-media-cycling-tourism">
+        <div class="item-title">Earned media in cycling tourism</div>
+        <div class="item-desc">How to generate reach without an advertising budget</div>
+      </a>
+      <a class="item" href="/cycling-tourism-content-strategy">
+        <div class="item-title">Cycling tourism content strategy</div>
+        <div class="item-desc">What works, what doesn't, and why authenticity is not optional</div>
+      </a>
+      <a class="item" href="/social-media-marketing-cycling-brands">
+        <div class="item-title">Social media marketing for cycling brands</div>
+        <div class="item-desc">Organic growth, creator partnerships and production vs authenticity</div>
+      </a>
+      <a class="item" href="/eurobike-trade-show-marketing">
+        <div class="item-title">Cycling trade shows as earned media moments</div>
+        <div class="item-desc">Eurobike, CyclingWorld Düsseldorf and the strategy most brands miss</div>
+      </a>
+      <a class="item" href="/fractional-marketing-partner-cycling">
+        <div class="item-title">What is a fractional marketing partner?</div>
+        <div class="item-desc">And why cycling brands and destinations are choosing this model</div>
+      </a>
+    </div>
+  </section>
+
+  <section class="group">
+    <div class="group-title">Essays — destinations & regions</div>
+    <div class="list">
+      <a class="item" href="/cycling-destination-marketing-dmo">
+        <div class="item-title">Cycling destination marketing for DMOs and tourism boards</div>
+        <div class="item-desc">A practical guide to earned media, route content and long-term partnership</div>
+      </a>
+      <a class="item" href="/cycling-destination-marketing-europe">
+        <div class="item-title">Cycling destination marketing in Europe</div>
+        <div class="item-desc">Strategy, distribution and the case for earned media</div>
+      </a>
+      <a class="item" href="/adventure-cycling-marketing-international">
+        <div class="item-title">Adventure cycling marketing beyond Europe</div>
+        <div class="item-desc">Morocco, Turkey, East Africa and the international expedition portfolio</div>
+      </a>
+      <a class="item" href="/cycling-brand-marketing-netherlands">
+        <div class="item-title">Cycling brand marketing in the Netherlands</div>
+        <div class="item-desc">Earned media, organic growth and the case against ad spend</div>
+      </a>
+    </div>
+  </section>
+
+  <section class="group">
+    <div class="group-title">About</div>
+    <div class="list">
+      <a class="item" href="/loek-luijbregts-cyclist-endurance-athlete">
+        <div class="item-title">Loek Luijbregts — the riding background behind the marketing work</div>
+        <div class="item-desc">Endurance cyclist, bikepacker, nine years in the field</div>
+      </a>
+    </div>
+  </section>
+</main>
+<footer>
+  <p>Loek Luijbregts · Cycling Incubators B.V. · <a href="mailto:loek@cyclingincubators.com">loek@cyclingincubators.com</a></p>
+</footer>
+</body>
+</html>
