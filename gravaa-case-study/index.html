@@ -1,0 +1,274 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GRAVAA: 60 Million Earned Impressions, Zero Ad Spend — Loek Luijbregts</title>
+<meta name="description" content="How a Dutch cycling technology startup generated 60 million earned impressions, tripled its social following, and built 9,000+ email subscribers — with no paid media.">
+<link rel="canonical" href="https://loekluijbregts.com/gravaa-case-study">
+<meta name="author" content="Loek Luijbregts">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GRAVAA: 60 Million Earned Impressions, Zero Ad Spend — Loek Luijbregts">
+<meta property="og:description" content="How a Dutch cycling technology startup generated 60 million earned impressions, tripled its social following, and built 9,000+ email subscribers — with no paid media.">
+<meta property="og:url" content="https://loekluijbregts.com/gravaa-case-study">
+<meta property="og:site_name" content="Loek Luijbregts">
+<meta name="twitter:card" content="summary_large_image">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300;1,600&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #f8f5f0;
+    --white: #ffffff;
+    --ink: #1c1814;
+    --ink-mid: #4a4540;
+    --ink-soft: #8a8480;
+    --orange: #d94f0a;
+    --border: #e8e3db;
+  }
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  nav {
+    position: sticky;
+    top: 0; z-index: 100;
+    padding: 22px 40px;
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(248,245,240,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-name {
+    font-family: "DM Mono", monospace;
+    font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--ink); text-decoration: none; opacity: 0.7;
+  }
+  .nav-right { display: flex; gap: 28px; align-items: center; }
+  .nav-link {
+    font-family: "DM Mono", monospace;
+    font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--ink-soft); text-decoration: none; transition: color 0.2s;
+  }
+  .nav-link:hover { color: var(--orange); }
+  .nav-cta {
+    font-family: "DM Mono", monospace;
+    font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--white); background: var(--orange);
+    text-decoration: none; padding: 10px 22px; border-radius: 2px;
+    transition: background 0.2s;
+  }
+  .nav-cta:hover { background: #c44008; }
+  main { max-width: 720px; margin: 0 auto; padding: 80px 32px 120px; }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: "DM Mono", monospace;
+    font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--ink-soft); text-decoration: none;
+    margin-bottom: 48px; transition: color 0.2s;
+  }
+  .back-link:hover { color: var(--orange); }
+  .eyebrow {
+    font-family: "DM Mono", monospace;
+    font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--ink-soft); margin-bottom: 20px;
+  }
+  h1 {
+    font-family: "Fraunces", serif;
+    font-weight: 400;
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+  }
+  .byline {
+    font-family: "DM Mono", monospace;
+    font-size: 11px; letter-spacing: 0.12em;
+    color: var(--ink-soft);
+    margin-bottom: 56px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--border);
+  }
+  .byline a { color: var(--ink-soft); text-decoration: none; }
+  .byline a:hover { color: var(--orange); }
+  .content h2 {
+    font-family: "Fraunces", serif;
+    font-weight: 400;
+    font-size: clamp(22px, 3vw, 30px);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin-top: 56px;
+    margin-bottom: 16px;
+  }
+  .content h3 {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    margin-top: 36px;
+    margin-bottom: 12px;
+  }
+  .content p {
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--ink-mid);
+    margin-bottom: 20px;
+  }
+  .content strong { color: var(--ink); font-weight: 500; }
+  .content ul, .content ol {
+    margin: 0 0 20px 24px;
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--ink-mid);
+  }
+  .content li { margin-bottom: 8px; }
+  .content hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 48px 0;
+  }
+  .content a { color: var(--orange); text-decoration: none; }
+  .content a:hover { text-decoration: underline; }
+  .cta-block {
+    margin-top: 64px;
+    padding: 40px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+  }
+  .cta-block p {
+    font-size: 15px;
+    color: var(--ink-soft);
+    margin-bottom: 4px;
+  }
+  .cta-block a { color: var(--orange); text-decoration: none; font-weight: 400; }
+  .cta-block a:hover { text-decoration: underline; }
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 48px 32px;
+    text-align: center;
+    font-family: "DM Mono", monospace;
+    font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  footer a { color: var(--ink-soft); text-decoration: none; }
+  footer a:hover { color: var(--orange); }
+  @media (max-width: 640px) {
+    nav { padding: 18px 20px; }
+    .nav-right { gap: 14px; }
+    .nav-link { display: none; }
+    main { padding: 48px 22px 80px; }
+    .cta-block { padding: 28px 22px; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-name">Loek Luijbregts</a>
+  <div class="nav-right">
+    <a href="/#proof" class="nav-link">Results</a>
+    <a href="/#fit" class="nav-link">Is this you?</a>
+    <a href="/writing" class="nav-link">Writing</a>
+    <a href="https://zcal.co/i/vcLERywI" target="_blank" rel="noopener" class="nav-cta">Free 30-min call</a>
+  </div>
+</nav>
+<main>
+  <a href="/writing" class="back-link">← Writing</a>
+  <div class="eyebrow">Case study</div>
+  <h1>GRAVAA: 60 million earned impressions, zero ad spend</h1>
+  <div class="byline">
+    By <a href="/">Loek Luijbregts</a> · Cycling Incubators B.V. · 2024
+  </div>
+  <div class="content">
+
+    <h2>The brief</h2>
+
+    <p>GRAVAA is a Dutch cycling technology company that produces an adaptive tyre pressure system - a device that automatically adjusts tyre pressure in real time based on terrain, speed, and rider preference. The technology addresses a genuine performance problem: tyre pressure is one of the most significant variables in cycling performance and comfort, and most riders either set it once and forget it, or stop repeatedly to adjust it manually. GRAVAA eliminates both problems.</p>
+
+    <p>The product is genuinely innovative. The challenge, when Loek Luijbregts joined the company as its first communication professional in 2023, was that GRAVAA was almost entirely unknown outside a narrow circle of cycling technology enthusiasts. The team was engineer-led. The product was technically sophisticated. The marketing was effectively non-existent.</p>
+
+    <p>The brief was to build awareness and credibility for GRAVAA in the global cycling market - with no paid media budget.</p>
+
+    <h2>The strategic context</h2>
+
+    <p>Marketing a cycling technology product faces a specific credibility challenge. Cycling consumers are sophisticated and sceptical. The cycling media landscape is populated by journalists and creators who have seen many products claim to solve problems that do not need solving, or to solve genuine problems less well than advertised. Getting coverage requires a genuine story - a real product, real performance, and real results in conditions that matter to the audience.</p>
+
+    <p>GRAVAA had the product. The strategic question was where and how to position it so that the cycling audience would encounter it in a context that made them take it seriously.</p>
+
+    <p>The answer was not a product launch event, a press release programme, or a social media content calendar. It was to place GRAVAA at the moments in professional cycling where tyre pressure most obviously mattered - and where the global cycling audience was already paying close attention.</p>
+
+    <p>Two events defined the 2024 GRAVAA communications programme: the Gravel World Championships and Paris-Roubaix.</p>
+
+    <h2>The Gravel World Championships</h2>
+
+    <p>The Gravel World Championships is the most significant event in gravel cycling - a discipline where tyre choice and tyre pressure are central to performance. Gravel surfaces, variable terrain, and long distances at race pace mean that tyre pressure decisions are not marginal. They are the difference between a successful race and a puncture, a mechanical, or an exhausting ride on tyres that are working against the terrain rather than with it.</p>
+
+    <p>Marianne Vos - one of the most decorated cyclists in the history of the sport, with World Championship victories across road, track, cyclocross, and mountain biking disciplines - competed at the Gravel World Championships on GRAVAA equipment.</p>
+
+    <p>The communications programme built around this moment involved positioning the story with cycling media and journalists in the weeks before the Championships, so that when the race happened, the journalists who covered it already understood what GRAVAA was and why it mattered. The goal was not to insert GRAVAA into a press release after the race. It was to make GRAVAA part of the story that journalists were already planning to tell.</p>
+
+    <p>The result was coverage in more than 30 media outlets around the Championships. These were not paid placements. They were editorial decisions made by journalists who found the GRAVAA story genuinely worth telling in the context of an event their readers were already engaged with.</p>
+
+    <h2>Paris-Roubaix</h2>
+
+    <p>Paris-Roubaix is one of the oldest and most demanding one-day races in professional cycling - the "Hell of the North," defined by its cobbled sectors and the unique demands they place on equipment. If tyre pressure matters in gravel cycling, it matters even more on the pave of northern France, where the difference between a pressure that absorbs the cobbles and one that transmits every impact to the rider is the difference between racing and suffering.</p>
+
+    <p>At Paris-Roubaix, Pauline Ferrand-Prevot won the women's race riding for Visma | Lease a Bike on GRAVAA equipment. Multiple riders across both the Visma | Lease a Bike men's and women's teams used GRAVAA technology on the cobbled sectors.</p>
+
+    <p>The communications strategy for Paris-Roubaix followed the same approach as the Gravel World Championships: building the story in advance, positioning GRAVAA in the context of the race's specific demands, and creating the conditions for journalists to include GRAVAA in their race coverage organically.</p>
+
+    <p>Paris-Roubaix is one of the most heavily covered events in professional cycling. Coverage featuring GRAVAA in this context reached a global cycling audience and confirmed the brand's positioning not as an interesting technology experiment but as a performance solution trusted by professional teams at the highest level of the sport.</p>
+
+    <h2>The results</h2>
+
+    <p><strong>60 million earned impressions.</strong> Across media coverage, creator content, and social amplification - with zero paid media spend.</p>
+
+    <p><strong>Tripled social following.</strong> GRAVAA's social media following across all channels grew by a factor of three during 2024. This growth was not the result of a follower acquisition campaign. It was the result of people who encountered GRAVAA through media coverage or event presence choosing to follow the brand because they found it genuinely interesting.</p>
+
+    <p><strong>9,000+ email subscribers.</strong> A direct email list of more than 9,000 contacts was built during 2024. These are people who actively chose to receive information from GRAVAA - a fundamentally different relationship with a potential customer than an advertising impression provides.</p>
+
+    <p><strong>30+ media outlets.</strong> Coverage in more than 30 publications and platforms, concentrated around the two major event moments but sustained across the year through consistent media relationship management.</p>
+
+    <h2>What the GRAVAA programme demonstrates</h2>
+
+    <p><strong>Timing is a strategic variable.</strong> The decision to position GRAVAA around the Gravel World Championships and Paris-Roubaix was not reactive - it was planned. The product was positioned in advance, the stories were built in advance, and the journalists were informed in advance. When the events happened, GRAVAA was already part of the narrative.</p>
+
+    <p><strong>Performance context is credibility.</strong> Cycling consumers trust product performance evidence when it comes from high-stakes competitive contexts. A product used by Marianne Vos at the Gravel World Championships, or by Visma | Lease a Bike on the pave of Paris-Roubaix, has been validated in conditions that most consumers cannot replicate and that most journalists consider genuinely newsworthy.</p>
+
+    <p><strong>The absence of a media budget is not an obstacle.</strong> The 60 million impressions generated for GRAVAA came from editorial coverage, not paid placement. This is qualitatively different from paid media reach - it represents the judgment of journalists and creators that the GRAVAA story was worth telling to their audience.</p>
+
+    <p><strong>Email is more valuable than social reach.</strong> The 9,000+ email subscribers built during 2024 represent a direct, owned relationship with potential customers. Social media following is contingent on platform algorithms and can disappear with a policy change. Email subscribers have actively chosen to maintain contact.</p>
+
+    <p><strong>An engineer-led team needs a communication counterpart.</strong> GRAVAA's product quality was not in question. The company's ability to communicate that quality to the market was the gap. Adding a single senior communication professional with deep cycling media knowledge and established journalist relationships was sufficient to generate 60 million impressions in a year.</p>
+
+    <h2>Limitations and honest assessment</h2>
+
+    <p>The GRAVAA programme produced exceptional results in 2024. Several contextual factors contributed to those results that are worth acknowledging.</p>
+
+    <p><strong>The timing was favourable.</strong> The coincidence of GRAVAA product availability, Marianne Vos's Gravel World Championship participation, and the growing global interest in gravel cycling created an unusually strong earned media opportunity. Not every year, for every brand, will present moments of equivalent significance.</p>
+
+    <p><strong>The product was genuinely innovative.</strong> Earned media cannot be manufactured for products that are not worth talking about. GRAVAA's technology was genuinely novel and addressed a real problem in a way that cycling journalists found interesting. The communications programme amplified a genuine story - it did not create one.</p>
+
+    <p><strong>Professional athlete involvement requires product readiness.</strong> Using professional race results as a credibility foundation requires that the product is ready for professional use. The reputational risk of a product failure in a high-profile context would be severe.</p>
+
+    <h2>Summary</h2>
+
+    <p>GRAVAA in 2024: 60 million earned impressions, social following tripled, 9,000+ email subscribers, 30+ media outlets, zero ad spend.</p>
+
+    <p>The programme worked because the product was genuine, the performance contexts were real, the communications were prepared in advance of the moments that mattered, and the media relationships were built on honest, accurate storytelling.</p>
+
+  </div>
+  <div class="cta-block">
+    <p><strong>Loek Luijbregts</strong> is the founder of Cycling Incubators - a fractional creative and marketing partner for cycling brands, destinations, and tourism boards.</p>
+    <p><a href="https://zcal.co/i/vcLERywI" target="_blank" rel="noopener">Book a free 30-minute call</a> · <a href="mailto:loek@cyclingincubators.com">loek@cyclingincubators.com</a> · <a href="https://cyclingincubators.com" target="_blank" rel="noopener">cyclingincubators.com</a></p>
+  </div>
+</main>
+<footer>
+  <p>Loek Luijbregts · Cycling Incubators B.V. · <a href="mailto:loek@cyclingincubators.com">loek@cyclingincubators.com</a></p>
+</footer>
+</body>
+</html>
