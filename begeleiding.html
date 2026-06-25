@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Pacer — Loek Luijbregts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #f8f5f0;
+    --ink: #1c1814;
+    --orange: #d94f0a;
+    --ink-light: #5a4f47;
+    --cream-dark: #ede8e1;
+    --cream-mid: #f2ede6;
+  }
+
+  html { font-size: 16px; scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container { max-width: 680px; margin: 0 auto; padding: 0 24px; }
+  section { padding: 80px 0; }
+  section + section { border-top: 1px solid var(--cream-dark); }
+
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: clamp(2.4rem, 7vw, 3.6rem);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+  }
+
+  h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: clamp(1.6rem, 5vw, 2.2rem);
+    line-height: 1.18;
+    letter-spacing: -0.01em;
+    margin-bottom: 28px;
+  }
+
+  h2 em, h1 em { font-style: italic; color: var(--orange); }
+
+  p { margin-bottom: 20px; }
+  p:last-child { margin-bottom: 0; }
+  strong { font-weight: 500; }
+
+  .label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.73rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+  }
+
+  .section-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.73rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--orange);
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .muted { color: var(--ink-light); }
+  .rule { width: 48px; height: 2px; background: var(--orange); margin-bottom: 36px; }
+
+  nav {
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .wordmark {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 1.05rem;
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .nav-cta {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 1px;
+  }
+
+  .btn {
+    display: inline-block;
+    background: var(--ink);
+    color: var(--cream);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 17px 36px;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .btn:hover { background: var(--orange); }
+
+  .hero { padding: 56px 0 80px; }
+  .hero .label { display: block; margin-bottom: 36px; }
+  .hero h1 { margin-bottom: 36px; }
+  .hero .lead {
+    font-size: 1.15rem;
+    line-height: 1.75;
+    color: var(--ink-light);
+    margin-bottom: 48px;
+    max-width: 560px;
+  }
+
+  .cta-stack { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
+
+  .cta-note {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.71rem;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+  }
+
+  .quote {
+    border-left: 3px solid var(--orange);
+    padding: 2px 0 2px 24px;
+    margin: 44px 0;
+  }
+
+  .quote p {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: clamp(1.1rem, 3.5vw, 1.4rem);
+    line-height: 1.45;
+    color: var(--ink);
+  }
+
+  .quote .source {
+    margin-top: 14px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.71rem;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    font-style: normal;
+  }
+
+  /* Cost visualisation */
+  .cost-vis { margin: 44px 0; background: var(--cream-dark); padding: 36px; }
+  .cost-vis-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.71rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-bottom: 28px;
+  }
+
+  .cost-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+    align-items: start;
+    padding: 16px 0;
+    border-top: 1px solid rgba(28,24,20,0.1);
+  }
+
+  .cost-row:first-of-type { border-top: none; padding-top: 0; }
+  .cost-situation { font-size: 0.92rem; line-height: 1.55; color: var(--ink); }
+  .cost-amount { font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 300; color: var(--ink-light); white-space: nowrap; text-align: right; }
+  .cost-amount.highlight { color: var(--orange); }
+  .cost-vs { grid-column: 1 / -1; text-align: center; font-family: 'DM Mono', monospace; font-size: 0.71rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-light); padding: 8px 0; }
+
+  /* Programme */
+  .programme-items { margin-top: 44px; }
+  .programme-item { padding: 32px 0; border-top: 1px solid var(--cream-dark); display: grid; grid-template-columns: 52px 1fr; gap: 20px; }
+  .programme-item:first-child { border-top: none; padding-top: 0; }
+  .prog-num { font-family: 'DM Mono', monospace; font-size: 0.73rem; color: var(--orange); letter-spacing: 0.04em; padding-top: 4px; }
+  .prog-body h4 { font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 1rem; margin-bottom: 10px; color: var(--ink); }
+  .prog-body p { font-size: 0.93rem; color: var(--ink-light); line-height: 1.7; margin-bottom: 10px; }
+  .prog-body p:last-child { margin-bottom: 0; }
+
+  /* Case study */
+  .case-story { background: var(--cream-dark); padding: 40px; margin-top: 44px; }
+  .case-label { font-family: 'DM Mono', monospace; font-size: 0.71rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-light); margin-bottom: 20px; }
+  .case-story h3 { font-family: 'Fraunces', serif; font-weight: 300; font-size: 1.35rem; line-height: 1.3; margin-bottom: 20px; color: var(--ink); }
+  .case-story p { font-size: 0.93rem; line-height: 1.75; color: var(--ink); }
+
+  .case-results { margin-top: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .result-item { border-top: 2px solid var(--orange); padding-top: 12px; }
+  .result-num { font-family: 'Fraunces', serif; font-weight: 300; font-size: 1.6rem; color: var(--ink); line-height: 1.1; }
+  .result-label { font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.07em; text-transform: uppercase; color: var(--ink-light); margin-top: 4px; }
+
+  /* Fit */
+  .fit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 44px; }
+  @media (max-width: 520px) { .fit-grid { grid-template-columns: 1fr; } .case-results { grid-template-columns: 1fr 1fr; } }
+
+  .fit-col h4 { font-family: 'DM Mono', monospace; font-size: 0.71rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-light); margin-bottom: 20px; }
+  .fit-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .fit-col li { font-size: 0.9rem; line-height: 1.55; padding-left: 20px; position: relative; color: var(--ink); }
+  .fit-col li::before { position: absolute; left: 0; font-size: 0.8rem; }
+  .fit-col.yes li::before { content: '→'; color: var(--orange); }
+  .fit-col.no li::before { content: '×'; color: var(--ink-light); }
+
+  /* Testimonials */
+  .testimonial-stack { display: flex; flex-direction: column; gap: 24px; margin-top: 44px; }
+  .testimonial { padding: 32px; background: var(--cream-dark); }
+  .testimonial p { font-family: 'Fraunces', serif; font-style: italic; font-weight: 300; font-size: 1.05rem; line-height: 1.65; color: var(--ink); margin-bottom: 16px; }
+  .testimonial .who { font-family: 'DM Mono', monospace; font-size: 0.71rem; letter-spacing: 0.07em; text-transform: uppercase; color: var(--ink-light); }
+
+  /* Pricing */
+  .pricing-stack { display: flex; flex-direction: column; gap: 16px; margin-top: 44px; }
+  .tier { padding: 32px; border: 1px solid var(--cream-dark); }
+  .tier.primary { border-color: var(--ink); }
+  .tier.premium { border-color: var(--orange); background: var(--cream-mid); }
+  .tier-tag { font-family: 'DM Mono', monospace; font-size: 0.71rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-light); margin-bottom: 10px; }
+  .tier-tag.orange { color: var(--orange); }
+  .tier-price { font-family: 'Fraunces', serif; font-weight: 300; font-size: 2.1rem; line-height: 1; color: var(--ink); margin-bottom: 6px; }
+  .tier-cadence { font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.05em; color: var(--ink-light); margin-bottom: 16px; }
+  .tier p { font-size: 0.9rem; color: var(--ink-light); line-height: 1.65; }
+  .tier-note { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--cream-dark); font-size: 0.84rem; color: var(--ink-light); }
+
+  .solo-note { margin-top: 20px; font-size: 0.83rem; color: var(--ink-light); font-style: italic; padding-left: 20px; border-left: 2px solid var(--cream-dark); line-height: 1.6; }
+  .eu-note { margin-top: 20px; padding: 20px; background: var(--cream-dark); font-size: 0.88rem; color: var(--ink-light); line-height: 1.65; }
+
+  /* Scene */
+  .scene { padding: 80px 0; text-align: center; border-top: 1px solid var(--cream-dark); }
+  .scene p { font-family: 'Fraunces', serif; font-weight: 300; font-style: italic; font-size: clamp(1.1rem, 3.5vw, 1.45rem); line-height: 1.6; color: var(--ink); max-width: 560px; margin: 0 auto 12px; }
+
+  /* CTA */
+  .cta-section { text-align: center; padding: 80px 0; }
+  .cta-section h2 { margin-bottom: 16px; }
+  .cta-section .sub { color: var(--ink-light); font-size: 1.05rem; max-width: 440px; margin: 0 auto 40px; }
+
+  /* Lang switcher */
+  .lang-switch {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.71rem;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    text-decoration: none;
+    border-bottom: 1px solid var(--cream-dark);
+    padding-bottom: 1px;
+    transition: color 0.2s;
+  }
+  .lang-switch:hover { color: var(--ink); }
+
+  footer { border-top: 1px solid var(--cream-dark); padding: 36px 24px; max-width: 680px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+  footer .footer-links { display: flex; gap: 24px; }
+  footer a { font-family: 'DM Mono', monospace; font-size: 0.71rem; letter-spacing: 0.07em; text-transform: uppercase; color: var(--ink-light); text-decoration: none; }
+  footer a:hover { color: var(--ink); }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="wordmark">Loek Luijbregts</a>
+  <div style="display:flex;gap:20px;align-items:center;">
+    <a href="/guidance" class="lang-switch">EN</a>
+    <a href="https://zcal.co/i/vcLERywI" class="nav-cta">Boek een kennismaking</a>
+  </div>
+</nav>
+
+<!-- ─── HERO ─────────────────────────────────────────────── -->
+<div class="container">
+  <section class="hero">
+    <span class="label">The Pacer — Een duurzame samenwerking voor ondernemers</span>
+
+    <h1>De meeste ondernemers presteren beter dan ze denken — en gaan langzamer dan ze zouden kunnen.</h1>
+
+    <p class="lead">Niet omdat ze niet hard genoeg werken. Niet omdat ze de kennis missen. Maar omdat er niemand naast ze staat die het hele plaatje kent, eerlijk is, en opneemt als het er echt om gaat.</p>
+
+    <div class="cta-stack">
+      <a href="https://zcal.co/i/vcLERywI" class="btn">Boek een gratis kennismakingsgesprek van 30 minuten →</a>
+      <span class="cta-note">Geen pitch. Geen agenda. We ontdekken samen of dit de juiste match is.</span>
+    </div>
+  </section>
+</div>
+
+<!-- ─── THE PROBLEM ──────────────────────────────────────── -->
+<div class="container">
+  <section>
+    <div class="rule"></div>
+    <span class="section-tag">Het echte probleem</span>
+    <h2>Dit is geen vaardighedenprobleem. Het is een <em>helderheids­probleem.</em></h2>
+
+    <p>Je hebt iets opgebouwd waar je trots op mag zijn. Je levert goed werk. Je kent je vak beter dan de meeste mensen die je zullen proberen te adviseren.</p>
+
+    <p>En toch.</p>
+
+    <p>Er zijn beslissingen die weken op je borst liggen. Klanten die je allang had moeten loslaten. Kansen die je niet hebt gegrepen omdat niemand bevestigde wat je zelf al vermoedde. Richtingen die je blijft omcirkelen zonder de stap te zetten.</p>
+
+    <p>Het standaard antwoord is: doe meer. Lees meer. Neem een coach. Doe een cursus. Join een mastermind. Koop een framework.</p>
+
+    <p>Niets van dat alles werkt — niet omdat het waardeloos is, maar omdat het je niet geeft wat er werkelijk voor zorgt dat je anders beslist, durft en handelt:</p>
+
+    <p><strong>Eén persoon. Die jouw hele plaatje kent. Die eerlijk zegt wat hij denkt. Die opneemt als het moment er is.</strong></p>
+
+    <div class="quote">
+      <p>"Ik heb honderden gesprekken gevoerd met ondernemers die technisch briljant zijn en in stilte vastzitten. Het patroon is altijd hetzelfde: ze weten wat ze moeten doen. Ze hebben alleen nooit iemand gehad die het hardop met ze durfde te zeggen."</p>
+      <p class="source">— Loek Luijbregts</p>
+    </div>
+  </section>
+</div>
+
+<!-- ─── DUTCH CONTEXT ────────────────────────────────────── -->
+<div class="container">
+  <section>
+    <div class="rule"></div>
+    <span class="section-tag">Herkenbaar?</span>
+    <h2>Nederlandse ondernemers zijn goed in bouwen. Minder goed in <em>zien wat ze waard zijn.</em></h2>
+
+    <p>Edwin en Finn van 2manydots bouwden in twintig jaar een van de meest betrouwbare online marketingbureaus van Nederland — FD Gazelle, Emerce100, ISO-gecertificeerd. En toch bleef hun verhaal ondervertegenwoordigd in de markt. Niet omdat het werk niet goed was. Omdat ze nooit iemand hadden die hielp om dat verhaal zo te vertellen dat het de juiste klanten aantrok zonder dat ze zichzelf elke keer opnieuw hoefden te introduceren.</p>
+
+    <p>Paul en Jan van Schrobbelèr — een Brabants genieten met 38.000 nieuwsbriefabonnees en een open rate van soms 50% — wisten dat ze iets bijzonders hadden. Maar de marketinginspanning was versnipperd, niemand was eigenaar, en de groeipotentie buiten Brabant bleef onbenut.</p>
+
+    <p>Lars Veenstra. Veertien jaar ervaring als visueel storyteller voor nationale omroepen en internationale merken. Een podcast geselecteerd voor een internationaal acceleratieprogramma. En toch: te versnipperd, verkeerde klanten, onzeker over zijn waarde.</p>
+
+    <p>Dit zijn geen uitzonderingen. Dit is het patroon. Nederlandse ondernemers zijn bescheiden over wat ze kunnen en vaag over wat ze vragen. Ze werken hard, leveren goed, en onderschatten systematisch wat hun werk voor anderen betekent.</p>
+
+    <p>Dat is precies waar ik binnenstap.</p>
+  </section>
+</div>
+
+<!-- ─── ROI ──────────────────────────────────────────────── -->
+<div class="container">
+  <section>
+    <div class="rule"></div>
+    <span class="section-tag">Wat het kost om het niet te doen</span>
+    <h2>Bij een omzet boven de €1 miljoen zijn trage beslissingen je duurste gewoonte.</h2>
+
+    <p>De meeste ondernemers denken bij dit programma aan de maandelijkse investering. De relevantere vraag is: wat kost het alternatief?</p>
+
+    <div class="cost-vis">
+      <p class="cost-vis-label">Maandelijkse kosten van veelvoorkomende situaties — indicatief</p>
+
+      <div class="cost-row">
+        <div class="cost-situation">Een strategische beslissing die 3 maanden voor zich uitgeschoven wordt terwijl twee mensen aan het verkeerde werken</div>
+        <div class="cost-amount">€10.000–45.000</div>
+      </div>
+
+      <div class="cost-row">
+        <div class="cost-situation">Eén verkeerde aanname: zes maanden marketing gericht op de verkeerde positionering</div>
+        <div class="cost-amount">€8.000–25.000</div>
+      </div>
+
+      <div class="cost-row">
+        <div class="cost-situation">Een droomklant die niet kiest voor jou omdat je propositie niet duidelijk genoeg was</div>
+        <div class="cost-amount">€5.000–40.000</div>
+      </div>
+
+      <div class="cost-row">
+        <div class="cost-situation">Eén verkeerde hire — onboarding, salaris, gemiste kans, exit</div>
+        <div class="cost-amount">€20.000–70.000</div>
+      </div>
+
+      <div class="cost-vs">versus</div>
+
+      <div class="cost-row">
+        <div class="cost-situation"><strong>The Pacer</strong> — één persoon die jouw hele plaatje kent en helpt sneller te beslissen, beter te durven, en dure drift te stoppen</div>
+        <div class="cost-amount highlight">€1.500–2.500 /mnd</div>
+      </div>
+    </div>
+
+    <p class="muted" style="font-size:0.85rem;">Dit zijn geen theoretische bedragen. Ze komen uit gesprekken met ondernemers waarbij de kosten van niets doen pas achteraf zichtbaar werden.</p>
+  </section>
+</div>
+
+<!-- ─── WHAT IT IS ───────────────────────────────────────── -->
+<div class="container">
+  <section>
+    <div class="rule"></div>
+    <span class="section-tag">Het programma</span>
+    <h2>Geen coachingpakket. Geen adviesretainer. Iets zeldzamers.</h2>
+
+    <p class="muted">Elke maand. Zolang het je wat oplevert. Opzegbaar per volgende maand zodra je er klaar mee bent.</p>
+
+    <div class="programme-items">
+
+      <div class="programme-item">
+        <div class="prog-num">01</div>
+        <div class="prog-body">
+          <h4>Eén diep gesprek — online</h4>
+          <p>90 minuten. Geen script. Geen vaste agenda. We gaan naar wat er echt speelt — een beslissing die je al weken omcirkelt, een klant die je niet scherp kunt zien van binnenuit, een richting die je wilt toetsen aan iemand die niet bang is om terug te duwen.</p>
+          <p>Ik bereid me voor. Ik luister meer dan ik praat. En dan zeg ik wat ik werkelijk zie.</p>
+        </div>
+      </div>
+
+      <div class="programme-item">
+        <div class="prog-num">02</div>
+        <div class="prog-body">
+          <h4>De Wandeling — in de natuur, bij jou in de buurt</h4>
+          <p>90 minuten lopen. Geen scherm. Geen slides. Gewoon een gesprek in beweging — dat een andere kwaliteit van denken oplevert dan alles wat achter een bureau gebeurt. Het probleem waarmee je aankomt is zelden het probleem waarmee je vertrekt.</p>
+          <p>Ik kom naar jou. Reistijd inbegrepen. Iedere ondernemer die dit gedaan heeft zegt hetzelfde: er verschoof iets wat al maanden vastzat.</p>
+          <p class="muted" style="font-size:0.82rem;">Standaard beschikbaar in NL & BE. Elders in Europa op aanvraag — zie prijzen.</p>
+        </div>
+      </div>
+
+      <div class="programme-item">
+        <div class="prog-num">03</div>
+        <div class="prog-body">
+          <h4>Jouw lijn — bereikbaar als het er toe doet</h4>
+          <p>Tot drie gesprekken van 20 minuten per maand. Jij belt. Ik neem op. Geen inplannen. Geen formulier. Geen wachten tot volgende week voor de vraag die maandagochtend op je borst lag.</p>
+          <p>Persoonlijk, zakelijk, financieel of besluitvormend — wat dan ook dat bepaalt hoe je denkt en beweegt. Volledige veiligheid. Volledig vertrouwen.</p>
+          <p>Dit is het onderdeel waarvan klanten zeggen dat ze niet hadden verwacht het zo te waarderen. Omdat het moment waarop je helderheid nodig hebt bijna nooit het moment is dat vooraf gepland stond.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+<!-- ─── CASE STUDY ───────────────────────────────────────── -->
+<div class="container">
+  <section>
+    <div class="rule"></div>
+    <span class="section-tag">Wat er verandert</span>
+    <h2>Een verhaal dat je in z'n geheel moet horen.</h2>
+
+    <p>Omdat een quote niet laat zien wat er werkelijk is gebeurd — of hoe.</p>
+
+    <div class="case-story">
+      <p class="case-label">Lars Veenstra — Visueel Storyteller & Filmmaker, Spirit Unfolding</p>
+      <h3>"Veertien jaar ervaring. Een groeiende reputatie. Een bedrijf dat niet liep zoals het zou moeten."</h3>
+
+      <p>Lars kwam ons eerste gesprek in met drie vragen die hij niet alleen kon beantwoorden. Hoe stop ik met versnipperd zijn over te veel identiteiten? Hoe bouw ik een bedrijf dat bij mij past — zonder dat ik iemand anders moet worden om het te verkopen? Hoe stop ik met de verkeerde klanten aantrekken voordat ze me al drie maanden hebben gekost?</p>
+
+      <p>In ons eerste gesprek — een wandeling door de duinen bij hem in de buurt — zei hij meer dan hij in maanden aan wie dan ook had gezegd. Niet omdat ik hem vroeg het te doen. Omdat de setting de ruimte gaf.</p>
+
+      <p>Wat we ontdekten: Lars was niet versnipperd. Hij was meervoudig. Het probleem was niet dat hij te veel deed — het was dat hij nog geen container had gevonden die dat allemaal samenhangend hield.</p>
+
+      <p>We bouwden die container. Het Hero Portrait — een filmisch portret voor mensen die iets bouwen dat ertoe doet. Eén helder product. Eén heldere doelgroep. Eén heldere prijs. Daarna een klantscorecard van zeven vragen om te toetsen of iemand klaar was voor dit werk voordat Lars ook maar een uur investeerde. Zijn tarieven werden herpositioneerd naar wat zijn werk werkelijk waard was. Zijn content werd herschreven zodat de juiste mensen hem vonden zonder dat hij zichzelf elke keer opnieuw hoefde uit te leggen.</p>
+
+      <p>Drie maanden later werd Lars gevraagd voor een opdracht in Berlijn. De klant — Gary Lineham van Human Garage — reageerde publiekelijk op social media terwijl het werk nog gaande was. En vroeg Lars direct: <em>laten we veel vaker samenwerken.</em></p>
+    </div>
+
+    <div class="case-results" style="margin-top:24px;">
+      <div class="result-item">
+        <div class="result-num">6 maanden</div>
+        <div class="result-label">Van versnipperd naar één helder product</div>
+      </div>
+      <div class="result-item">
+        <div class="result-num">€1.200/dag</div>
+        <div class="result-label">Tarief dat zijn echte waarde weerspiegelt</div>
+      </div>
+      <div class="result-item">
+        <div class="result-num">7 vragen</div>
+        <div class="result-label">Scorecard die verkeerde klanten stopt</div>
+      </div>
+      <div class="result-item">
+        <div class="result-num">1 opdracht</div>
+        <div class="result-label">Berlijn werd een langdurig partnerschap</div>
+      </div>
+    </div>
+
+    <div class="testimonial-stack">
+      <div class="testimonial">
+        <p>"In 9 maanden hielp Loek ons ons socialmediabereik te verdrievoudigen, 9.000 e-mailabonnees te verwelkomen, en coverage te verdienen bij meer dan 30 mediaplatforms. Zonder advertentiebudget. 10 van de 10."</p>
+        <div class="who">Gertjan van Ginderen — CEO, GRAVAA</div>
+      </div>
+      <div class="testimonial">
+        <p>"Een wendbare denker. Zijn aanpak is innovatief en efficiënt — en zet een voorbeeld voor de toekomst van onze hele sector."</p>
+        <div class="who">Henk Swarttouw — Voorzitter, European Cyclists' Federation</div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ─── WHO I AM ─────────────────────────────────────────── -->
+<div class="container">
+  <section>
+    <div class="rule"></div>
+    <span class="section-tag">Wie ik ben</span>
+    <h2>Ik heb altijd gekozen voor het echte — en tegen het gepolijste, het nagebootste, het veilige.</h2>
+
+    <p>Op mijn achttiende ging ik alleen op bikepacking. Niet voor Instagram. Omdat ik wilde weten wat ik waard was als niemand keek en de route moeilijk werd.</p>
+
+    <p>Als student trainde ik mezelf in zes maanden voor een Ironman. Ik leerde zwemmen van scratch. Ik finishte in 10:45 — 42ste in mijn leeftijdscategorie. Niet omdat ik dacht te winnen. Maar om te ontdekken wat er gebeurt als je je vastlegt op iets dat te groot lijkt en toch blijft.</p>
+
+    <p>Vier jaar lang hielp ik bij 2manydots meer dan veertig mkb-ondernemers ontdekken wat écht werkte voor hun online groei — niet de theorie, niet de hype, maar het echte ding eronder. Het ding waardoor hun ideale klant ja zei. Ik werd heel goed in het diagnosticeren van de kloof tussen wat ondernemers dachten dat hun waarde was en wat de markt er werkelijk in zag.</p>
+
+    <p>Toen kwam COVID. De wereld ging op slot. En ik zag hoe een hele industrie vluchtte in perfect geproduceerde content — gepolijst, veilig, nagebootst. Iedereen probeerde er beter uit te zien dan ze waren. Ik ging de andere kant op.</p>
+
+    <p>Ik startte FatPigeon.cc — een fietsmediadrijf gebouwd op één overtuiging: dat herkenbare, eerlijke, menselijke content altijd beter presteert dan perfecte content, omdat fietsers het verschil in seconden voelen. Het werkte. Visit Luxembourg. Cycling in Flanders. Go Türkiye. Shimano Europa. Meer dan dertig bestemmingen in Europa, Afrika en de VS.</p>
+
+    <p>Daarna verloor ik het hele bedrijf. Niet omdat het werk niet klopte — maar omdat ik de verkeerde partner vertrouwde. Ik vertrok met niets.</p>
+
+    <p>Een paar weken later begon ik opnieuw. Cycling Incubators B.V. Dezelfde methode. Andere structuur. 110 miljoen earned impressions. 90+ klanten. 75% terugkerend. Nul advertentiebudget.</p>
+
+    <p>Maar dit is wat ik leerde dat er voor jou toe doet:</p>
+
+    <p><strong>De reden dat Lars in maanden van versnipperd naar één helder product ging — de reden dat GRAVAA zijn following verdrievoudigde en 60 miljoen impressies verdiende in negen maanden — de reden dat Pilot Cycles 3,8 miljoen impressies en 210+ gekwalificeerde leads genereerde zonder advertentiebudget — was niet omdat ik een systeem gaf.</strong></p>
+
+    <p>Het was omdat hun eigen vaardigheden, hun echte waarde, hun authentieke relatie met hun ideale klant — mijn denken superchargedde. De vragen die ik stelde waren scherper door wie zij al waren. De richting werd sneller duidelijk omdat het ruwe materiaal buitengewoon was. Ik creëerde hun resultaten niet. Ik hielp ze zien wat ze al hadden — en stoppen met bewegen in richtingen die hen tijd, energie en geld kostten die ze niet konden missen.</p>
+
+    <p>Dat is wat ik meeneem. Geen framework. Het vermogen om jouw situatie helder te zien — en het hardop te zeggen.</p>
+
+    <div class="quote">
+      <p>"De meeste mensen presteren ver onder wat ze kunnen — niet omdat ze het vermogen missen, maar omdat ze nooit iemand hebben gehad die de afstand met ze ging en zei wat diegene werkelijk zag."</p>
+      <p class="source">— Loek Luijbregts</p>
+    </div>
+  </section>
+</div>
+
+<!-- ─── FIT ───────────────────────────────────────────────── -->
+<div class="container">
+  <section>
+    <div class="rule"></div>
+    <span class="section-tag">Is dit voor jou?</span>
+    <h2>Dit is niet voor iedereen. Dat is geen verkooppraatje.</h2>
+
+    <p class="muted">Ik werk met maximaal 5 mensen tegelijk. Het kennismakingsgesprek bestaat zodat we allebei kunnen ontdekken of dit klopt.</p>
+
+    <div class="fit-grid">
+      <div class="fit-col yes">
+        <h4>Dit werkt als je</h4>
+        <ul>
+          <li>Een echt bedrijf runt — €100K+ jaaromzet, of duidelijk op weg daarheen</li>
+          <li>Technisch sterk bent en commercieel vastloopt, of trager gaat dan je zou kunnen</li>
+          <li>Beslissingen neemt die een tweede denkhoofd verdienen</li>
+          <li>Wil worden uitgedaagd — niet alleen gelijk krijgen</li>
+          <li>Bereid bent minimaal 6 maanden te investeren, want echte verandering is geen sprint</li>
+          <li>Ondernemer, creatief professional of leider bent in welke sector dan ook</li>
+        </ul>
+      </div>
+      <div class="fit-col no">
+        <h4>Dit is niet voor jou als je</h4>
+        <ul>
+          <li>Iemand zoekt die het werk voor je uitvoert</li>
+          <li>Op zoek bent naar tactieken, templates of een 10-stappenplan</li>
+          <li>In het eerste jaar van je bedrijf zit</li>
+          <li>Niet bereid bent het moeilijke gesprek te voeren</li>
+          <li>Een gestructureerd coachingcurriculum met huiswerk wilt</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ─── PRICING ──────────────────────────────────────────── -->
+<div class="container">
+  <section>
+    <div class="rule"></div>
+    <span class="section-tag">Investering</span>
+    <h2>Transparant. Geen binding na de eerste 6 maanden.</h2>
+
+    <p class="muted">Minimale duur: 6 maanden. Dat is de absolute ondergrens om te beslissen, kiezen, installeren, testen en optimaliseren tot een duurzaam verbeterde manier van denken, durven, doen, werken en leven. Na maand 6 — opzegbaar per volgende maand, wanneer je maar wilt.</p>
+
+    <div class="pricing-stack">
+
+      <div class="tier premium">
+        <div class="tier-tag orange">Scale-up & grotere bedrijven — €4M+ jaaromzet</div>
+        <div class="tier-price">Maatwerk</div>
+        <div class="tier-cadence">Vanaf €5.000/maand — neem direct contact op</div>
+        <p>Voor ondernemers en leiders waarbij de kosten van een vertraagde beslissing of een verkeerde richting in de tienduizenden per maand lopen. Het programma breidt uit: vier sessies, onbeperkte toegangslijn, reiskosten EU inbegrepen. Geprijsd naar wat er op het spel staat.</p>
+      </div>
+
+      <div class="tier primary">
+        <div class="tier-tag">Groeiend bedrijf — €100K–€4M jaaromzet</div>
+        <div class="tier-price">€1.500 – €2.500</div>
+        <div class="tier-cadence">per maand — bevestigd na het kennismakingsgesprek</div>
+        <p>Volledig programma. Twee sessies per maand (online + De Wandeling), directe toegangslijn (tot 3 × 20 minuten). Prijs wordt bepaald op basis van de omvang en het speelveld van je bedrijf — transparant bevestigd nadat we gesproken hebben.</p>
+        <div class="tier-note">6 maanden minimum. Daarna per volgende maand opzegbaar. Geen contracten na de initiële periode.</div>
+      </div>
+
+    </div>
+
+    <p class="solo-note">Bouw je iets echts maar zit je nog niet op €100K? Hetzelfde programma is beschikbaar voor €1.200/maand voor solo-ondernemers onder de €100K jaaromzet. Het werk is identiek. De prijs weerspiegelt waar je nu staat, niet waar je naartoe gaat.</p>
+
+    <div class="eu-note">
+      <strong>Buiten NL of BE?</strong> Het online gesprek en de toegangslijn werken overal ter wereld identiek. De Wandeling — waarbij ik naar jou toe kom — wordt als premium geprijsd voor klanten elders in Europa. We bespreken wat logisch is na het kennismakingsgesprek.
+    </div>
+  </section>
+</div>
+
+<!-- ─── THE SCENE ─────────────────────────────────────────── -->
+<div class="container">
+  <section class="scene">
+    <p>Je staat midden in een beslissing die je zes weken wakker had gehouden.</p>
+    <p>Je pakt de telefoon.</p>
+    <p>Vijftien minuten later weet je precies wat je gaat doen — en waarom.</p>
+    <p style="color:var(--ink-light);font-size:1rem;font-family:'DM Sans',sans-serif;font-style:normal;margin-top:8px;">Dat is geen fantasie. Dat is wat een duurzame samenwerking mogelijk maakt.</p>
+  </section>
+</div>
+
+<!-- ─── CTA ───────────────────────────────────────────────── -->
+<div class="container">
+  <section class="cta-section" style="border-top:none;">
+    <div class="rule" style="margin:0 auto 36px;"></div>
+    <h2>De eerste stap is een gesprek.</h2>
+    <p class="sub">30 minuten. Gratis. Geen pitch. We ontdekken samen of dit de juiste match is — voor ons allebei.</p>
+    <a href="https://zcal.co/i/vcLERywI" class="btn">Boek je kennismakingsgesprek →</a>
+    <p class="cta-note" style="margin-top:20px;">Of stuur direct een mail: <a href="mailto:loek@cyclingincubators.com" style="color:var(--ink-light);text-decoration:none;border-bottom:1px solid var(--cream-dark);">loek@cyclingincubators.com</a></p>
+    <p class="cta-note" style="margin-top:8px;font-size:0.68rem;">5 plekken. Op dit moment <span style="color:var(--orange);">2 beschikbaar.</span></p>
+  </section>
+</div>
+
+<footer>
+  <a href="/" class="wordmark">Loek Luijbregts</a>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="https://cyclingincubators.com">Cycling Incubators</a>
+    <a href="/guidance">English</a>
+    <a href="https://zcal.co/i/vcLERywI">Kennismaking</a>
+  </div>
+</footer>
+
+</body>
+</html>
