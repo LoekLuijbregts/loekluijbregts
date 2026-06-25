@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Pacer — Loek Luijbregts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #f8f5f0;
+    --ink: #1c1814;
+    --orange: #d94f0a;
+    --ink-light: #5a4f47;
+    --cream-dark: #ede8e1;
+    --cream-mid: #f2ede6;
+  }
+
+  html { font-size: 16px; scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  section { padding: 80px 0; }
+  section + section { border-top: 1px solid var(--cream-dark); }
+
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: clamp(2.6rem, 7.5vw, 3.8rem);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+  }
+
+  h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: clamp(1.7rem, 5vw, 2.3rem);
+    line-height: 1.18;
+    letter-spacing: -0.01em;
+    margin-bottom: 28px;
+  }
+
+  h2 em, h1 em {
+    font-style: italic;
+    color: var(--orange);
+  }
+
+  p { margin-bottom: 20px; }
+  p:last-child { margin-bottom: 0; }
+
+  strong { font-weight: 500; }
+
+  .label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.73rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+  }
+
+  .section-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.73rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--orange);
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .muted { color: var(--ink-light); }
+
+  /* Nav */
+  nav {
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .wordmark {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 1.05rem;
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .nav-cta {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 1px;
+  }
+
+  /* Buttons */
+  .btn {
+    display: inline-block;
+    background: var(--ink);
+    color: var(--cream);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 17px 36px;
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    transition: background 0.2s;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn:hover { background: var(--orange); }
+
+  .btn-outline {
+    display: inline-block;
+    color: var(--ink);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: 1px solid var(--cream-dark);
+    padding-bottom: 3px;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .btn-outline:hover { border-color: var(--ink); }
+
+  /* Hero */
+  .hero { padding: 56px 0 80px; }
+  .hero .label { display: block; margin-bottom: 36px; }
+  .hero h1 { margin-bottom: 36px; }
+  .hero .lead {
+    font-size: 1.15rem;
+    line-height: 1.75;
+    color: var(--ink-light);
+    margin-bottom: 48px;
+    max-width: 560px;
+  }
+
+  .cta-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .cta-note {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.71rem;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+  }
+
+  /* Divider line */
+  .rule {
+    width: 48px;
+    height: 2px;
+    background: var(--orange);
+    margin-bottom: 36px;
+  }
+
+  /* Pull quote */
+  .quote {
+    border-left: 3px solid var(--orange);
+    padding: 2px 0 2px 24px;
+    margin: 44px 0;
+  }
+
+  .quote p {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: clamp(1.15rem, 3.5vw, 1.45rem);
+    line-height: 1.45;
+    color: var(--ink);
+  }
+
+  .quote .source {
+    margin-top: 14px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.71rem;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    font-style: normal;
+  }
+
+  /* Cost visualisation */
+  .cost-vis {
+    margin: 44px 0;
+    background: var(--cream-dark);
+    padding: 36px;
+  }
+
+  .cost-vis-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.71rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-bottom: 28px;
+  }
+
+  .cost-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+    align-items: start;
+    padding: 16px 0;
+    border-top: 1px solid rgba(28,24,20,0.1);
+  }
+
+  .cost-row:first-of-type { border-top: none; padding-top: 0; }
+
+  .cost-situation {
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: var(--ink);
+  }
+
+  .cost-amount {
+    font-family: 'Fraunces', serif;
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: var(--ink-light);
+    white-space: nowrap;
+    text-align: right;
+  }
+
+  .cost-amount.highlight {
+    color: var(--orange);
+  }
+
+  .cost-vs {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.71rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    padding: 8px 0;
+  }
+
+  /* The three things */
+  .programme-items { margin-top: 44px; }
+
+  .programme-item {
+    padding: 32px 0;
+    border-top: 1px solid var(--cream-dark);
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    gap: 20px;
+  }
+
+  .programme-item:first-child { border-top: none; padding-top: 0; }
+
+  .prog-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.73rem;
+    color: var(--orange);
+    letter-spacing: 0.04em;
+    padding-top: 4px;
+  }
+
+  .prog-body h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .prog-body p {
+    font-size: 0.93rem;
+    color: var(--ink-light);
+    line-height: 1.7;
+    margin-bottom: 10px;
+  }
+
+  .prog-body p:last-child { margin-bottom: 0; }
+
+  /* Case story */
+  .case-story {
+    background: var(--cream-dark);
+    padding: 40px;
+    margin-top: 44px;
+  }
+
+  .case-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.71rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-bottom: 20px;
+  }
+
+  .case-story h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    color: var(--ink);
+  }
+
+  .case-story p {
+    font-size: 0.93rem;
+    line-height: 1.75;
+    color: var(--ink);
+  }
+
+  .case-results {
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .result-item {
+    border-top: 2px solid var(--orange);
+    padding-top: 12px;
+  }
+
+  .result-num {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: 1.6rem;
+    color: var(--ink);
+    line-height: 1.1;
+  }
+
+  .result-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-top: 4px;
+  }
+
+  /* Fit section */
+  .fit-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 44px;
+  }
+
+  @media (max-width: 520px) {
+    .fit-grid { grid-template-columns: 1fr; }
+    .case-results { grid-template-columns: 1fr 1fr; }
+  }
+
+  .fit-col h4 {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.71rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-bottom: 20px;
+  }
+
+  .fit-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .fit-col li {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    padding-left: 20px;
+    position: relative;
+    color: var(--ink);
+  }
+
+  .fit-col li::before {
+    position: absolute;
+    left: 0;
+    font-size: 0.8rem;
+  }
+
+  .fit-col.yes li::before { content: '→'; color: var(--orange); }
+  .fit-col.no li::before { content: '×'; color: var(--ink-light); }
+
+  /* Testimonials */
+  .testimonial-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 44px;
+  }
+
+  .testimonial {
+    padding: 32px;
+    background: var(--cream-dark);
+  }
+
+  .testimonial p {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: var(--ink);
+    margin-bottom: 16px;
+  }
+
+  .testimonial .who {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.71rem;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+  }
+
+  /* Pricing */
+  .pricing-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 44px;
+  }
+
+  .tier {
+    padding: 32px;
+    border: 1px solid var(--cream-dark);
+  }
+
+  .tier.primary { border-color: var(--ink); }
+  .tier.premium { border-color: var(--orange); background: var(--cream-mid); }
+
+  .tier-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.71rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-bottom: 10px;
+  }
+
+  .tier-tag.orange { color: var(--orange); }
+
+  .tier-price {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: 2.1rem;
+    line-height: 1;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+
+  .tier-cadence {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.05em;
+    color: var(--ink-light);
+    margin-bottom: 16px;
+  }
+
+  .tier p {
+    font-size: 0.9rem;
+    color: var(--ink-light);
+    line-height: 1.65;
+  }
+
+  .tier-note {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--cream-dark);
+    font-size: 0.84rem;
+    color: var(--ink-light);
+  }
+
+  .solo-note {
+    margin-top: 20px;
+    font-size: 0.83rem;
+    color: var(--ink-light);
+    font-style: italic;
+    padding-left: 20px;
+    border-left: 2px solid var(--cream-dark);
+    line-height: 1.6;
+  }
+
+  .eu-note {
+    margin-top: 20px;
+    padding: 20px;
+    background: var(--cream-dark);
+    font-size: 0.88rem;
+    color: var(--ink-light);
+    line-height: 1.65;
+  }
+
+  /* The scene */
+  .scene {
+    padding: 80px 0;
+    text-align: center;
+  }
+
+  .scene p {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(1.15rem, 3.5vw, 1.5rem);
+    line-height: 1.6;
+    color: var(--ink);
+    max-width: 560px;
+    margin: 0 auto 12px;
+  }
+
+  /* CTA section */
+  .cta-section {
+    text-align: center;
+    padding: 80px 0;
+  }
+
+  .cta-section h2 { margin-bottom: 16px; }
+
+  .cta-section .sub {
+    color: var(--ink-light);
+    font-size: 1.05rem;
+    max-width: 440px;
+    margin: 0 auto 40px;
+  }
+
+  /* Footer */
+  footer {
+    border-top: 1px solid var(--cream-dark);
+    padding: 36px 24px;
+    max-width: 680px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  footer .footer-links {
+    display: flex;
+    gap: 24px;
+  }
+
+  footer a {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.71rem;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    text-decoration: none;
+  }
+
+  footer a:hover { color: var(--ink); }
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a href="/" class="wordmark">Loek Luijbregts</a>
+  <a href="https://zcal.co/i/vcLERywI" class="nav-cta">Book intro call</a>
+</nav>
+
+<!-- ─── HERO ─────────────────────────────────────────────── -->
+<div class="container">
+  <section class="hero">
+    <span class="label">The Pacer — A standing relationship for founders</span>
+
+    <h1>Most founders are doing better than they think — and going slower than they should.</h1>
+
+    <p class="lead">Not because they lack skills. Not because they lack ambition. Because there is nobody next to them who holds the full picture, tells the truth, and picks up the phone when it actually matters.</p>
+
+    <div class="cta-stack">
+      <a href="https://zcal.co/i/vcLERywI" class="btn">Book your free 30-minute intro call →</a>
+      <span class="cta-note">No pitch. No agenda. We find out if this is the right fit — together.</span>
+    </div>
+  </section>
+</div>
+
+<!-- ─── THE PROBLEM ──────────────────────────────────────── -->
+<div class="container">
+  <section>
+    <div class="rule"></div>
+    <span class="section-tag">The real problem</span>
+    <h2>This isn't a skills problem. It's a <em>clarity problem.</em></h2>
+
+    <p>You've built something real. You've delivered results most people around you couldn't. You know your craft better than almost anyone who'll try to advise you.</p>
+
+    <p>And yet.</p>
+
+    <p>There are decisions that sit on your chest for weeks. Clients you should have let go months ago. Opportunities you didn't pursue because nobody confirmed what you already suspected. Directions you keep circling without committing.</p>
+
+    <p>The standard response is to do more. Read more. Hire a coach. Take a course. Join a mastermind. Buy a framework.</p>
+
+    <p>None of it works — not because those things are worthless, but because none of them give you the one thing that actually changes how you decide, dare, and act:</p>
+
+    <p><strong>One person. Who knows your full picture. Who tells you what they actually think. Who is reachable when the moment matters.</strong></p>
+
+    <div class="quote">
+      <p>"I've spent years in conversations with founders who are technically brilliant and quietly stuck. The pattern is always the same: they know what to do. They just haven't had anyone who would say it out loud with them."</p>
+      <p class="source">— Loek Luijbregts</p>
+    </div>
+  </section>
+</div>
+
+<!-- ─── ROI / COST VIS ───────────────────────────────────── -->
+<div class="container">
+  <section>
+    <div class="rule"></div>
+    <span class="section-tag">The cost of going without</span>
+    <h2>At €4M+ revenue, slow decisions are your most expensive habit.</h2>
+
+    <p>Most founders think about this programme in terms of its monthly cost. The more useful question is: what does the alternative actually cost?</p>
+
+    <div class="cost-vis">
+      <p class="cost-vis-label">Monthly cost of common founder situations — estimated</p>
+
+      <div class="cost-row">
+        <div class="cost-situation">A strategic decision deferred for 3 months while two senior people work on the wrong thing</div>
+        <div class="cost-amount">€15,000–60,000</div>
+      </div>
+
+      <div class="cost-row">
+        <div class="cost-situation">One wrong hire — onboarding, salary, opportunity cost, exit</div>
+        <div class="cost-amount">€25,000–80,000</div>
+      </div>
+
+      <div class="cost-row">
+        <div class="cost-situation">A dream client lost because the proposal didn't communicate the real value</div>
+        <div class="cost-amount">€10,000–50,000</div>
+      </div>
+
+      <div class="cost-row">
+        <div class="cost-situation">Six months of content, marketing and outreach aimed at the wrong positioning</div>
+        <div class="cost-amount">€8,000–30,000</div>
+      </div>
+
+      <div class="cost-vs">versus</div>
+
+      <div class="cost-row">
+        <div class="cost-situation"><strong>The Pacer</strong> — one person who holds your full picture and helps you move faster, decide better, and stop the expensive drift</div>
+        <div class="cost-amount highlight">€1,500–2,500 /mo</div>
+      </div>
+    </div>
+
+    <p class="muted" style="font-size:0.85rem;">These are not hypothetical numbers. They come from conversations with founders I've worked with — where the cost of going without was visible only in hindsight.</p>
+  </section>
+</div>
+
+<!-- ─── WHAT THE PACER IS ────────────────────────────────── -->
+<div class="container">
+  <section>
+    <div class="rule"></div>
+    <span class="section-tag">The programme</span>
+    <h2>Not a coaching package. Not a consultancy retainer. Something rarer.</h2>
+
+    <p class="muted">Every month. As long as it serves you. Cancel when it doesn't.</p>
+
+    <div class="programme-items">
+
+      <div class="programme-item">
+        <div class="prog-num">01</div>
+        <div class="prog-body">
+          <h4>One deep session — online</h4>
+          <p>90 minutes. No script. No preset agenda. We go where the most important thing actually is — a decision you've been circling, a client situation you can't see clearly from inside it, a direction you need to test against someone who isn't afraid to push back.</p>
+          <p>I prepare. I listen more than I talk. Then I say what I actually think.</p>
+        </div>
+      </div>
+
+      <div class="programme-item">
+        <div class="prog-num">02</div>
+        <div class="prog-body">
+          <h4>The Walk — in nature, near you</h4>
+          <p>90 minutes on foot. No screens. No slides. Just a conversation in motion — which produces a different quality of thinking than anything that happens at a desk. The kind of thinking where the problem you arrived with isn't the problem you leave with.</p>
+          <p>I come to you. My travel time is included. Every client who has done this has said the same thing: something shifted that hadn't shifted in months.</p>
+          <p class="muted" style="font-size:0.82rem;">Currently available in NL & BE. EU on request — see pricing.</p>
+        </div>
+      </div>
+
+      <div class="programme-item">
+        <div class="prog-num">03</div>
+        <div class="prog-body">
+          <h4>Your line — available when it counts</h4>
+          <p>Up to three 20-minute calls per month. You call. I pick up. No scheduling. No intake form. No waiting until next Tuesday's session for the question that's been sitting on your chest since Monday morning.</p>
+          <p>Personal, business, financial, or decision-making — whatever is affecting how you think and move. Full safety. Full confidence. Complete trust.</p>
+          <p>This is the part clients say they didn't expect to value as much as they do. Because the moment you need clarity is almost never a moment that was scheduled in advance.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+<!-- ─── LARS CASE STUDY ──────────────────────────────────── -->
+<div class="container">
+  <section>
+    <div class="rule"></div>
+    <span class="section-tag">What changes</span>
+    <h2>A story worth telling you in full.</h2>
+
+    <p>Because a quote doesn't show you what actually happened — or how.</p>
+
+    <div class="case-story">
+      <p class="case-label">Lars Veenstra — Visual Storyteller & Filmmaker, Spirit Unfolding</p>
+      <h3>"14 years of experience. A growing reputation. A business that wasn't working the way it should."</h3>
+
+      <p>Lars came into our first conversation with three questions he couldn't answer alone. How do I stop being scattered across too many identities? How do I build a business that fits who I actually am — without becoming someone I'm not to sell it? How do I stop attracting the wrong clients before they've already cost me three months?</p>
+
+      <p>In our first session — a walk through the dunes near his home — he said more than he'd said to anyone in months. Not because I asked him to. Because the format created the space for it.</p>
+
+      <p>What we found: Lars wasn't scattered. He was plural. The problem wasn't that he did too many things — it was that he hadn't yet found the container that held all of them together coherently.</p>
+
+      <p>We built one. The Hero Portrait — a cinematic portrait for people building something that matters. One clear product. One clear audience. One clear price.</p>
+
+      <p>Then we built a client scorecard — seven questions to filter whether someone was ready for this kind of work before Lars invested a minute of his time. His pricing was repositioned to reflect what his work was actually worth. His content was restructured to attract the right people without him explaining himself every time.</p>
+
+      <p>Three months later, Lars was commissioned for his first retreat in Berlin. The client — Gary Lineham of Human Garage — responded publicly, on social media, while the work was still happening. Then asked Lars directly: <em>let's work together much more often.</em></p>
+    </div>
+
+    <div class="case-results" style="margin-top:24px;">
+      <div class="result-item">
+        <div class="result-num">6 months</div>
+        <div class="result-label">From scattered to one clear product</div>
+      </div>
+      <div class="result-item">
+        <div class="result-num">€1,200/day</div>
+        <div class="result-label">Pricing that reflected his real value</div>
+      </div>
+      <div class="result-item">
+        <div class="result-num">7 questions</div>
+        <div class="result-label">Client scorecard that stopped wrong-fit work</div>
+      </div>
+      <div class="result-item">
+        <div class="result-num">1 call</div>
+        <div class="result-label">Turned a Berlin commission into a long-term partnership</div>
+      </div>
+    </div>
+
+    <div class="testimonial-stack">
+      <div class="testimonial">
+        <p>"In 9 months Loek helped us triple our social following, welcome 9,000 email subscribers, and earn coverage across 30+ media platforms — with zero ad spend. 10 out of 10."</p>
+        <div class="who">Gertjan van Ginderen — CEO, GRAVAA</div>
+      </div>
+      <div class="testimonial">
+        <p>"An agile thinker. His approach is innovative and efficient — setting an example for the future of the entire sector."</p>
+        <div class="who">Henk Swarttouw — President, European Cyclists' Federation</div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ─── WHO I AM ─────────────────────────────────────────── -->
+<div class="container">
+  <section>
+    <div class="rule"></div>
+    <span class="section-tag">Who I am</span>
+    <h2>I've always moved toward the real — and away from the polished, the performed, the safe.</h2>
+
+    <p>At 18 I went bikepacking alone. Not for Instagram. Because I wanted to know what I was made of when nobody was watching and the route got hard.</p>
+
+    <p>As a university student I trained myself for an Ironman in six months. I learned to swim from scratch. I finished in 10:45 — 42nd in my age group. I didn't do it because I thought I'd win. I did it to find out what happened when you committed to something that seemed too big and stayed anyway.</p>
+
+    <p>For four years at a digital marketing agency I helped 40+ small businesses find what actually worked — not the theory, not the trend, but the real thing underneath. The thing that made their ideal customer say yes. I got very good at diagnosing the gap between what founders thought their value was and what the market actually saw.</p>
+
+    <p>Then COVID happened. The world went into lockdown. And I watched an entire industry retreat into perfectly produced content — polished, safe, performed. Everyone trying to look better than they were. I went the opposite direction.</p>
+
+    <p>I started FatPigeon.cc — a cycling media company built on one belief: that relatable, honest, human content would always outperform perfect content, because riders could feel the difference in seconds. It worked. Visit Luxembourg. Cycling in Flanders. Go Türkiye. Shimano Europe. 30+ destinations across Europe, Africa, and the USA.</p>
+
+    <p>Then I lost the whole business. Not because the work was wrong — because I trusted the wrong partner. I left with nothing.</p>
+
+    <p>A few weeks later I started again. Cycling Incubators B.V. Same method. Different structure. 110 million earned impressions. 90+ clients. 75% recurring. Zero ad spend.</p>
+
+    <p>But here's what I learned that matters most for you:</p>
+
+    <p><strong>The reason Lars went from scattered to one clear offer in months — the reason GRAVAA tripled its following and earned 60 million impressions in nine months — the reason Pilot Cycles generated 3.8 million impressions and 210+ qualified leads with no ad spend — was not because I gave them a system.</strong></p>
+
+    <p>It was because their original skills, their real value, their genuine relationship with their ideal clients — supercharged my thinking. The questions I asked were sharper because of who they already were. The direction became clear faster because the raw material was extraordinary. I didn't create their results. I helped them see what they already had — and stop moving in directions that were costing them time, energy, and money they didn't have to spend.</p>
+
+    <p>That's what I bring. Not a framework. The ability to see your situation clearly — and say it out loud.</p>
+
+    <div class="quote">
+      <p>"Most people fall far short of what they're capable of — not because they lack the ability, but because they've never had someone who would go the distance with them and tell them what they actually see."</p>
+      <p class="source">— Loek Luijbregts</p>
+    </div>
+  </section>
+</div>
+
+<!-- ─── FIT ───────────────────────────────────────────────── -->
+<div class="container">
+  <section>
+    <div class="rule"></div>
+    <span class="section-tag">Is this for you?</span>
+    <h2>This isn't for everyone. That's not a sales line.</h2>
+
+    <p class="muted">I work with a maximum of 5 people at any one time. The intro call exists so we can both find out whether it makes sense.</p>
+
+    <div class="fit-grid">
+      <div class="fit-col yes">
+        <h4>This works if you are</h4>
+        <ul>
+          <li>Running a real business — €100K+ annual revenue, or clearly on the way there</li>
+          <li>Technically excellent and commercially stuck, or moving slower than you should be</li>
+          <li>Making decisions alone that deserve a second mind</li>
+          <li>Willing to be challenged — not just agreed with</li>
+          <li>Ready to commit to at least 6 months, because real change isn't a sprint</li>
+          <li>A founder, creative professional, or leader in any sector</li>
+        </ul>
+      </div>
+      <div class="fit-col no">
+        <h4>This isn't for you if you</h4>
+        <ul>
+          <li>Want someone to execute work for you</li>
+          <li>Are looking for tactics, templates, or a 10-step system</li>
+          <li>Are in your first year of business</li>
+          <li>Aren't willing to have the hard conversation</li>
+          <li>Want a structured coaching curriculum with homework</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ─── PRICING ──────────────────────────────────────────── -->
+<div class="container">
+  <section>
+    <div class="rule"></div>
+    <span class="section-tag">Investment</span>
+    <h2>Transparent. No lock-in after the first 6 months.</h2>
+
+    <p class="muted">Minimum commitment: 6 months. That's the bare minimum time to decide, choose, install, test, and optimise a lasting change in how you think, dare, and act. After month 6 — cancel per month, whenever you choose.</p>
+
+    <div class="pricing-stack">
+
+      <div class="tier premium">
+        <div class="tier-tag orange">Scale-up & enterprise — €4M+ annual revenue</div>
+        <div class="tier-price">Custom</div>
+        <div class="tier-cadence">Starting from €5,000/month — contact directly</div>
+        <p>For founders and leaders where the cost of a stalled decision or a wrong direction is measured in tens of thousands per month. The programme expands: four sessions, unlimited access line, EU travel included. Priced relative to what's at stake.</p>
+      </div>
+
+      <div class="tier primary">
+        <div class="tier-tag">Growing business — €100K–€4M annual revenue</div>
+        <div class="tier-price">€1,500 – €2,500</div>
+        <div class="tier-cadence">per month — confirmed after intro call</div>
+        <p>Full programme. Two sessions per month (online + The Walk), direct access line (up to 3 × 20 min calls). Price is set based on the size and scope of your business — confirmed transparently after we've spoken.</p>
+        <div class="tier-note">6-month minimum. Cancel per following month after that. No contracts beyond the initial commitment.</div>
+      </div>
+
+    </div>
+
+    <p class="solo-note">Building something real but not yet at €100K? The same programme is available at €1,200/month for solo founders under €100K annual revenue. The work is identical. The price reflects where you are, not where you're going.</p>
+
+    <div class="eu-note">
+      <strong>Outside NL & BE?</strong> The online session and access line run identically anywhere in the world. The Walk — which requires travel — is priced as a premium for clients across the EU and internationally. We'll discuss what makes sense for your situation after the intro call.
+    </div>
+  </section>
+</div>
+
+<!-- ─── THE SCENE ─────────────────────────────────────────── -->
+<div class="container">
+  <section class="scene" style="border-top: 1px solid var(--cream-dark); border-bottom: none; padding: 80px 0;">
+    <p>You're in the middle of a decision that would have kept you up for six weeks.</p>
+    <p>You pick up the phone.</p>
+    <p>Fifteen minutes later you know exactly what you're doing — and why.</p>
+    <p style="color: var(--ink-light); font-size: 1rem; font-family: 'DM Sans', sans-serif; font-style: normal; margin-top: 8px;">That's not a fantasy. That's what a standing relationship makes possible.</p>
+  </section>
+</div>
+
+<!-- ─── FINAL CTA ─────────────────────────────────────────── -->
+<div class="container">
+  <section class="cta-section" style="border-top:none;">
+    <div class="rule" style="margin: 0 auto 36px;"></div>
+    <h2>The first step is a conversation.</h2>
+    <p class="sub">30 minutes. Free. No pitch. We find out together whether this is the right fit — for both of us.</p>
+    <a href="https://zcal.co/i/vcLERywI" class="btn">Book your intro call →</a>
+    <p class="cta-note" style="margin-top: 20px;">Or reach out directly: <a href="mailto:loek@cyclingincubators.com" style="color:var(--ink-light); text-decoration:none; border-bottom:1px solid var(--cream-dark);">loek@cyclingincubators.com</a></p>
+    <p class="cta-note" style="margin-top: 8px; font-size: 0.68rem;">5 spots. Currently <span style="color:var(--orange);">2 available.</span></p>
+  </section>
+</div>
+
+<footer>
+  <a href="/" class="wordmark">Loek Luijbregts</a>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="https://cyclingincubators.com">Cycling Incubators</a>
+    <a href="https://zcal.co/i/vcLERywI">Book a call</a>
+  </div>
+</footer>
+
+</body>
+</html>
