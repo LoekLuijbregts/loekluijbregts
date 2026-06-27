@@ -11,6 +11,7 @@
 <meta property="og:title" content="Rides — Loek Luijbregts">
 <meta property="og:description" content="Rider-first isn't a tagline. These are the actual rides — the routes, the distances, the road conditions — that built the eye behind the lens.">
 <meta property="og:url" content="https://loekluijbregts.com/rides">
+<meta property="og:image" content="https://loekluijbregts.com/img/rides/iceland-landmannalaugar.jpg">
 <meta property="og:site_name" content="Loek Luijbregts">
 <meta name="twitter:card" content="summary_large_image">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300;1,600&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -102,13 +103,11 @@
   /* STATS BAR */
   .stats-bar {
     display: flex;
-    gap: 0;
     border: 1px solid var(--border);
-    margin-bottom: 0;
   }
   .stats-bar-item {
     flex: 1;
-    padding: 28px 28px;
+    padding: 28px;
     border-right: 1px solid var(--border);
   }
   .stats-bar-item:last-child { border-right: none; }
@@ -145,22 +144,37 @@
     border-bottom: 1px solid var(--border);
   }
 
-  /* RIDES LIST */
+  /* RIDES */
   .rides-section {
     max-width: 880px;
     margin: 0 auto;
     padding: 72px 40px;
   }
+
   .ride-entry {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .ride-entry:first-child { padding-top: 0; }
+
+  .ride-photo {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 2px;
+    margin-bottom: 36px;
+  }
+  .ride-photo.portrait { height: 420px; }
+
+  .ride-entry-body {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 48px;
-    padding: 48px 0;
-    border-bottom: 1px solid var(--border);
     align-items: start;
   }
-  .ride-entry:first-child { padding-top: 0; }
-  .ride-meta { }
+
   .ride-location {
     font-family: "Fraunces", serif;
     font-weight: 600;
@@ -183,11 +197,7 @@
     text-transform: uppercase;
     color: var(--ink-soft);
   }
-  .ride-stat strong {
-    font-weight: 500;
-    color: var(--ink-mid);
-    font-style: normal;
-  }
+  .ride-stat strong { font-weight: 500; color: var(--ink-mid); }
   .ride-tag {
     display: inline-block;
     background: var(--orange-pale);
@@ -200,7 +210,7 @@
     border-radius: 2px;
     margin-top: 4px;
   }
-  .ride-content { }
+
   .ride-story {
     font-size: 16px;
     color: var(--ink-mid);
@@ -282,10 +292,28 @@
   footer a { color: var(--ink-soft); text-decoration: none; }
   footer a:hover { color: var(--orange); }
 
+  /* PHOTO DUO */
+  .ride-photo-duo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    margin-bottom: 36px;
+  }
+  .ride-photo-duo img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 2px;
+  }
+
   @media (max-width: 700px) {
-    .ride-entry { grid-template-columns: 1fr; gap: 20px; }
+    .ride-entry-body { grid-template-columns: 1fr; gap: 24px; }
+    .ride-photo { height: 300px; }
+    .ride-photo.portrait { height: 300px; }
+    .ride-photo-duo { grid-template-columns: 1fr; }
+    .ride-photo-duo img { height: 300px; }
     .stats-bar { flex-wrap: wrap; }
-    .stats-bar-item { border-right: none; border-bottom: 1px solid var(--border); }
+    .stats-bar-item { border-right: none; border-bottom: 1px solid var(--border); min-width: 50%; }
     .stats-bar-item:last-child { border-bottom: none; }
   }
   @media (max-width: 640px) {
@@ -315,12 +343,10 @@
   </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <span class="eyebrow">From the road</span>
   <h1>The work comes<br>from <em>actually riding.</em></h1>
-  <p class="hero-lede">Rider-first isn't a positioning line — it's a physical fact. These are the rides: the distances, the passes, the bad weather days, the breakdowns, and the moments that became campaigns. You can't fake what a saddle teaches you at kilometre 180.</p>
-
+  <p class="hero-lede">Rider-first isn't a positioning line — it's a physical fact. These are the rides: the distances, the passes, the bad weather days, and the moments that became campaigns. You can't fake what a saddle teaches you at kilometre 180.</p>
   <div class="stats-bar">
     <div class="stats-bar-item">
       <div class="stats-bar-number">20<em>+</em></div>
@@ -343,125 +369,142 @@
 
 <div class="rule"><hr></div>
 
-<!-- RIDES -->
 <section class="rides-section">
   <span class="section-label">The ride log</span>
 
+  <!-- ICELAND -->
   <div class="ride-entry">
-    <div class="ride-meta">
-      <div class="ride-location">Atlas Mountains,<br>Morocco</div>
-      <div class="ride-stats">
-        <div class="ride-stat"><strong>1,200 km</strong> over 12 days</div>
-        <div class="ride-stat"><strong>22,000 m</strong> elevation gain</div>
-        <div class="ride-stat"><strong>Gravel &amp; piste</strong></div>
-        <div class="ride-stat"><strong>2024</strong></div>
+    <img class="ride-photo portrait" src="/img/rides/iceland-river-crossing.jpg"
+         alt="Two cyclists fording a glacial river in Iceland's Landmannalaugar highlands — vivid rhyolite mountains and snowfields behind them"
+         loading="eager">
+    <div class="ride-entry-body">
+      <div class="ride-meta">
+        <div class="ride-location">Landmannalaugar,<br>Iceland</div>
+        <div class="ride-stats">
+          <div class="ride-stat"><strong>F-roads</strong> & glacial fords</div>
+          <div class="ride-stat"><strong>Iceland Highlands</strong></div>
+          <div class="ride-stat"><strong>Gravel & hike-a-bike</strong></div>
+        </div>
+        <span class="ride-tag">Destination campaign</span>
       </div>
-      <span class="ride-tag">Campaign origin</span>
-    </div>
-    <div class="ride-content">
-      <p class="ride-story">Two weeks self-supported through Morocco's High Atlas — loaded with a kit that had to double as camera gear, camping equipment, and two weeks of nutrition. The conditions ranged from 40°C tarmac to snow on the Tizi n'Test pass. Every frame shot on an iPhone from the handlebar bag or a roadside rock. The content from this expedition generated more than 8 million organic impressions and placed in three major cycling publications before the trip was even finished.</p>
-      <p class="ride-story">This route is now used by two cycling tourism operators as a reference itinerary. The destination marketing started because people kept asking where we rode.</p>
-      <a href="/adventure-cycling-marketing-international" class="ride-link">How this ride became a destination marketing strategy →</a>
+      <div class="ride-content">
+        <p class="ride-story">Two riders, two bikes, one of the most geologically violent landscapes on earth. The Icelandic Highlands are accessible for roughly eight weeks a year — the rest of the time the F-roads are closed by snow, flood, or volcanic activity. The glacial fords have no bridges. You read the current, pick your line, and commit. That image — two riders mid-crossing with rhyolite mountains behind them — exists because someone actually rode it, not because someone scouted a location and hired talent.</p>
+        <p class="ride-story">The content from this ride placed in three international cycling media outlets within two weeks of the trip finishing. The destination generated its most-searched season on record the following year. Iceland doesn't need a marketing budget. It needs someone willing to ride it.</p>
+      </div>
     </div>
   </div>
 
+  <!-- SCOTLAND -->
   <div class="ride-entry">
-    <div class="ride-meta">
-      <div class="ride-location">Paris–Roubaix<br>Media Ride</div>
-      <div class="ride-stats">
-        <div class="ride-stat"><strong>257 km</strong></div>
-        <div class="ride-stat"><strong>29 sectors</strong> of cobbles</div>
-        <div class="ride-stat"><strong>Road &amp; pave</strong></div>
-        <div class="ride-stat"><strong>2024</strong></div>
+    <img class="ride-photo" src="/img/rides/scotland-highland-camp.jpg"
+         alt="Bikepacking setup on a misty Scottish highland pass — camping stove on wet gravel track, loaded bike against hillside, low clouds"
+         loading="lazy">
+    <div class="ride-entry-body">
+      <div class="ride-meta">
+        <div class="ride-location">Scottish<br>Highlands</div>
+        <div class="ride-stats">
+          <div class="ride-stat"><strong>Multi-day</strong> bikepacking</div>
+          <div class="ride-stat"><strong>Scotland</strong></div>
+          <div class="ride-stat"><strong>Gravel, piste & hike-a-bike</strong></div>
+        </div>
+        <span class="ride-tag">Recurring</span>
       </div>
-      <span class="ride-tag">Case study</span>
-    </div>
-    <div class="ride-content">
-      <p class="ride-story">Riding Paris–Roubaix as a media attachment for GRAVAA — their electronic derailleur mounted on the bike, the camera rolling from inside the experience rather than from the press truck. The difference between shooting a product and riding a product across cobblestones at race pace is the entire argument for rider-first content. No studio shot has the same credibility as a system that kept working after 257 km of Arenberg.</p>
-      <p class="ride-story">The resulting content earned placement in Rouleur, GCN, and Eurosport. Total earned reach from one race weekend: 31 million impressions.</p>
-      <a href="/gravaa-case-study" class="ride-link">See the GRAVAA case study →</a>
+      <div class="ride-content">
+        <p class="ride-story">Scotland's Highlands reward the riders who stay long enough for the weather to stop being a problem and start being the content. The rain, the mist rolling over the Cairngorms, the cold that makes a camping stove mid-pass feel earned — none of that is incidental. It's the story. Clients who want to reach adventure cyclists know that authenticity is the filter: if it looks like a photoshoot, it gets scrolled past.</p>
+        <p class="ride-story">The ferns, the single-track drowned in bracken, the hike-a-bike through heather — these are the moments that travel on social media because they make riders recognise something they've felt themselves. Recognition is the mechanism behind earned reach.</p>
+      </div>
     </div>
   </div>
 
+  <!-- MOROCCO -->
   <div class="ride-entry">
-    <div class="ride-meta">
-      <div class="ride-location">Gravel World<br>Championship,<br>Veneto, Italy</div>
-      <div class="ride-stats">
-        <div class="ride-stat"><strong>186 km</strong></div>
-        <div class="ride-stat"><strong>4,800 m</strong> elevation</div>
-        <div class="ride-stat"><strong>UCI Gravel</strong></div>
-        <div class="ride-stat"><strong>2024</strong></div>
-      </div>
-      <span class="ride-tag">Campaign origin</span>
+    <div class="ride-photo-duo">
+      <img src="/img/rides/morocco-middle-atlas-gravel.jpg"
+           alt="Cyclist descending a winding gravel track through Middle Atlas cedar forest plateau, Morocco"
+           loading="lazy">
+      <img src="/img/rides/morocco-middle-atlas-night.jpg"
+           alt="Three cyclists with loaded bikes silhouetted against a deep starry night sky in Morocco's Middle Atlas"
+           loading="lazy">
     </div>
-    <div class="ride-content">
-      <p class="ride-story">Competing at Gravel Worlds as both rider and content creator — the only way to produce footage that actually looks like what it feels like to race. The difference shows in the comments: riders don't share press releases, they share things that make them feel understood. That feeling comes from content made by someone who has been there, not someone who watched from the finish line.</p>
-      <p class="ride-story">GRAVAA's gravel category saw a 22% increase in direct inquiries in the six weeks following this coverage.</p>
-      <a href="/gravaa-case-study" class="ride-link">See the full GRAVAA case study →</a>
+    <div class="ride-entry-body">
+      <div class="ride-meta">
+        <div class="ride-location">Middle Atlas,<br>Morocco</div>
+        <div class="ride-stats">
+          <div class="ride-stat"><strong>5,000,000</strong> impressions</div>
+          <div class="ride-stat"><strong>Zero</strong> paid ads</div>
+          <div class="ride-stat"><strong>Gravel & piste</strong></div>
+          <div class="ride-stat"><strong>Self-curated</strong></div>
+        </div>
+        <span class="ride-tag">Earned media</span>
+      </div>
+      <div class="ride-content">
+        <p class="ride-story">Three riders, Middle Atlas, Morocco. A trip designed from scratch — no brand brief, no commission, no support. A route through cedar forests above 2,000 metres, across limestone plateaus, along gravel tracks that don't appear on cycling maps because no one has thought to put them there yet. The nights under a sky you can only see from here. The Morocco that doesn't reach international media unless someone actually goes and finds it.</p>
+        <p class="ride-story">The resulting content earned 5 million impressions across cycling, travel, and outdoor media without a single euro in paid distribution. The regions benefited from organic reach calibrated to exactly the right audience. Partnering brands gained exposure that no media spend could have placed with that precision. The mechanism wasn't budget — it was a trip genuinely worth talking about.</p>
+        <a href="/pilot-cycles-case-study" class="ride-link">See the Pilot Cycles Morocco case study →</a>
+      </div>
     </div>
   </div>
 
+  <!-- TURKEY -->
   <div class="ride-entry">
-    <div class="ride-meta">
-      <div class="ride-location">Titanium Test,<br>Wales &amp; Pyrenees</div>
-      <div class="ride-stats">
-        <div class="ride-stat"><strong>Two expeditions</strong></div>
-        <div class="ride-stat"><strong>6 weeks</strong> total</div>
-        <div class="ride-stat"><strong>Mixed terrain</strong></div>
-        <div class="ride-stat"><strong>2024–2025</strong></div>
+    <img class="ride-photo portrait" src="/img/rides/turkey-cappadocia-balloons.jpg"
+         style="object-position: center top;"
+         alt="Two hot air balloons silhouetted against a golden sunrise over Cappadocia's volcanic landscape, Turkey"
+         loading="lazy">
+    <div class="ride-entry-body">
+      <div class="ride-meta">
+        <div class="ride-location">Cappadocia &<br>Taurus Mountains,<br>Turkey</div>
+        <div class="ride-stats">
+          <div class="ride-stat"><strong>Multi-region</strong></div>
+          <div class="ride-stat"><strong>Turkey</strong></div>
+          <div class="ride-stat"><strong>Road & gravel</strong></div>
+        </div>
+        <span class="ride-tag">Destination campaign</span>
       </div>
-      <span class="ride-tag">Case study</span>
-    </div>
-    <div class="ride-content">
-      <p class="ride-story">Two self-initiated expeditions to put Pilot Cycles' custom titanium builds through the conditions they were designed for — not a staged shoot, but actual riding. Six weeks of content compressed what would have been 12 months of organic growth into a single campaign window. The resulting media generated 210+ qualified leads and placed the brand in front of the specialist audience that titanium bikes actually require: people who understand why material choices matter.</p>
-      <a href="/pilot-cycles-case-study" class="ride-link">See the Pilot Cycles case study →</a>
+      <div class="ride-content">
+        <p class="ride-story">Turkey's cycling potential is one of the most underreported stories in adventure travel. Cappadocia at dawn — before the tourist coaches arrive and the heat becomes a factor — is unlike anywhere else on the planet. The Taurus Mountains offer sustained climbing on roads that see almost no traffic. The cycling infrastructure barely exists, which is precisely what makes the content interesting to the audience that matters: riders who are looking for somewhere new.</p>
+        <p class="ride-story">Destination marketing for places that haven't been discovered yet requires a different approach than destination marketing for Mallorca or the Dolomites. The story is the discovery — and the discovery only works if someone has actually made it.</p>
+      </div>
     </div>
   </div>
 
+  <!-- PARIS-ROUBAIX -->
   <div class="ride-entry">
-    <div class="ride-meta">
-      <div class="ride-location">Koppenberg &amp;<br>Flanders Classics</div>
-      <div class="ride-stats">
-        <div class="ride-stat"><strong>Annual</strong></div>
-        <div class="ride-stat"><strong>Belgium</strong></div>
-        <div class="ride-stat"><strong>Cobbles &amp; climbs</strong></div>
+    <div class="ride-entry-body">
+      <div class="ride-meta">
+        <div class="ride-location">Paris–Roubaix<br>Media Ride</div>
+        <div class="ride-stats">
+          <div class="ride-stat"><strong>257 km</strong></div>
+          <div class="ride-stat"><strong>29 cobble sectors</strong></div>
+          <div class="ride-stat"><strong>Road & pavé</strong></div>
+          <div class="ride-stat"><strong>2024</strong></div>
+        </div>
+        <span class="ride-tag">Case study</span>
       </div>
-      <span class="ride-tag">Recurring</span>
-    </div>
-    <div class="ride-content">
-      <p class="ride-story">The cobbled classics are the annual calibration — a reminder of what cycling looks like when difficulty is the point and suffering is the spectacle. Riding Flanders' bergs and sectors informs everything from brand voice to content pacing. There's a rhythm to how cycling's hardest races build narrative tension. That rhythm shows up in campaign structure when you've ridden the routes yourself.</p>
+      <div class="ride-content">
+        <p class="ride-story">Riding Paris–Roubaix as a media attachment for GRAVAA — their electronic derailleur mounted on the bike, content rolling from inside the experience rather than from the press truck. The difference between shooting a product and riding a product across cobblestones at race pace is the entire argument for rider-first content. No studio shot has the credibility of a system that kept working after 257 km of Arenberg.</p>
+        <p class="ride-story">The resulting content earned placement in Rouleur, GCN, and Eurosport. Total earned reach from one race weekend: 31 million impressions.</p>
+        <a href="/gravaa-case-study" class="ride-link">See the GRAVAA case study →</a>
+      </div>
     </div>
   </div>
 
+  <!-- NETHERLANDS -->
   <div class="ride-entry">
-    <div class="ride-meta">
-      <div class="ride-location">Netherlands<br>Route Network</div>
-      <div class="ride-stats">
-        <div class="ride-stat"><strong>Ongoing</strong></div>
-        <div class="ride-stat"><strong>Netherlands</strong></div>
-        <div class="ride-stat"><strong>Road &amp; gravel</strong></div>
+    <div class="ride-entry-body">
+      <div class="ride-meta">
+        <div class="ride-location">Netherlands<br>Route Network</div>
+        <div class="ride-stats">
+          <div class="ride-stat"><strong>Ongoing</strong></div>
+          <div class="ride-stat"><strong>Netherlands</strong></div>
+          <div class="ride-stat"><strong>Road & gravel</strong></div>
+        </div>
+        <span class="ride-tag">Base</span>
       </div>
-      <span class="ride-tag">Base</span>
-    </div>
-    <div class="ride-content">
-      <p class="ride-story">Home terrain and the daily baseline — the Netherlands' cycling infrastructure is the world's most sophisticated and the most misunderstood by outsiders who reduce it to flat Amsterdam streets. The route network through Brabant, Limburg's climbs, and the gravel tracks of the national forests makes up the weekly training ground. Most of the destination marketing work for Dutch cycling tourism started with routes that were already mapped in the legs before they were mapped on paper.</p>
-      <a href="/cycling-brand-marketing-netherlands" class="ride-link">Cycling brand marketing in the Netherlands →</a>
-    </div>
-  </div>
-
-  <div class="ride-entry">
-    <div class="ride-meta">
-      <div class="ride-location">East Africa:<br>Rwanda &amp; Kenya</div>
-      <div class="ride-stats">
-        <div class="ride-stat"><strong>3 weeks</strong></div>
-        <div class="ride-stat"><strong>Rwanda, Kenya</strong></div>
-        <div class="ride-stat"><strong>Road &amp; dirt</strong></div>
+      <div class="ride-content">
+        <p class="ride-story">Home terrain and the daily baseline. The Netherlands' cycling infrastructure is the world's most sophisticated — and the most misunderstood by outsiders who reduce it to flat Amsterdam streets. The route network through Brabant, Limburg's climbs, and the gravel tracks of the national forests makes up the weekly training ground. Most of the destination marketing work for Dutch cycling tourism started with routes already mapped in the legs before they were mapped on paper.</p>
+        <a href="/cycling-brand-marketing-netherlands" class="ride-link">Cycling brand marketing in the Netherlands →</a>
       </div>
-      <span class="ride-tag">Campaign origin</span>
-    </div>
-    <div class="ride-content">
-      <p class="ride-story">Riding in East Africa changes the scale of what cycling means. In Rwanda, the national team trains on the same mountain roads that serve as daily commuting routes. In Kenya, cycling is infrastructure before it is sport. The content from this trip became the case for adventure cycling marketing beyond Europe — a market that most European cycling brands have not yet reached and that has enormous latent demand.</p>
-      <a href="/adventure-cycling-marketing-international" class="ride-link">Adventure cycling marketing beyond Europe →</a>
     </div>
   </div>
 
@@ -469,7 +512,6 @@
 
 <div class="rule"><hr></div>
 
-<!-- CTA -->
 <section class="cta-section">
   <span class="eyebrow">Work with someone who was there</span>
   <h2>The road informs<br>everything. <em>Every time.</em></h2>
