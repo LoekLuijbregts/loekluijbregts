@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Mission — 100 Million Cyclists · Loek Luijbregts</title>
+<meta name="description" content="The work is guided by one number: 100 million new cyclists. Not because cycling is a hobby. Because it's one of the most solvable stories in public health, climate, and city design.">
+<link rel="canonical" href="https://loekluijbregts.com/the-mission">
+<meta name="author" content="Loek Luijbregts">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Mission — 100 Million Cyclists · Loek Luijbregts">
+<meta property="og:description" content="One billion bikes sit in garages. The answer isn't infrastructure first. It's story first.">
+<meta property="og:url" content="https://loekluijbregts.com/the-mission">
+<meta property="og:site_name" content="Loek Luijbregts">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Mission — 100 Million Cyclists">
+<meta name="twitter:description" content="One billion bikes sit in garages. The answer isn't infrastructure first. It's story first.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300;1,600&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #f8f5f0;
+    --white: #ffffff;
+    --ink: #1c1814;
+    --ink-mid: #4a4540;
+    --ink-soft: #8a8480;
+    --orange: #d94f0a;
+    --orange-pale: #fdf1eb;
+    --border: #e8e3db;
+    --sand: #f0ebe3;
+  }
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0; z-index: 100;
+    padding: 22px 40px;
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(248,245,240,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-name {
+    font-family: "DM Mono", monospace;
+    font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--ink); text-decoration: none; opacity: 0.7;
+  }
+  .nav-right { display: flex; gap: 28px; align-items: center; }
+  .nav-link {
+    font-family: "DM Mono", monospace;
+    font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--ink-soft); text-decoration: none; transition: color 0.2s;
+  }
+  .nav-link:hover { color: var(--orange); }
+  .nav-link.active { color: var(--orange); }
+  .nav-cta {
+    font-family: "DM Mono", monospace;
+    font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--white); background: var(--orange);
+    text-decoration: none; padding: 10px 22px; border-radius: 2px;
+    transition: background 0.2s;
+  }
+  .nav-cta:hover { background: #c44008; }
+
+  /* HERO */
+  .hero {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 96px 40px 80px;
+    position: relative;
+  }
+  .hero-bg-number {
+    position: absolute;
+    top: 40px;
+    right: -20px;
+    font-family: "Fraunces", serif;
+    font-weight: 600;
+    font-size: clamp(120px, 22vw, 280px);
+    line-height: 1;
+    letter-spacing: -0.06em;
+    color: var(--ink);
+    opacity: 0.04;
+    user-select: none;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+  .eyebrow {
+    font-family: "DM Mono", monospace;
+    font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--orange); margin-bottom: 32px;
+    display: block;
+  }
+  .hero h1 {
+    font-family: "Fraunces", serif;
+    font-weight: 600;
+    font-size: clamp(42px, 6vw, 76px);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    margin-bottom: 36px;
+    max-width: 720px;
+  }
+  .hero h1 em {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--orange);
+  }
+  .hero-lede {
+    font-size: 19px;
+    color: var(--ink-mid);
+    line-height: 1.8;
+    max-width: 620px;
+    margin-bottom: 0;
+  }
+
+  /* RULE */
+  .rule {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+  .rule hr { border: none; border-top: 1px solid var(--border); }
+
+  /* SECTION */
+  .section {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 80px 40px;
+  }
+  .section-label {
+    font-family: "DM Mono", monospace;
+    font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 28px;
+    display: block;
+  }
+  .section h2 {
+    font-family: "Fraunces", serif;
+    font-weight: 400;
+    font-size: clamp(30px, 4vw, 48px);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    margin-bottom: 32px;
+  }
+  .section h2 em {
+    font-style: italic;
+    color: var(--orange);
+  }
+  .section p {
+    font-size: 17px;
+    color: var(--ink-mid);
+    line-height: 1.87;
+    max-width: 640px;
+    margin-bottom: 22px;
+  }
+  .section p:last-child { margin-bottom: 0; }
+
+  /* STATS */
+  .stats-section {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 80px 40px;
+  }
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    margin-top: 48px;
+  }
+  .stat-item {
+    background: var(--cream);
+    padding: 44px 32px;
+  }
+  .stat-number {
+    font-family: "Fraunces", serif;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+    margin-bottom: 12px;
+  }
+  .stat-number em {
+    font-style: normal;
+    color: var(--orange);
+  }
+  .stat-label {
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+
+  /* GEO */
+  .geo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    margin-top: 40px;
+  }
+  .geo-item {
+    background: var(--sand);
+    padding: 14px 20px;
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-mid);
+    border-radius: 2px;
+  }
+
+  /* QUOTES */
+  .quotes-section {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 80px 40px;
+  }
+  .quotes-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 48px;
+  }
+  .quote-card {
+    background: var(--sand);
+    padding: 44px 40px 36px;
+    border-radius: 2px;
+    position: relative;
+  }
+  .quote-mark {
+    font-family: "Fraunces", serif;
+    font-size: 72px;
+    line-height: 0.7;
+    color: var(--orange);
+    opacity: 0.25;
+    position: absolute;
+    top: 28px;
+    left: 36px;
+  }
+  .quote-text {
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.65;
+    color: var(--ink);
+    margin-bottom: 24px;
+    padding-top: 12px;
+  }
+  .quote-source {
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  /* CTA */
+  .cta-section {
+    background: var(--ink);
+    padding: 112px 40px;
+    text-align: center;
+  }
+  .cta-section .eyebrow { color: var(--orange); }
+  .cta-section h2 {
+    font-family: "Fraunces", serif;
+    font-weight: 400;
+    font-size: clamp(34px, 4.5vw, 56px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    max-width: 600px;
+    margin: 20px auto 24px;
+    color: var(--cream);
+  }
+  .cta-section h2 em {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--orange);
+  }
+  .cta-section .sub {
+    font-size: 17px;
+    color: rgba(248,245,240,0.6);
+    max-width: 460px;
+    margin: 0 auto 52px;
+    line-height: 1.78;
+  }
+  .cta-form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  .cta-form input[type="email"] {
+    padding: 14px 24px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    background: rgba(248,245,240,0.08);
+    border: 1px solid rgba(248,245,240,0.2);
+    color: var(--cream);
+    border-radius: 2px;
+    width: 300px;
+    outline: none;
+    transition: border-color 0.2s;
+    -webkit-appearance: none;
+  }
+  .cta-form input[type="email"]::placeholder { color: rgba(248,245,240,0.3); }
+  .cta-form input[type="email"]:focus { border-color: var(--orange); }
+  .cta-form button {
+    padding: 14px 32px;
+    font-family: "DM Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    background: var(--orange);
+    color: var(--white);
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background 0.2s;
+    white-space: nowrap;
+  }
+  .cta-form button:hover { background: #c44008; }
+  .form-note {
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(248,245,240,0.25);
+    margin-bottom: 40px;
+  }
+  .cta-links {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .cta-link-secondary {
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(248,245,240,0.45);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .cta-link-secondary:hover { color: var(--orange); }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 48px 32px;
+    text-align: center;
+    font-family: "DM Mono", monospace;
+    font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  footer a { color: var(--ink-soft); text-decoration: none; }
+  footer a:hover { color: var(--orange); }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .stats-grid { grid-template-columns: 1fr 1fr; }
+    .quotes-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px) {
+    nav { padding: 18px 20px; }
+    .nav-right { gap: 14px; }
+    .nav-link { display: none; }
+    .hero { padding: 60px 22px 56px; }
+    .hero-bg-number { display: none; }
+    .rule { padding: 0 22px; }
+    .section { padding: 60px 22px; }
+    .stats-section { padding: 60px 22px; }
+    .quotes-section { padding: 60px 22px; }
+    .cta-form input[type="email"] { width: 100%; }
+    .cta-section { padding: 80px 22px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-name">Loek Luijbregts</a>
+  <div class="nav-right">
+    <a href="/#proof" class="nav-link">Results</a>
+    <a href="/#fit" class="nav-link">Is this you?</a>
+    <a href="/writing" class="nav-link">Writing</a>
+    <a href="/the-mission" class="nav-link active">The Mission</a>
+    <a href="https://zcal.co/i/vcLERywI" target="_blank" rel="noopener" class="nav-cta">Free 30-min call</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg-number" aria-hidden="true">100M</div>
+  <span class="eyebrow">The North Star</span>
+  <h1>One hundred million<br>new cyclists.<br><em>That's the goal.</em></h1>
+  <p class="hero-lede">One billion people already own a bike. Most of them stopped riding it. That's not an infrastructure problem — it's a story problem. Every campaign, every destination, every brand we help isn't just a client project. It's another kilometre toward that number.</p>
+</section>
+
+<div class="rule"><hr></div>
+
+<!-- THE PROBLEM -->
+<section class="section">
+  <span class="section-label">The Problem</span>
+  <h2>The bike isn't<br>the bottleneck.<br><em>The story is.</em></h2>
+  <p>Walk into almost any garage in Europe and you'll find one. A bike leaning against the wall, tyres a little soft, saddle dusty. The person who owns it knows they should ride more. They probably want to. But something between the intention and the act keeps failing.</p>
+  <p>It's not the infrastructure. Infrastructure helps — but it follows culture, it doesn't create it. The cities that lead in cycling didn't build their way there first. They told their way there. Cycling became visible, normal, desirable. The roads and lanes followed.</p>
+  <p>The brands and destinations I work with are sitting on the same kind of untapped story. A gravel route nobody has heard of. A bike that solves a problem nobody knows exists. A region whose cycling potential is known to insiders but invisible to the world. The gap isn't product. It's distribution. It's the story not being told — or not being told in a way that travels.</p>
+</section>
+
+<div class="rule"><hr></div>
+
+<!-- THE MECHANISM -->
+<section class="section">
+  <span class="section-label">The Mechanism</span>
+  <h2>Earned media is<br><em>how culture moves.</em></h2>
+  <p>Paid media can buy visibility. Earned media builds belief. When someone shares content about a route, a product, or a destination — not because they were paid to, but because it moved them — that's a different kind of reach. It travels further, sticks longer, and compounds over time without a budget attached to it.</p>
+  <p>The 110 million earned impressions across this work didn't come from a media buy or a boosted post. They came from riding the route, shooting it from the inside, and telling the story as it happened — not as a polished retrospective. Authentic, because it was real. Not because "authentic" appeared in the brief.</p>
+  <p>iPhone-first production isn't a budget constraint. It's a philosophy. The image from a camera bag on a rainy pass in the Atlas Mountains converts better than the image shot in a studio for the same brief — because it was actually there. The audience always knows the difference.</p>
+</section>
+
+<div class="rule"><hr></div>
+
+<!-- PROGRESS -->
+<section class="stats-section">
+  <span class="section-label">The Progress</span>
+  <h2 style="font-family:'Fraunces',serif;font-weight:400;font-size:clamp(30px,4vw,48px);line-height:1.12;letter-spacing:-0.02em;margin-bottom:20px;">How far we've come.<br><em style="font-style:italic;color:var(--orange);">How far there is to go.</em></h2>
+  <p style="font-size:17px;color:var(--ink-mid);line-height:1.87;max-width:640px;">Every number below is a data point on the mission — not a business metric. Every impression is a person who encountered a cycling story they didn't go looking for. Every client is a brand or destination that chose to build reach through story rather than through spend.</p>
+  <div class="stats-grid">
+    <div class="stat-item">
+      <div class="stat-number">110<em>M+</em></div>
+      <div class="stat-label">Earned impressions<br>across all work</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">40<em>+</em></div>
+      <div class="stat-label">Brands &amp; destinations<br>helped</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">13<em>+</em></div>
+      <div class="stat-label">Countries &amp; regions<br>activated</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">€<em>0</em></div>
+      <div class="stat-label">Ad spend behind<br>those 110M impressions</div>
+    </div>
+  </div>
+</section>
+
+<div class="rule"><hr></div>
+
+<!-- WHERE WE'VE BEEN -->
+<section class="section">
+  <span class="section-label">The Map</span>
+  <h2>Where the work has<br><em>put cycling on the map.</em></h2>
+  <p>Each of these geographies represents a destination, brand, or campaign that reached an audience larger than any local budget could buy — through cycling tourism, gravel routes, urban infrastructure, and product storytelling.</p>
+  <div class="geo-grid">
+    <div class="geo-item">Netherlands</div>
+    <div class="geo-item">Belgium</div>
+    <div class="geo-item">Germany</div>
+    <div class="geo-item">France</div>
+    <div class="geo-item">Spain</div>
+    <div class="geo-item">Luxembourg</div>
+    <div class="geo-item">Morocco</div>
+    <div class="geo-item">Turkey</div>
+    <div class="geo-item">Kenya</div>
+    <div class="geo-item">Rwanda</div>
+    <div class="geo-item">United States</div>
+    <div class="geo-item">United Kingdom</div>
+    <div class="geo-item">Scandinavia</div>
+  </div>
+</section>
+
+<div class="rule"><hr></div>
+
+<!-- VOICES -->
+<section class="quotes-section">
+  <span class="section-label">Voices from the ecosystem</span>
+  <h2 style="font-family:'Fraunces',serif;font-weight:400;font-size:clamp(30px,4vw,48px);line-height:1.12;letter-spacing:-0.02em;margin-bottom:20px;">What people building<br>for cycling <em style="font-style:italic;color:var(--orange);">actually say.</em></h2>
+  <p style="font-size:17px;color:var(--ink-mid);line-height:1.87;max-width:640px;">Not quotes about working with me. Quotes about why the mission matters from the people inside cycling's ecosystem doing the work.</p>
+  <div class="quotes-grid">
+    <div class="quote-card">
+      <div class="quote-mark" aria-hidden="true">"</div>
+      <p class="quote-text">We didn't just want media coverage. We wanted to shift how serious cyclists saw us. That shift happened — and it happened through content that came from inside the experience, not from a press release.</p>
+      <div class="quote-source">Cycling brand founder · Netherlands</div>
+    </div>
+    <div class="quote-card">
+      <div class="quote-mark" aria-hidden="true">"</div>
+      <p class="quote-text">Our destination had a story worth telling but no reach beyond the local cycling community. The work changed that. We're now in conversations with tour operators across three continents.</p>
+      <div class="quote-source">Tourism board · North Africa</div>
+    </div>
+    <div class="quote-card">
+      <div class="quote-mark" aria-hidden="true">"</div>
+      <p class="quote-text">What I respect most is that the mission is real — not a positioning line. Every decision about what to make and where to place it traces back to whether it actually moves more people to ride.</p>
+      <div class="quote-source">DMO director · Europe</div>
+    </div>
+    <div class="quote-card">
+      <div class="quote-mark" aria-hidden="true">"</div>
+      <p class="quote-text">The cycling industry is full of people who love cycling. What's rare is someone who loves cycling and understands how to translate that into reach at scale. That combination is the unlock.</p>
+      <div class="quote-source">Cycling startup · USA</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <span class="eyebrow">Join the journey</span>
+  <h2>Follow the road<br>toward <em>100 million.</em></h2>
+  <p class="sub">Once a fortnight: what's actually moving in cycling media, destinations, and earned coverage — written from the road, not from a trend report.</p>
+  <form class="cta-form" name="mission-newsletter" method="POST" netlify>
+    <input type="hidden" name="form-name" value="mission-newsletter">
+    <input type="email" name="email" placeholder="Your email address" required autocomplete="email">
+    <button type="submit">Follow the journey →</button>
+  </form>
+  <p class="form-note">No noise. Unsubscribe any time. Read by cycling brand leaders, DMO directors &amp; destination marketers.</p>
+  <div class="cta-links">
+    <a href="https://zcal.co/i/vcLERywI" target="_blank" rel="noopener" class="cta-link-secondary">Building for this mission? Let's talk →</a>
+    <a href="/writing" class="cta-link-secondary">Read how we think about earned media →</a>
+  </div>
+</section>
+
+<footer>
+  <p>Loek Luijbregts · Cycling Incubators B.V. · <a href="mailto:loek@cyclingincubators.com">loek@cyclingincubators.com</a></p>
+</footer>
+</body>
+</html>
