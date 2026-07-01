@@ -1,6 +1,6 @@
 # loekluijbregts.com
 
-Personal brand site for Loek Luijbregts — fractional creative and marketing partner for cycling brands, destinations, and tourism boards.
+Personal brand site for Loek Luijbregts — growth partner and pacer for founders and leaders. Cycling marketing execution lives on the business site (Cycling Incubators).
 
 **Live site:** [loekluijbregts.com](https://loekluijbregts.com)  
 **Business site:** [cyclingincubators.com](https://cyclingincubators.com)  
@@ -26,9 +26,16 @@ Single HTML file — no build tools, no dependencies, no separate CSS or JS.
 
 ```
 loekluijbregts/
-├── index.html          ← the full site
-├── README.md           ← this file
-└── loekluijbregts.md   ← long-form SEO and reference content
+├── index.html          ← homepage (growth partner positioning, routes to The Pacer & Cycling Incubators)
+├── guidance.html       ← The Pacer (EN) — served at /guidance
+├── begeleiding.html    ← The Pacer (NL) — served at /begeleiding
+├── writing/            ← essay & case study index
+├── */index.html        ← individual essays and case studies
+├── images/             ← site images (extracted from former inline base64)
+├── sitemap.xml         ← all 17 pages
+├── robots.txt
+├── _redirects          ← Netlify routes (incl. /guidance, /begeleiding)
+└── *.md                ← long-form source/reference content
 ```
 
 Deployed via [Netlify](https://netlify.com). Custom domain managed via Netlify DNS.
