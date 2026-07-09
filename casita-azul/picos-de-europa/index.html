@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Picos de Europa · Casita Azul · Pravia, Asturias</title>
+  <meta name="description" content="Where the mountains meet the sea — and shepherds have walked the same paths for 2,000 years" />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #1B2E5E;
+      --navy-mid: #243B73;
+      --cream: #F4EFE5;
+      --ivory: #FAFAF6;
+      --gold: #B8955A;
+      --gold-light: #D4AF7A;
+      --gold-pale: #F0E4CC;
+      --text: #2A2520;
+      --muted: #6B6158;
+      --green: #3B5934;
+      --border: rgba(27,46,94,0.11);
+      --shadow: 0 20px 60px rgba(27,46,94,0.13);
+    }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--ivory); overflow-x: hidden; }
+    h1,h2,h3,h4 { font-family: 'Cormorant Garamond', serif; font-weight: 400; line-height: 1.12; }
+    img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.2rem 3rem;
+      background: rgba(250,250,246,.97);
+      box-shadow: 0 1px 0 var(--border);
+      backdrop-filter: blur(10px);
+    }
+    .nav-back {
+      display: inline-flex; align-items: center; gap: .5rem;
+      font-size: .72rem; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--muted); text-decoration: none; transition: color .3s;
+      font-family: 'Inter', sans-serif;
+    }
+    .nav-back:hover { color: var(--gold); }
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 500;
+      color: var(--navy); text-decoration: none; letter-spacing: .05em;
+      display: flex; align-items: center; gap: .4rem;
+    }
+    .logo-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--gold); }
+    .nav-book-btn {
+      background: var(--gold); color: #fff; padding: .5rem 1.3rem;
+      border-radius: 2px; font-size: .72rem; font-weight: 500; letter-spacing: .12em;
+      text-transform: uppercase; text-decoration: none; transition: background .3s;
+      font-family: 'Inter', sans-serif;
+    }
+    .nav-book-btn:hover { background: var(--gold-light); }
+
+    /* HERO */
+    .hero {
+      height: 72vh; min-height: 520px;
+      position: relative; display: flex; align-items: flex-end;
+      overflow: hidden; margin-top: 0;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1800&q=85&auto=format&fit=crop');
+      background-size: cover; background-position: center 40%;
+      transform: scale(1.03);
+      transition: transform 8s ease-out;
+    }
+    .hero.loaded .hero-bg { transform: scale(1); }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(15,25,55,.15) 0%, rgba(10,18,45,.72) 100%);
+    }
+    .hero-content {
+      position: relative; z-index: 2;
+      padding: 0 3rem 6vh; max-width: 860px;
+    }
+    .hero-label {
+      font-size: .66rem; letter-spacing: .22em; text-transform: uppercase;
+      color: var(--gold-light); margin-bottom: 1rem; display: block;
+    }
+    .hero-content h1 {
+      font-size: clamp(2.8rem, 6vw, 5rem); color: #fff;
+      font-weight: 300; margin-bottom: 1.2rem; letter-spacing: .01em;
+    }
+    .hero-subtitle {
+      font-size: 1rem; color: rgba(255,255,255,.72);
+      font-weight: 300; line-height: 1.75; max-width: 600px;
+    }
+
+    /* SECTIONS */
+    section { padding: 5rem 3rem; }
+    .container { max-width: 1140px; margin: 0 auto; }
+    .section-label {
+      font-size: .66rem; letter-spacing: .22em; text-transform: uppercase;
+      color: var(--gold); font-weight: 500; margin-bottom: .85rem; display: block;
+    }
+    .section-title { font-size: clamp(1.9rem,3.5vw,2.8rem); color: var(--navy); margin-bottom: 1.5rem; }
+
+    /* WHY SECTION */
+    #why { background: var(--cream); }
+    .why-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 3.5rem;
+    }
+    .why-col h3 {
+      font-size: 1.5rem; color: var(--navy); margin-bottom: 1.1rem;
+      padding-bottom: .8rem; border-bottom: 1px solid var(--border);
+    }
+    .why-col p {
+      font-size: .94rem; line-height: 1.88; color: var(--muted); font-weight: 300;
+    }
+    .why-col p + p { margin-top: 1rem; }
+
+    /* TOP 10 */
+    #list { background: var(--ivory); }
+    .list-header { margin-bottom: 3.5rem; }
+    .items-grid { display: flex; flex-direction: column; gap: 1px; background: var(--border); }
+    .item-card {
+      display: grid; grid-template-columns: 64px 1fr; gap: 2rem;
+      background: #fff; padding: 1.8rem 2rem; align-items: start;
+      transition: background .2s;
+    }
+    .item-card:hover { background: var(--cream); }
+    .item-number {
+      font-family: 'Cormorant Garamond', serif; font-size: 2.4rem;
+      color: var(--gold-pale); font-weight: 300; line-height: 1; padding-top: .1rem;
+    }
+    .item-name {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.45rem;
+      color: var(--navy); margin-bottom: .45rem;
+    }
+    .item-desc {
+      font-size: .88rem; color: var(--muted); line-height: 1.72; margin-bottom: .7rem;
+      font-weight: 300;
+    }
+    .item-meta {
+      font-size: .64rem; letter-spacing: .1em; text-transform: uppercase;
+      color: var(--gold); font-weight: 500;
+    }
+
+    /* FLEUR & CARLOS */
+    #hosts { background: var(--navy); padding: 5rem 3rem; }
+    .hosts-header { text-align: center; margin-bottom: 3.5rem; }
+    .hosts-header .section-label { color: var(--gold-light); }
+    .hosts-header .section-title { color: #fff; }
+    .hosts-header p { color: rgba(255,255,255,.6); font-size: .92rem; font-weight: 300; line-height: 1.7; max-width: 520px; margin: 0 auto; }
+    .hosts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: rgba(255,255,255,.08); }
+    .host-card { background: rgba(255,255,255,.04); padding: 2.5rem; }
+    .host-photo-wrap {
+      width: 88px; height: 88px; border-radius: 50%; overflow: hidden; margin-bottom: 1.4rem;
+      border: 2px solid rgba(184,149,90,.4);
+      background: linear-gradient(135deg, #243B73 0%, #1B4A30 100%);
+    }
+    .host-photo-wrap img { width: 100%; height: 100%; }
+    .host-name { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: #fff; margin-bottom: .15rem; }
+    .host-pick-label {
+      font-size: .62rem; letter-spacing: .16em; text-transform: uppercase;
+      color: var(--gold-light); margin-bottom: .6rem; display: block; margin-top: .6rem;
+    }
+    .host-pick-name { font-size: 1.1rem; color: var(--gold-light); font-family: 'Cormorant Garamond', serif; margin-bottom: 1rem; font-style: italic; }
+    .host-quote { font-size: .88rem; color: rgba(255,255,255,.62); line-height: 1.78; font-weight: 300; }
+
+    /* FOOTER */
+    footer {
+      background: var(--ivory); padding: 2.5rem 3rem;
+      border-top: 1px solid var(--border); text-align: center;
+    }
+    .footer-back {
+      display: inline-flex; align-items: center; gap: .6rem;
+      font-size: .72rem; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--muted); text-decoration: none; transition: color .3s;
+    }
+    .footer-back:hover { color: var(--gold); }
+    .footer-tagline { font-size: .8rem; color: var(--muted); margin-top: .6rem; font-weight: 300; }
+
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.5rem; }
+      .hero-content { padding: 0 1.5rem 5vh; }
+      section { padding: 3.5rem 1.5rem; }
+      .why-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .hosts-grid { grid-template-columns: 1fr; }
+      .item-card { grid-template-columns: 48px 1fr; gap: 1.2rem; padding: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/casita-azul/" class="nav-back">← Casita Azul</a>
+    <a href="/casita-azul/" class="nav-logo">
+      <span class="logo-dot"></span> Casita Azul
+    </a>
+    <a href="/casita-azul/#booking" class="nav-book-btn">Book a stay</a>
+  </nav>
+
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-label">Casita Azul · Pravia, Asturias</span>
+      <h1>Picos de Europa</h1>
+      <p class="hero-subtitle">Where the mountains meet the sea — and shepherds have walked the same paths for 2,000 years</p>
+    </div>
+  </section>
+
+  <section id="why">
+    <div class="container">
+      <span class="section-label">The context</span>
+      <h2 class="section-title">Why this matters here</h2>
+      <div class="why-grid">
+        <div class="why-col">
+          <h3>A landscape lived in, not looked at</h3>
+          <p>The Picos de Europa were named by sailors returning from the Americas — these peaks were the first sight of home, the edge of Europe rising from the Atlantic. But long before any sailor spotted them, the Vaqueiros de Alzada were already here: Asturian nomadic herders who drove their cattle up to summer pastures every May and back down every October, a practice called <em>transhumance</em> that has continued unbroken for over 2,000 years.<br><br>
+The mountain villages — Bulnes, Sotres, Tielve — were built with stone so thick the winters couldn't get in. Families made cheese in the caves (Cabrales, still produced the same way today), fished for salmon in the gorges, and hunted brown bears and chamois in the high passes. The Picos were never a wilderness to escape to. They were home.</p>
+        </div>
+        <div class="why-col">
+          <h3>Why the world only just arrived</h3>
+          <p>Spain's very first National Park was declared right here in 1918, yet for most of the 20th century the Picos remained quietly unknown outside Asturias. There were no ski resorts, no motorway, no airport. The only way in was the way the Vaqueiros had always used: on foot.<br><br>
+That changed slowly through the 1990s, when the Ruta del Cares appeared on the first trekking maps and outdoor magazines started calling it "Spain's best-kept secret." Today the Cares gorge trail gets 300,000 walkers a year — still nothing compared to the Alps, but enough to make it the defining reason visitors come to this corner of Asturias. Most still don't realise Pravia is the perfect base: 45 minutes from the park entrance, and without a single souvenir shop in sight.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="list">
+    <div class="container">
+      <div class="list-header">
+        <span class="section-label">Hiking Routes</span>
+        <h2 class="section-title">10 Routes Worth Every Step</h2>
+      </div>
+      <div class="items-grid">
+        
+        <div class="item-card">
+          <div class="item-number">01</div>
+          <div class="item-body">
+            <h3 class="item-name">Ruta del Cares</h3>
+            <p class="item-desc">The 'Divine Gorge' — 12 km carved into vertical limestone with the river thundering 500 m below. Start early. The path narrows to a ledge above nothing.</p>
+            <span class="item-meta">12 km · 4–5 hrs · Medium</span>
+          </div>
+        </div>
+        <div class="item-card">
+          <div class="item-number">02</div>
+          <div class="item-body">
+            <h3 class="item-name">Naranjo de Bulnes (Picu Urriellu)</h3>
+            <p class="item-desc">The iconic orange limestone monolith that defines the Picos skyline. The approach through Pandébano is spectacular even without attempting the technical summit.</p>
+            <span class="item-meta">8 km to base · 3 hrs · Medium–Hard</span>
+          </div>
+        </div>
+        <div class="item-card">
+          <div class="item-number">03</div>
+          <div class="item-body">
+            <h3 class="item-name">Lagos de Covadonga</h3>
+            <p class="item-desc">Two glacial lakes at 1,000 m, brilliant turquoise in summer, wreathed in mist in autumn. The road closes to cars at peak season — take the shuttle bus and have the trail to yourself.</p>
+            <span class="item-meta">Loop 6 km · 2 hrs · Easy</span>
+          </div>
+        </div>
+        <div class="item-card">
+          <div class="item-number">04</div>
+          <div class="item-body">
+            <h3 class="item-name">Vega de Ario</h3>
+            <p class="item-desc">A high plateau accessible from Lago Enol with sweeping views across the Central Massif. One of the least-crowded routes in the park and among the most dramatic.</p>
+            <span class="item-meta">18 km round trip · 6 hrs · Hard</span>
+          </div>
+        </div>
+        <div class="item-card">
+          <div class="item-number">05</div>
+          <div class="item-body">
+            <h3 class="item-name">Pandébano to Bulnes</h3>
+            <p class="item-desc">The ancient mule track to one of Spain's last car-free villages, now also served by a funicular. Walk down, take the cable car back up, have lunch at the village bar.</p>
+            <span class="item-meta">3.5 km descent · 1.5 hrs · Medium</span>
+          </div>
+        </div>
+        <div class="item-card">
+          <div class="item-number">06</div>
+          <div class="item-body">
+            <h3 class="item-name">Ruta de los Beyos</h3>
+            <p class="item-desc">Following the Río Sella through a dramatic limestone gorge between Asturias and León. Accessible by car through the gorge, or on foot along the old road.</p>
+            <span class="item-meta">10 km · 3 hrs · Easy</span>
+          </div>
+        </div>
+        <div class="item-card">
+          <div class="item-number">07</div>
+          <div class="item-body">
+            <h3 class="item-name">Collado Jermoso</h3>
+            <p class="item-desc">A high mountain refuge route through the Western Massif with wild ibex grazing on the crags. Stay overnight in the mountain hut and wake before sunrise.</p>
+            <span class="item-meta">14 km · 5 hrs · Hard</span>
+          </div>
+        </div>
+        <div class="item-card">
+          <div class="item-number">08</div>
+          <div class="item-body">
+            <h3 class="item-name">Desfiladero de la Hermida</h3>
+            <p class="item-desc">The Deva river gorge that connects the Picos to Cantabria — a winding canyon of towering walls and medieval hermitages carved into the rock.</p>
+            <span class="item-meta">Drive + 5 km walk · 2 hrs · Easy</span>
+          </div>
+        </div>
+        <div class="item-card">
+          <div class="item-number">09</div>
+          <div class="item-body">
+            <h3 class="item-name">Fuente Dé Cable Car + Aliva Plateau</h3>
+            <p class="item-desc">Take the cable car from 70 m to 1,823 m in four minutes, then walk the high moorland plateau where wild horses and chamois share the grass.</p>
+            <span class="item-meta">Cable car + 8 km loop · 3 hrs · Easy–Medium</span>
+          </div>
+        </div>
+        <div class="item-card">
+          <div class="item-number">10</div>
+          <div class="item-body">
+            <h3 class="item-name">Ruta del Alba</h3>
+            <p class="item-desc">Following the Río Alba from Tarna through beech forest and meadows — quieter than the Cares, equally beautiful, and almost always empty midweek.</p>
+            <span class="item-meta">9 km · 3.5 hrs · Medium</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="hosts">
+    <div class="container">
+      <div class="hosts-header">
+        <span class="section-label">Personal picks</span>
+        <h2 class="section-title">Fleur & Carlos recommend</h2>
+        <p>Two people, two perspectives — their actual favourite, not a curated list.</p>
+      </div>
+      <div class="hosts-grid">
+        <div class="host-card">
+          <div class="host-photo-wrap">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&q=80&auto=format&fit=crop&crop=face"
+                 alt="Fleur"
+                 loading="lazy" onerror="this.style.display='none'" />
+          </div>
+          <div class="host-name">Fleur</div>
+          <span class="host-pick-label">Her number one</span>
+          <div class="host-pick-name">Lagos de Covadonga</div>
+          <p class="host-quote">"I've watched the sun set over Lago Ercina three times now and every time I cry a little. The colours — the water turns completely silver, the grass gold. It's half an hour from the casa and it feels like the end of the world in the best way. Go on a Tuesday, skip the weekend crowds, bring wine."</p>
+        </div>
+        <div class="host-card">
+          <div class="host-photo-wrap">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&q=80&auto=format&fit=crop&crop=face"
+                 alt="Carlos"
+                 loading="lazy" onerror="this.style.display='none'" />
+          </div>
+          <div class="host-name">Carlos</div>
+          <span class="host-pick-label">His number one</span>
+          <div class="host-pick-name">Ruta del Cares</div>
+          <p class="host-quote">"This was the first hike I did when I came to Asturias, before I'd ever met Fleur, before any of this. I didn't know the region at all. I remember turning a corner in the gorge and stopping completely — I couldn't believe a place like this existed and I hadn't known about it. It's the reason I stayed."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <a href="/casita-azul/" class="footer-back">← Back to Casita Azul</a>
+    <p class="footer-tagline">Casita Azul · Pravia, Asturias · A 19th-century Indiano mansion reborn</p>
+  </footer>
+
+  <script>
+    window.addEventListener('load', () => {
+      document.getElementById('hero').classList.add('loaded');
+    });
+  </script>
+
+</body>
+</html>
