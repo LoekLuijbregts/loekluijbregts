@@ -281,7 +281,7 @@
     .exp-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5px; background:rgba(27,46,94,.08); }
     .exp-card {
       position:relative; height:340px; overflow:hidden;
-      cursor:default;
+      cursor:pointer; text-decoration:none; display:block;
     }
     .exp-bg {
       position:absolute; inset:0; background-size:cover; background-position:center;
@@ -775,7 +775,7 @@
   <div class="exp-grid">
 
     <!-- 1. Picos de Europa -->
-    <div class="exp-card">
+    <a class="exp-card" href="/casita-azul/picos-de-europa/">
       <div class="exp-bg" style="background-image:url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=85&auto=format&fit=crop');"></div>
       <div class="exp-overlay"></div>
       <div class="exp-body">
@@ -783,10 +783,10 @@
         <div class="exp-name">Picos de Europa</div>
         <p class="exp-desc">Spain's most dramatic national park — limestone giants with the legendary Ruta del Cares carved into the gorge. The Lagos de Covadonga glacial lakes. Take the day. Take two.</p>
       </div>
-    </div>
+    </a>
 
     <!-- 2. Atlantic Beaches -->
-    <div class="exp-card">
+    <a class="exp-card" href="/casita-azul/playas/">
       <div class="exp-bg" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=85&auto=format&fit=crop');"></div>
       <div class="exp-overlay"></div>
       <div class="exp-body">
@@ -794,10 +794,10 @@
         <div class="exp-name">Atlantic Beaches &amp; Surf</div>
         <p class="exp-desc">Asturias has 200+ beaches — wild, wide, rarely crowded. Salinas for surf, Rodiles for legendary barrels, Playa de San Juan for golden sand. All on the same coastline.</p>
       </div>
-    </div>
+    </a>
 
     <!-- 3. Cider & Food -->
-    <div class="exp-card">
+    <a class="exp-card" href="/casita-azul/gastronomia/">
       <div class="exp-bg" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=85&auto=format&fit=crop');"></div>
       <div class="exp-overlay"></div>
       <div class="exp-body">
@@ -805,10 +805,10 @@
         <div class="exp-name">Cider, Fabada &amp; Sidrerías</div>
         <p class="exp-desc">Asturian cuisine is one of Spain's best-kept secrets. Fabada with morcilla, fresh Nalón salmon, Cabrales cheese, and cider poured from height. We know the real places.</p>
       </div>
-    </div>
+    </a>
 
     <!-- 4. Camino del Norte -->
-    <div class="exp-card">
+    <a class="exp-card" href="/casita-azul/camino/">
       <div class="exp-bg" style="background-image:url('https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&q=85&auto=format&fit=crop');"></div>
       <div class="exp-overlay"></div>
       <div class="exp-body">
@@ -816,10 +816,10 @@
         <div class="exp-name">Camino del Norte</div>
         <p class="exp-desc">The northern Camino runs through this landscape — mountains on one side, the Cantabrian Sea on the other. Walk a stage, or commit to a week. Casita Azul is the perfect base.</p>
       </div>
-    </div>
+    </a>
 
     <!-- 5. Heritage -->
-    <div class="exp-card">
+    <a class="exp-card" href="/casita-azul/patrimonio/">
       <div class="exp-bg" style="background-image:url('https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=800&q=85&auto=format&fit=crop');"></div>
       <div class="exp-overlay"></div>
       <div class="exp-body">
@@ -827,10 +827,10 @@
         <div class="exp-name">Pre-Romanesque Heritage</div>
         <p class="exp-desc">The Iglesia de Santianes is one of Spain's oldest Christian churches. The Route of the Indianos reveals extraordinary architecture from the returning Americas emigrants. History, no crowds.</p>
       </div>
-    </div>
+    </a>
 
     <!-- 6. River & Cycling -->
-    <div class="exp-card">
+    <a class="exp-card" href="/casita-azul/rios/">
       <div class="exp-bg" style="background-image:url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&q=85&auto=format&fit=crop');"></div>
       <div class="exp-overlay"></div>
       <div class="exp-body">
@@ -838,7 +838,7 @@
         <div class="exp-name">Cycling, Kayaking &amp; Rivers</div>
         <p class="exp-desc">The Nalón and Narcea rivers are legendary for salmon and kayaking. Cycle routes wind through chestnut forests and apple orchards. We keep bikes. We'll arrange the rest.</p>
       </div>
-    </div>
+    </a>
 
   </div>
 </section>
@@ -1122,10 +1122,12 @@
     </div>
     <div class="footer-col">
       <h4>Asturias</h4>
-      <a href="#experiences">Picos de Europa</a>
-      <a href="#experiences">Beaches &amp; Surf</a>
-      <a href="#experiences">Camino del Norte</a>
-      <a href="#experiences">Food &amp; Cider</a>
+      <a href="/casita-azul/picos-de-europa/">Picos de Europa</a>
+      <a href="/casita-azul/playas/">Beaches &amp; Surf</a>
+      <a href="/casita-azul/camino/">Camino del Norte</a>
+      <a href="/casita-azul/gastronomia/">Food &amp; Cider</a>
+      <a href="/casita-azul/patrimonio/">Heritage</a>
+      <a href="/casita-azul/rios/">Rivers &amp; Cycling</a>
       <a href="#location">Getting Here</a>
     </div>
     <div class="footer-col">
