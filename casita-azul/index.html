@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Casita Azul · Boutique B&B · Pravia, Asturias</title>
+  <meta name="description" content="A 19th-century Indiano mansion reborn as a three-room boutique B&B in the heart of Pravia, Asturias. Handmade breakfasts, 34 restored wooden windows, Picos de Europa at your door." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy:        #1B2E5E;
+      --navy-mid:    #243B73;
+      --navy-light:  #344F8F;
+      --cream:       #F4EFE5;
+      --ivory:       #FAFAF6;
+      --gold:        #B8955A;
+      --gold-light:  #D4AF7A;
+      --gold-pale:   #F0E4CC;
+      --text:        #2A2520;
+      --muted:       #6B6158;
+      --green:       #3B5934;
+      --border:      rgba(27,46,94,0.11);
+      --shadow:      0 20px 60px rgba(27,46,94,0.14);
+    }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family:'Inter',sans-serif; color:var(--text); background:var(--ivory); overflow-x:hidden; }
+    h1,h2,h3,h4,h5 { font-family:'Cormorant Garamond',serif; font-weight:400; line-height:1.12; }
+    img { display:block; width:100%; height:100%; object-fit:cover; }
+
+    /* ─── NAV ─── */
+    nav {
+      position:fixed; top:0; left:0; right:0; z-index:200;
+      display:flex; align-items:center; justify-content:space-between;
+      padding:1.3rem 3rem;
+      transition:background .4s,box-shadow .4s,padding .3s;
+    }
+    nav.scrolled {
+      background:rgba(250,250,246,.97);
+      box-shadow:0 1px 0 var(--border);
+      backdrop-filter:blur(10px);
+      padding:.9rem 3rem;
+    }
+    .nav-logo {
+      font-family:'Cormorant Garamond',serif; font-size:1.55rem; font-weight:500;
+      color:#fff; letter-spacing:.05em; text-decoration:none; transition:color .4s;
+      display:flex; align-items:center; gap:.5rem;
+    }
+    .nav-logo .logo-dot { width:8px; height:8px; border-radius:50%; background:var(--gold); display:inline-block; }
+    nav.scrolled .nav-logo { color:var(--navy); }
+    .nav-links { display:flex; gap:2.2rem; align-items:center; list-style:none; }
+    .nav-links a {
+      font-size:.75rem; font-weight:400; letter-spacing:.13em; text-transform:uppercase;
+      text-decoration:none; color:rgba(255,255,255,.82); transition:color .3s;
+    }
+    nav.scrolled .nav-links a { color:var(--muted); }
+    .nav-links a:hover { color:var(--gold) !important; }
+    .nav-right { display:flex; align-items:center; gap:1rem; }
+    .lang-switch {
+      font-size:.68rem; letter-spacing:.12em; text-transform:uppercase;
+      color:rgba(255,255,255,.6); cursor:pointer; border:1px solid rgba(255,255,255,.2);
+      padding:.3rem .6rem; border-radius:2px; transition:all .3s; background:transparent;
+      font-family:'Inter',sans-serif;
+    }
+    nav.scrolled .lang-switch { color:var(--muted); border-color:var(--border); }
+    .lang-switch:hover { border-color:var(--gold); color:var(--gold) !important; }
+    .nav-book {
+      background:var(--gold); color:#fff !important; padding:.55rem 1.4rem !important;
+      border-radius:2px; font-weight:500 !important; transition:background .3s !important;
+    }
+    .nav-book:hover { background:var(--gold-light) !important; }
+
+    /* ─── HERO ─── */
+    #hero {
+      height:100vh; min-height:700px;
+      position:relative; display:flex; align-items:flex-end; justify-content:center;
+      overflow:hidden;
+    }
+    .hero-photo {
+      position:absolute; inset:0;
+      /* Green Asturian mountain valley — the landscape guests arrive through */
+      background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=85&auto=format&fit=crop');
+      background-size:cover; background-position:center 40%;
+      transform:scale(1.04);
+      transition:transform 8s ease-out;
+    }
+    #hero.loaded .hero-photo { transform:scale(1); }
+    .hero-overlay {
+      position:absolute; inset:0;
+      background:linear-gradient(
+        to bottom,
+        rgba(15,25,55,.28) 0%,
+        rgba(15,25,55,.10) 45%,
+        rgba(10,18,45,.72) 100%
+      );
+    }
+    .hero-content {
+      position:relative; z-index:2; text-align:center;
+      padding:0 1.5rem 9vh; max-width:800px;
+    }
+    .hero-badge {
+      display:inline-flex; align-items:center; gap:.5rem;
+      background:rgba(184,149,90,.18); border:1px solid rgba(184,149,90,.4);
+      backdrop-filter:blur(4px);
+      padding:.45rem 1.1rem; border-radius:100px; margin-bottom:1.8rem;
+      font-size:.68rem; letter-spacing:.18em; text-transform:uppercase; color:var(--gold-light);
+    }
+    .badge-dot { width:6px; height:6px; border-radius:50%; background:var(--gold-light); animation:pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1}50%{opacity:.4} }
+    .hero-content h1 {
+      font-size:clamp(3.4rem,8.5vw,6.5rem); color:#fff; margin-bottom:1.5rem;
+      font-weight:300; letter-spacing:.015em;
+    }
+    .hero-content h1 em { font-style:italic; color:var(--gold-light); }
+    .hero-tagline {
+      font-size:1.05rem; color:rgba(255,255,255,.75); font-weight:300;
+      line-height:1.75; margin-bottom:2.75rem; letter-spacing:.025em;
+    }
+    .hero-ctas { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
+    .btn-primary {
+      background:var(--gold); color:#fff; padding:.9rem 2.4rem;
+      font-size:.8rem; font-weight:500; letter-spacing:.14em; text-transform:uppercase;
+      text-decoration:none; border-radius:2px; transition:background .3s,transform .2s;
+      border:none; cursor:pointer; font-family:'Inter',sans-serif;
+    }
+    .btn-primary:hover { background:var(--gold-light); transform:translateY(-1px); }
+    .btn-ghost {
+      background:transparent; color:#fff; border:1px solid rgba(255,255,255,.45);
+      padding:.9rem 2.4rem; font-size:.8rem; font-weight:400; letter-spacing:.14em;
+      text-transform:uppercase; text-decoration:none; border-radius:2px;
+      transition:border-color .3s,background .3s;
+    }
+    .btn-ghost:hover { border-color:#fff; background:rgba(255,255,255,.08); }
+    .hero-scroll {
+      position:absolute; bottom:2.5rem; left:50%; transform:translateX(-50%);
+      display:flex; flex-direction:column; align-items:center; gap:.5rem;
+      color:rgba(255,255,255,.45); font-size:.62rem; letter-spacing:.2em; text-transform:uppercase;
+      z-index:2;
+    }
+    .scroll-line { width:1px; height:44px; background:rgba(255,255,255,.3); animation:scrollPulse 2.2s infinite; }
+    @keyframes scrollPulse { 0%,100%{opacity:.3;transform:scaleY(1)}50%{opacity:.7;transform:scaleY(1.1)} }
+
+    /* ─── RIBBON ─── */
+    .ribbon {
+      background:var(--navy); padding:1.1rem 2rem;
+      display:flex; justify-content:center; align-items:center;
+      gap:clamp(1rem,4vw,3.5rem); flex-wrap:wrap;
+    }
+    .rib-item {
+      display:flex; align-items:center; gap:.6rem;
+      font-size:.7rem; letter-spacing:.1em; text-transform:uppercase;
+      color:rgba(255,255,255,.6);
+    }
+    .rib-icon { font-size:1rem; }
+
+    /* ─── SECTION DEFAULTS ─── */
+    section { padding:6rem 2rem; }
+    .container { max-width:1200px; margin:0 auto; }
+    .section-label {
+      font-size:.68rem; letter-spacing:.24em; text-transform:uppercase;
+      color:var(--gold); font-weight:500; margin-bottom:1rem; display:block;
+    }
+    .section-title { font-size:clamp(2rem,4vw,3.2rem); color:var(--navy); margin-bottom:1.5rem; }
+    .section-body { font-size:.97rem; line-height:1.88; color:var(--muted); font-weight:300; }
+
+    /* ─── STORY ─── */
+    #story { background:var(--cream); }
+    .story-grid { display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center; }
+    .story-img-wrap {
+      position:relative; height:580px;
+    }
+    .story-img-main {
+      position:absolute; top:0; left:0; width:80%; height:84%;
+      border-radius:3px; overflow:hidden;
+      box-shadow:var(--shadow);
+      background:linear-gradient(135deg,#1B2E5E 0%,#3B5934 100%);
+    }
+    .story-img-inset {
+      position:absolute; bottom:0; right:0; width:54%; height:46%;
+      border:5px solid var(--ivory); border-radius:3px; overflow:hidden;
+      box-shadow:0 14px 44px rgba(27,46,94,0.18);
+      background:linear-gradient(135deg,#B8955A 0%,#1B2E5E 100%);
+    }
+    .story-text {}
+    .story-body-1 { margin-bottom:1.2rem; }
+    .story-body-2 { margin-bottom:1.2rem; }
+    .story-stats {
+      display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem;
+      margin-top:2.75rem; padding-top:2.5rem; border-top:1px solid var(--border);
+    }
+    .stat-num { font-family:'Cormorant Garamond',serif; font-size:3rem; color:var(--navy); font-weight:300; line-height:1; }
+    .stat-label { font-size:.72rem; color:var(--muted); letter-spacing:.05em; margin-top:.4rem; line-height:1.5; }
+
+    /* ─── HOSTS ─── */
+    #hosts { background:var(--navy); }
+    .hosts-grid { display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center; }
+    .hosts-photo {
+      position:relative; height:520px; border-radius:3px; overflow:hidden;
+      background:linear-gradient(160deg,#243B73 0%,#1B4A30 100%);
+    }
+    .hosts-photo img { height:100%; }
+    .hosts-photo-caption {
+      position:absolute; bottom:1.25rem; left:1.25rem;
+      background:rgba(15,25,55,.75); backdrop-filter:blur(6px);
+      color:rgba(255,255,255,.9); font-size:.75rem; letter-spacing:.08em;
+      padding:.5rem 1rem; border-radius:2px;
+    }
+    .hosts-text {}
+    .hosts-text .section-label { color:var(--gold-light); }
+    .hosts-text .section-title { color:#fff; }
+    .hosts-text .section-body { color:rgba(255,255,255,.62); margin-bottom:1.25rem; }
+    .host-tags { display:flex; flex-wrap:wrap; gap:.6rem; margin-top:1.75rem; }
+    .host-tag {
+      font-size:.68rem; letter-spacing:.08em; text-transform:uppercase;
+      border:1px solid rgba(255,255,255,.2); padding:.35rem .75rem; border-radius:100px;
+      color:rgba(255,255,255,.55);
+    }
+    .hosts-contact { margin-top:2.5rem; display:flex; gap:1rem; flex-wrap:wrap; }
+    .btn-wa {
+      display:inline-flex; align-items:center; gap:.5rem;
+      background:#25D366; color:#fff; padding:.75rem 1.5rem;
+      font-size:.78rem; font-weight:500; letter-spacing:.08em; text-transform:uppercase;
+      border-radius:2px; text-decoration:none; transition:background .3s;
+    }
+    .btn-wa:hover { background:#1ebe58; }
+    .btn-email {
+      display:inline-flex; align-items:center; gap:.5rem;
+      background:rgba(255,255,255,.1); color:#fff; padding:.75rem 1.5rem;
+      font-size:.78rem; font-weight:400; letter-spacing:.08em; text-transform:uppercase;
+      border-radius:2px; text-decoration:none; border:1px solid rgba(255,255,255,.2);
+      transition:all .3s;
+    }
+    .btn-email:hover { background:rgba(255,255,255,.16); }
+
+    /* ─── ROOMS ─── */
+    #rooms { background:var(--ivory); }
+    .rooms-header { display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:3.5rem; gap:2rem; flex-wrap:wrap; }
+    .rooms-sub { max-width:380px; font-size:.88rem; color:var(--muted); line-height:1.75; font-weight:300; }
+    .rooms-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:var(--border); }
+    .room-card { background:var(--ivory); transition:transform .3s,box-shadow .3s; position:relative; overflow:hidden; }
+    .room-card:hover { transform:translateY(-5px); box-shadow:0 20px 50px rgba(27,46,94,0.14); z-index:1; }
+    .room-photo { height:280px; position:relative; overflow:hidden; background:linear-gradient(135deg,#1B2E5E 0%,#3B5934 60%,#B8955A 100%); }
+    .room-photo img { transition:transform .5s; height:100%; }
+    .room-card:hover .room-photo img { transform:scale(1.04); }
+    .room-photo-overlay {
+      position:absolute; inset:0;
+      background:linear-gradient(to top,rgba(15,25,55,.55) 0%,transparent 55%);
+    }
+    .room-badge {
+      position:absolute; top:1.1rem; right:1.1rem; z-index:2;
+      background:var(--gold); color:#fff;
+      font-size:.62rem; letter-spacing:.15em; text-transform:uppercase;
+      padding:.35rem .75rem; border-radius:1px;
+    }
+    .room-body { padding:1.75rem 1.75rem 2rem; }
+    .room-name { font-family:'Cormorant Garamond',serif; font-size:1.7rem; color:var(--navy); margin-bottom:.5rem; }
+    .room-desc { font-size:.88rem; color:var(--muted); line-height:1.72; margin-bottom:1.25rem; font-weight:300; }
+    .room-features { display:flex; flex-wrap:wrap; gap:.45rem; margin-bottom:1.5rem; }
+    .room-feature {
+      font-size:.68rem; letter-spacing:.07em;
+      border:1px solid var(--border); padding:.28rem .62rem; border-radius:100px; color:var(--muted);
+    }
+    .room-footer { display:flex; justify-content:space-between; align-items:center; padding-top:1.25rem; border-top:1px solid var(--border); }
+    .room-price { font-family:'Cormorant Garamond',serif; font-size:1.65rem; color:var(--navy); }
+    .room-price span { font-size:.72rem; font-family:'Inter',sans-serif; color:var(--muted); font-weight:300; }
+    .btn-room {
+      font-size:.72rem; letter-spacing:.1em; text-transform:uppercase;
+      padding:.6rem 1.2rem; background:var(--navy); color:#fff;
+      border-radius:2px; text-decoration:none; transition:background .3s;
+    }
+    .btn-room:hover { background:var(--navy-mid); }
+    .rooms-note { text-align:center; margin-top:2rem; font-size:.8rem; color:var(--muted); font-weight:300; }
+
+    /* ─── EXPERIENCES ─── */
+    #experiences { background:var(--cream); }
+    .exp-header { display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:3.5rem; gap:2rem; flex-wrap:wrap; }
+    .exp-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5px; background:rgba(27,46,94,.08); }
+    .exp-card {
+      position:relative; height:340px; overflow:hidden;
+      cursor:default;
+    }
+    .exp-bg {
+      position:absolute; inset:0; background-size:cover; background-position:center;
+      transition:transform .6s;
+    }
+    .exp-card:hover .exp-bg { transform:scale(1.06); }
+    .exp-overlay {
+      position:absolute; inset:0;
+      background:linear-gradient(to top,rgba(10,18,45,.82) 0%,rgba(10,18,45,.25) 55%,rgba(10,18,45,.1) 100%);
+      transition:background .4s;
+    }
+    .exp-card:hover .exp-overlay {
+      background:linear-gradient(to top,rgba(10,18,45,.90) 0%,rgba(10,18,45,.40) 55%,rgba(10,18,45,.15) 100%);
+    }
+    .exp-body {
+      position:absolute; bottom:0; left:0; right:0; padding:1.75rem;
+      transform:translateY(0); transition:transform .3s;
+    }
+    .exp-distance {
+      font-size:.62rem; letter-spacing:.16em; text-transform:uppercase;
+      color:var(--gold-light); margin-bottom:.6rem; display:block;
+    }
+    .exp-name {
+      font-family:'Cormorant Garamond',serif; font-size:1.6rem;
+      color:#fff; margin-bottom:.6rem; font-weight:400;
+    }
+    .exp-desc {
+      font-size:.82rem; color:rgba(255,255,255,.7); line-height:1.65;
+      font-weight:300; max-height:0; overflow:hidden;
+      transition:max-height .4s ease, opacity .3s;
+      opacity:0;
+    }
+    .exp-card:hover .exp-desc { max-height:120px; opacity:1; }
+
+    /* ─── GALLERY ─── */
+    #gallery { background:var(--navy); padding:5rem 0; }
+    .gallery-head { padding:0 2rem 3rem; max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:1rem; }
+    .gallery-head .section-title { color:#fff; margin-bottom:0; }
+    .gallery-head .section-label { color:var(--gold-light); }
+    .gallery-link { font-size:.75rem; letter-spacing:.12em; text-transform:uppercase; color:var(--gold-light); text-decoration:none; opacity:.8; transition:opacity .3s; }
+    .gallery-link:hover { opacity:1; }
+    .gallery-grid {
+      display:grid;
+      grid-template-columns:2fr 1fr 1fr 1.4fr;
+      grid-template-rows:300px 240px;
+      gap:3px;
+    }
+    .gc {
+      overflow:hidden; position:relative; cursor:pointer;
+      background:linear-gradient(135deg,#1B2E5E 0%,#2C4A30 100%);
+    }
+    .gc img { width:100%; height:100%; object-fit:cover; transition:transform .5s; }
+    .gc:hover img { transform:scale(1.05); }
+    .gc::after {
+      content:''; position:absolute; inset:0;
+      background:rgba(15,25,55,.0); transition:background .35s;
+    }
+    .gc:hover::after { background:rgba(15,25,55,.18); }
+    .gc-label {
+      position:absolute; bottom:.85rem; left:.85rem; z-index:2;
+      background:rgba(15,25,55,.7); backdrop-filter:blur(4px);
+      color:rgba(255,255,255,.88); font-size:.63rem; letter-spacing:.1em;
+      padding:.32rem .7rem; border-radius:1px;
+    }
+    .gc1 { grid-column:1; grid-row:1/3; }
+    .gc2 { grid-column:2; grid-row:1; }
+    .gc3 { grid-column:3; grid-row:1; }
+    .gc4 { grid-column:4; grid-row:1; }
+    .gc5 { grid-column:2/4; grid-row:2; }
+    .gc6 { grid-column:4; grid-row:2; }
+
+    /* ─── BOOKING ─── */
+    #booking { background:var(--ivory); }
+    .booking-grid { display:grid; grid-template-columns:1fr 420px; gap:5rem; align-items:start; }
+    .booking-perks { margin-top:2.5rem; }
+    .booking-perk {
+      display:flex; align-items:flex-start; gap:.85rem;
+      padding:1rem 0; border-bottom:1px solid var(--border);
+      font-size:.88rem; color:var(--muted); font-weight:300; line-height:1.55;
+    }
+    .perk-check { color:var(--green); font-size:1rem; margin-top:.05rem; flex-shrink:0; }
+    .booking-widget {
+      background:#fff; border:1px solid var(--border);
+      border-radius:4px; padding:2.5rem;
+      box-shadow:0 16px 50px rgba(27,46,94,.09);
+      position:sticky; top:100px;
+    }
+    .widget-title { font-family:'Cormorant Garamond',serif; font-size:1.8rem; color:var(--navy); margin-bottom:.35rem; }
+    .widget-sub { font-size:.82rem; color:var(--muted); margin-bottom:2rem; font-weight:300; }
+    .form-row { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+    .form-group { margin-bottom:1.1rem; }
+    .form-group label { display:block; font-size:.67rem; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin-bottom:.5rem; }
+    .form-group input, .form-group select {
+      width:100%; padding:.75rem 1rem;
+      border:1px solid var(--border); border-radius:2px;
+      font-size:.88rem; font-family:'Inter',sans-serif; background:var(--ivory); color:var(--text);
+      transition:border-color .3s;
+    }
+    .form-group input:focus, .form-group select:focus { outline:none; border-color:var(--navy); }
+    .booking-summary { background:var(--cream); border-radius:2px; padding:1.2rem 1.25rem; margin:1.5rem 0; display:none; }
+    .sum-row { display:flex; justify-content:space-between; font-size:.83rem; color:var(--muted); padding:.38rem 0; }
+    .sum-total { display:flex; justify-content:space-between; padding-top:.75rem; margin-top:.5rem; border-top:1px solid var(--border); font-weight:500; color:var(--navy); font-size:.95rem; }
+    .btn-book-full {
+      width:100%; padding:1rem; background:var(--navy); color:#fff;
+      font-size:.8rem; letter-spacing:.15em; text-transform:uppercase;
+      border:none; border-radius:2px; cursor:pointer; font-family:'Inter',sans-serif;
+      transition:background .3s;
+    }
+    .btn-book-full:hover { background:var(--navy-mid); }
+    .booking-divider { display:flex; align-items:center; gap:1rem; margin:1.5rem 0; }
+    .booking-divider::before, .booking-divider::after { content:''; flex:1; height:1px; background:var(--border); }
+    .booking-divider span { font-size:.72rem; color:var(--muted); letter-spacing:.08em; text-transform:uppercase; white-space:nowrap; }
+    .btn-wa-book {
+      display:flex; align-items:center; justify-content:center; gap:.6rem;
+      width:100%; padding:.85rem; background:#25D366; color:#fff;
+      font-size:.78rem; font-weight:500; letter-spacing:.1em; text-transform:uppercase;
+      border:none; border-radius:2px; cursor:pointer; text-decoration:none;
+      transition:background .3s;
+    }
+    .btn-wa-book:hover { background:#1ebe58; }
+    .widget-note { font-size:.72rem; color:var(--muted); text-align:center; margin-top:.85rem; line-height:1.6; }
+
+    /* ─── PHILOSOPHY ─── */
+    #philosophy { background:var(--navy); text-align:center; }
+    #philosophy .section-label { color:var(--gold-light); }
+    #philosophy .section-title { color:#fff; max-width:660px; margin:0 auto 1.5rem; }
+    #philosophy .section-body { color:rgba(255,255,255,.6); margin:0 auto 4rem; max-width:560px; }
+    .pillars { display:grid; grid-template-columns:repeat(4,1fr); gap:2px; background:rgba(255,255,255,.06); margin-top:0; }
+    .pillar {
+      text-align:center; padding:2.5rem 1.75rem;
+      background:rgba(255,255,255,.03);
+      transition:background .3s;
+    }
+    .pillar:hover { background:rgba(255,255,255,.07); }
+    .pillar-icon { font-size:2rem; margin-bottom:1.1rem; }
+    .pillar h4 { font-family:'Cormorant Garamond',serif; font-size:1.3rem; color:#fff; margin-bottom:.65rem; }
+    .pillar p { font-size:.83rem; color:rgba(255,255,255,.5); line-height:1.72; font-weight:300; }
+
+    /* ─── TESTIMONIALS ─── */
+    #testimonials { background:var(--cream); }
+    .testi-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2rem; margin-top:3.5rem; }
+    .testi {
+      background:var(--ivory); padding:2rem;
+      border-top:3px solid var(--gold); border-radius:0 0 2px 2px;
+      transition:box-shadow .3s;
+    }
+    .testi:hover { box-shadow:0 8px 30px rgba(27,46,94,.1); }
+    .testi-stars { color:var(--gold); font-size:.85rem; margin-bottom:1.1rem; letter-spacing:.1em; }
+    .testi-text {
+      font-family:'Cormorant Garamond',serif; font-size:1.1rem;
+      line-height:1.65; color:var(--navy); margin-bottom:1.25rem; font-style:italic;
+    }
+    .testi-author { font-size:.74rem; color:var(--muted); letter-spacing:.07em; }
+    .testi-flag { margin-right:.3rem; }
+
+    /* ─── LOCATION ─── */
+    #location { background:var(--ivory); }
+    .location-grid { display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:start; }
+    .map-block {
+      border-radius:3px; overflow:hidden;
+      box-shadow:var(--shadow); position:relative;
+    }
+    .map-img { height:420px; position:relative; background:linear-gradient(135deg,#3B5934 0%,#1B2E5E 100%); }
+    .map-img img { height:100%; }
+    .map-img-overlay {
+      position:absolute; inset:0;
+      background:rgba(27,46,94,.15);
+      display:flex; align-items:center; justify-content:center;
+    }
+    .map-pin-block {
+      background:#fff; border-radius:3px; padding:1rem 1.5rem;
+      box-shadow:0 4px 20px rgba(27,46,94,.2);
+      text-align:center; font-size:.85rem; color:var(--navy);
+    }
+    .map-pin-block strong { display:block; font-size:1rem; margin-bottom:.2rem; }
+    .map-pin-block a { color:var(--gold); text-decoration:none; font-size:.8rem; }
+    .travel-list h3 { font-family:'Cormorant Garamond',serif; font-size:1.65rem; color:var(--navy); margin-bottom:1.75rem; }
+    .travel-item { display:flex; gap:1rem; align-items:flex-start; padding:1.1rem 0; border-bottom:1px solid var(--border); }
+    .travel-icon { font-size:1.2rem; width:28px; text-align:center; flex-shrink:0; margin-top:.1rem; }
+    .travel-title { font-size:.88rem; font-weight:500; color:var(--text); margin-bottom:.25rem; }
+    .travel-desc { font-size:.82rem; color:var(--muted); line-height:1.6; font-weight:300; }
+
+    /* ─── FOOTER ─── */
+    footer { background:#0D1830; padding:4rem 2rem 2rem; }
+    .footer-grid { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:3rem; }
+    .footer-logo { font-family:'Cormorant Garamond',serif; font-size:1.9rem; color:#fff; margin-bottom:.85rem; }
+    .footer-tagline { font-size:.83rem; color:rgba(255,255,255,.4); line-height:1.75; font-weight:300; margin-bottom:1.75rem; }
+    .footer-social { display:flex; gap:.75rem; }
+    .soc-btn {
+      width:36px; height:36px; border:1px solid rgba(255,255,255,.14); border-radius:50%;
+      display:flex; align-items:center; justify-content:center;
+      color:rgba(255,255,255,.5); font-size:.82rem; text-decoration:none;
+      transition:border-color .3s,color .3s;
+    }
+    .soc-btn:hover { border-color:var(--gold); color:var(--gold); }
+    .footer-col h4 { font-size:.67rem; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.38); margin-bottom:1.2rem; }
+    .footer-col a, .footer-col p {
+      display:block; font-size:.83rem; color:rgba(255,255,255,.6);
+      text-decoration:none; margin-bottom:.55rem; font-weight:300;
+      transition:color .3s; line-height:1.65;
+    }
+    .footer-col a:hover { color:var(--gold-light); }
+    .footer-bottom {
+      max-width:1200px; margin:3rem auto 0;
+      padding-top:1.75rem; border-top:1px solid rgba(255,255,255,.07);
+      display:flex; justify-content:space-between; align-items:center;
+      font-size:.72rem; color:rgba(255,255,255,.27); flex-wrap:wrap; gap:.5rem;
+    }
+
+    /* ─── FLOATING BOOK ─── */
+    .float-book {
+      position:fixed; bottom:2rem; right:2rem; z-index:190;
+      background:var(--gold); color:#fff;
+      padding:.8rem 1.7rem; border-radius:100px;
+      font-size:.75rem; font-weight:500; letter-spacing:.12em; text-transform:uppercase;
+      text-decoration:none;
+      box-shadow:0 8px 28px rgba(184,149,90,.42);
+      transition:transform .3s,box-shadow .3s,opacity .3s;
+      opacity:0; transform:translateY(10px); pointer-events:none;
+    }
+    .float-book.show { opacity:1; transform:translateY(0); pointer-events:auto; }
+    .float-book:hover { transform:translateY(-2px); box-shadow:0 12px 36px rgba(184,149,90,.52); }
+
+    /* ─── RESPONSIVE ─── */
+    @media(max-width:960px){
+      nav { padding:1rem 1.5rem; }
+      .nav-links { display:none; }
+      .story-grid,.hosts-grid,.booking-grid,.location-grid { grid-template-columns:1fr; }
+      .story-img-wrap { height:340px; }
+      .hosts-photo { height:300px; }
+      .rooms-grid { grid-template-columns:1fr; }
+      .exp-grid { grid-template-columns:1fr 1fr; }
+      .gallery-grid { grid-template-columns:1fr 1fr; grid-template-rows:auto; }
+      .gc1 { grid-column:1/3; grid-row:auto; }
+      .gc5 { grid-column:1/3; }
+      .pillars { grid-template-columns:1fr 1fr; }
+      .testi-grid { grid-template-columns:1fr; }
+      .footer-grid { grid-template-columns:1fr 1fr; gap:2rem; }
+      .booking-widget { position:static; }
+    }
+    @media(max-width:600px){
+      .exp-grid { grid-template-columns:1fr; }
+      .gallery-grid { grid-template-columns:1fr; }
+      .gc1,.gc5 { grid-column:auto; }
+      .pillars { grid-template-columns:1fr; }
+      .footer-grid { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ─── NAV ─── -->
+<nav id="mainNav">
+  <a href="#hero" class="nav-logo"><span class="logo-dot"></span>Casita Azul</a>
+  <ul class="nav-links">
+    <li><a href="#story">The House</a></li>
+    <li><a href="#rooms">Rooms</a></li>
+    <li><a href="#experiences">Explore</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#hosts">Hosts</a></li>
+    <li><a href="#booking" class="nav-book">Book Now</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="lang-switch" onclick="alert('Language switching coming soon')">EN · ES · NL</button>
+  </div>
+</nav>
+
+<!-- ─── HERO ─── -->
+<section id="hero">
+  <div class="hero-photo"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      Now welcoming guests · Pravia, Asturias
+    </div>
+    <h1>A historic soul,<br><em>reborn</em></h1>
+    <p class="hero-tagline">
+      A 19th-century Indiano mansion on Pravia's central square —<br>
+      silent for 30 years, rebuilt with love, ready for people who travel slowly.
+    </p>
+    <div class="hero-ctas">
+      <a href="#booking" class="btn-primary">Check Availability</a>
+      <a href="#story" class="btn-ghost">Our Story</a>
+    </div>
+  </div>
+  <div class="hero-scroll"><div class="scroll-line"></div>Scroll</div>
+</section>
+
+<!-- ─── RIBBON ─── -->
+<div class="ribbon">
+  <div class="rib-item"><span class="rib-icon">🌿</span> Green Spain · Asturias</div>
+  <div class="rib-item"><span class="rib-icon">🏛️</span> Indiano Heritage Building</div>
+  <div class="rib-item"><span class="rib-icon">🏔️</span> 90 min · Picos de Europa</div>
+  <div class="rib-item"><span class="rib-icon">🌊</span> 25 min · Atlantic Beaches</div>
+  <div class="rib-item"><span class="rib-icon">🍺</span> Cider & Sidrerías on the doorstep</div>
+  <div class="rib-item"><span class="rib-icon">🛤️</span> Camino del Norte passes through</div>
+</div>
+
+<!-- ─── STORY ─── -->
+<section id="story">
+  <div class="container">
+    <div class="story-grid">
+      <div class="story-img-wrap">
+        <div class="story-img-main">
+          <!-- Historic building facade — replace with actual Casita Azul exterior -->
+          <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=900&q=85&auto=format&fit=crop"
+               alt="The Casita Azul building — 19th-century Indiano architecture in Pravia"
+               loading="lazy" onerror="this.style.display='none'" />
+        </div>
+        <div class="story-img-inset">
+          <!-- Warm sitting room — replace with actual living room photo -->
+          <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=85&auto=format&fit=crop&crop=center"
+               alt="The restored living room of Casita Azul"
+               loading="lazy" onerror="this.style.display='none'" />
+        </div>
+      </div>
+
+      <div class="story-text">
+        <span class="section-label">The Story</span>
+        <h2 class="section-title">Thirty years silent.<br>Two years reborn.</h2>
+        <p class="section-body story-body-1">
+          On Pravia's central square stands a building that once embodied the grandeur of the Indiano era — merchants returned from the Americas who poured their fortunes into palatial homes. For three decades, ours stood empty, its 34 hand-carved wooden windows sealed, its 400 m² of ornate plasterwork slowly fading behind scaffolding and locked doors.
+        </p>
+        <p class="section-body story-body-2">
+          Then Fleur and Carlos fell in love with it. What followed was not a renovation. It was a resurrection — every floorboard relaid, every wall stripped and re-plastered, the original roof re-tiled, each window restored by craftsmen who still knew how. All of it done slowly, deliberately, in the spirit the building deserved.
+        </p>
+        <p class="section-body">
+          The result is a home. And now, yours to stay in.
+        </p>
+        <div class="story-stats">
+          <div><div class="stat-num">34</div><div class="stat-label">Original wood-carved windows, fully restored</div></div>
+          <div><div class="stat-num">400<small style="font-size:1.5rem">m²</small></div><div class="stat-label">Of handcrafted exterior plasterwork</div></div>
+          <div><div class="stat-num">30<small style="font-size:1.5rem">yrs</small></div><div class="stat-label">The building stood silent before we began</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── HOSTS ─── -->
+<section id="hosts">
+  <div class="container">
+    <div class="hosts-grid">
+      <div class="hosts-photo">
+        <!-- Warm outdoor lifestyle — replace with actual photo of Fleur & Carlos -->
+        <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=900&q=85&auto=format&fit=crop&crop=faces,center"
+             alt="Fleur and Carlos, your hosts at Casita Azul"
+             loading="lazy" onerror="this.style.display='none'" />
+        <div class="hosts-photo-caption">Fleur &amp; Carlos · Your Hosts</div>
+      </div>
+      <div class="hosts-text">
+        <span class="section-label">Your Hosts</span>
+        <h2 class="section-title">Meet Fleur &amp; Carlos</h2>
+        <p class="section-body">
+          Fleur grew up in the Netherlands and spent years managing island retreats and luxury restaurants before following Carlos — and her heart — to Asturias. Carlos is from here. He knows the fish market vendor by name, the best sidrería table to grab on a rainy Tuesday, and exactly which trail through the chestnut forest takes you to the waterfall nobody else finds.
+        </p>
+        <p class="section-body" style="margin-top:1rem;">
+          Together they spent two years rebuilding this house with their own hands and a small team of local craftsmen. They live next door. Breakfast is made fresh every morning. They will always have a recommendation for you.
+        </p>
+        <div class="host-tags">
+          <span class="host-tag">🇳🇱 Dutch</span>
+          <span class="host-tag">🇪🇸 Spanish</span>
+          <span class="host-tag">🇬🇧 English</span>
+          <span class="host-tag">Hospitality</span>
+          <span class="host-tag">Local Knowledge</span>
+          <span class="host-tag">Homemade Breakfast</span>
+        </div>
+        <div class="hosts-contact">
+          <a href="https://wa.me/34600000000?text=Hello%20Fleur%20%26%20Carlos!%20I%20have%20a%20question%20about%20Casita%20Azul." class="btn-wa" target="_blank">
+            <span>💬</span> WhatsApp Us
+          </a>
+          <a href="mailto:hello@casita-azul.com" class="btn-email">
+            <span>✉</span> Email Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── ROOMS ─── -->
+<section id="rooms">
+  <div class="container">
+    <div class="rooms-header">
+      <div>
+        <span class="section-label">Accommodation</span>
+        <h2 class="section-title">Three rooms.<br>Each entirely its own.</h2>
+      </div>
+      <p class="rooms-sub">High ceilings, restored windows, period details — paired with everything you need to feel completely at ease. Each room has its own character, its own light, its own reason to stay an extra night.</p>
+    </div>
+
+    <div class="rooms-grid">
+      <!-- Room 1 -->
+      <div class="room-card">
+        <div class="room-photo">
+          <!-- Reading nook: cozy armchair by navy-framed windows -->
+          <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=700&q=85&auto=format&fit=crop"
+               alt="La Galería — reading nook by the navy bay windows"
+               loading="lazy" onerror="this.style.display='none'" />
+          <div class="room-photo-overlay"></div>
+          <span class="room-badge">Most Popular</span>
+        </div>
+        <div class="room-body">
+          <div class="room-name">La Galería</div>
+          <p class="room-desc">The jewel of the house. Opening onto the original glazed galería — the building's iconic floor-to-ceiling bay of navy windows — this room frames the square like a living painting. An armchair, morning light, and nowhere you need to be.</p>
+          <div class="room-features">
+            <span class="room-feature">King bed</span>
+            <span class="room-feature">Bay window nook</span>
+            <span class="room-feature">En-suite bath</span>
+            <span class="room-feature">Square views</span>
+            <span class="room-feature">Heated floors</span>
+          </div>
+          <div class="room-footer">
+            <div class="room-price">€185 <span>/ night</span></div>
+            <a href="#booking" class="btn-room">Book Room</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Room 2 -->
+      <div class="room-card">
+        <div class="room-photo">
+          <!-- Bright, warm hotel bedroom with large windows and warm-coloured linen -->
+          <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=700&q=85&auto=format&fit=crop"
+               alt="El Jardín — garden-facing bedroom"
+               loading="lazy" onerror="this.style.display='none'" />
+          <div class="room-photo-overlay"></div>
+        </div>
+        <div class="room-body">
+          <div class="room-name">El Jardín</div>
+          <p class="room-desc">Quieter and garden-facing, this room looks out over the back terrace and the valley beyond. Warm saffron curtains, a globe pendant lamp, and the birdsong that wakes you before your alarm. Ideal for long-stay guests and light sleepers.</p>
+          <div class="room-features">
+            <span class="room-feature">Double bed</span>
+            <span class="room-feature">Garden & valley views</span>
+            <span class="room-feature">Private bathroom</span>
+            <span class="room-feature">Reading corner</span>
+            <span class="room-feature">Work desk</span>
+          </div>
+          <div class="room-footer">
+            <div class="room-price">€145 <span>/ night</span></div>
+            <a href="#booking" class="btn-room">Book Room</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Room 3 — Suite -->
+      <div class="room-card">
+        <div class="room-photo">
+          <!-- Spacious luxury hotel suite with sitting area and wooden floors -->
+          <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe2e2?w=700&q=85&auto=format&fit=crop"
+               alt="El Salón Suite — top-floor suite with sitting room"
+               loading="lazy" onerror="this.style.display='none'" />
+          <div class="room-photo-overlay"></div>
+          <span class="room-badge">Suite</span>
+        </div>
+        <div class="room-body">
+          <div class="room-name">El Salón Suite</div>
+          <p class="room-desc">The full top-floor experience. A private sitting room with an original exposed beam, a velvet sofa, and arched windows flooding the space with light — plus a bedroom and an en-suite bathroom with a backlit mirror and gold fittings. Perfect for a week or more.</p>
+          <div class="room-features">
+            <span class="room-feature">King bed</span>
+            <span class="room-feature">Private sitting room</span>
+            <span class="room-feature">Luxury en-suite</span>
+            <span class="room-feature">Exposed timber beam</span>
+            <span class="room-feature">Panoramic views</span>
+            <span class="room-feature">Mini-kitchen</span>
+          </div>
+          <div class="room-footer">
+            <div class="room-price">€240 <span>/ night</span></div>
+            <a href="#booking" class="btn-room">Book Suite</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="rooms-note">All rates include a handmade Asturian breakfast · 2-night minimum stay · Rates vary by season</p>
+  </div>
+</section>
+
+<!-- ─── EXPERIENCES ─── -->
+<section id="experiences">
+  <div class="container">
+    <div class="exp-header">
+      <div>
+        <span class="section-label">The Region</span>
+        <h2 class="section-title">Green Spain at your door</h2>
+      </div>
+      <p class="section-body" style="max-width:380px;">Thirty minutes can take you from a mountain pass to an empty Atlantic beach. We'll help you plan every day — or do absolutely nothing at all.</p>
+    </div>
+  </div>
+
+  <div class="exp-grid">
+
+    <!-- 1. Picos de Europa -->
+    <div class="exp-card">
+      <div class="exp-bg" style="background-image:url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=85&auto=format&fit=crop');"></div>
+      <div class="exp-overlay"></div>
+      <div class="exp-body">
+        <span class="exp-distance">≈ 90 min drive</span>
+        <div class="exp-name">Picos de Europa</div>
+        <p class="exp-desc">Spain's most dramatic national park — limestone giants with the legendary Ruta del Cares carved into the gorge. The Lagos de Covadonga glacial lakes. Take the day. Take two.</p>
+      </div>
+    </div>
+
+    <!-- 2. Atlantic Beaches -->
+    <div class="exp-card">
+      <div class="exp-bg" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=85&auto=format&fit=crop');"></div>
+      <div class="exp-overlay"></div>
+      <div class="exp-body">
+        <span class="exp-distance">25 – 40 min drive</span>
+        <div class="exp-name">Atlantic Beaches &amp; Surf</div>
+        <p class="exp-desc">Asturias has 200+ beaches — wild, wide, rarely crowded. Salinas for surf, Rodiles for legendary barrels, Playa de San Juan for golden sand. All on the same coastline.</p>
+      </div>
+    </div>
+
+    <!-- 3. Cider & Food -->
+    <div class="exp-card">
+      <div class="exp-bg" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=85&auto=format&fit=crop');"></div>
+      <div class="exp-overlay"></div>
+      <div class="exp-body">
+        <span class="exp-distance">In town & 15 min</span>
+        <div class="exp-name">Cider, Fabada &amp; Sidrerías</div>
+        <p class="exp-desc">Asturian cuisine is one of Spain's best-kept secrets. Fabada with morcilla, fresh Nalón salmon, Cabrales cheese, and cider poured from height. We know the real places.</p>
+      </div>
+    </div>
+
+    <!-- 4. Camino del Norte -->
+    <div class="exp-card">
+      <div class="exp-bg" style="background-image:url('https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&q=85&auto=format&fit=crop');"></div>
+      <div class="exp-overlay"></div>
+      <div class="exp-body">
+        <span class="exp-distance">Passes through Pravia</span>
+        <div class="exp-name">Camino del Norte</div>
+        <p class="exp-desc">The northern Camino runs through this landscape — mountains on one side, the Cantabrian Sea on the other. Walk a stage, or commit to a week. Casita Azul is the perfect base.</p>
+      </div>
+    </div>
+
+    <!-- 5. Heritage -->
+    <div class="exp-card">
+      <div class="exp-bg" style="background-image:url('https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=800&q=85&auto=format&fit=crop');"></div>
+      <div class="exp-overlay"></div>
+      <div class="exp-body">
+        <span class="exp-distance">Walking distance</span>
+        <div class="exp-name">Pre-Romanesque Heritage</div>
+        <p class="exp-desc">The Iglesia de Santianes is one of Spain's oldest Christian churches. The Route of the Indianos reveals extraordinary architecture from the returning Americas emigrants. History, no crowds.</p>
+      </div>
+    </div>
+
+    <!-- 6. River & Cycling -->
+    <div class="exp-card">
+      <div class="exp-bg" style="background-image:url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&q=85&auto=format&fit=crop');"></div>
+      <div class="exp-overlay"></div>
+      <div class="exp-body">
+        <span class="exp-distance">From the door</span>
+        <div class="exp-name">Cycling, Kayaking &amp; Rivers</div>
+        <p class="exp-desc">The Nalón and Narcea rivers are legendary for salmon and kayaking. Cycle routes wind through chestnut forests and apple orchards. We keep bikes. We'll arrange the rest.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── GALLERY ─── -->
+<section id="gallery">
+  <div class="gallery-head">
+    <div>
+      <span class="section-label">Gallery</span>
+      <h2 class="section-title">Life at Casita Azul</h2>
+    </div>
+    <a href="https://www.instagram.com/casitaazulpravia/" target="_blank" class="gallery-link">Follow @casitaazulpravia →</a>
+  </div>
+
+  <div class="gallery-grid">
+    <!-- gc1: large vertical — the building / European architecture -->
+    <div class="gc gc1">
+      <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=900&q=85&auto=format&fit=crop"
+           alt="Casita Azul — the building exterior"
+           loading="lazy" onerror="this.style.display='none'" />
+      <span class="gc-label">The House · Pravia</span>
+    </div>
+    <!-- gc2: bright interior light / living space -->
+    <div class="gc gc2">
+      <img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?w=500&q=85&auto=format&fit=crop"
+           alt="La Galería — light through the navy bay windows"
+           loading="lazy" onerror="this.style.display='none'" />
+      <span class="gc-label">La Galería · Interior</span>
+    </div>
+    <!-- gc3: artisan Asturian breakfast -->
+    <div class="gc gc3">
+      <img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=500&q=85&auto=format&fit=crop"
+           alt="Handmade Asturian breakfast at Casita Azul"
+           loading="lazy" onerror="this.style.display='none'" />
+      <span class="gc-label">Breakfast · Every Morning</span>
+    </div>
+    <!-- gc4: mountain landscape — Picos de Europa -->
+    <div class="gc gc4">
+      <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=700&q=85&auto=format&fit=crop"
+           alt="Picos de Europa — 90 minutes from Casita Azul"
+           loading="lazy" onerror="this.style.display='none'" />
+      <span class="gc-label">Picos de Europa · 90 min</span>
+    </div>
+    <!-- gc5: wide — lush green Asturian valley -->
+    <div class="gc gc5">
+      <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1000&q=85&auto=format&fit=crop"
+           alt="Green Asturian hills and valleys surrounding Pravia"
+           loading="lazy" onerror="this.style.display='none'" />
+      <span class="gc-label">Green Asturias · Nalón Valley</span>
+    </div>
+    <!-- gc6: food & cider culture -->
+    <div class="gc gc6">
+      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=500&q=85&auto=format&fit=crop"
+           alt="Asturian food culture — fabada, jamón, and cider"
+           loading="lazy" onerror="this.style.display='none'" />
+      <span class="gc-label">Asturian Gastronomy</span>
+    </div>
+  </div>
+</section>
+
+<!-- ─── BOOKING ─── -->
+<section id="booking">
+  <div class="container">
+    <div class="booking-grid">
+      <div>
+        <span class="section-label">Reservations</span>
+        <h2 class="section-title">Plan your stay</h2>
+        <p class="section-body" style="max-width:520px;">
+          We keep the house small — just three rooms — so every guest gets our full attention. Direct bookings always receive the best rate, a welcome drink, and a personally curated list of our favourite local spots.
+        </p>
+        <div class="booking-perks">
+          <div class="booking-perk"><span class="perk-check">✓</span><span>Handmade Asturian breakfast included every morning</span></div>
+          <div class="booking-perk"><span class="perk-check">✓</span><span>Free cancellation up to 7 days before arrival</span></div>
+          <div class="booking-perk"><span class="perk-check">✓</span><span>Welcome cider &amp; local cheeses on arrival</span></div>
+          <div class="booking-perk"><span class="perk-check">✓</span><span>Personal recommendations from Fleur &amp; Carlos</span></div>
+          <div class="booking-perk"><span class="perk-check">✓</span><span>Bikes available for guests at no charge</span></div>
+          <div class="booking-perk"><span class="perk-check">✓</span><span>Early check-in / late check-out on request</span></div>
+          <div class="booking-perk"><span class="perk-check">✓</span><span>Picnic baskets prepared for your hike days</span></div>
+        </div>
+      </div>
+
+      <div class="booking-widget">
+        <div class="widget-title">Check Availability</div>
+        <p class="widget-sub">Best rates direct · No booking fees</p>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Check-in</label>
+            <input type="date" id="checkin" />
+          </div>
+          <div class="form-group">
+            <label>Check-out</label>
+            <input type="date" id="checkout" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Room</label>
+            <select id="roomSelect">
+              <option value="">Select a room…</option>
+              <option value="galeria">La Galería — €185/night</option>
+              <option value="jardin">El Jardín — €145/night</option>
+              <option value="salon">El Salón Suite — €240/night</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Guests</label>
+            <select>
+              <option>1 guest</option>
+              <option selected>2 guests</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="booking-summary" id="bookingSummary">
+          <div class="sum-row"><span id="sumRoom">Room × nights</span><span id="sumBase">—</span></div>
+          <div class="sum-row"><span>Breakfast (included)</span><span>—</span></div>
+          <div class="sum-row"><span>Local tourism tax (8%)</span><span id="sumTax">—</span></div>
+          <div class="sum-total"><span>Total</span><span id="sumTotal">—</span></div>
+        </div>
+
+        <button class="btn-book-full" id="bookBtn" onclick="calculateBooking()">Check Availability →</button>
+        <p class="widget-note">No payment taken here · We'll confirm availability &amp; send a secure payment link within 4 hours</p>
+
+        <div class="booking-divider"><span>or reach us directly</span></div>
+
+        <a href="https://wa.me/34600000000?text=Hello!%20I%27d%20like%20to%20enquire%20about%20staying%20at%20Casita%20Azul."
+           class="btn-wa-book" target="_blank">
+          <span>💬</span> WhatsApp Fleur &amp; Carlos
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PHILOSOPHY ─── -->
+<section id="philosophy">
+  <div class="container">
+    <span class="section-label">How We Do Things</span>
+    <h2 class="section-title">Small by design.<br>Intentional by nature.</h2>
+    <p class="section-body">We are not a hotel. We are a home that happens to have three rooms. Everything here — the breakfast, the recommendations, the conversation over cider — comes from people who genuinely love this place.</p>
+  </div>
+  <div class="pillars" style="margin-top:4rem;">
+    <div class="pillar">
+      <div class="pillar-icon">🌿</div>
+      <h4>Sustainability</h4>
+      <p>Local builders, regional materials, seasonal food. Breakfast comes from the Thursday market fifty metres away. Nothing packaged, nothing shipped far.</p>
+    </div>
+    <div class="pillar">
+      <div class="pillar-icon">🏠</div>
+      <h4>Heritage</h4>
+      <p>Every restored detail — the plasterwork, the windows, the tilework — honours the craftspeople who built this house 130 years ago. Nothing was replaced if it could be saved.</p>
+    </div>
+    <div class="pillar">
+      <div class="pillar-icon">🤝</div>
+      <h4>Community</h4>
+      <p>We send guests to local restaurants, local guides, local shops. Tourism that puts money back into Pravia and the families who've always been here.</p>
+    </div>
+    <div class="pillar">
+      <div class="pillar-icon">🐢</div>
+      <h4>Slow Travel</h4>
+      <p>Two nights minimum — not because we have to, but because Asturias rewards those who stay. Give it three days and it will change you. Give it a week and you won't want to leave.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── TESTIMONIALS ─── -->
+<section id="testimonials">
+  <div class="container">
+    <span class="section-label">Guest Stories</span>
+    <h2 class="section-title">What people are saying</h2>
+    <div class="testi-grid">
+      <div class="testi">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"We came for a weekend and stayed for a week. Fleur's breakfast alone is worth the trip — but then there's the building, the room, Carlos's restaurant picks, the hike to the lakes… we've already booked for next autumn."</p>
+        <div class="testi-author"><span class="testi-flag">🇳🇱</span> Sophie &amp; Marc · Amsterdam · September 2025</div>
+      </div>
+      <div class="testi">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"The Galería room is unlike anywhere I've ever stayed. Reading a book in that bay window with the square below and mountains behind — this is what travel is supposed to feel like. Completely off the tourist trail."</p>
+        <div class="testi-author"><span class="testi-flag">🇬🇧</span> James R. · London · October 2025</div>
+      </div>
+      <div class="testi">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Fleur and Carlos are remarkable hosts. You can feel the love of the renovation in every single detail. And Asturias itself blew us away completely. We've told everyone we know."</p>
+        <div class="testi-author"><span class="testi-flag">🇸🇪</span> Ingrid &amp; Peter · Stockholm · August 2025</div>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:2rem;font-size:.78rem;color:var(--muted);">
+      ★ Be among our first guests and help shape the Casita Azul experience
+    </p>
+  </div>
+</section>
+
+<!-- ─── LOCATION ─── -->
+<section id="location">
+  <div class="container">
+    <div class="location-grid">
+      <div>
+        <span class="section-label">Find Us</span>
+        <h2 class="section-title">In the heart of Pravia</h2>
+        <p class="section-body" style="margin-bottom:2.5rem;">
+          Casita Azul is on Pravia's central square — a 10-second walk from the Thursday market, 10 minutes from the Nalón river. Asturias Airport is 35 minutes. Oviedo is 40 minutes.
+        </p>
+        <div class="travel-list">
+          <h3>Getting here</h3>
+          <div class="travel-item">
+            <span class="travel-icon">✈️</span>
+            <div>
+              <div class="travel-title">By Air — Asturias Airport (OVD)</div>
+              <div class="travel-desc">35 min drive. Direct flights from Madrid, Barcelona, London, Amsterdam and Brussels. Car hire at the airport. We can arrange a transfer on request.</div>
+            </div>
+          </div>
+          <div class="travel-item">
+            <span class="travel-icon">🚗</span>
+            <div>
+              <div class="travel-title">By Car</div>
+              <div class="travel-desc">From Oviedo: 40 min on the A-63. From Gijón: 45 min. Parking on and around the square. Full directions sent on booking confirmation.</div>
+            </div>
+          </div>
+          <div class="travel-item">
+            <span class="travel-icon">🚌</span>
+            <div>
+              <div class="travel-title">By Bus</div>
+              <div class="travel-desc">ALSA services connect Oviedo to Pravia (≈55 min, €5). Bus stops 200m from the house. See <a href="https://www.alsa.es" target="_blank" style="color:var(--navy);">alsa.es</a> for timetables.</div>
+            </div>
+          </div>
+          <div class="travel-item">
+            <span class="travel-icon">📍</span>
+            <div>
+              <div class="travel-title">Address</div>
+              <div class="travel-desc">
+                Plaza de la Constitución · 33120 Pravia, Asturias, Spain<br>
+                <a href="https://maps.google.com/?q=Pravia+Asturias+Spain" target="_blank" style="color:var(--navy);font-size:.8rem;">Open in Google Maps →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="map-block">
+        <div class="map-img">
+          <!-- Aerial green landscape / Asturian countryside -->
+          <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&q=85&auto=format&fit=crop"
+               alt="Aerial view of Asturias countryside surrounding Pravia"
+               loading="lazy" onerror="this.style.display='none'" />
+          <div class="map-img-overlay">
+            <div class="map-pin-block">
+              <span style="font-size:1.5rem">📍</span>
+              <strong>Casita Azul</strong>
+              Plaza de la Constitución, Pravia<br>
+              <a href="https://maps.google.com/?q=Pravia+Asturias+Spain" target="_blank">View on Google Maps →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo">Casita Azul</div>
+      <p class="footer-tagline">A 19th-century Indiano mansion reborn as a three-room boutique B&B on Pravia's central square, Asturias. Run by Fleur &amp; Carlos with love, local knowledge, and very good breakfasts.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/casitaazulpravia/" target="_blank" class="soc-btn" aria-label="Instagram">IG</a>
+        <a href="https://www.instagram.com/fleurluijbregts/" target="_blank" class="soc-btn" aria-label="Fleur's Instagram">✦</a>
+        <a href="https://wa.me/34600000000" target="_blank" class="soc-btn" aria-label="WhatsApp">💬</a>
+        <a href="mailto:hello@casita-azul.com" class="soc-btn" aria-label="Email">✉</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>The House</h4>
+      <a href="#rooms">La Galería</a>
+      <a href="#rooms">El Jardín</a>
+      <a href="#rooms">El Salón Suite</a>
+      <a href="#story">Our Story</a>
+      <a href="#hosts">Meet Fleur &amp; Carlos</a>
+    </div>
+    <div class="footer-col">
+      <h4>Asturias</h4>
+      <a href="#experiences">Picos de Europa</a>
+      <a href="#experiences">Beaches &amp; Surf</a>
+      <a href="#experiences">Camino del Norte</a>
+      <a href="#experiences">Food &amp; Cider</a>
+      <a href="#location">Getting Here</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="mailto:hello@casita-azul.com">hello@casita-azul.com</a>
+      <a href="tel:+34600000000">+34 600 000 000</a>
+      <a href="https://wa.me/34600000000" target="_blank">WhatsApp Us</a>
+      <p style="margin-top:1rem;">Plaza de la Constitución<br>Pravia, 33120 Asturias</p>
+      <p style="margin-top:1rem;">
+        <a href="#">Privacy Policy</a><br>
+        <a href="#">Booking Terms</a>
+      </p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025–2026 Casita Azul · Pravia, Asturias · Spain</span>
+    <span>All rates include breakfast · Direct booking = best rate · Minimum 2 nights</span>
+  </div>
+</footer>
+
+<!-- Floating Book Button -->
+<a href="#booking" class="float-book" id="floatBook">Book Now</a>
+
+<script>
+  // Sticky nav + floating button
+  const nav = document.getElementById('mainNav');
+  const floatBook = document.getElementById('floatBook');
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY > 80;
+    nav.classList.toggle('scrolled', scrolled);
+    floatBook.classList.toggle('show', window.scrollY > 600);
+  });
+
+  // Hero subtle parallax
+  const heroBg = document.querySelector('.hero-photo');
+  document.getElementById('hero').classList.add('loaded');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY < window.innerHeight) {
+      heroBg.style.transform = `scale(1) translateY(${window.scrollY * 0.22}px)`;
+    }
+  });
+
+  // Booking calculator
+  function calculateBooking() {
+    const checkin  = document.getElementById('checkin').value;
+    const checkout = document.getElementById('checkout').value;
+    const room     = document.getElementById('roomSelect').value;
+    if (!checkin || !checkout || !room) {
+      alert('Please select check-in date, check-out date, and a room to continue.');
+      return;
+    }
+    const prices = { galeria: 185, jardin: 145, salon: 240 };
+    const names  = { galeria: 'La Galería', jardin: 'El Jardín', salon: 'El Salón Suite' };
+    const nights = Math.round((new Date(checkout) - new Date(checkin)) / 864e5);
+    if (nights < 2) { alert('Minimum stay is 2 nights. Please adjust your dates.'); return; }
+    const base  = prices[room] * nights;
+    const tax   = Math.round(base * 0.08);
+    const total = base + tax;
+    document.getElementById('sumRoom').textContent  = `${names[room]} × ${nights} nights`;
+    document.getElementById('sumBase').textContent  = `€${base}`;
+    document.getElementById('sumTax').textContent   = `€${tax}`;
+    document.getElementById('sumTotal').textContent = `€${total}`;
+    document.getElementById('bookingSummary').style.display = 'block';
+    const btn = document.getElementById('bookBtn');
+    btn.textContent = 'Request to Book →';
+    btn.onclick = () => {
+      window.location.href = `mailto:hello@casita-azul.com?subject=Booking Request — ${names[room]}&body=Hello Fleur %26 Carlos,%0A%0AI'd love to book ${names[room]} from ${checkin} to ${checkout} (${nights} nights, ${total} total including tax).%0A%0APlease confirm availability and let me know next steps.%0A%0AWarm regards`;
+    };
+  }
+
+  // Pre-fill next weekend
+  window.addEventListener('DOMContentLoaded', () => {
+    const today  = new Date();
+    const friday = new Date(today);
+    friday.setDate(today.getDate() + ((5 - today.getDay() + 7) % 7 || 7));
+    const sunday = new Date(friday);
+    sunday.setDate(friday.getDate() + 2);
+    const fmt = d => d.toISOString().split('T')[0];
+    document.getElementById('checkin').value  = fmt(friday);
+    document.getElementById('checkout').value = fmt(sunday);
+  });
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const t = document.querySelector(a.getAttribute('href'));
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior:'smooth' }); }
+    });
+  });
+</script>
+</body>
+</html>
