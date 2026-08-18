@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Pacer - Founder Growth Partnership | Loek Luijbregts</title>
+<meta name="description" content="The Pacer is a six-month founder growth partnership with monthly build sessions, a founder walk and direct access to Strategic Outside-In Partner Loek Luijbregts.">
+<meta name="author" content="Loek Luijbregts">
+<meta name="keywords" content="strategic growth partner, founder positioning, overlooked value, customer value, earned demand, repeatable growth, cycling industry, Tilburg, Netherlands">
+<link rel="canonical" href="https://loekluijbregts.com/the-pacer/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Pacer - Founder Growth Partnership">
+<meta property="og:description" content="A six-month founder growth partnership for turning overlooked value into clearer positioning, stronger opportunities and practical growth.">
+<meta property="og:url" content="https://loekluijbregts.com/the-pacer/">
+<meta property="og:site_name" content="Loek Luijbregts">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Pacer - Founder Growth Partnership">
+<meta name="twitter:description" content="A six-month founder growth partnership for turning overlooked value into clearer positioning, stronger opportunities and practical growth.">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Loek Luijbregts",
+  "url": "https://loekluijbregts.com/",
+  "jobTitle": "Strategic Growth Partner for Founders",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Cycling Incubators B.V.",
+    "url": "https://cyclingincubators.com/"
+  },
+  "email": "loek@cyclingincubators.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "Noord-Brabant",
+    "addressCountry": "NL"
+  },
+  "sameAs": [
+    "https://cyclingincubators.com/",
+    "https://linkedin.com/in/loekluijbregts"
+  ]
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300;1,600&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #f8f5f0;
+    --white: #ffffff;
+    --ink: #1c1814;
+    --ink-mid: #4a4540;
+    --ink-soft: #8a8480;
+    --orange: #d94f0a;
+    --orange-pale: #fdf1eb;
+    --border: #e8e3db;
+    --sand: #f0ebe3;
+  }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 22px 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(248,245,240,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-name {
+    font-family: "DM Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+    opacity: 0.7;
+  }
+
+  .nav-right { display: flex; gap: 32px; align-items: center; }
+
+  .nav-link {
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-link:hover { color: var(--orange); }
+
+  .nav-cta {
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--white);
+    background: var(--orange);
+    text-decoration: none;
+    padding: 10px 24px;
+    transition: all 0.2s;
+    border-radius: 2px;
+  }
+
+  .nav-cta:hover { background: #c44008; }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 80px;
+  }
+
+  .hero-left {
+    padding: 80px 56px 80px 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+
+  .hero-tag {
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 28px;
+    opacity: 0;
+    animation: fadeUp 0.7s 0.2s forwards;
+  }
+
+  .hero-h1 {
+    font-family: "Fraunces", serif;
+    font-weight: 600;
+    font-size: clamp(40px, 5vw, 66px);
+    line-height: 1.08;
+    color: var(--ink);
+    margin-bottom: 32px;
+    letter-spacing: -0.02em;
+    opacity: 0;
+    animation: fadeUp 0.7s 0.35s forwards;
+  }
+
+  .hero-h1 em {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--orange);
+  }
+
+  .hero-sub {
+    font-size: 17px;
+    color: var(--ink-mid);
+    line-height: 1.75;
+    max-width: 420px;
+    margin-bottom: 48px;
+    opacity: 0;
+    animation: fadeUp 0.7s 0.5s forwards;
+  }
+
+  .hero-ctas {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 64px;
+    opacity: 0;
+    animation: fadeUp 0.7s 0.65s forwards;
+  }
+
+  .btn-primary {
+    background: var(--orange);
+    color: white;
+    padding: 14px 36px;
+    font-family: "DM Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: all 0.2s;
+    display: inline-block;
+  }
+
+  .btn-primary:hover { background: #c44008; transform: translateY(-1px); }
+
+  .btn-secondary {
+    border: 1px solid var(--border);
+    color: var(--ink-mid);
+    padding: 14px 36px;
+    font-family: "DM Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: all 0.2s;
+    display: inline-block;
+    background: var(--white);
+  }
+
+  .btn-secondary:hover { border-color: var(--orange); color: var(--orange); }
+
+  .hero-proof {
+    display: flex;
+    gap: 40px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+    opacity: 0;
+    animation: fadeUp 0.7s 0.8s forwards;
+  }
+
+  .proof-num {
+    font-family: "Fraunces", serif;
+    font-weight: 600;
+    font-size: 28px;
+    color: var(--ink);
+    line-height: 1;
+    display: block;
+    letter-spacing: -0.01em;
+  }
+
+  .proof-lbl {
+    font-family: "DM Mono", monospace;
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-top: 4px;
+    display: block;
+  }
+
+  .hero-right {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    display: block;
+    opacity: 0;
+    animation: imgFade 1s 0.4s forwards;
+  }
+
+  .hero-img-caption {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    font-family: "DM Mono", monospace;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+    background: rgba(28,24,20,0.5);
+    padding: 6px 12px;
+    border-radius: 2px;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes imgFade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  /* RECOGNITION STRIP */
+  .recognition {
+    background: var(--white);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 64px 56px;
+  }
+
+  .rec-label {
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .rec-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+
+  .rec-item {
+    background: var(--sand);
+    padding: 32px 28px;
+    border-radius: 2px;
+    transition: background 0.2s;
+  }
+
+  .rec-item:hover { background: var(--orange-pale); }
+
+  .rec-q {
+    font-family: "Fraunces", serif;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.5;
+    color: var(--ink);
+    margin-bottom: 12px;
+  }
+
+  .rec-a {
+    font-size: 13px;
+    color: var(--orange);
+    font-family: "DM Mono", monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  /* ABOUT LOEK */
+  .about {
+    padding: 120px 56px;
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    gap: 80px;
+    align-items: start;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .about-left {}
+
+  .section-eye {
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 24px;
+  }
+
+  .about-h2 {
+    font-family: "Fraunces", serif;
+    font-weight: 600;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-bottom: 32px;
+  }
+
+  .about-h2 em { font-style: italic; font-weight: 300; color: var(--ink-mid); }
+
+  .about-body {
+    font-size: 16px;
+    color: var(--ink-mid);
+    line-height: 1.85;
+    max-width: 560px;
+  }
+
+  .about-body p { margin-bottom: 20px; }
+  .about-body strong { color: var(--ink); font-weight: 500; }
+
+  .about-right {}
+
+  .about-photo {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .photo-caption {
+    font-family: "DM Mono", monospace;
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  /* WHAT HAPPENS */
+  .what-happens {
+    padding: 120px 56px;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .wh-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    margin-bottom: 72px;
+  }
+
+  .wh-h2 {
+    font-family: "Fraunces", serif;
+    font-weight: 600;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+  }
+
+  .wh-h2 em { font-style: italic; font-weight: 300; color: var(--orange); }
+
+  .wh-desc {
+    font-size: 16px;
+    color: var(--ink-mid);
+    line-height: 1.8;
+    padding-top: 8px;
+  }
+
+  .wh-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+
+  .wh-step {
+    background: var(--sand);
+    padding: 40px 32px;
+    border-radius: 2px;
+    transition: background 0.25s;
+    position: relative;
+  }
+
+  .wh-step:hover { background: var(--orange-pale); }
+
+  .step-num {
+    font-family: "Fraunces", serif;
+    font-size: 56px;
+    font-weight: 600;
+    color: rgba(28,24,20,0.06);
+    line-height: 1;
+    margin-bottom: 16px;
+    letter-spacing: -0.03em;
+  }
+
+  .step-title {
+    font-family: "Fraunces", serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--ink);
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+  }
+
+  .step-body {
+    font-size: 14px;
+    color: var(--ink-mid);
+    line-height: 1.75;
+  }
+
+  /* PROOF WITH PHOTO */
+  .proof-section {
+    padding: 120px 56px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .proof-header {
+    margin-bottom: 64px;
+  }
+
+  .proof-header .section-eye { margin-bottom: 16px; }
+
+  .proof-h2 {
+    font-family: "Fraunces", serif;
+    font-weight: 600;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-bottom: 16px;
+  }
+
+  .proof-sub {
+    font-size: 16px;
+    color: var(--ink-soft);
+    max-width: 540px;
+    line-height: 1.7;
+  }
+
+  .proof-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .proof-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .proof-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(28,24,20,0.08);
+  }
+
+  .proof-card-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .proof-card-body { padding: 32px 28px; }
+
+  .proof-card-client {
+    font-family: "DM Mono", monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 12px;
+  }
+
+  .proof-card-result {
+    font-family: "Fraunces", serif;
+    font-weight: 600;
+    font-size: 26px;
+    color: var(--ink);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin-bottom: 12px;
+  }
+
+  .proof-card-desc {
+    font-size: 14px;
+    color: var(--ink-mid);
+    line-height: 1.7;
+  }
+
+  /* TESTIMONIALS */
+  .testimonials {
+    background: var(--ink);
+    padding: 120px 56px;
+  }
+
+  .test-header {
+    margin-bottom: 64px;
+  }
+
+  .test-header .section-eye { color: var(--orange); }
+
+  .test-h2 {
+    font-family: "Fraunces", serif;
+    font-weight: 600;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--cream);
+  }
+
+  .test-h2 em { font-style: italic; font-weight: 300; color: rgba(248,245,240,0.4); }
+
+  .test-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .test-card {
+    border: 1px solid rgba(248,245,240,0.1);
+    padding: 48px 40px;
+    border-radius: 4px;
+    transition: border-color 0.25s;
+  }
+
+  .test-card:hover { border-color: rgba(217,79,10,0.4); }
+
+  .test-quote {
+    font-family: "Fraunces", serif;
+    font-size: 19px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.65;
+    color: rgba(248,245,240,0.75);
+    margin-bottom: 28px;
+    position: relative;
+    padding-top: 12px;
+  }
+
+  .test-quote::before {
+    content: "";
+    display: block;
+    width: 32px;
+    height: 2px;
+    background: var(--orange);
+    margin-bottom: 24px;
+  }
+
+  .test-attr {
+    font-family: "DM Mono", monospace;
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--orange);
+  }
+
+  /* IS THIS YOU */
+  .fit-section {
+    padding: 120px 56px;
+    background: var(--cream);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .fit-header { margin-bottom: 64px; }
+
+  .fit-h2 {
+    font-family: "Fraunces", serif;
+    font-weight: 600;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-bottom: 16px;
+  }
+
+  .fit-h2 em { font-style: italic; font-weight: 300; color: var(--ink-soft); }
+
+  .fit-sub {
+    font-size: 16px;
+    color: var(--ink-soft);
+    max-width: 480px;
+    line-height: 1.7;
+  }
+
+  .fit-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 64px;
+  }
+
+  .fit-col-label {
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid;
+  }
+
+  .fit-col-yes .fit-col-label { color: var(--orange); border-color: var(--orange); }
+  .fit-col-no .fit-col-label { color: var(--ink-soft); border-color: var(--border); }
+
+  .fit-item {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--ink-mid);
+    display: flex;
+    gap: 14px;
+    align-items: baseline;
+  }
+
+  .fit-item-mark {
+    font-family: "DM Mono", monospace;
+    font-size: 13px;
+    flex-shrink: 0;
+  }
+
+  .fit-col-yes .fit-item-mark { color: var(--orange); }
+  .fit-col-no .fit-item-mark { color: var(--border); }
+
+  .fit-cta-row {
+    background: var(--orange-pale);
+    border: 1px solid rgba(217,79,10,0.15);
+    border-radius: 4px;
+    padding: 36px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+
+  .fit-cta-text {
+    font-family: "Fraunces", serif;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--ink);
+    max-width: 480px;
+    line-height: 1.5;
+  }
+
+  /* FINAL CTA */
+  .final-cta {
+    padding: 120px 56px;
+    text-align: center;
+    background: var(--white);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .final-cta::before {
+    content: "";
+    position: absolute;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 600px; height: 300px;
+    background: radial-gradient(ellipse at 50% 100%, rgba(217,79,10,0.07), transparent 70%);
+    pointer-events: none;
+  }
+
+  .final-h2 {
+    font-family: "Fraunces", serif;
+    font-weight: 600;
+    font-size: clamp(40px, 6vw, 72px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .final-h2 em { font-style: italic; font-weight: 300; color: var(--ink-soft); display: block; font-size: 0.72em; margin-top: 8px; }
+
+  .final-sub {
+    font-size: 17px;
+    color: var(--ink-soft);
+    max-width: 440px;
+    margin: 0 auto 48px;
+    line-height: 1.7;
+    position: relative;
+  }
+
+  .final-buttons {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 36px 56px;
+    background: var(--ink);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .footer-brand {
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(248,245,240,0.3);
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+  }
+
+  .footer-links a {
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(248,245,240,0.3);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--orange); }
+
+  /* TWO LANES */
+  .lanes { padding: 120px 56px; background: var(--white); border-bottom: 1px solid var(--border); }
+  .lanes-header { margin-bottom: 48px; }
+  .lanes-h2 { font-family: "Fraunces", serif; font-weight: 600; font-size: clamp(32px, 4vw, 48px); line-height: 1.1; letter-spacing: -0.02em; color: var(--ink); }
+  .lanes-h2 em { font-style: italic; font-weight: 300; color: var(--ink-soft); }
+  .lanes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  .lane-card { display: block; text-decoration: none; border: 1px solid var(--border); border-radius: 4px; padding: 40px; background: var(--cream); transition: border-color 0.2s, transform 0.2s; }
+  .lane-card:hover { border-color: var(--orange); transform: translateY(-2px); }
+  .lane-tag { font-family: "DM Mono", monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 16px; }
+  .lane-title { font-family: "Fraunces", serif; font-weight: 600; font-size: 28px; color: var(--ink); margin-bottom: 12px; }
+  .lane-desc { font-size: 15px; line-height: 1.7; color: var(--ink-mid); margin-bottom: 20px; }
+  .lane-link { font-family: "DM Mono", monospace; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--orange); }
+  .proof-card-wide { grid-column: 1 / -1; border: 1px solid var(--border); border-radius: 4px; background: var(--white); padding: 36px 40px; }
+
+  /* SCROLL REVEAL */
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.65s ease, transform 0.65s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    nav { padding: 18px 24px; }
+    .hero { grid-template-columns: 1fr; }
+    .hero-right { height: 50vw; }
+    .hero-left { padding: 80px 24px 48px; }
+    .recognition, .about, .what-happens, .proof-section, .testimonials, .fit-section, .final-cta, .lanes { padding: 80px 24px; }
+    .about { grid-template-columns: 1fr; }
+    .rec-grid, .wh-steps, .proof-cards, .test-grid, .fit-grid, .lanes-grid { grid-template-columns: 1fr; }
+    .wh-header { grid-template-columns: 1fr; gap: 24px; }
+    .footer { padding: 28px 24px; flex-direction: column; text-align: center; }
+  }
+
+  /* COST OF WAITING */
+  .cost-section { padding: 120px 56px; background: var(--white); border-bottom: 1px solid var(--border); }
+  .cost-header { margin-bottom: 56px; max-width: 720px; }
+  .cost-h2 { font-family: "Fraunces", serif; font-weight: 600; font-size: clamp(32px, 4vw, 48px); line-height: 1.1; letter-spacing: -0.02em; color: var(--ink); margin-bottom: 20px; }
+  .cost-h2 em { font-style: italic; font-weight: 300; color: var(--ink-soft); }
+  .cost-intro { font-size: 16px; color: var(--ink-mid); line-height: 1.7; }
+  .cost-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; margin-bottom: 40px; }
+  .cost-card { border: 1px solid var(--border); border-radius: 4px; background: var(--cream); padding: 36px 32px; display: flex; flex-direction: column; }
+  .cost-tag { font-family: "DM Mono", monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--orange); margin-bottom: 16px; }
+  .cost-title { font-family: "Fraunces", serif; font-weight: 600; font-size: 21px; line-height: 1.25; color: var(--ink); margin-bottom: 14px; }
+  .cost-pain { font-size: 14.5px; line-height: 1.7; color: var(--ink-mid); margin-bottom: 24px; flex-grow: 1; }
+  .cost-amount { font-family: "Fraunces", serif; font-weight: 600; font-size: 26px; color: var(--orange); line-height: 1.1; }
+  .cost-amount-lbl { font-family: "DM Mono", monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); margin-top: 6px; }
+  .cost-kicker { font-family: "Fraunces", serif; font-style: italic; font-weight: 300; font-size: clamp(19px, 2.2vw, 24px); line-height: 1.5; color: var(--ink); max-width: 760px; }
+  .cost-kicker strong { font-weight: 600; font-style: normal; color: var(--orange); }
+
+  /* PRICING */
+  .pricing { padding: 120px 56px; background: var(--white); border-bottom: 1px solid var(--border); }
+  .pricing-header { margin-bottom: 48px; }
+  .price-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; margin-bottom: 28px; }
+  .price-card { border: 1px solid var(--border); border-radius: 4px; background: var(--cream); padding: 36px 32px; }
+  .price-card.primary { border-color: var(--orange); background: var(--orange-pale); }
+  .price-tier { font-family: "DM Mono", monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 14px; }
+  .price-card.primary .price-tier { color: var(--orange); }
+  .price-amount { font-family: "Fraunces", serif; font-weight: 600; font-size: 30px; color: var(--ink); line-height: 1.1; margin-bottom: 4px; }
+  .price-cadence { font-family: "DM Mono", monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 16px; }
+  .price-desc { font-size: 14px; line-height: 1.65; color: var(--ink-mid); }
+  .price-note { font-size: 14px; color: var(--ink-soft); line-height: 1.7; max-width: 640px; }
+
+  @media (max-width: 900px) {
+    .cost-section, .pricing { padding: 80px 24px; }
+    .cost-grid, .price-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-name">Loek Luijbregts</a>
+  <div class="nav-right">
+    <a href="/work/" class="nav-link">Work</a>
+    <a href="#programme" class="nav-link">How it works</a>
+    <a href="#proof" class="nav-link">Proof</a>
+    <a href="#pricing" class="nav-link">Partnership</a>
+    <a href="/writing" class="nav-link">Writing</a>
+    <a href="https://zcal.co/i/vcLERywI" target="_blank" class="nav-cta">Outside-In conversation</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-tag">Strategic Outside-In Partner · Proven, Complex Businesses</div>
+    <h1 class="hero-h1">
+      Your business may be more valuable<br>
+      than your market currently<br>
+      <em>understands.</em>
+    </h1>
+    <p class="hero-sub">I help founders uncover the value they are too close to see, translate it for customers, partners and investors, and turn it into clearer positioning, stronger opportunities and practical growth.</p>
+    <div class="hero-ctas">
+      <a href="https://zcal.co/i/vcLERywI" target="_blank" class="btn-primary">Plan an Outside-In conversation</a>
+      <a href="#programme" class="btn-secondary">See how I work</a>
+    </div>
+    <div class="hero-proof">
+      <div><span class="proof-num">110M+</span><span class="proof-lbl">Earned impressions</span></div>
+      <div><span class="proof-num">10K+</span><span class="proof-lbl">Qualified product leads</span></div>
+      <div><span class="proof-num">€100K+</span><span class="proof-lbl">Partnership value</span></div>
+      <div><span class="proof-num">40+</span><span class="proof-lbl">Growth programmes</span></div>
+    </div>
+    <p class="hero-sub">Especially valuable when people say “we need this” after the demonstration, but struggle to understand it before the conversation. For cycling brands and destinations, my activation practice lives at <a href="https://cyclingincubators.com" target="_blank" rel="noopener" style="color:var(--orange);">Cycling Incubators</a>. Liever Nederlands? <a href="/begeleiding" style="color:var(--orange);">Lees de Nederlandse versie</a>.</p>
+  </div>
+  <div class="hero-right">
+    <img class="hero-img" src="/images/hero-gravaa-global-launch-bram-berkien.jpg" fetchpriority="high" alt="Visma Lease a Bike rider racing during the GRAVAA global launch">
+    <div class="hero-img-caption">Gravaa Global Launch - photo by Bram Berkien</div>
+  </div>
+</section>
+
+<!-- WHY HOW WHAT -->
+<section class="recognition reveal" id="why-how-what">
+  <div class="rec-label">The shortest version - why, how, what</div>
+  <div class="rec-grid">
+    <div class="rec-item">
+      <div class="rec-a" style="margin-bottom:12px;">Why</div>
+      <p class="rec-q">Strong businesses should not need to become louder, more generic or less human to be valued.</p>
+    </div>
+    <div class="rec-item">
+      <div class="rec-a" style="margin-bottom:12px;">How</div>
+      <p class="rec-q">I create distance and direction by asking better questions, recognising patterns and connecting strategy with human stories.</p>
+    </div>
+    <div class="rec-item">
+      <div class="rec-a" style="margin-bottom:12px;">What</div>
+      <p class="rec-q">We turn overlooked value into clear positioning, trusted stories and focused growth your team can repeat.</p>
+    </div>
+  </div>
+  <div class="hero-ctas" style="justify-content:center;margin:40px 0 0;">
+    <a href="https://zcal.co/i/vcLERywI" target="_blank" class="btn-primary">Plan an Outside-In conversation</a>
+    <a href="#fit" class="btn-secondary">Check your fit in 60 seconds</a>
+  </div>
+</section>
+
+<!-- VALUE LEAKS -->
+<section class="cost-section reveal" id="problem">
+  <div class="cost-header">
+    <div class="section-eye">Where valuable businesses get stuck</div>
+    <h2 class="cost-h2">The value is real.<br><em>The market still has to see it.</em></h2>
+    <p class="cost-intro">A strong product does not automatically create a clear story, qualified demand or investor confidence. These three gaps appear repeatedly in founder-led businesses with genuine substance.</p>
+  </div>
+  <div class="cost-grid">
+    <div class="cost-card">
+      <div class="cost-tag">01 · Positioning</div>
+      <div class="cost-title">The business has outgrown its story</div>
+      <p class="cost-pain">Customers value more than your website or proposals currently express. What once explained the business now hides its strongest proof, newest capabilities and most valuable opportunities.</p>
+      <div class="cost-amount">Sharper positioning</div>
+      <div class="cost-amount-lbl">A story customers can recognise and repeat</div>
+    </div>
+    <div class="cost-card">
+      <div class="cost-tag">02 · Stakeholders</div>
+      <div class="cost-title">One message is doing too many jobs</div>
+      <p class="cost-pain">Customers, partners, employees and investors need different reasons to care. When every audience receives the same explanation, a valuable but complex company becomes harder to understand than it needs to be.</p>
+      <div class="cost-amount">Relevant narratives</div>
+      <div class="cost-amount-lbl">The right value for each decision-maker</div>
+    </div>
+    <div class="cost-card">
+      <div class="cost-tag">03 · Activation</div>
+      <div class="cost-title">Too many opportunities stay theoretical</div>
+      <p class="cost-pain">The founder sees ten possible routes forward. The team needs one testable next step. Without small experiments, important ideas either wait for perfection or become expensive projects before anyone has learned what works.</p>
+      <div class="cost-amount">Focused experiments</div>
+      <div class="cost-amount-lbl">Evidence before scale</div>
+    </div>
+  </div>
+  <p class="cost-kicker">I become close enough to understand the business, but remain far enough outside it to see what the people inside can no longer see. <strong>That is the Outside-In advantage.</strong></p>
+</section>
+
+<!-- PROGRAMME -->
+<section class="what-happens reveal" id="programme">
+  <div class="wh-header">
+    <div>
+      <div class="section-eye">Founder Growth Partnership · The Pacer</div>
+      <h2 class="wh-h2">From overlooked value<br>to <em>repeatable growth.</em></h2>
+    </div>
+    <p class="wh-desc">A six-month strategic partnership combining monthly online build sessions, a 90-minute founder walk and direct access between sessions. Not a fixed coaching curriculum: a structured process applied to the commercial reality of your business.</p>
+  </div>
+  <div class="wh-steps">
+    <div class="wh-step">
+      <div class="step-num">01</div>
+      <div class="step-title">Reveal</div>
+      <div class="step-body">We map what you have built, what your best customers genuinely value and where internal assumptions are hiding commercial potential. When useful, I speak with customers or partners to add the perspective no internal workshop can produce.</div>
+    </div>
+    <div class="wh-step">
+      <div class="step-num">02</div>
+      <div class="step-title">Sharpen &amp; test</div>
+      <div class="step-body">We turn insight into clearer positioning, stakeholder-specific messages, stronger offers and small market experiments. The aim is not a polished strategy document; it is evidence about what earns attention, trust and action.</div>
+    </div>
+    <div class="wh-step">
+      <div class="step-num">03</div>
+      <div class="step-title">Embed</div>
+      <div class="step-body">We build what works into decisions, communication and repeatable routines. I stay involved as a second strategic mind and, where specialist execution is needed, help direct the right people without becoming another layer of agency overhead.</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section class="proof-section reveal" id="proof">
+  <div class="proof-header">
+    <div class="section-eye">Proof across different problems</div>
+    <h2 class="proof-h2">Different outcomes.<br>The same underlying ability.</h2>
+    <p class="proof-sub">Find the undervalued potential. Make it understandable. Create the conditions for customers, partners or media to act. Reach matters here only when it contributes to qualified commercial progress.</p>
+  </div>
+  <div class="proof-cards">
+    <div class="proof-card-wide">
+      <div class="proof-card-client">Hero Filmmaker - Solopreneur</div>
+      <div class="proof-card-result">From looking for a €100.000 investor to seeing, showing &amp; selling his true value · 100% ownership · 10x collaboration ROI within 9 months from day 0</div>
+      <p class="proof-card-desc">His original plan was to raise €100.000 and give away part of the business. By uncovering what clients already valued, we created and sold a clearer, higher-value offer. He kept 100% ownership, and the collaboration returned 10x its investment within nine months.</p>
+    </div>
+    <div class="proof-card">
+      <img class="proof-card-img" loading="lazy" src="/images/proof-gravaa.jpg" alt="GRAVAA earned media following Marianne Vos at the Gravel World Championships">
+      <div class="proof-card-body">
+        <div class="proof-card-client">GRAVAA · Strategic marketing &amp; communications · 2024</div>
+        <div class="proof-card-result">Social audience ×3 · 9,000 new subscribers · 30+ global media placements</div>
+        <p class="proof-card-desc">As the first communications hire, I clarified a highly technical product for riders, media and partners. We prepared the earned-media system before the moment arrived, so Marianne Vos winning the Gravel World Championship on GRAVAA became international proof within hours.</p>
+      </div>
+    </div>
+    <div class="proof-card">
+      <img class="proof-card-img" loading="lazy" src="/images/proof-pilot.jpg" alt="Pilot Cycles activation at CyclingWorld Düsseldorf">
+      <div class="proof-card-body">
+        <div class="proof-card-client">Pilot Cycles · Qualified demand · 2026</div>
+        <div class="proof-card-result">9M impressions · 270+ leads for €8,000+ bikes · 100% remote · €0 ad spend</div>
+        <p class="proof-card-desc">When Pilot could not attend CyclingWorld Düsseldorf, I represented the brand on the show floor while running the collaboration with their team 100% remotely. Combined with Morocco and amplification by DT Swiss, Schwalbe, Pinion and Vittoria, the rider-first stories connected premium product proof to measurable demand.</p>
+      </div>
+    </div>
+    <div class="proof-card">
+      <img class="proof-card-img" loading="lazy" src="/images/proof-morocco.jpg" alt="Rider-first Morocco gravel activation">
+      <div class="proof-card-body">
+        <div class="proof-card-client">Morocco Gravel Adventure · Brand collaboration · 2026</div>
+        <div class="proof-card-result">1.9M impressions · 6 integrated partners · 5 days</div>
+        <p class="proof-card-desc">I designed and self-produced a mobile-first field story in which six brands became useful parts of a credible rider experience. The partners earned attention because the audience saw products solving real needs, not logos interrupting an adventure.</p>
+      </div>
+    </div>
+    <div class="proof-card">
+      <img class="proof-card-img" loading="lazy" src="/images/proof-tourism-zuiderwaterlinie.webp" alt="Gravel cycling along the Zuiderwaterlinie route">
+      <div class="proof-card-body">
+        <div class="proof-card-client">Tourism boards · 30+ programmes across Europe, Africa &amp; the USA</div>
+        <div class="proof-card-result">900.000+ route clicks · multiple annual rebookings · €0 license costs, €0 ad spend</div>
+        <p class="proof-card-desc">For organisations including Visit Luxembourg, Cycling in Flanders and Go Türkiye, I connected destination identity to the motivations of real riders, then translated that into strategy, stories, routes and partnerships people could actually use. The approach generated repeatable reach without paid ads or licence costs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials reveal">
+  <div class="test-header">
+    <div class="section-eye">Customer Reviews</div>
+    <h2 class="test-h2">In their own words.<br><em>Unedited.</em></h2>
+  </div>
+  <div class="test-grid">
+    <div class="test-card">
+      <p class="test-quote">His broad perspective on cycle tourism, active mobility and funding, combined with his energy and talent for making new connections, often leads to fresh insights and concrete opportunities. Loek is an agile thinker; his approach is innovative and efficient, setting an example for the future of our sector.</p>
+      <div class="test-attr">Henk Swarttouw · President, European Cyclists' Federation</div>
+    </div>
+    <div class="test-card">
+      <p class="test-quote">When Loek says he's going to do something, he goes for it. "Can't" doesn't exist. He knows how to deal with the unexpected: he can switch gears and act immediately. He is the best at putting together a high-quality media package, informing the press, and getting them excited.</p>
+      <div class="test-attr">Gertjan van Ginderen · CEO, GRAVAA</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO I AM -->
+<section class="about reveal">
+  <div class="about-left">
+    <div class="section-eye">Why founders bring me close</div>
+    <h2 class="about-h2">Close enough to understand.<br><em>Far enough outside to see.</em></h2>
+    <div class="about-body">
+      <p>Founders rarely lack ideas, commitment or expertise. They lack an independent person who understands enough of the full picture to challenge the assumptions everyone inside the business has learned to accept.</p>
+      <p>For four years I ran 40+ growth programmes for small businesses. I then co-founded a cycling media company and learned how honest, specific stories can move riders, partners and international media. Today, through Cycling Incubators B.V., I work close to founders while bringing in specialist talent only where it creates real value.</p>
+      <p>The work has contributed to <strong>110M+ earned impressions, 10,000+ qualified product leads, recurring international clients and partnerships exceeding €100K in value.</strong> Those are not four separate tricks. They came from understanding what mattered, expressing it clearly and acting before the opportunity disappeared.</p>
+      <p>I do not arrive with generic answers. I ask the questions specialists often skip, connect what appears unrelated and help turn clarity into decisions, experiments and growth that your team can continue without me.</p>
+    </div>
+  </div>
+  <div class="about-right">
+    <img class="about-photo" loading="lazy" src="/images/loek-portrait.jpg" alt="Loek Luijbregts">
+    <span class="photo-caption">Loek Luijbregts · Founder, Cycling Incubators B.V.</span>
+  </div>
+</section>
+
+<!-- IS THIS YOU -->
+<section class="fit-section reveal" id="fit">
+  <div class="fit-header">
+    <div class="section-eye">Is this the right kind of challenge?</div>
+    <h2 class="fit-h2">Built for real substance<br><em>that is still hard to explain.</em></h2>
+    <p class="fit-sub">The strongest fit is not a specific industry. It is a proven business whose product, expertise or opportunity is more valuable than its current story and commercial system make visible.</p>
+  </div>
+  <div class="fit-grid">
+    <div class="fit-col-yes">
+      <div class="fit-col-label">This works when you</div>
+      <div class="fit-item"><span class="fit-item-mark">✓</span>Have built a real product, business or body of expertise with evidence that customers value it</div>
+      <div class="fit-item"><span class="fit-item-mark">✓</span>Hear “now I understand it” too often after a long explanation or demonstration</div>
+      <div class="fit-item"><span class="fit-item-mark">✓</span>Need different customers, partners or investors to recognise different parts of the same value</div>
+      <div class="fit-item"><span class="fit-item-mark">✓</span>Want an independent strategic mind who will challenge internal assumptions</div>
+      <div class="fit-item"><span class="fit-item-mark">✓</span>Are willing to test focused ideas before committing a full team or budget</div>
+      <div class="fit-item"><span class="fit-item-mark">✓</span>Want clarity and capability to remain inside the business after our work</div>
+    </div>
+    <div class="fit-col-no">
+      <div class="fit-col-label">This is less useful when you</div>
+      <div class="fit-item"><span class="fit-item-mark">×</span>Want to outsource responsibility and disappear from the work</div>
+      <div class="fit-item"><span class="fit-item-mark">×</span>Need only a hands-on production supplier with no strategic involvement</div>
+      <div class="fit-item"><span class="fit-item-mark">×</span>Have not yet found any evidence that customers value what you sell</div>
+      <div class="fit-item"><span class="fit-item-mark">×</span>Want confirmation more than an honest outside perspective</div>
+      <div class="fit-item"><span class="fit-item-mark">×</span>Prefer one big launch over learning through smaller experiments</div>
+    </div>
+  </div>
+  <div class="fit-cta-row">
+    <p class="fit-cta-text">In 30 minutes, we explore where value may be getting lost between what you have built and what the market currently sees. If I am not the right partner, I will say so.</p>
+    <a href="https://zcal.co/i/vcLERywI" target="_blank" class="btn-primary">Plan an Outside-In conversation</a>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing reveal" id="pricing">
+  <div class="pricing-header">
+    <div class="section-eye">The partnership</div>
+    <h2 class="cost-h2">Six months to reveal,<br><em>test and embed what matters.</em></h2>
+  </div>
+  <div class="price-grid">
+    <div class="price-card">
+      <div class="price-tier">Independent founder · building toward €100K</div>
+      <div class="price-amount">€1,200</div>
+      <div class="price-cadence">per month · excl. VAT</div>
+      <p class="price-desc">For an established independent founder or expert who needs sharper positioning, stronger choices and a second strategic mind. The same three phases, calibrated to a smaller organisation.</p>
+    </div>
+    <div class="price-card primary">
+      <div class="price-tier">Growing business · €100K–€4M</div>
+      <div class="price-amount">€1,500–2,500</div>
+      <div class="price-cadence">per month · confirmed after diagnostic</div>
+      <p class="price-desc">Monthly online build session, founder walk and direct access, moving through Reveal, Sharpen &amp; test, and Embed. Scope reflects the complexity of the business and the number of stakeholders involved.</p>
+    </div>
+    <div class="price-card">
+      <div class="price-tier">Scale-up &amp; enterprise · €4M+</div>
+      <div class="price-amount">Custom</div>
+      <div class="price-cadence">from €5,000 per month</div>
+      <p class="price-desc">For higher-stakes positioning, stakeholder alignment and growth activation. The partnership can expand to additional sessions, customer research, specialist direction and international on-site work.</p>
+    </div>
+  </div>
+  <p class="price-note">Every proposal follows a Founder Value Diagnostic, because revenue alone does not determine the work required. The minimum partnership is six months: long enough to reveal the real opportunity, test it and embed what proves valuable. After month six, the partnership continues month by month. For partners outside the Netherlands and Belgium, in-person sessions are grouped into focused visits rather than monthly travel.</p>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta reveal">
+  <h2 class="final-h2">
+    The first step is seeing<br>what is currently hidden.
+    <em>Start Outside-In.</em>
+  </h2>
+  <p class="final-sub">A 30-minute conversation about the value you have built, the people who still need to understand it and the opportunity that deserves attention first.</p>
+  <div class="final-buttons">
+    <a href="https://zcal.co/i/vcLERywI" target="_blank" class="btn-primary">Plan an Outside-In conversation</a>
+    <a href="https://cyclingincubators.com" target="_blank" rel="noopener" class="btn-secondary">Cycling brand or destination? →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-brand">Loek Luijbregts · Tilburg, Netherlands · 2026</div>
+  <ul class="footer-links">
+    <li><a href="mailto:loek@cyclingincubators.com">loek@cyclingincubators.com</a></li>
+    <li><a href="tel:+31650939434">+316 50 93 94 34</a></li>
+    <li><a href="https://linkedin.com/in/loekluijbregts" target="_blank">LinkedIn</a></li>
+    <li><a href="/begeleiding">Nederlands</a></li>
+    <li><a href="https://cyclingincubators.com" target="_blank" rel="noopener">Cycling Incubators</a></li>
+  </ul>
+</footer>
+
+<script>
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add("visible"); obs.unobserve(e.target); }
+  });
+}, { threshold: 0.08 });
+document.querySelectorAll(".reveal").forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>
