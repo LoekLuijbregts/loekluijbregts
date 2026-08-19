@@ -6,6 +6,28 @@ const site = 'https://loekluijbregts.com';
 const modified = '2026-08-18';
 
 const articles = {
+  'website-images-speed-seo-communication': {
+    seoTitle: 'Website Image Optimisation: Speed, SEO and Trust | Loek Luijbregts',
+    description: 'How relevant, lightweight website images improve loading time, visual decision cues, search visibility and the transfer of business value.',
+    intent: 'Website image optimisation for speed, SEO and trust',
+    category: 'Communication strategy and execution',
+    published: '2026-08-19', modified: '2026-08-19', readTime: '10 minute read',
+    image: '/images/real-mark-gunter-chris-burkard-1200.webp', imageWidth: 1200, imageHeight: 1500,
+    imageAlt: 'Chris Burkard announced as a judge for the tenth Mark Gunter Photo Awards',
+    caption: 'A real project image transfers proof, relevance and credibility while an optimised WebP file keeps the page light.',
+    related: ['help-ideal-customers-buy-the-work-you-love', 'iphone-first-content-creation', 'customer-reviews-are-strategy-research']
+  },
+  'communication-timing-published-beats-perfect': {
+    seoTitle: 'Why Communication Timing Matters More Than Perfection | Loek Luijbregts',
+    description: 'Why successful communication depends on transfer, reception, action, distribution and timing, not only the quality of the finished message.',
+    intent: 'Communication timing, distribution and desired action',
+    category: 'Communication strategy and execution',
+    published: '2026-08-19', modified: '2026-08-19', readTime: '11 minute read',
+    image: '/images/real-gravaa-media-proof.webp', imageWidth: 1600, imageHeight: 900,
+    imageAlt: 'Marianne Vos winning the Gravel World Championships surrounded by international GRAVAA headlines',
+    caption: 'GRAVAA connected credible product proof to the moment the international cycling market already cared.',
+    related: ['build-proof-before-the-launch', 'earned-media-is-borrowed-trust', 'gravaa-case-study']
+  },
   'business-more-valuable-than-proposition': {
     seoTitle: 'How to Write a Stronger Value Proposition | Loek Luijbregts',
     description: 'A practical Outside-In audit for founders who want to uncover hidden customer value and turn it into a clearer proposition, offer and proof.',
@@ -372,6 +394,10 @@ const articles = {
 };
 
 const ctaByCategory = {
+  'Communication strategy and execution': {
+    title: 'Make the valuable truth easier to receive',
+    text: 'Connect the receiver, message, visual proof, timing, channel and next action into communication that can travel and sell.'
+  },
   'Founder positioning and overlooked value': {
     title: 'Make your real value easier to buy',
     text: 'An Outside-In conversation identifies what ideal customers already value, where the proposition loses that value and which proof or offer deserves attention first.'
@@ -551,7 +577,7 @@ function seoGraph(slug, item) {
       {
         '@type': 'Article', '@id': `${canonical}#article`,
         headline, description: item.description, articleSection: item.category,
-        datePublished: item.published, dateModified: modified, inLanguage: 'en',
+        datePublished: item.published, dateModified: item.modified || modified, inLanguage: 'en',
         image: {'@type': 'ImageObject', url: image, width: item.imageWidth, height: item.imageHeight, caption: item.caption},
         author: {'@id': `${site}/#loek-luijbregts`},
         publisher: {'@id': `${site}/#organization`},
@@ -604,8 +630,9 @@ function replaceSeoHead(html, slug, item) {
 
 function visibleDate(item) {
   const published = new Date(`${item.published}T12:00:00Z`).toLocaleDateString('en-GB', {day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC'});
-  const updated = new Date(`${modified}T12:00:00Z`).toLocaleDateString('en-GB', {day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC'});
-  const update = item.published === modified ? '' : ` · Updated ${updated}`;
+  const itemModified = item.modified || modified;
+  const updated = new Date(`${itemModified}T12:00:00Z`).toLocaleDateString('en-GB', {day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC'});
+  const update = item.published === itemModified ? '' : ` · Updated ${updated}`;
   return `By <a href="/">Loek Luijbregts</a> · Published ${published}${update} · ${item.readTime}`;
 }
 
@@ -678,10 +705,10 @@ for (const [slug, item] of Object.entries(articles)) {
   const graph = {
     '@context': 'https://schema.org', '@graph': [
       {'@type': 'Person', '@id': `${site}/#loek-luijbregts`, name: 'Loek Luijbregts', url: `${site}/`, jobTitle: 'Strategic Outside-In Partner and Founder', sameAs: ['https://www.linkedin.com/in/loekluijbregts/', 'https://cyclingincubators.com/']},
-      {'@type': 'CollectionPage', '@id': `${site}/writing/#collection`, url: `${site}/writing/`, name: 'Founder Positioning, Earned Media and Growth Articles', description: 'Practical essays and case studies on founder positioning, earned media, creator partnerships, content systems and cycling or destination marketing.', author: {'@id': `${site}/#loek-luijbregts`}, mainEntity: {'@type': 'ItemList', itemListElement: items}}
+      {'@type': 'CollectionPage', '@id': `${site}/writing/#collection`, url: `${site}/writing/`, name: 'Communication, Founder Positioning, Earned Media and Growth Articles', description: 'Practical essays and case studies on communication, founder positioning, earned media, creator partnerships, content systems and cycling or destination marketing.', author: {'@id': `${site}/#loek-luijbregts`}, mainEntity: {'@type': 'ItemList', itemListElement: items}}
     ]
   };
-  const desc = 'Practical essays and case studies on founder positioning, earned media, creator partnerships, content systems and cycling or destination marketing.';
+  const desc = 'Practical essays and case studies on communication, founder positioning, earned media, creator partnerships, content systems and cycling or destination marketing.';
   const block = `<title>Founder Growth &amp; Earned Media Articles | Loek Luijbregts</title>
 <meta name="description" content="${desc}">
 <meta name="author" content="Loek Luijbregts">
@@ -719,11 +746,12 @@ for (const [slug, item] of Object.entries(articles)) {
   const file = path.join(root, 'sitemap.xml');
   let xml = read(file);
   for (const slug of Object.keys(articles)) {
+    const item = articles[slug];
     const loc = `${site}/${slug}/`;
     const block = new RegExp(`<url>\\s*<loc>${site.replace(/[.*+?^${}()|[\\]\\]/g, '\\$&')}/${slug}/?</loc>[\\s\\S]*?</url>`, 'i');
     const existing = xml.match(block)?.[0];
     const priority = existing?.match(/<priority>([^<]+)<\/priority>/)?.[1] || '0.7';
-    const replacement = `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${modified}</lastmod>\n    <priority>${priority}</priority>\n  </url>`;
+    const replacement = `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${item.modified || modified}</lastmod>\n    <priority>${priority}</priority>\n  </url>`;
     if (existing) xml = xml.replace(block, replacement);
   }
   write(file, xml);
