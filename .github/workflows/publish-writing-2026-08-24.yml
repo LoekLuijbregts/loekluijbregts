@@ -1,0 +1,52 @@
+name: Publish scheduled writing update
+
+on:
+  schedule:
+    - cron: "15 7 24 8 *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Merge the approved writing pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          set -euo pipefail
+
+          expected_date="2026-08-24"
+          current_date="$(date -u +%F)"
+
+          if [ "$EVENT_NAME" != "workflow_dispatch" ] && [ "$current_date" != "$expected_date" ]; then
+            echo "Scheduled release date is $expected_date; today is $current_date. Nothing to publish."
+            exit 0
+          fi
+
+          pr_number="2"
+          state="$(gh pr view "$pr_number" --repo "$REPOSITORY" --json state --jq .state)"
+          draft="$(gh pr view "$pr_number" --repo "$REPOSITORY" --json isDraft --jq .isDraft)"
+          head="$(gh pr view "$pr_number" --repo "$REPOSITORY" --json headRefName --jq .headRefName)"
+          base="$(gh pr view "$pr_number" --repo "$REPOSITORY" --json baseRefName --jq .baseRefName)"
+
+          if [ "$state" != "OPEN" ]; then
+            echo "PR #$pr_number is $state; no merge performed."
+            exit 0
+          fi
+
+          if [ "$head" != "codex/seo-writing-library" ] || [ "$base" != "main" ]; then
+            echo "Unexpected PR branches: $head -> $base"
+            exit 1
+          fi
+
+          if [ "$draft" = "true" ]; then
+            gh pr ready "$pr_number" --repo "$REPOSITORY"
+          fi
+
+          gh pr merge "$pr_number" --repo "$REPOSITORY" --merge
