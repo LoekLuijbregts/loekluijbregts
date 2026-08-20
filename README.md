@@ -10,29 +10,31 @@ Personal brand site for Loek Luijbregts — growth partner and pacer for founder
 
 ## What this site is
 
-This is a personal introduction — the person behind Cycling Incubators B.V. It answers three questions:
+This is a bilingual personal introduction — the person behind Cycling Incubators B.V. Dutch is the default language; `/en/` is the English homepage. It answers three questions:
 
 1. Who is Loek Luijbregts?
 2. What has he actually done?
 3. Is working together worth a 30-minute conversation?
 
-It is intentionally separate from the business site. The two sites alternate stories: this one is personal, rider-led, and honest. The business site handles services, pricing, and conversion.
+It is intentionally separate from the business site. This site introduces Loek's cross-industry Outside-In work, directie- en teamsessies, The Pacer and his writing. Cycling Incubators remains the specialist practice for cycling, outdoor and destination assignments.
 
 ---
 
 ## Site structure
 
-Single HTML file — no build tools, no dependencies, no separate CSS or JS.
+Static HTML and CSS — no build tools or JavaScript dependencies.
 
 ```
 loekluijbregts/
-├── index.html          ← homepage (growth partner positioning, routes to The Pacer & Cycling Incubators)
+├── index.html          ← Dutch homepage (default, with ScoreApp as first step)
+├── en/index.html       ← English homepage
+├── assets/site.css     ← shared homepage design system
 ├── guidance.html       ← The Pacer (EN) — served at /guidance
 ├── begeleiding.html    ← The Pacer (NL) — served at /begeleiding
 ├── writing/            ← essay & case study index
 ├── */index.html        ← individual essays and case studies
 ├── images/             ← site images (extracted from former inline base64)
-├── sitemap.xml         ← all 17 pages
+├── sitemap.xml         ← all indexable pages
 ├── robots.txt
 ├── _redirects          ← Netlify routes (incl. /guidance, /begeleiding)
 └── *.md                ← long-form source/reference content
@@ -47,7 +49,7 @@ Deployed via [Netlify](https://netlify.com). Custom domain managed via Netlify D
 This repo is connected to Netlify with auto-deploy on push to `main`.
 
 To update the site:
-1. Edit `index.html`
+1. Edit the relevant HTML file and, for shared homepage styling, `assets/site.css`
 2. Commit and push to `main`
 3. Netlify auto-deploys within ~60 seconds
 
@@ -58,14 +60,12 @@ To update the site:
 - **Typography:** Fraunces (display, serif) + DM Sans (body) + DM Mono (labels)
 - **Palette:** Cream `#f8f5f0` · Ink `#1c1814` · Orange `#d94f0a`
 - **Philosophy:** Authentic over polished. iPhone-first production. Earned, not bought.
-- **Photos:** Morocco gravel trip, photographed by Youri Zwart
+- **Photos:** Real project evidence and one restrained personal portrait; cycling imagery is used as proof, not as the default identity cue
 
 ---
 
 ## About Loek
 
-Loek Luijbregts is the founder of Cycling Incubators B.V., based in Noord-Brabant, Netherlands. He helps cycling brands, destinations, and tourism boards grow through rider-first earned media — without ad spend.
-
-Nine years in the field. 30+ clients across Europe, Africa, and the USA. 110M+ earned views.
+Loek Luijbregts is a strategic Outside-In partner and the founder of Cycling Incubators B.V., based in Tilburg, Netherlands. He helps founders and leadership teams reveal overlooked value, choose what deserves attention and turn that choice into clearer positioning, trusted stories and focused movement. Cycling and destination work provide specialist proof, not the boundary of his role.
 
 → Full profile: [loekluijbregts.md](./loekluijbregts.md)
