@@ -1,0 +1,15 @@
+{
+  "name": "Loek Luijbregts",
+  "short_name": "Loek",
+  "icons": [
+    {
+      "src": "/images/logo-mark-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "theme_color": "#152042",
+  "background_color": "#F7F9FC",
+  "display": "standalone"
+}
