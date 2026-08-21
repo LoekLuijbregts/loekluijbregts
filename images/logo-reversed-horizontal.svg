@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="360" viewBox="0 0 750 180" role="img" aria-labelledby="title desc">
+  <title id="title">Loek Luijbregts logo voor donkere achtergrond</title>
+  <desc id="desc">Focuskader met wit woordmerk op een marineblauwe achtergrond.</desc>
+  <rect width="750" height="180" rx="18" fill="#152042"/>
+  <g transform="translate(18 26)">
+    <path fill="#FFFFFF" d="M20 18h18v72h72v18H20z"/>
+    <path fill="#1C78FE" d="M108 20v70H90V38H38V20z"/>
+  </g>
+  <text x="174" y="108" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="53" font-weight="700" letter-spacing="-2">Loek Luijbregts</text>
+</svg>
