@@ -52,8 +52,7 @@ function inspect(file) {
     }
     if (!vendorHosts.has(parsed.hostname)) continue;
     const normalized = normalize(raw);
-    const allowed = parsed.hostname === "manychat.partnerlinks.io" ||
-      [...allowedVendorUrls].some((item) => normalize(item) === normalized);
+    const allowed = [...allowedVendorUrls].some((item) => normalize(item) === normalized);
     if (!allowed) failures.push({ file: path.relative(root, file), url: raw });
   }
 }
