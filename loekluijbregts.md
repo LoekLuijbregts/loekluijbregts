@@ -7,7 +7,7 @@
 **LinkedIn:** [linkedin.com/in/loekluijbregts](https://linkedin.com/in/loekluijbregts)  
 **Website:** [loekluijbregts.com](https://loekluijbregts.com)  
 **Business:** [cyclingincubators.com](https://cyclingincubators.com)  
-**Book a call:** [zcal.co/i/vcLERywI](https://zcal.co/i/vcLERywI)
+**Book a call:** [zcal.co/i/vcLERywI](https://zcal.co/i/vcLERywI?via=improve-your-scheduling-tool)
 
 ---
 
@@ -177,7 +177,7 @@ Loek works as a fractional partner — not an agency. This means:
 - €1,200/month for solopreneur exception (under €100K/year revenue)
 - Includes 24/7 helpline, monthly sessions (in-person + online for NL/BE)
 
-**Book a free 30-minute call:** [zcal.co/i/vcLERywI](https://zcal.co/i/vcLERywI)  
+**Book a free 30-minute call:** [zcal.co/i/vcLERywI](https://zcal.co/i/vcLERywI?via=improve-your-scheduling-tool)  
 The call is exploratory — no pitch, no pressure. If there's a fit, you'll know within 30 minutes.
 
 ---
@@ -211,7 +211,7 @@ That is the number Loek works toward. Not because it is achievable in a quarter,
 **Email:** loek@cyclingincubators.com  
 **Phone:** +316 50 93 94 34  
 **LinkedIn:** [linkedin.com/in/loekluijbregts](https://linkedin.com/in/loekluijbregts)  
-**Book a call:** [zcal.co/i/vcLERywI](https://zcal.co/i/vcLERywI)  
+**Book a call:** [zcal.co/i/vcLERywI](https://zcal.co/i/vcLERywI?via=improve-your-scheduling-tool)  
 **Business site:** [cyclingincubators.com](https://cyclingincubators.com)
 
 Cycling Incubators B.V. · Noord-Brabant, Netherlands · KvK registered

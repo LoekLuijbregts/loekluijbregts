@@ -120,5 +120,5 @@ European cycling destination marketing works when it is built on genuine experie
 The opportunity for destinations that have not yet invested in this model is significant. The cycling tourism market is growing. The audience is reachable. The content that works is honest, specific, and produced from inside the experience.
 
 **Contact:** loek@cyclingincubators.com  
-**Book a free 30-minute call:** [zcal.co/i/vcLERywI](https://zcal.co/i/vcLERywI)  
+**Book a free 30-minute call:** [zcal.co/i/vcLERywI](https://zcal.co/i/vcLERywI?via=improve-your-scheduling-tool)  
 **Full profile:** [loekluijbregts.com](https://loekluijbregts.com)

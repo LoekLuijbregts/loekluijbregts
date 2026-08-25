@@ -100,5 +100,5 @@ CyclingWorld Düsseldorf in March 2026: 830,000 views, 86 qualified leads, resha
 The brands and destinations that treat trade shows as earned media moments, and prepare for them accordingly, generate returns that the brands treating them as sales events do not.
 
 **Contact:** loek@cyclingincubators.com  
-**Book a free 30-minute call:** [zcal.co/i/vcLERywI](https://zcal.co/i/vcLERywI)  
+**Book a free 30-minute call:** [zcal.co/i/vcLERywI](https://zcal.co/i/vcLERywI?via=improve-your-scheduling-tool)  
 **Full profile:** [loekluijbregts.com](https://loekluijbregts.com)

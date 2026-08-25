@@ -118,5 +118,5 @@ Social media marketing for cycling brands works when it is built on authentic co
 GRAVAA: social following tripled in 2024, zero paid promotion. Pilot Cycles: 4,500 new followers in six weeks, from two self-initiated trips.
 
 **Contact:** loek@cyclingincubators.com  
-**Book a free 30-minute call:** [zcal.co/i/vcLERywI](https://zcal.co/i/vcLERywI)  
+**Book a free 30-minute call:** [zcal.co/i/vcLERywI](https://zcal.co/i/vcLERywI?via=improve-your-scheduling-tool)  
 **Full profile:** [loekluijbregts.com](https://loekluijbregts.com)

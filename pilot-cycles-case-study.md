@@ -112,5 +112,5 @@ Pilot Cycles, 2026: 9 million impressions, 270+ marketing-qualified leads for â‚
 The sprint is a proof of concept for earned media in the custom bicycle market â€” and a model for how cycling brands with a genuine product and a compelling story can reach their target audience without a media budget.
 
 **Contact:** loek@cyclingincubators.com  
-**Book a free 30-minute call:** [zcal.co/i/vcLERywI](https://zcal.co/i/vcLERywI)  
+**Book a free 30-minute call:** [zcal.co/i/vcLERywI](https://zcal.co/i/vcLERywI?via=improve-your-scheduling-tool)  
 **Full profile:** [loekluijbregts.com](https://loekluijbregts.com)

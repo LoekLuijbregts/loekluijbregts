@@ -652,7 +652,7 @@ function relatedReading(slug, item) {
 function articleCta(slug, item, oldTemplate) {
   const cta = ctaByCategory[item.category];
   const cls = oldTemplate ? 'cta-block article-cta' : 'article-cta';
-  return `<div class="${cls}"><h2>${cta.title}</h2><p>${cta.text}</p><a class="button" data-conversion="outside-in-conversation" data-source-article="${slug}" href="https://zcal.co/i/vcLERywI" target="_blank" rel="noopener">Plan an Outside-In conversation</a></div>`;
+  return `<div class="${cls}"><h2>${cta.title}</h2><p>${cta.text}</p><a class="button" data-conversion="outside-in-conversation" data-source-article="${slug}" href="https://zcal.co/i/vcLERywI?via=improve-your-scheduling-tool" target="_blank" rel="noopener">Plan an Outside-In conversation</a></div>`;
 }
 
 for (const [slug, item] of Object.entries(articles)) {

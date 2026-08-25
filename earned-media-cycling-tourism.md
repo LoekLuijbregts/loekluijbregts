@@ -112,5 +112,5 @@ Earned media in cycling tourism is not a tactic. It is a system built on genuine
 Nine years, 30+ clients, 110 million views, zero ad spend.
 
 **Contact:** loek@cyclingincubators.com  
-**Book a free 30-minute call:** [zcal.co/i/vcLERywI](https://zcal.co/i/vcLERywI)  
+**Book a free 30-minute call:** [zcal.co/i/vcLERywI](https://zcal.co/i/vcLERywI?via=improve-your-scheduling-tool)  
 **Full profile:** [loekluijbregts.com](https://loekluijbregts.com)

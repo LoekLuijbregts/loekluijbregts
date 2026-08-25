@@ -126,5 +126,5 @@ Cycling destination marketing for DMOs works when it is built on genuine experie
 Visit Luxembourg: 90,000+ Komoot route clicks over four years. Cycling in Flanders: four-year ongoing partnership. Go Türkiye: four consecutive rebookings since 2022.
 
 **Contact:** loek@cyclingincubators.com  
-**Book a free 30-minute call:** [zcal.co/i/vcLERywI](https://zcal.co/i/vcLERywI)  
+**Book a free 30-minute call:** [zcal.co/i/vcLERywI](https://zcal.co/i/vcLERywI?via=improve-your-scheduling-tool)  
 **Full profile:** [loekluijbregts.com](https://loekluijbregts.com)

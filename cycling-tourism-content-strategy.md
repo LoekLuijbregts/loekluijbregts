@@ -114,5 +114,5 @@ Cycling tourism content strategy works when it starts from genuine experience, c
 Nine years. 30+ destinations. 110 million earned views. 1,000,000+ Komoot route clicks. Zero ad spend.
 
 **Contact:** loek@cyclingincubators.com  
-**Book a free 30-minute call:** [zcal.co/i/vcLERywI](https://zcal.co/i/vcLERywI)  
+**Book a free 30-minute call:** [zcal.co/i/vcLERywI](https://zcal.co/i/vcLERywI?via=improve-your-scheduling-tool)  
 **Full profile:** [loekluijbregts.com](https://loekluijbregts.com)

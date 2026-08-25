@@ -110,5 +110,5 @@ The international adventure cycling portfolio — Morocco, Turkey, East Africa, 
 Go Türkiye: rebooked four consecutive times since 2022. Morocco: 1.9 million impressions from five days of self-organised riding. The Rift, Gran Guanche, Migration Gravel Race: direct content experience from some of the most distinctive cycling events on earth.
 
 **Contact:** loek@cyclingincubators.com  
-**Book a free 30-minute call:** [zcal.co/i/vcLERywI](https://zcal.co/i/vcLERywI)  
+**Book a free 30-minute call:** [zcal.co/i/vcLERywI](https://zcal.co/i/vcLERywI?via=improve-your-scheduling-tool)  
 **Full profile:** [loekluijbregts.com](https://loekluijbregts.com)

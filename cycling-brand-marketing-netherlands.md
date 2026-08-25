@@ -98,5 +98,5 @@ The Dutch cycling industry has several structural advantages in earned media mar
 Cycling brand marketing in the Netherlands works when it is built on genuine performance, documented from inside real experiences, and distributed through channels where committed cyclists are already paying attention. GRAVAA and Pilot Cycles are both evidence that the earned media model produces results — at scale, without advertising spend, and with a compounding return that grows over time.
 
 **Contact:** loek@cyclingincubators.com  
-**Book a free 30-minute call:** [zcal.co/i/vcLERywI](https://zcal.co/i/vcLERywI)  
+**Book a free 30-minute call:** [zcal.co/i/vcLERywI](https://zcal.co/i/vcLERywI?via=improve-your-scheduling-tool)  
 **Full profile:** [loekluijbregts.com](https://loekluijbregts.com)
