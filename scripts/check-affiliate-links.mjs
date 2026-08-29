@@ -33,6 +33,11 @@ const allowedVendorUrls = new Set([
 
 const failures = [];
 
+// Client proposals can contain their own booking links. They are not part of
+// this site's affiliate-link programme, so keep this audit scoped to the
+// first-party pages it is designed to protect.
+const excludedDirectories = new Set([".git", "node_modules", "WaranaFilmCompany"]);
+
 function normalize(raw) {
   const url = new URL(raw.replaceAll("&amp;", "&"));
   url.hash = "";
@@ -59,7 +64,7 @@ function inspect(file) {
 
 function walk(directory) {
   for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
-    if (entry.name === ".git" || entry.name === "node_modules") continue;
+    if (excludedDirectories.has(entry.name)) continue;
     const full = path.join(directory, entry.name);
     if (entry.isDirectory()) walk(full);
     else if (full.endsWith(".html") || full.endsWith(".mjs") || full.endsWith(".md")) inspect(full);
