@@ -1,0 +1,71 @@
+<div class="page-head">
+  <div class="wrap">
+    <img class="mark" src="{{ROOT}}/img/warana-logo.svg" alt="Warana Film Company" width="401" height="241">
+    <p class="eyebrow">{{hero_eyebrow}}</p>
+    <h1>{{hero_h1}}</h1>
+    <p class="lede" style="margin-top:1.2rem">{{hero_lede}}</p>
+    <div class="note"><p>{{hero_warn}}</p></div>
+  </div>
+</div>
+
+<hr class="rule">
+
+<section id="soorten">
+  <div class="wrap">
+    <p class="eyebrow">{{t_eyebrow}}</p>
+    <h2>{{t_h2}}</h2>
+    <div class="tiers">{{#qa:tiers}}</div>
+
+    <div class="chart">
+      <div class="chart-head">
+        <div>
+          <p class="eyebrow" style="margin-bottom:.45rem">{{c_total_label}}</p>
+          <span class="total tnum">{{c_total}} <span class="unit">{{c_million}}</span></span>
+        </div>
+        <ul class="legend">
+          <li><span class="sw-dot" style="background:var(--t1)"></span>{{c_l1}}</li>
+          <li><span class="sw-dot" style="background:var(--t2)"></span>{{c_l2}}</li>
+          <li><span class="sw-dot" style="background:var(--t3)"></span>{{c_l3}}</li>
+        </ul>
+      </div>
+      <div class="bars">{{#bars}}</div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section id="bronnen">
+  <div class="wrap">
+    <p class="eyebrow">{{d_eyebrow}}</p>
+    <h2>{{d_h2}}</h2>
+    <div class="fin-list">{{#funding}}</div>
+
+    <div class="two" style="margin-top:clamp(38px,5vw,60px)">
+      <div>
+        <h3>{{o_h3}}</h3>
+        <p style="color:var(--dim);margin-top:1rem">{{o_p1}}</p>
+        <p style="color:var(--dim)">{{o_p2}}</p>
+      </div>
+      <div>
+        <h4>{{src_h}}</h4>
+        <ul class="srclist">{{src}}</ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="sig">
+      <p class="eyebrow">{{sig_eyebrow}}</p>
+      <p>{{sig_p1}}</p>
+      <p style="margin-bottom:0">{{sig_p2}}</p>
+      <p class="name">{{sig_name}}</p>
+      <p class="date">{{sig_date}}</p>
+    </div>
+    <p class="foot-meta"><span>{{foot_1}}</span><span>{{foot_2}}</span>
+      <span><a href="mailto:bart@waranafilm.com">bart@waranafilm.com</a></span>
+      <span>{{foot_3}}</span></p>
+  </div>
+</footer>

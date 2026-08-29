@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-en="Warana Brand Book" data-nl="Warana Merkboek">Warana Brand Book</title>
+<meta name="description" content="Colour, type, image rules and writing style for Warana Film Company — read out of the Slate 2026 and sharpened.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#101B2B">
+<meta property="og:title" content="Warana Brand Book">
+<meta property="og:description" content="Colour, type, image rules and writing style for Warana Film Company — read out of the Slate 2026 and sharpened.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap">
+<style>
+/* ============================================================
+   Warana Film Company — case section on loekluijbregts.com
+   Chrome: Loek's site tokens (cream / orange / DM Mono)
+   Content: Warana's world (navy / cream / gold)
+   Type: Instrument Serif (display) + Archivo (everything else)
+   ============================================================ */
+:root{
+  /* Warana */
+  --ink:#101B2B; --ink2:#16243A; --ink3:#1E3050;
+  --line:rgba(237,227,210,.14); --line2:rgba(237,227,210,.26);
+  --cream:#EDE3D2; --dim:rgba(237,227,210,.68); --faint:rgba(237,227,210,.44);
+  --gold:#C9A063; --gold-2:#94734A; --sea:#3D8CA8;
+  --t1:#EDE3D2; --t2:#C9A063; --t3:#94734A;
+  /* Loek chrome */
+  --loek-cream:#F8F5F0; --loek-ink:#1C1814; --loek-orange:#D94F0A; --loek-border:#E5DFD6;
+  /* type */
+  --display:"Instrument Serif",Georgia,"Times New Roman",serif;
+  --ui:"Archivo",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --wrap:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:var(--cream);font-family:var(--ui);
+  font-weight:400;font-size:17px;line-height:1.66;-webkit-font-smoothing:antialiased;
+  font-synthesis-weight:none}
+img{max-width:100%;display:block}
+h1,h2,h3,h4{font-family:var(--display);font-weight:400;margin:0;text-wrap:balance;letter-spacing:0}
+h1{font-size:clamp(2.9rem,7.2vw,5.4rem);line-height:1.0}
+h2{font-size:clamp(2rem,4.3vw,3.15rem);line-height:1.08}
+h3{font-size:1.55rem;line-height:1.18}
+h4{font-size:1.16rem;line-height:1.25}
+p{margin:0 0 1.05em}
+a{color:var(--gold)}
+hr.rule{height:1px;background:var(--line);border:0;margin:0}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:2px}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:clamp(20px,5vw,40px)}
+section{padding-block:clamp(58px,8vw,104px);position:relative}
+.eyebrow{font-family:var(--ui);font-weight:600;font-size:.66rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--gold);margin:0 0 1rem}
+.lede{font-size:clamp(1.06rem,1.8vw,1.26rem);color:var(--dim);max-width:62ch}
+.tnum{font-variant-numeric:tabular-nums}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* ---------- taal ---------- */
+[lang]:where(.langblock){display:contents}
+:root[data-lang="nl"] .langblock[lang="en"]{display:none}
+:root[data-lang="en"] .langblock[lang="nl"]{display:none}
+
+/* ---------- Loek-balk ---------- */
+.chrome{position:sticky;top:0;z-index:60;background:var(--loek-cream);color:var(--loek-ink);
+  border-bottom:1px solid var(--loek-border)}
+.chrome-in{max-width:var(--wrap);margin-inline:auto;padding:10px clamp(20px,5vw,40px);
+  display:flex;flex-wrap:wrap;gap:.7rem 1.2rem;align-items:center;justify-content:space-between}
+.chrome a.home{display:inline-flex;align-items:center;gap:.55rem;color:var(--loek-ink);text-decoration:none;
+  font-size:.66rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase}
+.chrome a.home:hover{color:var(--loek-orange)}
+.chrome .crumb{font-size:.66rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:#827C76}
+.chrome .crumb b{color:var(--loek-orange);font-weight:600}
+.langtoggle{display:inline-flex;border:1px solid var(--loek-border);border-radius:3px;overflow:hidden;background:#fff}
+.langtoggle button{appearance:none;border:0;background:transparent;cursor:pointer;padding:.42rem .78rem;
+  font-family:var(--ui);font-size:.64rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;
+  color:#827C76;transition:.18s}
+.langtoggle button+button{border-left:1px solid var(--loek-border)}
+.langtoggle button:hover{color:var(--loek-ink)}
+.langtoggle button[aria-pressed="true"]{background:var(--loek-orange);color:#fff}
+
+/* ---------- sectienavigatie ---------- */
+.subnav{background:var(--ink2);border-bottom:1px solid var(--line)}
+.subnav-in{max-width:var(--wrap);margin-inline:auto;padding:0 clamp(20px,5vw,40px);
+  display:flex;gap:.2rem;overflow-x:auto;scrollbar-width:none}
+.subnav-in::-webkit-scrollbar{display:none}
+.subnav a{flex:none;padding:.9rem .95rem;color:var(--faint);text-decoration:none;white-space:nowrap;
+  font-size:.66rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  border-bottom:2px solid transparent;transition:.18s}
+.subnav a:hover{color:var(--cream)}
+.subnav a[aria-current="page"]{color:var(--cream);border-bottom-color:var(--gold)}
+
+/* ---------- knoppen ---------- */
+.btn{display:inline-flex;align-items:center;gap:.55rem;padding:.82rem 1.45rem;border-radius:2px;
+  font-family:var(--ui);font-size:.68rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;
+  text-decoration:none;border:1px solid var(--gold);cursor:pointer;transition:.2s}
+.btn-solid{background:var(--gold);color:#101B2B}
+.btn-solid:hover{background:var(--cream);border-color:var(--cream)}
+.btn-ghost{background:transparent;color:var(--cream);border-color:var(--line2)}
+.btn-ghost:hover{border-color:var(--cream)}
+.cta-row{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2.2rem}
+
+/* ---------- bouwstenen ---------- */
+.two{display:grid;gap:clamp(30px,5vw,64px);grid-template-columns:1fr}
+@media(min-width:900px){.two{grid-template-columns:1.05fr .95fr;align-items:start}}
+.facts{display:grid;margin:1.9rem 0 0;border-top:1px solid var(--line)}
+.facts>div{display:grid;grid-template-columns:minmax(108px,.32fr) 1fr;gap:1.1rem;padding:.8rem 0;
+  border-bottom:1px solid var(--line)}
+.facts .k{font-size:.63rem;font-weight:600;letter-spacing:.17em;text-transform:uppercase;color:var(--gold);padding-top:.42em}
+.facts .v{color:var(--dim);font-size:.95rem}
+.facts .v b{color:var(--cream);font-weight:500}
+.badges{display:flex;flex-wrap:wrap;gap:.45rem;margin:1.5rem 0 0;padding:0;list-style:none}
+.badges li{border:1px solid var(--line);padding:.4rem .78rem;font-size:.64rem;font-weight:500;
+  letter-spacing:.13em;text-transform:uppercase;color:var(--dim)}
+.badges li b{color:var(--cream);font-weight:600}
+.stat-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(122px,1fr));gap:1px;
+  background:var(--line);border:1px solid var(--line);border-radius:3px;overflow:hidden;margin-top:1.9rem}
+.stat{background:var(--ink2);padding:1.05rem 1.1rem}
+.stat b{display:block;font-family:var(--display);font-size:2rem;line-height:1;margin-bottom:.35rem;font-variant-numeric:tabular-nums}
+.stat span{font-size:.62rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--faint);line-height:1.45;display:block}
+.callout{border-left:2px solid var(--gold);padding:.15rem 0 .15rem 1.3rem;margin:2rem 0;
+  font-family:var(--display);font-size:clamp(1.2rem,2.4vw,1.62rem);line-height:1.34;color:var(--cream)}
+.callout cite{display:block;font-family:var(--ui);font-style:normal;font-size:.64rem;font-weight:600;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-top:.85rem}
+.note{border:1px solid var(--gold);border-radius:3px;background:rgba(201,160,99,.06);padding:1.15rem 1.3rem;margin-top:2rem}
+.note p:last-child{margin-bottom:0}
+.box{border:1px solid var(--line);border-radius:3px;padding:1.2rem 1.3rem;background:var(--ink2)}
+.box.good{border-left:2px solid var(--gold)}
+.box.bad{border-left:2px solid #A45B4A}
+.box h4{margin-bottom:.65rem}
+.box ul{margin:0;padding-left:1.05rem}
+.box li{margin-bottom:.5rem;color:var(--dim);font-size:.93rem}
+.box li::marker{color:var(--faint)}
+.box li b{color:var(--cream);font-weight:500}
+.dd{display:grid;gap:15px;grid-template-columns:1fr;margin-top:1.7rem}
+@media(min-width:760px){.dd.cols2{grid-template-columns:1fr 1fr}}
+.person-img{border:1px solid var(--line);border-radius:3px;overflow:hidden}
+.cap{font-size:.8rem;color:var(--faint);margin-top:.8rem}
+
+/* ---------- hublinks ---------- */
+.hub{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));margin-top:2.4rem}
+.hubcard{display:flex;flex-direction:column;gap:.5rem;padding:1.35rem 1.4rem 1.5rem;background:var(--ink2);
+  border:1px solid var(--line);border-radius:3px;text-decoration:none;color:inherit;transition:.22s}
+.hubcard:hover{border-color:var(--gold);transform:translateY(-3px)}
+.hubcard .n{font-size:.62rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.hubcard h3{font-size:1.42rem}
+.hubcard p{font-size:.92rem;color:var(--dim);margin:0;flex:1}
+.hubcard .go{font-size:.64rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--cream);
+  margin-top:.55rem;padding-top:.85rem;border-top:1px solid var(--line)}
+
+/* ---------- voettekst ---------- */
+footer.site{background:#0B1421;border-top:1px solid var(--line);padding-block:clamp(44px,6vw,72px)}
+.sig{border:1px solid var(--gold);border-radius:3px;padding:clamp(20px,3.2vw,30px);background:rgba(201,160,99,.055)}
+.sig .name{font-family:var(--display);font-size:1.35rem;margin:1.3rem 0 0}
+.sig .date{font-size:.64rem;font-weight:600;letter-spacing:.17em;text-transform:uppercase;color:var(--gold);margin:.25rem 0 0}
+.foot-meta{display:flex;flex-wrap:wrap;gap:.55rem 1.9rem;margin-top:2.3rem;font-size:.66rem;
+  letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--faint)}
+.foot-meta a{color:inherit}
+
+.page-head{padding-block:clamp(46px,7vw,92px) clamp(40px,6vw,76px)}
+.mark{width:clamp(112px,12vw,150px);height:auto;margin-bottom:clamp(22px,4vw,40px)}
+.page-head h1{max-width:20ch;font-size:clamp(2.5rem,5.6vw,4.2rem)}
+
+.sw-grid{display:grid;gap:13px;grid-template-columns:repeat(auto-fill,minmax(166px,1fr));margin-top:1.9rem}
+.sw{border:1px solid var(--line);border-radius:3px;overflow:hidden}
+.sw .chipc{height:84px}
+.sw .meta{padding:.68rem .78rem .82rem;background:var(--ink2)}
+.sw b{display:block;font-weight:500;font-size:.93rem}
+.sw code{display:block;font-size:.73rem;letter-spacing:.08em;color:var(--gold);margin-top:.18rem;font-variant-numeric:tabular-nums}
+.sw span{display:block;font-size:.74rem;color:var(--faint);margin-top:.32rem;line-height:1.4}
+
+.spec{border:1px solid var(--line);border-radius:3px;background:var(--ink2);
+  padding:clamp(20px,3vw,30px);margin-top:1.4rem}
+.spec .big{font-family:var(--display);font-size:clamp(2.4rem,6.4vw,4.4rem);line-height:1;margin-bottom:.55rem}
+.spec .big.sans{font-family:var(--ui);font-weight:400;font-size:clamp(1.3rem,2.6vw,1.9rem);line-height:1.25}
+.spec .row{display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;font-size:.68rem;letter-spacing:.13em;
+  text-transform:uppercase;font-weight:600;color:var(--faint);padding-top:.95rem;
+  border-top:1px solid var(--line);margin:1rem 0 0}
+
+.ba{display:grid;border:1px solid var(--line);border-radius:3px;overflow:hidden;margin-top:1.3rem}
+@media(min-width:800px){.ba{grid-template-columns:1fr 1fr}}
+.ba>div{padding:1.15rem 1.3rem;background:var(--ink2)}
+.ba>div+div{border-top:1px solid var(--line)}
+@media(min-width:800px){.ba>div+div{border-top:0;border-left:1px solid var(--line)}}
+.ba .tag{font-size:.62rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+  margin-bottom:.65rem;display:block}
+.ba .t-old{color:#C08574}
+.ba .t-new{color:var(--gold)}
+.ba q{display:block;font-size:.97rem;color:var(--dim);line-height:1.6;quotes:none}
+.ba .t-new+q{color:var(--cream)}
+.box code{color:var(--gold);font-size:.86em}
+</style>
+</head>
+<body>
+<div class="chrome">
+  <div class="chrome-in">
+    <a class="home" href="/">&larr;&nbsp; Loek Luijbregts</a>
+    <span class="crumb"><span class="langblock" lang="en">Client work</span><span class="langblock" lang="nl">Werk voor een klant</span> &middot; <b>Warana Film Company</b></span>
+    <div class="langtoggle" role="group" aria-label="Language">
+      <button type="button" data-set="en" aria-pressed="true">EN</button>
+      <button type="button" data-set="nl" aria-pressed="false">NL</button>
+    </div>
+  </div>
+</div>
+<nav class="subnav" aria-label="Sections">
+  <div class="subnav-in"><a href="../"><span class="langblock" lang="en">Overview</span><span class="langblock" lang="nl">Overzicht</span></a><a href="../pitch/"><span class="langblock" lang="en">The pitch page</span><span class="langblock" lang="nl">De pitchpagina</span></a><a href="../brand/" aria-current="page"><span class="langblock" lang="en">Brand book</span><span class="langblock" lang="nl">Merkboek</span></a><a href="../social/"><span class="langblock" lang="en">Social</span><span class="langblock" lang="nl">Social</span></a><a href="../funding/"><span class="langblock" lang="en">Funding</span><span class="langblock" lang="nl">Financiering</span></a></div>
+</nav>
+<div class="langblock" lang="en">
+<div class="page-head">
+  <div class="wrap">
+    <img class="mark" src="../img/warana-logo.svg" alt="Warana Film Company" width="401" height="241">
+    <p class="eyebrow">Brand book · August 2026</p>
+    <h1>Warana already has a house style. Nobody had written it down.</h1>
+    <p class="lede" style="margin-top:1.2rem">Almost everything below comes out of the Slate 2026 itself: the colours, the rhythm, the tone of the loglines. I named it, sharpened it, and changed one thing on purpose. That change is explained where it happens.</p>
+  </div>
+</div>
+
+<hr class="rule">
+
+<section id="kleur">
+  <div class="wrap">
+    <p class="eyebrow">1 · Colour</p>
+    <h2>The base palette</h2>
+    <p class="lede" style="margin-top:1rem">Three colours carry everything. The deep blue is the ground, cream is the ink, gold is the only accent. This brand needs no more than that — and should not be given more.</p>
+    <div class="sw-grid"><div class="sw"><div class="chipc" style="background:#162334"></div>
+  <div class="meta"><b>Deep blue</b><code>#162334</code><span>Ground. The background of every piece, from deck to website.</span></div></div>
+<div class="sw"><div class="chipc" style="background:#E7DCC8"></div>
+  <div class="meta"><b>Cream</b><code>#E7DCC8</code><span>Ink. The logo, all running text, all titles.</span></div></div>
+<div class="sw"><div class="chipc" style="background:#C9A063"></div>
+  <div class="meta"><b>Gold</b><code>#C9A063</code><span>Accent. Labels, buttons, one line per screen. Never for running text.</span></div></div></div>
+    <h3 style="margin-top:2.8rem">And then the part that already exists but has no name</h3>
+    <p style="color:var(--dim);margin-top:.8rem;max-width:64ch">In the slate every project gets its own colour wash over the image. That is not an accident, and it works: you can tell the eight titles apart without adding a single logo. This is a project palette. Use it everywhere — on the site, in the feed, on every document that belongs to a title.</p>
+    <div class="sw-grid"><div class="sw"><div class="chipc" style="background:#135E7B"></div>
+  <div class="meta"><b>Kachhua</b><code>#135E7B</code><span>Ocean blue</span></div></div>
+<div class="sw"><div class="chipc" style="background:#2A3841"></div>
+  <div class="meta"><b>Polar Bear in the War</b><code>#2A3841</code><span>Winter slate</span></div></div>
+<div class="sw"><div class="chipc" style="background:#0C393F"></div>
+  <div class="meta"><b>Under the Red Sea</b><code>#0C393F</code><span>Deep water green</span></div></div>
+<div class="sw"><div class="chipc" style="background:#50241B"></div>
+  <div class="meta"><b>Monkey</b><code>#50241B</code><span>Christmas brown</span></div></div>
+<div class="sw"><div class="chipc" style="background:#292D4A"></div>
+  <div class="meta"><b>A2 Racer</b><code>#292D4A</code><span>Night asphalt</span></div></div>
+<div class="sw"><div class="chipc" style="background:#8C4B2D"></div>
+  <div class="meta"><b>Cape of Good Hope</b><code>#8C4B2D</code><span>Terracotta</span></div></div>
+<div class="sw"><div class="chipc" style="background:#45602D"></div>
+  <div class="meta"><b>Matzy</b><code>#45602D</code><span>Meadow</span></div></div>
+<div class="sw"><div class="chipc" style="background:#556572"></div>
+  <div class="meta"><b>See You Tomorrow</b><code>#556572</code><span>Dune mist</span></div></div></div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section id="letters">
+  <div class="wrap">
+    <p class="eyebrow">2 · Type</p>
+    <h2>Two families, and one deliberate change</h2>
+    <div class="note" style="margin-top:1.6rem"><p>The slate pairs the logo with a serif and a sans that both sit close to whatever a design tool hands you by default. They are not wrong; they are unowned — you have seen them on a hundred other decks. The wordmark WARANA is a Didone: high contrast, thin hairlines, real character. Give it a display face that answers it instead of blending in.</p></div>
+    <div class="spec">
+      <div class="big">Cinema that endures.</div>
+      <p style="color:var(--dim);margin:0">Instrument Serif. High contrast, narrow, cut for headlines — the closest living relative of the wordmark. Titles, loglines and quotes only. Never below 20 pixels: the hairlines disappear.</p>
+      <p class="row"><span>Instrument Serif</span>
+<span>Titles · loglines · quotes</span>
+<span>Line height 1.0–1.2</span></p>
+    </div>
+    <div class="spec">
+      <div class="big sans">Everything that has to be read rather than seen.</div>
+      <p style="color:var(--dim);margin:0">Archivo. A tight grotesque with a straight back and enough weight to hold a label. Running text, tables and captions. Labels always in capitals with generous letter-spacing — that is the only typographic trick in this brand, which is exactly why it works.</p>
+      <p class="row"><span>Archivo</span>
+<span>400 running · 600 labels</span>
+<span>Labels: 0.18em tracking</span></p>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section id="beeld">
+  <div class="wrap">
+    <p class="eyebrow">3 · Image and logo</p>
+    <h2>What to do and what not to</h2>
+    <div class="dd cols2">
+      <div class="box good"><h4>Do</h4><ul><li>Always run images full bleed, with the project's colour wash over them. No white frames.</li>
+<li>Logo in cream on dark, in <code>#111111</code> on light. Both files are ready.</li>
+<li>Keep clear space around the logo, at least the height of the arc on every side.</li>
+<li>Where development images were generated with AI, label them <b>mood image</b>. Financiers can tell anyway, and honesty costs nothing here.</li>
+<li>Leave the documentary photographs from India unfiltered. Those are the only real images you have, and they are worth more than all the renders put together.</li></ul></div>
+      <div class="box bad"><h4>Do not</h4><ul><li>Put the logo on a busy image without darkening what sits behind it. The hairline of the arc vanishes.</li>
+<li>Use gold for running text. It reads badly and turns an accent into a habit.</li>
+<li>Add a fourth and fifth colour because a slide feels empty.</li>
+<li>Stretch, tilt or shadow the wordmark.</li>
+<li>Set stray words in capitals mid-sentence. Capitals are for labels only.</li></ul></div>
+    </div>
+    <div class="note"><p><b>One concrete error currently in the slate.</b> On at least five pages a fragment is repeated: "leidt het park leidt het park", "op haalbaarheid, op haalbaarheid", "welpen heeft welpen heeft gekregen", "Amsterdam, Maastricht, Amsterdam", "die die". A financier reads that as haste. Half an hour of work to fix, and the first thing I would do.</p></div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section id="schrijfstijl">
+  <div class="wrap">
+    <p class="eyebrow">4 · Writing style</p>
+    <h2>Write the way you write loglines, not the way you write your about page</h2>
+    <p class="lede" style="margin-top:1rem">The loglines in the slate are good. They are in the present tense, they run to one sentence, and each one has a person with a problem in it. The company copy around them is abstract and interchangeable. Pull it towards the loglines, not the other way round.</p>
+    <h3 style="margin-top:2.4rem">Five rules</h3>
+    <div class="box" style="margin-top:1.4rem"><ul style="margin:0"><li><b>Start with a person, not a theme.</b> Not "a film about plastic", but "a lawyer who returns to the beach of his childhood".</li>
+<li><b>One number per paragraph, and it has to be right.</b> 4,000 tonnes. 100 weeks. 19 credits. Numbers do the work adjectives cannot.</li>
+<li><b>Present tense for story, past tense for proof.</b> The story is happening now; what you have done is finished.</li>
+<li><b>No word you have to explain before it lands.</b> Cut "character-driven", "inseparably connected", "international ambition" unless there is an example standing next to it.</li>
+<li><b>Say what you want from the reader.</b> Every piece ends with one concrete question, not with "hope to speak soon".</li></ul></div>
+    <h3 style="margin-top:2.6rem">Three before-and-afters, using sentences from the slate</h3>
+    <div class="ba">
+  <div><span class="tag t-old">Now</span><q>Warana Film Company develops and produces character-driven feature films and series with international ambition, where every story is inseparable from the world that defines it.</q></div>
+  <div><span class="tag t-new">Proposed</span><q>Warana makes films where the world a story happens in matters as much as the person it happens to. A zoo in wartime. An air pocket in the Red Sea. A beach in Mumbai under four metres of plastic.</q></div>
+</div>
+<div class="ba">
+  <div><span class="tag t-old">Now</span><q>From that production background, Warana combines creative ambition with a strong focus on feasibility, among other things through innovation and co-productions.</q></div>
+  <div><span class="tag t-new">Proposed</span><q>Bart Willemsen has produced nineteen films and series. In May 2020 he conceived, wrote and shot one of them in twelve days, in the middle of lockdown. At Warana, feasibility is not a promise but a habit.</q></div>
+</div>
+<div class="ba">
+  <div><span class="tag t-old">Now</span><q>Thank you for reading and hopefully speak soon</q></div>
+  <div><span class="tag t-new">Proposed</span><q>Two of these eight titles are looking for a co-producer right now. If you want to know which two, book twenty minutes and you will get a straight answer.</q></div>
+</div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="sig">
+      <p class="eyebrow">What you are looking at</p>
+      <p>This is not a live page from Warana Film Company. It is a proposal. I read the Slate 2026, found the public sources around it, and in one evening built what I think the story deserves. Every image, project and logline comes from Bart's own slate.</p>
+      <p style="margin-bottom:0">The funding stack is my model, not a commitment. The percentages and ceilings inside it were checked against the Netherlands Film Fund, the UK Screen Alliance and Eurimages.</p>
+      <p class="name">Loek Luijbregts</p>
+      <p class="date">August 2026</p>
+    </div>
+    <p class="foot-meta"><span>Warana Film Company</span><span>Amsterdam, the Netherlands</span>
+      <span><a href="mailto:bart@waranafilm.com">bart@waranafilm.com</a></span>
+      <span>Built by Loek Luijbregts</span></p>
+  </div>
+</footer>
+
+</div>
+<div class="langblock" lang="nl">
+<div class="page-head">
+  <div class="wrap">
+    <img class="mark" src="../img/warana-logo.svg" alt="Warana Film Company" width="401" height="241">
+    <p class="eyebrow">Merkboek · augustus 2026</p>
+    <h1>Warana heeft al een huisstijl. Niemand had hem opgeschreven.</h1>
+    <p class="lede" style="margin-top:1.2rem">Bijna alles hieronder komt uit de Slate 2026 zelf: de kleuren, het ritme, de toon van de loglines. Ik heb het benoemd, aangescherpt en één ding bewust veranderd. Dat ene punt leg ik uit op de plek waar het staat.</p>
+  </div>
+</div>
+
+<hr class="rule">
+
+<section id="kleur">
+  <div class="wrap">
+    <p class="eyebrow">1 · Kleur</p>
+    <h2>Het basispalet</h2>
+    <p class="lede" style="margin-top:1rem">Drie kleuren dragen alles. Het diepe blauw is de grond, crème is de inkt, goud is het enige accent. Meer heeft dit merk niet nodig — en meer moet het ook niet krijgen.</p>
+    <div class="sw-grid"><div class="sw"><div class="chipc" style="background:#162334"></div>
+  <div class="meta"><b>Diepblauw</b><code>#162334</code><span>Grond. Achtergrond van elk stuk, van deck tot website.</span></div></div>
+<div class="sw"><div class="chipc" style="background:#E7DCC8"></div>
+  <div class="meta"><b>Crème</b><code>#E7DCC8</code><span>Inkt. Het logo, alle lopende tekst, alle titels.</span></div></div>
+<div class="sw"><div class="chipc" style="background:#C9A063"></div>
+  <div class="meta"><b>Goud</b><code>#C9A063</code><span>Accent. Labels, knoppen, één lijn per scherm. Nooit voor lopende tekst.</span></div></div></div>
+    <h3 style="margin-top:2.8rem">En dan het stuk dat al bestaat maar geen naam heeft</h3>
+    <p style="color:var(--dim);margin-top:.8rem;max-width:64ch">In de slate krijgt elk project een eigen kleurwaas over het beeld. Dat is geen toeval en het werkt: je houdt acht titels uit elkaar zonder dat er één logo bij hoeft. Dit is een projectpalet. Gebruik het overal — op de site, in de feed, op elk document per titel.</p>
+    <div class="sw-grid"><div class="sw"><div class="chipc" style="background:#135E7B"></div>
+  <div class="meta"><b>Kachhua</b><code>#135E7B</code><span>Oceaanblauw</span></div></div>
+<div class="sw"><div class="chipc" style="background:#2A3841"></div>
+  <div class="meta"><b>IJsbeer in de Oorlog</b><code>#2A3841</code><span>Winterleisteen</span></div></div>
+<div class="sw"><div class="chipc" style="background:#0C393F"></div>
+  <div class="meta"><b>Onder de Rode Zee</b><code>#0C393F</code><span>Diepwatergroen</span></div></div>
+<div class="sw"><div class="chipc" style="background:#50241B"></div>
+  <div class="meta"><b>Monkey</b><code>#50241B</code><span>Kerstbruin</span></div></div>
+<div class="sw"><div class="chipc" style="background:#292D4A"></div>
+  <div class="meta"><b>A2 Racer</b><code>#292D4A</code><span>Nachtasfalt</span></div></div>
+<div class="sw"><div class="chipc" style="background:#8C4B2D"></div>
+  <div class="meta"><b>Kaap de Goede Hoop</b><code>#8C4B2D</code><span>Terracotta</span></div></div>
+<div class="sw"><div class="chipc" style="background:#45602D"></div>
+  <div class="meta"><b>Matzy</b><code>#45602D</code><span>Weiland</span></div></div>
+<div class="sw"><div class="chipc" style="background:#556572"></div>
+  <div class="meta"><b>Tot Morgen</b><code>#556572</code><span>Duinmist</span></div></div></div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section id="letters">
+  <div class="wrap">
+    <p class="eyebrow">2 · Letters</p>
+    <h2>Twee families, en één bewuste verandering</h2>
+    <div class="note" style="margin-top:1.6rem"><p>De slate zet naast het logo een serif en een schreefloze. Allebei liggen ze dicht bij wat een ontwerpprogramma je standaard aanreikt. Ze zijn niet fout, ze zijn van niemand — je hebt ze op honderd andere decks gezien. Het woordmerk WARANA is een didone: hoog contrast, dunne haarlijnen, echt karakter. Zet daar een letter naast die antwoordt in plaats van meebeweegt.</p></div>
+    <div class="spec">
+      <div class="big">Cinema die blijft.</div>
+      <p style="color:var(--dim);margin:0">Instrument Serif. Hoog contrast, smal, gesneden voor koppen — de naaste verwant van het woordmerk. Alleen voor titels, loglines en citaten. Nooit onder de 20 pixels: de haarlijnen vallen weg.</p>
+      <p class="row"><span>Instrument Serif</span>
+<span>Titels · loglines · citaten</span>
+<span>Regelafstand 1.0–1.2</span></p>
+    </div>
+    <div class="spec">
+      <div class="big sans">Alles wat gelezen moet worden in plaats van gezien.</div>
+      <p style="color:var(--dim);margin:0">Archivo. Een strakke grotesk met een rechte rug en genoeg gewicht om een label te dragen. Lopende tekst, tabellen en bijschriften. Labels altijd in kapitalen met ruime letterafstand — dat is het enige typografische trucje in dit merk, en daarom werkt het.</p>
+      <p class="row"><span>Archivo</span>
+<span>400 lopend · 600 labels</span>
+<span>Labels: 0.18em letterafstand</span></p>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section id="beeld">
+  <div class="wrap">
+    <p class="eyebrow">3 · Beeld en logo</p>
+    <h2>Wat wel en niet mag</h2>
+    <div class="dd cols2">
+      <div class="box good"><h4>Doen</h4><ul><li>Beeld altijd volledig aflopend, met de kleurwaas van het project eroverheen. Geen witte kaders.</li>
+<li>Logo in crème op donker, in <code>#111111</code> op licht. Beide bestanden staan klaar.</li>
+<li>Houd rond het logo minstens de hoogte van de boog vrij.</li>
+<li>Bij ontwikkelbeeld dat met AI is gemaakt: zet er <b>moodbeeld</b> bij. Financiers zien het toch, en eerlijkheid kost hier niets.</li>
+<li>Laat de documentairefoto's uit India ongefilterd. Dat is het enige echte beeld dat je hebt en het is meer waard dan alle renders samen.</li></ul></div>
+      <div class="box bad"><h4>Niet doen</h4><ul><li>Het logo op een druk beeld zetten zonder verdonkering eronder. De haarlijn van de boog verdwijnt.</li>
+<li>Goud gebruiken voor lopende tekst. Het leest slecht en maakt van een accent een gewoonte.</li>
+<li>Een vierde en vijfde kleur toevoegen omdat een slide leeg voelt.</li>
+<li>Het woordmerk uitrekken, kantelen of van een schaduw voorzien.</li>
+<li>Losse woorden in kapitalen midden in een zin. Kapitalen zijn alleen voor labels.</li></ul></div>
+    </div>
+    <div class="note"><p><b>Eén concrete fout die nu in de slate staat.</b> Op minstens vijf pagina's staan zinsdelen dubbel: "leidt het park leidt het park", "op haalbaarheid, op haalbaarheid", "welpen heeft welpen heeft gekregen", "Amsterdam, Maastricht, Amsterdam", "die die". Een financier leest dat als haast. Het is een half uur werk om weg te halen en het is het eerste wat ik zou doen.</p></div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section id="schrijfstijl">
+  <div class="wrap">
+    <p class="eyebrow">4 · Schrijfstijl</p>
+    <h2>Schrijf zoals je een logline schrijft, niet zoals je een over-pagina schrijft</h2>
+    <p class="lede" style="margin-top:1rem">De loglines in de slate zijn goed. Ze staan in de tegenwoordige tijd, ze zijn één zin, en er zit altijd een mens met een probleem in. De bedrijfsteksten eromheen zijn abstract en verwisselbaar. Trek de bedrijfsteksten naar de loglines toe, niet andersom.</p>
+    <h3 style="margin-top:2.4rem">Vijf regels</h3>
+    <div class="box" style="margin-top:1.4rem"><ul style="margin:0"><li><b>Begin bij een mens, niet bij een thema.</b> Niet "een film over plastic", maar "een advocaat die terugkeert naar het strand van zijn jeugd".</li>
+<li><b>Eén getal per alinea, en het moet kloppen.</b> 4.000 ton. 100 weken. 19 credits. Getallen doen het werk dat bijvoeglijke naamwoorden niet kunnen.</li>
+<li><b>Tegenwoordige tijd bij verhaal, verleden tijd bij bewijs.</b> Het verhaal gebeurt nu; wat je hebt gedaan is af.</li>
+<li><b>Geen woord dat je moet uitleggen voordat het landt.</b> Schrap "karaktergedreven", "onlosmakelijk verbonden", "internationale ambitie" als er geen voorbeeld naast staat.</li>
+<li><b>Zeg wat je van de lezer wilt.</b> Elk stuk eindigt met één concrete vraag, niet met "hopelijk tot snel".</li></ul></div>
+    <h3 style="margin-top:2.6rem">Drie keer voor en na, met zinnen uit de slate</h3>
+    <div class="ba">
+  <div><span class="tag t-old">Nu</span><q>Warana Film Company ontwikkelt en produceert karaktergedreven speelfilms en series met internationale ambitie, waarin elk verhaal onlosmakelijk verbonden is met de wereld waarin het zich afspeelt.</q></div>
+  <div><span class="tag t-new">Voorstel</span><q>Warana maakt films waarin de wereld van een verhaal net zo zwaar weegt als de mens aan wie het gebeurt. Een dierentuin in oorlogstijd. Een luchtbel in de Rode Zee. Een strand in Mumbai onder vier meter plastic.</q></div>
+</div>
+<div class="ba">
+  <div><span class="tag t-old">Nu</span><q>Vanuit die productionele achtergrond combineert Warana creatieve ambitie met een sterke focus op haalbaarheid, onder meer door innovatie en coproducties.</q></div>
+  <div><span class="tag t-new">Voorstel</span><q>Bart Willemsen heeft negentien films en series geproduceerd. In mei 2020 bedacht, schreef en draaide hij er één in twaalf dagen, midden in de lockdown. Haalbaarheid is bij Warana geen belofte maar een gewoonte.</q></div>
+</div>
+<div class="ba">
+  <div><span class="tag t-old">Nu</span><q>Dank voor het lezen en hopelijk tot snel</q></div>
+  <div><span class="tag t-new">Voorstel</span><q>Twee van deze acht titels zoeken op dit moment een coproducent. Als je wilt weten welke, plan dan twintig minuten — dan hoor je het zonder omweg.</q></div>
+</div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="sig">
+      <p class="eyebrow">Wat je hier ziet</p>
+      <p>Dit is geen live pagina van Warana Film Company. Het is een voorstel. Ik heb de Slate 2026 gelezen, de openbare bronnen erbij gezocht en in één avond gebouwd wat het verhaal volgens mij verdient. Alle beelden, projecten en loglines komen uit de slate van Bart zelf.</p>
+      <p style="margin-bottom:0">De financieringsstapel is mijn model, geen toezegging. De percentages en plafonds erin zijn nagekeken bij het Filmfonds, de UK Screen Alliance en Eurimages.</p>
+      <p class="name">Loek Luijbregts</p>
+      <p class="date">Augustus 2026</p>
+    </div>
+    <p class="foot-meta"><span>Warana Film Company</span><span>Amsterdam, Nederland</span>
+      <span><a href="mailto:bart@waranafilm.com">bart@waranafilm.com</a></span>
+      <span>Gebouwd door Loek Luijbregts</span></p>
+  </div>
+</footer>
+
+</div>
+<script>
+(function(){
+  var r=document.documentElement, KEY='warana-lang';
+  function set(l,save){
+    r.dataset.lang=l; r.setAttribute('lang',l);
+    document.querySelectorAll('.langtoggle button').forEach(function(b){
+      b.setAttribute('aria-pressed', String(b.dataset.set===l));
+    });
+    var t=document.querySelector('title[data-'+l+']');
+    if(t) document.title=t.getAttribute('data-'+l);
+    if(save){ try{ localStorage.setItem(KEY,l); }catch(e){} }
+  }
+  var q=new URLSearchParams(location.search).get('lang');
+  var saved=null; try{ saved=localStorage.getItem(KEY); }catch(e){}
+  set(q==='nl'||q==='en' ? q : (saved==='nl'||saved==='en' ? saved : 'en'), false);
+  document.addEventListener('click', function(e){
+    var b=e.target.closest('.langtoggle button'); if(!b) return;
+    set(b.dataset.set,true);
+  });
+})();
+</script>
+</body>
+</html>

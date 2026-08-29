@@ -1,0 +1,228 @@
+{
+  "meta": {
+    "title": {
+      "en": "Warana Film Company — a proposal",
+      "nl": "Warana Film Company — een voorstel"
+    },
+    "description": {
+      "en": "A pitch page, a brand book, a social plan and a funding map for Warana Film Company. Built by Loek Luijbregts from the Slate 2026.",
+      "nl": "Een pitchpagina, een merkboek, een socialplan en een financieringskaart voor Warana Film Company. Door Loek Luijbregts gebouwd op basis van de Slate 2026."
+    }
+  },
+  "hero_eyebrow": {
+    "en": "Proposal · August 2026",
+    "nl": "Voorstel · augustus 2026"
+  },
+  "hero_h1": {
+    "en": "Nineteen producer credits. One website showing a short film from 2020.",
+    "nl": "Negentien producentencredits. Eén website met een korte film uit 2020."
+  },
+  "hero_lede": {
+    "en": "Bart Willemsen is developing eight films and series. One of them, <em>Kachhua</em>, is in funded development with a London co-producer and a BAFTA-winning writer. None of it is visible anywhere. This is what it looks like when it is.",
+    "nl": "Bart Willemsen ontwikkelt acht films en series. Eén daarvan, <em>Kachhua</em>, is in gefinancierde ontwikkeling met een Londense coproducent en een BAFTA-winnende schrijver. Daar is nergens iets van te zien. Zo ziet het eruit als dat wel zo is."
+  },
+  "hero_cta1": {
+    "en": "Start with the pitch page",
+    "nl": "Begin bij de pitchpagina"
+  },
+  "hero_cta2": {
+    "en": "What I found",
+    "nl": "Wat mij opviel"
+  },
+  "hero_meta": {
+    "en": [
+      "<span>Four documents</span>",
+      "<span>Two languages</span>",
+      "<span>Built in one evening</span>"
+    ],
+    "nl": [
+      "<span>Vier documenten</span>",
+      "<span>Twee talen</span>",
+      "<span>In één avond gebouwd</span>"
+    ]
+  },
+  "hub_eyebrow": {
+    "en": "Four parts",
+    "nl": "Vier onderdelen"
+  },
+  "hub_h2": {
+    "en": "Where to go",
+    "nl": "Waar je heen kunt"
+  },
+  "hub_lede": {
+    "en": "The first one is what a financier would see. The other three are the work behind it.",
+    "nl": "Het eerste is wat een financier zou zien. De andere drie zijn het werk daarachter."
+  },
+  "cards": [
+    {
+      "n": {
+        "en": "One",
+        "nl": "Eén"
+      },
+      "title": {
+        "en": "The pitch page",
+        "nl": "De pitchpagina"
+      },
+      "text": {
+        "en": "A beach in Mumbai you can drag from 2015 to 2018 with your thumb. Kachhua, all eight titles with a status filter, the €20 million as a stack, and a working way to book a call.",
+        "nl": "Een strand in Mumbai dat je met je duim van 2015 naar 2018 sleept. Kachhua, alle acht titels met een statusfilter, de €20 miljoen als stapel, en een werkende manier om een gesprek te plannen."
+      },
+      "go": {
+        "en": "Open the pitch page",
+        "nl": "Open de pitchpagina"
+      },
+      "href": "pitch/"
+    },
+    {
+      "n": {
+        "en": "Two",
+        "nl": "Twee"
+      },
+      "title": {
+        "en": "Brand book",
+        "nl": "Merkboek"
+      },
+      "text": {
+        "en": "Warana already has a house style. Nobody had written it down. Colour, type, image rules, and three before-and-afters using Bart's own sentences.",
+        "nl": "Warana heeft al een huisstijl. Niemand had hem opgeschreven. Kleur, letters, beeldregels, en drie keer voor-en-na met Barts eigen zinnen."
+      },
+      "go": {
+        "en": "Open the brand book",
+        "nl": "Open het merkboek"
+      },
+      "href": "brand/"
+    },
+    {
+      "n": {
+        "en": "Three",
+        "nl": "Drie"
+      },
+      "title": {
+        "en": "Social",
+        "nl": "Social"
+      },
+      "text": {
+        "en": "An Instagram grid of nine posts instead of two. Three stories that build to one link. Three LinkedIn posts over three weeks, from no ask to the real one.",
+        "nl": "Een Instagram-raster van negen posts in plaats van twee. Drie stories die naar één link lopen. Drie LinkedIn-posts over drie weken, van geen vraag naar de echte."
+      },
+      "go": {
+        "en": "Open the social plan",
+        "nl": "Open het socialplan"
+      },
+      "href": "social/"
+    },
+    {
+      "n": {
+        "en": "Four",
+        "nl": "Vier"
+      },
+      "title": {
+        "en": "Funding",
+        "nl": "Financiering"
+      },
+      "text": {
+        "en": "Eight kinds of money for one slate, sorted by how certain each one is — and what has to be on the table before you knock on each door.",
+        "nl": "Acht soorten geld voor één slate, gesorteerd op hoe zeker ze zijn — en wat er moet liggen voordat je bij elke deur aanklopt."
+      },
+      "go": {
+        "en": "Open the funding map",
+        "nl": "Open de financieringskaart"
+      },
+      "href": "funding/"
+    }
+  ],
+  "found_eyebrow": {
+    "en": "Reading the slate",
+    "nl": "Bij het lezen van de slate"
+  },
+  "found_h2": {
+    "en": "Four things that were already there",
+    "nl": "Vier dingen die er al waren"
+  },
+  "found_lede": {
+    "en": "None of this is invented. It was all sitting in the deck, in the logo, and on IMDb — just never named.",
+    "nl": "Niets hiervan is verzonnen. Het zat allemaal al in de deck, in het logo en op IMDb — alleen nooit benoemd."
+  },
+  "found": [
+    {
+      "h": {
+        "en": "The film is not called Warana. It is called Kachhua.",
+        "nl": "De film heet niet Warana. Hij heet Kachhua."
+      },
+      "p": {
+        "en": "Warana is the company; <em>Kachhua</em> is the film — Hindi for turtle. It is in co-production with SunnyMarch in London, in development with Grain Media, written by Ayub Khan Din, who wrote <em>East is East</em>. Status: funded development, writer attached. That is the furthest-advanced thing on the entire slate and it appears nowhere online.",
+        "nl": "Warana is het bedrijf; <em>Kachhua</em> is de film — Hindi voor schildpad. De film is een coproductie met SunnyMarch in Londen en wordt ontwikkeld met Grain Media. De schrijver is Ayub Khan Din, die <em>East is East</em> schreef. Status: gefinancierde ontwikkeling, schrijver verbonden. Dat is het verst gevorderde project van de hele slate en het staat nergens online."
+      }
+    },
+    {
+      "h": {
+        "en": "The slate already has a colour system.",
+        "nl": "De slate heeft al een kleursysteem."
+      },
+      "p": {
+        "en": "Every title in the deck carries its own colour wash over the image. Eight colours, used consistently, never named. That is a working brand system that happened by accident. In the brand book I pulled them out of the file and gave each one a name.",
+        "nl": "Elke titel in de deck heeft een eigen kleurwaas over het beeld. Acht kleuren, consequent gebruikt, nooit benoemd. Dat is een werkend merksysteem dat per ongeluk is ontstaan. In het merkboek heb ik ze uit het bestand gelezen en elk een naam gegeven."
+      }
+    },
+    {
+      "h": {
+        "en": "The logo tells the story of the film.",
+        "nl": "Het logo vertelt het verhaal van de film."
+      },
+      "p": {
+        "en": "An arc with a small winged shape underneath — a horizon with a bird above the sea. That is <em>Kachhua</em>, drawn into a logo that sits on a website where <em>Kachhua</em> does not appear.",
+        "nl": "Een boog met een klein gevleugeld vormpje eronder — een horizon met een vogel boven zee. Dat is <em>Kachhua</em>, getekend in een logo dat op een website staat waar <em>Kachhua</em> niet op voorkomt."
+      }
+    },
+    {
+      "h": {
+        "en": "His best writing is about someone else's project.",
+        "nl": "Zijn sterkste tekst gaat over andermans project."
+      },
+      "p": {
+        "en": "About <em>Máxima</em> he wrote: \"the international ambition of the project and the royal richness of the script grabbed me immediately… cast and crew from different countries.\" Word for word, that is the profile of <em>Kachhua</em>. He can say it clearly the moment it is not about him.",
+        "nl": "Over <em>Máxima</em> schreef hij: \"de internationale ambitie van het project en de koninklijke rijkheid van het script grepen mij direct aan… cast en crew uit verschillende landen.\" Woord voor woord is dat het profiel van <em>Kachhua</em>. Hij kan het scherp formuleren zodra het niet over hemzelf gaat."
+      }
+    }
+  ],
+  "check_eyebrow": {
+    "en": "Before anything goes further",
+    "nl": "Voordat dit ergens heen gaat"
+  },
+  "check_h2": {
+    "en": "Three things to check with Bart",
+    "nl": "Drie dingen om met Bart na te lopen"
+  },
+  "check": [
+    {
+      "h": {
+        "en": "SunnyMarch is not the same as Benedict Cumberbatch",
+        "nl": "SunnyMarch is niet hetzelfde als Benedict Cumberbatch"
+      },
+      "p": {
+        "en": "The slate says \"in co-production with SunnyMarch, London\", and that is exactly how it appears here. SunnyMarch is publicly known as Benedict Cumberbatch's production company. A company-level co-production is a different claim from an actor attaching himself to a film, and financiers hold you to that difference. His name is nowhere on these pages until Bart says what is actually signed.",
+        "nl": "De slate zegt \"in coproductie met SunnyMarch, Londen\", en zo staat het hier ook. SunnyMarch is publiek bekend als het productiebedrijf van Benedict Cumberbatch. Een coproductie op bedrijfsniveau is iets anders dan een acteur die zich aan een film verbindt, en op dat verschil word je afgerekend. Zijn naam staat nergens op deze pagina's tot Bart zegt wat er werkelijk getekend is."
+      }
+    },
+    {
+      "h": {
+        "en": "The €20 million is a model, not Bart's number",
+        "nl": "De €20 miljoen is een model, niet Barts getal"
+      },
+      "p": {
+        "en": "Bart never said he is raising €20 million. The figure came from the brief, and I built a credible stack around it to show what a sum like that looks like in practice. The percentages and ceilings in it are real and checked. The split is illustrative. If the real number is €6 million, the page only gets stronger.",
+        "nl": "Bart heeft nergens gezegd dat hij €20 miljoen zoekt. Dat getal kwam uit de opdracht, en ik heb er een geloofwaardige stapel omheen gebouwd om te laten zien hoe zo'n bedrag er in de praktijk uitziet. De percentages en plafonds erin zijn echt en nagekeken. De verdeling is een voorbeeld. Als het werkelijke bedrag €6 miljoen is, wordt de pagina alleen maar sterker."
+      }
+    },
+    {
+      "h": {
+        "en": "This page is not indexed",
+        "nl": "Deze pagina wordt niet geïndexeerd"
+      },
+      "p": {
+        "en": "Eight unannounced titles, an IP licence still under negotiation, and a project being developed with a suicide-prevention foundation. All of it carries a noindex tag and is excluded from the sitemap, so search engines leave it alone. The link works for anyone Bart chooses to send it to. Whether it ever becomes public is his call, not mine.",
+        "nl": "Acht nog niet aangekondigde titels, een IP-licentie die nog in onderhandeling is, en een project dat wordt ontwikkeld met een stichting voor zelfmoordpreventie. Alles draagt een noindex-tag en staat niet in de sitemap, dus zoekmachines laten het met rust. De link werkt voor iedereen aan wie Bart hem stuurt. Of het ooit openbaar wordt, is zijn beslissing en niet de mijne."
+      }
+    }
+  ]
+}

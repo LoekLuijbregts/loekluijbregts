@@ -1,0 +1,60 @@
+<div class="hero-plain">
+  <div class="wrap">
+    <img class="mark" src="{{ROOT}}/img/warana-logo.svg" alt="Warana Film Company" width="401" height="241">
+    <p class="eyebrow">{{hero_eyebrow}}</p>
+    <h1>{{hero_h1}}</h1>
+    <p class="lede" style="margin-top:1.3rem">{{hero_lede}}</p>
+    <div class="cta-row">
+      <a class="btn btn-solid" href="{{ROOT}}/pitch/">{{hero_cta1}}</a>
+      <a class="btn btn-ghost" href="#gevonden">{{hero_cta2}}</a>
+    </div>
+    <p class="hero-meta">{{hero_meta}}</p>
+  </div>
+</div>
+
+<hr class="rule">
+
+<section id="onderdelen">
+  <div class="wrap">
+    <p class="eyebrow">{{hub_eyebrow}}</p>
+    <h2>{{hub_h2}}</h2>
+    <p class="lede" style="margin-top:1rem">{{hub_lede}}</p>
+    <div class="hub">{{#hubcards:cards}}</div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section id="gevonden">
+  <div class="wrap">
+    <p class="eyebrow">{{found_eyebrow}}</p>
+    <h2>{{found_h2}}</h2>
+    <p class="lede" style="margin-top:1rem">{{found_lede}}</p>
+    <div class="qalist">{{#qa:found}}</div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section id="controle">
+  <div class="wrap">
+    <p class="eyebrow">{{check_eyebrow}}</p>
+    <h2>{{check_h2}}</h2>
+    <div class="qalist tight">{{#qa:check}}</div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="sig">
+      <p class="eyebrow">{{sig_eyebrow}}</p>
+      <p>{{sig_p1}}</p>
+      <p style="margin-bottom:0">{{sig_p2}}</p>
+      <p class="name">{{sig_name}}</p>
+      <p class="date">{{sig_date}}</p>
+    </div>
+    <p class="foot-meta"><span>{{foot_1}}</span><span>{{foot_2}}</span>
+      <span><a href="mailto:bart@waranafilm.com">bart@waranafilm.com</a></span>
+      <span>{{foot_3}}</span></p>
+  </div>
+</footer>

@@ -1,0 +1,25 @@
+{
+  "crumb":        { "en": "Client work",            "nl": "Werk voor een klant" },
+  "nav_label":    { "en": "Sections",               "nl": "Onderdelen" },
+  "nav_overview": { "en": "Overview",               "nl": "Overzicht" },
+  "nav_pitch":    { "en": "The pitch page",         "nl": "De pitchpagina" },
+  "nav_brand":    { "en": "Brand book",             "nl": "Merkboek" },
+  "nav_social":   { "en": "Social",                 "nl": "Social" },
+  "nav_funding":  { "en": "Funding",                "nl": "Financiering" },
+
+  "sig_eyebrow":  { "en": "What you are looking at", "nl": "Wat je hier ziet" },
+  "sig_p1": {
+    "en": "This is not a live page from Warana Film Company. It is a proposal. I read the Slate 2026, found the public sources around it, and in one evening built what I think the story deserves. Every image, project and logline comes from Bart's own slate.",
+    "nl": "Dit is geen live pagina van Warana Film Company. Het is een voorstel. Ik heb de Slate 2026 gelezen, de openbare bronnen erbij gezocht en in één avond gebouwd wat het verhaal volgens mij verdient. Alle beelden, projecten en loglines komen uit de slate van Bart zelf."
+  },
+  "sig_p2": {
+    "en": "The funding stack is my model, not a commitment. The percentages and ceilings inside it were checked against the Netherlands Film Fund, the UK Screen Alliance and Eurimages.",
+    "nl": "De financieringsstapel is mijn model, geen toezegging. De percentages en plafonds erin zijn nagekeken bij het Filmfonds, de UK Screen Alliance en Eurimages."
+  },
+  "sig_name":     { "en": "Loek Luijbregts",        "nl": "Loek Luijbregts" },
+  "sig_date":     { "en": "August 2026",            "nl": "Augustus 2026" },
+
+  "foot_1":       { "en": "Warana Film Company",    "nl": "Warana Film Company" },
+  "foot_2":       { "en": "Amsterdam, the Netherlands", "nl": "Amsterdam, Nederland" },
+  "foot_3":       { "en": "Built by Loek Luijbregts", "nl": "Gebouwd door Loek Luijbregts" }
+}

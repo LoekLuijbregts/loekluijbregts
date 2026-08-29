@@ -1,0 +1,56 @@
+.page-head{padding-block:clamp(46px,7vw,92px) clamp(40px,6vw,76px)}
+.mark{width:clamp(112px,12vw,150px);height:auto;margin-bottom:clamp(22px,4vw,40px)}
+.page-head h1{max-width:18ch;font-size:clamp(2.5rem,5.6vw,4.2rem)}
+.page-head .note{max-width:70ch}
+.page-head .note p{font-size:.9rem;color:var(--dim)}
+
+.tiers{display:grid;gap:15px;grid-template-columns:1fr;margin-top:2rem}
+@media(min-width:860px){.tiers{grid-template-columns:repeat(3,1fr)}}
+.tiers .qa{display:block;padding:1.2rem 1.3rem;border:1px solid var(--line);
+  border-top:2px solid var(--gold);border-radius:3px;background:var(--ink2)}
+.tiers .qa:nth-child(1){border-top-color:var(--t1)}
+.tiers .qa:nth-child(2){border-top-color:var(--t2)}
+.tiers .qa:nth-child(3){border-top-color:var(--t3)}
+.tiers .qa h4{margin-bottom:.55rem}
+.tiers .qa p{margin:0;color:var(--dim);font-size:.93rem}
+
+/* grafiek */
+.chart{margin-top:2.4rem;border:1px solid var(--line);border-radius:3px;background:var(--ink2);overflow:hidden}
+.chart-head{padding:1.2rem 1.35rem;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;
+  gap:1rem 2rem;align-items:baseline;justify-content:space-between}
+.total{font-family:var(--display);font-size:clamp(2.2rem,5vw,3.1rem);line-height:1}
+.total .unit{font-size:.36em;letter-spacing:.13em;text-transform:uppercase;font-family:var(--ui);
+  font-weight:600;color:var(--dim)}
+.legend{display:flex;flex-wrap:wrap;gap:.4rem 1.25rem;padding:0;margin:0;list-style:none;
+  font-size:.65rem;letter-spacing:.11em;text-transform:uppercase;font-weight:600;color:var(--dim)}
+.legend li{display:flex;align-items:center;gap:.45rem}
+.sw-dot{width:13px;height:13px;border-radius:2px;flex:none}
+.bars{padding:1.25rem 1.35rem 1.4rem;display:grid;gap:2px}
+.bar-row{display:grid;gap:.28rem;padding:.6rem .5rem;border-radius:2px;transition:background .18s}
+.bar-row:hover,.bar-row:focus-within{background:rgba(237,227,210,.055)}
+.bar-top{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
+.bar-name{font-size:.92rem;color:var(--cream)}
+.bar-val{font-size:.85rem;color:var(--dim);white-space:nowrap;font-weight:600}
+.track{height:12px;background:rgba(237,227,210,.07);border-radius:2px;overflow:hidden}
+.fill{height:100%;border-radius:0 4px 4px 0;transform-origin:left;animation:grow .9s cubic-bezier(.2,.7,.3,1) both}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.bar-note{font-size:.79rem;color:var(--faint);line-height:1.5;margin:0}
+
+/* bronnen */
+.fin-list{display:grid;gap:14px;margin-top:2rem}
+.fin{border:1px solid var(--line);border-left-width:2px;border-radius:3px;background:var(--ink2);
+  padding:1.15rem 1.3rem}
+.fin.t1{border-left-color:#EDE3D2}
+.fin.t2{border-left-color:#C9A063}
+.fin.t3{border-left-color:#94734A}
+.fin .top{display:flex;flex-wrap:wrap;gap:.35rem 1rem;align-items:baseline;
+  justify-content:space-between;margin-bottom:.5rem}
+.fin h4{font-size:1.14rem}
+.fin .tier{font-size:.6rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+.fin p{font-size:.92rem;color:var(--dim);margin-bottom:.7rem}
+.fin .need{font-size:.85rem;color:var(--faint);border-top:1px solid var(--line);
+  padding-top:.68rem;margin:0}
+.fin .need b{color:var(--gold);font-weight:600;font-size:.63rem;letter-spacing:.14em;
+  text-transform:uppercase;margin-right:.4rem}
+.srclist{margin:.9rem 0 0;padding-left:1.05rem;color:var(--dim);font-size:.9rem;line-height:1.7}
+.srclist li::marker{color:var(--faint)}

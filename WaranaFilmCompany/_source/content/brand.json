@@ -1,0 +1,365 @@
+{
+  "meta": {
+    "title": {
+      "en": "Warana Brand Book",
+      "nl": "Warana Merkboek"
+    },
+    "description": {
+      "en": "Colour, type, image rules and writing style for Warana Film Company — read out of the Slate 2026 and sharpened.",
+      "nl": "Kleur, letters, beeldregels en schrijfstijl voor Warana Film Company — uit de Slate 2026 gelezen en aangescherpt."
+    }
+  },
+  "hero_eyebrow": {
+    "en": "Brand book · August 2026",
+    "nl": "Merkboek · augustus 2026"
+  },
+  "hero_h1": {
+    "en": "Warana already has a house style. Nobody had written it down.",
+    "nl": "Warana heeft al een huisstijl. Niemand had hem opgeschreven."
+  },
+  "hero_lede": {
+    "en": "Almost everything below comes out of the Slate 2026 itself: the colours, the rhythm, the tone of the loglines. I named it, sharpened it, and changed one thing on purpose. That change is explained where it happens.",
+    "nl": "Bijna alles hieronder komt uit de Slate 2026 zelf: de kleuren, het ritme, de toon van de loglines. Ik heb het benoemd, aangescherpt en één ding bewust veranderd. Dat ene punt leg ik uit op de plek waar het staat."
+  },
+  "c_eyebrow": {
+    "en": "1 · Colour",
+    "nl": "1 · Kleur"
+  },
+  "c_h2": {
+    "en": "The base palette",
+    "nl": "Het basispalet"
+  },
+  "c_lede": {
+    "en": "Three colours carry everything. The deep blue is the ground, cream is the ink, gold is the only accent. This brand needs no more than that — and should not be given more.",
+    "nl": "Drie kleuren dragen alles. Het diepe blauw is de grond, crème is de inkt, goud is het enige accent. Meer heeft dit merk niet nodig — en meer moet het ook niet krijgen."
+  },
+  "base": [
+    {
+      "hex": "#162334",
+      "name": {
+        "en": "Deep blue",
+        "nl": "Diepblauw"
+      },
+      "use": {
+        "en": "Ground. The background of every piece, from deck to website.",
+        "nl": "Grond. Achtergrond van elk stuk, van deck tot website."
+      }
+    },
+    {
+      "hex": "#E7DCC8",
+      "name": {
+        "en": "Cream",
+        "nl": "Crème"
+      },
+      "use": {
+        "en": "Ink. The logo, all running text, all titles.",
+        "nl": "Inkt. Het logo, alle lopende tekst, alle titels."
+      }
+    },
+    {
+      "hex": "#C9A063",
+      "name": {
+        "en": "Gold",
+        "nl": "Goud"
+      },
+      "use": {
+        "en": "Accent. Labels, buttons, one line per screen. Never for running text.",
+        "nl": "Accent. Labels, knoppen, één lijn per scherm. Nooit voor lopende tekst."
+      }
+    }
+  ],
+  "c2_h3": {
+    "en": "And then the part that already exists but has no name",
+    "nl": "En dan het stuk dat al bestaat maar geen naam heeft"
+  },
+  "c2_p": {
+    "en": "In the slate every project gets its own colour wash over the image. That is not an accident, and it works: you can tell the eight titles apart without adding a single logo. This is a project palette. Use it everywhere — on the site, in the feed, on every document that belongs to a title.",
+    "nl": "In de slate krijgt elk project een eigen kleurwaas over het beeld. Dat is geen toeval en het werkt: je houdt acht titels uit elkaar zonder dat er één logo bij hoeft. Dit is een projectpalet. Gebruik het overal — op de site, in de feed, op elk document per titel."
+  },
+  "projects": [
+    {
+      "hex": "#135E7B",
+      "name": {
+        "en": "Kachhua",
+        "nl": "Kachhua"
+      },
+      "use": {
+        "en": "Ocean blue",
+        "nl": "Oceaanblauw"
+      }
+    },
+    {
+      "hex": "#2A3841",
+      "name": {
+        "en": "Polar Bear in the War",
+        "nl": "IJsbeer in de Oorlog"
+      },
+      "use": {
+        "en": "Winter slate",
+        "nl": "Winterleisteen"
+      }
+    },
+    {
+      "hex": "#0C393F",
+      "name": {
+        "en": "Under the Red Sea",
+        "nl": "Onder de Rode Zee"
+      },
+      "use": {
+        "en": "Deep water green",
+        "nl": "Diepwatergroen"
+      }
+    },
+    {
+      "hex": "#50241B",
+      "name": {
+        "en": "Monkey",
+        "nl": "Monkey"
+      },
+      "use": {
+        "en": "Christmas brown",
+        "nl": "Kerstbruin"
+      }
+    },
+    {
+      "hex": "#292D4A",
+      "name": {
+        "en": "A2 Racer",
+        "nl": "A2 Racer"
+      },
+      "use": {
+        "en": "Night asphalt",
+        "nl": "Nachtasfalt"
+      }
+    },
+    {
+      "hex": "#8C4B2D",
+      "name": {
+        "en": "Cape of Good Hope",
+        "nl": "Kaap de Goede Hoop"
+      },
+      "use": {
+        "en": "Terracotta",
+        "nl": "Terracotta"
+      }
+    },
+    {
+      "hex": "#45602D",
+      "name": {
+        "en": "Matzy",
+        "nl": "Matzy"
+      },
+      "use": {
+        "en": "Meadow",
+        "nl": "Weiland"
+      }
+    },
+    {
+      "hex": "#556572",
+      "name": {
+        "en": "See You Tomorrow",
+        "nl": "Tot Morgen"
+      },
+      "use": {
+        "en": "Dune mist",
+        "nl": "Duinmist"
+      }
+    }
+  ],
+  "t_eyebrow": {
+    "en": "2 · Type",
+    "nl": "2 · Letters"
+  },
+  "t_h2": {
+    "en": "Two families, and one deliberate change",
+    "nl": "Twee families, en één bewuste verandering"
+  },
+  "t_change": {
+    "en": "The slate pairs the logo with a serif and a sans that both sit close to whatever a design tool hands you by default. They are not wrong; they are unowned — you have seen them on a hundred other decks. The wordmark WARANA is a Didone: high contrast, thin hairlines, real character. Give it a display face that answers it instead of blending in.",
+    "nl": "De slate zet naast het logo een serif en een schreefloze. Allebei liggen ze dicht bij wat een ontwerpprogramma je standaard aanreikt. Ze zijn niet fout, ze zijn van niemand — je hebt ze op honderd andere decks gezien. Het woordmerk WARANA is een didone: hoog contrast, dunne haarlijnen, echt karakter. Zet daar een letter naast die antwoordt in plaats van meebeweegt."
+  },
+  "t_spec1_line": {
+    "en": "Cinema that endures.",
+    "nl": "Cinema die blijft."
+  },
+  "t_spec1_p": {
+    "en": "Instrument Serif. High contrast, narrow, cut for headlines — the closest living relative of the wordmark. Titles, loglines and quotes only. Never below 20 pixels: the hairlines disappear.",
+    "nl": "Instrument Serif. Hoog contrast, smal, gesneden voor koppen — de naaste verwant van het woordmerk. Alleen voor titels, loglines en citaten. Nooit onder de 20 pixels: de haarlijnen vallen weg."
+  },
+  "t_spec1_meta": {
+    "en": [
+      "<span>Instrument Serif</span>",
+      "<span>Titles · loglines · quotes</span>",
+      "<span>Line height 1.0–1.2</span>"
+    ],
+    "nl": [
+      "<span>Instrument Serif</span>",
+      "<span>Titels · loglines · citaten</span>",
+      "<span>Regelafstand 1.0–1.2</span>"
+    ]
+  },
+  "t_spec2_line": {
+    "en": "Everything that has to be read rather than seen.",
+    "nl": "Alles wat gelezen moet worden in plaats van gezien."
+  },
+  "t_spec2_p": {
+    "en": "Archivo. A tight grotesque with a straight back and enough weight to hold a label. Running text, tables and captions. Labels always in capitals with generous letter-spacing — that is the only typographic trick in this brand, which is exactly why it works.",
+    "nl": "Archivo. Een strakke grotesk met een rechte rug en genoeg gewicht om een label te dragen. Lopende tekst, tabellen en bijschriften. Labels altijd in kapitalen met ruime letterafstand — dat is het enige typografische trucje in dit merk, en daarom werkt het."
+  },
+  "t_spec2_meta": {
+    "en": [
+      "<span>Archivo</span>",
+      "<span>400 running · 600 labels</span>",
+      "<span>Labels: 0.18em tracking</span>"
+    ],
+    "nl": [
+      "<span>Archivo</span>",
+      "<span>400 lopend · 600 labels</span>",
+      "<span>Labels: 0.18em letterafstand</span>"
+    ]
+  },
+  "b_eyebrow": {
+    "en": "3 · Image and logo",
+    "nl": "3 · Beeld en logo"
+  },
+  "b_h2": {
+    "en": "What to do and what not to",
+    "nl": "Wat wel en niet mag"
+  },
+  "b_do_h": {
+    "en": "Do",
+    "nl": "Doen"
+  },
+  "b_do": {
+    "en": [
+      "<li>Always run images full bleed, with the project's colour wash over them. No white frames.</li>",
+      "<li>Logo in cream on dark, in <code>#111111</code> on light. Both files are ready.</li>",
+      "<li>Keep clear space around the logo, at least the height of the arc on every side.</li>",
+      "<li>Where development images were generated with AI, label them <b>mood image</b>. Financiers can tell anyway, and honesty costs nothing here.</li>",
+      "<li>Leave the documentary photographs from India unfiltered. Those are the only real images you have, and they are worth more than all the renders put together.</li>"
+    ],
+    "nl": [
+      "<li>Beeld altijd volledig aflopend, met de kleurwaas van het project eroverheen. Geen witte kaders.</li>",
+      "<li>Logo in crème op donker, in <code>#111111</code> op licht. Beide bestanden staan klaar.</li>",
+      "<li>Houd rond het logo minstens de hoogte van de boog vrij.</li>",
+      "<li>Bij ontwikkelbeeld dat met AI is gemaakt: zet er <b>moodbeeld</b> bij. Financiers zien het toch, en eerlijkheid kost hier niets.</li>",
+      "<li>Laat de documentairefoto's uit India ongefilterd. Dat is het enige echte beeld dat je hebt en het is meer waard dan alle renders samen.</li>"
+    ]
+  },
+  "b_dont_h": {
+    "en": "Do not",
+    "nl": "Niet doen"
+  },
+  "b_dont": {
+    "en": [
+      "<li>Put the logo on a busy image without darkening what sits behind it. The hairline of the arc vanishes.</li>",
+      "<li>Use gold for running text. It reads badly and turns an accent into a habit.</li>",
+      "<li>Add a fourth and fifth colour because a slide feels empty.</li>",
+      "<li>Stretch, tilt or shadow the wordmark.</li>",
+      "<li>Set stray words in capitals mid-sentence. Capitals are for labels only.</li>"
+    ],
+    "nl": [
+      "<li>Het logo op een druk beeld zetten zonder verdonkering eronder. De haarlijn van de boog verdwijnt.</li>",
+      "<li>Goud gebruiken voor lopende tekst. Het leest slecht en maakt van een accent een gewoonte.</li>",
+      "<li>Een vierde en vijfde kleur toevoegen omdat een slide leeg voelt.</li>",
+      "<li>Het woordmerk uitrekken, kantelen of van een schaduw voorzien.</li>",
+      "<li>Losse woorden in kapitalen midden in een zin. Kapitalen zijn alleen voor labels.</li>"
+    ]
+  },
+  "b_note": {
+    "en": "<b>One concrete error currently in the slate.</b> On at least five pages a fragment is repeated: \"leidt het park leidt het park\", \"op haalbaarheid, op haalbaarheid\", \"welpen heeft welpen heeft gekregen\", \"Amsterdam, Maastricht, Amsterdam\", \"die die\". A financier reads that as haste. Half an hour of work to fix, and the first thing I would do.",
+    "nl": "<b>Eén concrete fout die nu in de slate staat.</b> Op minstens vijf pagina's staan zinsdelen dubbel: \"leidt het park leidt het park\", \"op haalbaarheid, op haalbaarheid\", \"welpen heeft welpen heeft gekregen\", \"Amsterdam, Maastricht, Amsterdam\", \"die die\". Een financier leest dat als haast. Het is een half uur werk om weg te halen en het is het eerste wat ik zou doen."
+  },
+  "w_eyebrow": {
+    "en": "4 · Writing style",
+    "nl": "4 · Schrijfstijl"
+  },
+  "w_h2": {
+    "en": "Write the way you write loglines, not the way you write your about page",
+    "nl": "Schrijf zoals je een logline schrijft, niet zoals je een over-pagina schrijft"
+  },
+  "w_lede": {
+    "en": "The loglines in the slate are good. They are in the present tense, they run to one sentence, and each one has a person with a problem in it. The company copy around them is abstract and interchangeable. Pull it towards the loglines, not the other way round.",
+    "nl": "De loglines in de slate zijn goed. Ze staan in de tegenwoordige tijd, ze zijn één zin, en er zit altijd een mens met een probleem in. De bedrijfsteksten eromheen zijn abstract en verwisselbaar. Trek de bedrijfsteksten naar de loglines toe, niet andersom."
+  },
+  "w_rules_h": {
+    "en": "Five rules",
+    "nl": "Vijf regels"
+  },
+  "w_rules": {
+    "en": [
+      "<li><b>Start with a person, not a theme.</b> Not \"a film about plastic\", but \"a lawyer who returns to the beach of his childhood\".</li>",
+      "<li><b>One number per paragraph, and it has to be right.</b> 4,000 tonnes. 100 weeks. 19 credits. Numbers do the work adjectives cannot.</li>",
+      "<li><b>Present tense for story, past tense for proof.</b> The story is happening now; what you have done is finished.</li>",
+      "<li><b>No word you have to explain before it lands.</b> Cut \"character-driven\", \"inseparably connected\", \"international ambition\" unless there is an example standing next to it.</li>",
+      "<li><b>Say what you want from the reader.</b> Every piece ends with one concrete question, not with \"hope to speak soon\".</li>"
+    ],
+    "nl": [
+      "<li><b>Begin bij een mens, niet bij een thema.</b> Niet \"een film over plastic\", maar \"een advocaat die terugkeert naar het strand van zijn jeugd\".</li>",
+      "<li><b>Eén getal per alinea, en het moet kloppen.</b> 4.000 ton. 100 weken. 19 credits. Getallen doen het werk dat bijvoeglijke naamwoorden niet kunnen.</li>",
+      "<li><b>Tegenwoordige tijd bij verhaal, verleden tijd bij bewijs.</b> Het verhaal gebeurt nu; wat je hebt gedaan is af.</li>",
+      "<li><b>Geen woord dat je moet uitleggen voordat het landt.</b> Schrap \"karaktergedreven\", \"onlosmakelijk verbonden\", \"internationale ambitie\" als er geen voorbeeld naast staat.</li>",
+      "<li><b>Zeg wat je van de lezer wilt.</b> Elk stuk eindigt met één concrete vraag, niet met \"hopelijk tot snel\".</li>"
+    ]
+  },
+  "w_ba_h": {
+    "en": "Three before-and-afters, using sentences from the slate",
+    "nl": "Drie keer voor en na, met zinnen uit de slate"
+  },
+  "ba": [
+    {
+      "oldLabel": {
+        "en": "Now",
+        "nl": "Nu"
+      },
+      "newLabel": {
+        "en": "Proposed",
+        "nl": "Voorstel"
+      },
+      "old": {
+        "en": "Warana Film Company develops and produces character-driven feature films and series with international ambition, where every story is inseparable from the world that defines it.",
+        "nl": "Warana Film Company ontwikkelt en produceert karaktergedreven speelfilms en series met internationale ambitie, waarin elk verhaal onlosmakelijk verbonden is met de wereld waarin het zich afspeelt."
+      },
+      "new": {
+        "en": "Warana makes films where the world a story happens in matters as much as the person it happens to. A zoo in wartime. An air pocket in the Red Sea. A beach in Mumbai under four metres of plastic.",
+        "nl": "Warana maakt films waarin de wereld van een verhaal net zo zwaar weegt als de mens aan wie het gebeurt. Een dierentuin in oorlogstijd. Een luchtbel in de Rode Zee. Een strand in Mumbai onder vier meter plastic."
+      }
+    },
+    {
+      "oldLabel": {
+        "en": "Now",
+        "nl": "Nu"
+      },
+      "newLabel": {
+        "en": "Proposed",
+        "nl": "Voorstel"
+      },
+      "old": {
+        "en": "From that production background, Warana combines creative ambition with a strong focus on feasibility, among other things through innovation and co-productions.",
+        "nl": "Vanuit die productionele achtergrond combineert Warana creatieve ambitie met een sterke focus op haalbaarheid, onder meer door innovatie en coproducties."
+      },
+      "new": {
+        "en": "Bart Willemsen has produced nineteen films and series. In May 2020 he conceived, wrote and shot one of them in twelve days, in the middle of lockdown. At Warana, feasibility is not a promise but a habit.",
+        "nl": "Bart Willemsen heeft negentien films en series geproduceerd. In mei 2020 bedacht, schreef en draaide hij er één in twaalf dagen, midden in de lockdown. Haalbaarheid is bij Warana geen belofte maar een gewoonte."
+      }
+    },
+    {
+      "oldLabel": {
+        "en": "Now",
+        "nl": "Nu"
+      },
+      "newLabel": {
+        "en": "Proposed",
+        "nl": "Voorstel"
+      },
+      "old": {
+        "en": "Thank you for reading and hopefully speak soon",
+        "nl": "Dank voor het lezen en hopelijk tot snel"
+      },
+      "new": {
+        "en": "Two of these eight titles are looking for a co-producer right now. If you want to know which two, book twenty minutes and you will get a straight answer.",
+        "nl": "Twee van deze acht titels zoeken op dit moment een coproducent. Als je wilt weten welke, plan dan twintig minuten — dan hoor je het zonder omweg."
+      }
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+<div class="hero">
+  <div class="hero-bg"><img src="{{ROOT}}/img/hero-kachhua.jpg" alt="{{hero_alt}}"></div>
+  <div class="hero-veil"></div>
+  <div class="wrap hero-inner">
+    <img class="mark" src="{{ROOT}}/img/warana-logo.svg" alt="Warana Film Company" width="401" height="241">
+    <p class="eyebrow">{{hero_eyebrow}}</p>
+    <h1>{{hero_h1}}</h1>
+    <p class="lede">{{hero_lede}}</p>
+    <div class="cta-row">
+      <a class="btn btn-solid" href="#gesprek">{{hero_cta1}}</a>
+      <a class="btn btn-ghost" href="#slate">{{hero_cta2}}</a>
+    </div>
+    <p class="hero-meta">{{hero_meta}}</p>
+  </div>
+</div>
+
+<section id="bewijs">
+  <div class="wrap">
+    <p class="eyebrow">{{wipe_eyebrow}}</p>
+    <h2>{{wipe_h2}}</h2>
+    <p class="lede" style="margin-top:1.2rem">{{wipe_lede}}</p>
+    <div class="wipe-shell">
+      <div class="wipe" role="slider" tabindex="0" aria-label="{{wipe_slider_label}}"
+           aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+        <img src="{{ROOT}}/img/k2018.jpg" alt="{{wipe_alt_b}}">
+        <div class="wipe-top"><img src="{{ROOT}}/img/k2015.jpg" alt="{{wipe_alt_a}}"></div>
+        <div class="wipe-line"></div>
+        <div class="wipe-knob" aria-hidden="true">&#8646;</div>
+      </div>
+      <p class="wipe-cap">{{wipe_cap}}</p>
+    </div>
+    <p class="callout" style="margin-top:2.4rem">{{wipe_pull}}</p>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section id="kachhua">
+  <div class="wrap two">
+    <div>
+      <p class="eyebrow">{{k_eyebrow}}</p>
+      <h2>{{k_h2}}</h2>
+      <p class="lede" style="margin-top:1.1rem">{{k_lede}}</p>
+      <p style="margin-top:1.3rem;color:var(--dim)">{{k_body}}</p>
+      <div class="facts">
+        <div><span class="k">{{k_f1k}}</span><span class="v">{{k_f1v}}</span></div>
+        <div><span class="k">{{k_f2k}}</span><span class="v">{{k_f2v}}</span></div>
+        <div><span class="k">{{k_f3k}}</span><span class="v">{{k_f3v}}</span></div>
+        <div><span class="k">{{k_f4k}}</span><span class="v">{{k_f4v}}</span></div>
+        <div><span class="k">{{k_f5k}}</span><span class="v">{{k_f5v}}</span></div>
+        <div><span class="k">{{k_f6k}}</span><span class="v" style="color:var(--t1)">{{k_f6v}}</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="person-img"><img src="{{ROOT}}/img/card-kachhua.jpg" alt="{{k_img_alt}}"></div>
+      <p class="eyebrow" style="margin:2.2rem 0 .9rem">{{k_who}}</p>
+      <ul class="badges" style="margin-top:0">{{k_badges}}</ul>
+      <div class="stat-row">
+        <div class="stat"><b>{{k_s1n}}</b><span>{{k_s1l}}</span></div>
+        <div class="stat"><b>{{k_s2n}}</b><span>{{k_s2l}}</span></div>
+        <div class="stat"><b>{{k_s3n}}</b><span>{{k_s3l}}</span></div>
+      </div>
+      <p class="cap" style="margin-top:1.4rem">{{k_src}}</p>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section id="slate">
+  <div class="wrap">
+    <p class="eyebrow">{{s_eyebrow}}</p>
+    <h2>{{s_h2}}</h2>
+    <p class="lede" style="margin-top:1.1rem">{{s_lede}}</p>
+    <div class="filters" role="group" aria-label="{{s_filter_label}}">
+      <button class="chip" type="button" data-f="all" aria-pressed="true">{{s_f_all}}</button>
+      <button class="chip" type="button" data-f="fin" aria-pressed="false">{{s_f_fin}}</button>
+      <button class="chip" type="button" data-f="dev" aria-pressed="false">{{s_f_dev}}</button>
+      <button class="chip" type="button" data-f="early" aria-pressed="false">{{s_f_early}}</button>
+      <button class="chip" type="button" data-f="con" aria-pressed="false">{{s_f_con}}</button>
+    </div>
+    <div class="slate">{{#slate}}</div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section id="financiering">
+  <div class="wrap">
+    <p class="eyebrow">{{f_eyebrow}}</p>
+    <h2>{{f_h2}}</h2>
+    <p class="lede" style="margin-top:1.1rem">{{f_lede}}</p>
+    <div class="chart">
+      <div class="chart-head">
+        <div>
+          <p class="eyebrow" style="margin-bottom:.45rem">{{f_total_label}}</p>
+          <span class="total tnum">{{f_total}} <span class="unit">{{f_million}}</span></span>
+        </div>
+        <ul class="legend">
+          <li><span class="sw-dot" style="background:var(--t1)"></span>{{f_l1}}</li>
+          <li><span class="sw-dot" style="background:var(--t2)"></span>{{f_l2}}</li>
+          <li><span class="sw-dot" style="background:var(--t3)"></span>{{f_l3}}</li>
+        </ul>
+      </div>
+      <div class="bars">{{#bars}}</div>
+      <p class="chart-foot">{{f_foot}}</p>
+    </div>
+    <div class="cta-row"><a class="btn btn-ghost" href="{{ROOT}}/funding/">{{f_more}}</a></div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section id="producent">
+  <div class="wrap two">
+    <div>
+      <p class="eyebrow">{{p_eyebrow}}</p>
+      <h2>{{p_h2}}</h2>
+      <p class="lede" style="margin-top:1.1rem">{{p_lede}}</p>
+      <div class="stat-row">
+        <div class="stat"><b>{{p_s1n}}</b><span>{{p_s1l}}</span></div>
+        <div class="stat"><b>{{p_s2n}}</b><span>{{p_s2l}}</span></div>
+        <div class="stat"><b>{{p_s3n}}</b><span>{{p_s3l}}</span></div>
+      </div>
+      <p class="callout" style="margin-top:2rem">{{p_quote}}<cite>{{p_quote_cite}}</cite></p>
+      <p style="color:var(--dim);margin-top:1.5rem">{{p_body}}</p>
+    </div>
+    <div>
+      <div class="person-img"><img src="{{ROOT}}/img/bart-set.jpg" alt="{{p_alt1}}"></div>
+      <div class="person-img" style="margin-top:1.1rem"><img src="{{ROOT}}/img/bart-india.jpg" alt="{{p_alt2}}"></div>
+      <p class="cap">{{p_cap}}</p>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section id="gesprek">
+  <div class="wrap">
+    <p class="eyebrow">{{b_eyebrow}}</p>
+    <h2>{{b_h2}}</h2>
+    <p class="lede" style="margin-top:1.1rem">{{b_lede}}</p>
+    <div class="book" data-book="{{#bookcfg}}">
+      <div class="book-grid">
+        <div class="book-pane">
+          <p class="eyebrow">{{b_step1}}</p>
+          <div class="opts" role="group" aria-label="{{b_types_label}}"></div>
+        </div>
+        <div class="book-pane">
+          <p class="eyebrow">{{b_step2}}</p>
+          <div class="slots" role="group" aria-label="{{b_slots_label}}"></div>
+          <p class="tz"></p>
+          <div class="book-sum"></div>
+          <a class="btn btn-solid go" href="#" style="margin-top:1.2rem" target="_blank" rel="noopener">{{b_go}}</a>
+          <p class="cap" style="margin-top:1rem">{{b_mail}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="sig">
+      <p class="eyebrow">{{sig_eyebrow}}</p>
+      <p>{{sig_p1}}</p>
+      <p style="margin-bottom:0">{{sig_p2}}</p>
+      <p class="name">{{sig_name}}</p>
+      <p class="date">{{sig_date}}</p>
+    </div>
+    <p class="foot-meta"><span>{{foot_1}}</span><span>{{foot_2}}</span>
+      <span><a href="mailto:bart@waranafilm.com">bart@waranafilm.com</a></span>
+      <span><a href="https://www.waranafilm.com">waranafilm.com</a></span></p>
+  </div>
+</footer>

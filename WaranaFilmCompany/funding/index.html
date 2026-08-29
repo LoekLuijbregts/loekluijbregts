@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-en="Warana Funding Map" data-nl="Warana Financieringskaart">Warana Funding Map</title>
+<meta name="description" content="Eight kinds of money for one slate, sorted by how certain each one is, and what has to be on the table before you knock.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#101B2B">
+<meta property="og:title" content="Warana Funding Map">
+<meta property="og:description" content="Eight kinds of money for one slate, sorted by how certain each one is, and what has to be on the table before you knock.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap">
+<style>
+/* ============================================================
+   Warana Film Company — case section on loekluijbregts.com
+   Chrome: Loek's site tokens (cream / orange / DM Mono)
+   Content: Warana's world (navy / cream / gold)
+   Type: Instrument Serif (display) + Archivo (everything else)
+   ============================================================ */
+:root{
+  /* Warana */
+  --ink:#101B2B; --ink2:#16243A; --ink3:#1E3050;
+  --line:rgba(237,227,210,.14); --line2:rgba(237,227,210,.26);
+  --cream:#EDE3D2; --dim:rgba(237,227,210,.68); --faint:rgba(237,227,210,.44);
+  --gold:#C9A063; --gold-2:#94734A; --sea:#3D8CA8;
+  --t1:#EDE3D2; --t2:#C9A063; --t3:#94734A;
+  /* Loek chrome */
+  --loek-cream:#F8F5F0; --loek-ink:#1C1814; --loek-orange:#D94F0A; --loek-border:#E5DFD6;
+  /* type */
+  --display:"Instrument Serif",Georgia,"Times New Roman",serif;
+  --ui:"Archivo",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --wrap:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:var(--cream);font-family:var(--ui);
+  font-weight:400;font-size:17px;line-height:1.66;-webkit-font-smoothing:antialiased;
+  font-synthesis-weight:none}
+img{max-width:100%;display:block}
+h1,h2,h3,h4{font-family:var(--display);font-weight:400;margin:0;text-wrap:balance;letter-spacing:0}
+h1{font-size:clamp(2.9rem,7.2vw,5.4rem);line-height:1.0}
+h2{font-size:clamp(2rem,4.3vw,3.15rem);line-height:1.08}
+h3{font-size:1.55rem;line-height:1.18}
+h4{font-size:1.16rem;line-height:1.25}
+p{margin:0 0 1.05em}
+a{color:var(--gold)}
+hr.rule{height:1px;background:var(--line);border:0;margin:0}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:2px}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:clamp(20px,5vw,40px)}
+section{padding-block:clamp(58px,8vw,104px);position:relative}
+.eyebrow{font-family:var(--ui);font-weight:600;font-size:.66rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--gold);margin:0 0 1rem}
+.lede{font-size:clamp(1.06rem,1.8vw,1.26rem);color:var(--dim);max-width:62ch}
+.tnum{font-variant-numeric:tabular-nums}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* ---------- taal ---------- */
+[lang]:where(.langblock){display:contents}
+:root[data-lang="nl"] .langblock[lang="en"]{display:none}
+:root[data-lang="en"] .langblock[lang="nl"]{display:none}
+
+/* ---------- Loek-balk ---------- */
+.chrome{position:sticky;top:0;z-index:60;background:var(--loek-cream);color:var(--loek-ink);
+  border-bottom:1px solid var(--loek-border)}
+.chrome-in{max-width:var(--wrap);margin-inline:auto;padding:10px clamp(20px,5vw,40px);
+  display:flex;flex-wrap:wrap;gap:.7rem 1.2rem;align-items:center;justify-content:space-between}
+.chrome a.home{display:inline-flex;align-items:center;gap:.55rem;color:var(--loek-ink);text-decoration:none;
+  font-size:.66rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase}
+.chrome a.home:hover{color:var(--loek-orange)}
+.chrome .crumb{font-size:.66rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:#827C76}
+.chrome .crumb b{color:var(--loek-orange);font-weight:600}
+.langtoggle{display:inline-flex;border:1px solid var(--loek-border);border-radius:3px;overflow:hidden;background:#fff}
+.langtoggle button{appearance:none;border:0;background:transparent;cursor:pointer;padding:.42rem .78rem;
+  font-family:var(--ui);font-size:.64rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;
+  color:#827C76;transition:.18s}
+.langtoggle button+button{border-left:1px solid var(--loek-border)}
+.langtoggle button:hover{color:var(--loek-ink)}
+.langtoggle button[aria-pressed="true"]{background:var(--loek-orange);color:#fff}
+
+/* ---------- sectienavigatie ---------- */
+.subnav{background:var(--ink2);border-bottom:1px solid var(--line)}
+.subnav-in{max-width:var(--wrap);margin-inline:auto;padding:0 clamp(20px,5vw,40px);
+  display:flex;gap:.2rem;overflow-x:auto;scrollbar-width:none}
+.subnav-in::-webkit-scrollbar{display:none}
+.subnav a{flex:none;padding:.9rem .95rem;color:var(--faint);text-decoration:none;white-space:nowrap;
+  font-size:.66rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  border-bottom:2px solid transparent;transition:.18s}
+.subnav a:hover{color:var(--cream)}
+.subnav a[aria-current="page"]{color:var(--cream);border-bottom-color:var(--gold)}
+
+/* ---------- knoppen ---------- */
+.btn{display:inline-flex;align-items:center;gap:.55rem;padding:.82rem 1.45rem;border-radius:2px;
+  font-family:var(--ui);font-size:.68rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;
+  text-decoration:none;border:1px solid var(--gold);cursor:pointer;transition:.2s}
+.btn-solid{background:var(--gold);color:#101B2B}
+.btn-solid:hover{background:var(--cream);border-color:var(--cream)}
+.btn-ghost{background:transparent;color:var(--cream);border-color:var(--line2)}
+.btn-ghost:hover{border-color:var(--cream)}
+.cta-row{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2.2rem}
+
+/* ---------- bouwstenen ---------- */
+.two{display:grid;gap:clamp(30px,5vw,64px);grid-template-columns:1fr}
+@media(min-width:900px){.two{grid-template-columns:1.05fr .95fr;align-items:start}}
+.facts{display:grid;margin:1.9rem 0 0;border-top:1px solid var(--line)}
+.facts>div{display:grid;grid-template-columns:minmax(108px,.32fr) 1fr;gap:1.1rem;padding:.8rem 0;
+  border-bottom:1px solid var(--line)}
+.facts .k{font-size:.63rem;font-weight:600;letter-spacing:.17em;text-transform:uppercase;color:var(--gold);padding-top:.42em}
+.facts .v{color:var(--dim);font-size:.95rem}
+.facts .v b{color:var(--cream);font-weight:500}
+.badges{display:flex;flex-wrap:wrap;gap:.45rem;margin:1.5rem 0 0;padding:0;list-style:none}
+.badges li{border:1px solid var(--line);padding:.4rem .78rem;font-size:.64rem;font-weight:500;
+  letter-spacing:.13em;text-transform:uppercase;color:var(--dim)}
+.badges li b{color:var(--cream);font-weight:600}
+.stat-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(122px,1fr));gap:1px;
+  background:var(--line);border:1px solid var(--line);border-radius:3px;overflow:hidden;margin-top:1.9rem}
+.stat{background:var(--ink2);padding:1.05rem 1.1rem}
+.stat b{display:block;font-family:var(--display);font-size:2rem;line-height:1;margin-bottom:.35rem;font-variant-numeric:tabular-nums}
+.stat span{font-size:.62rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--faint);line-height:1.45;display:block}
+.callout{border-left:2px solid var(--gold);padding:.15rem 0 .15rem 1.3rem;margin:2rem 0;
+  font-family:var(--display);font-size:clamp(1.2rem,2.4vw,1.62rem);line-height:1.34;color:var(--cream)}
+.callout cite{display:block;font-family:var(--ui);font-style:normal;font-size:.64rem;font-weight:600;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-top:.85rem}
+.note{border:1px solid var(--gold);border-radius:3px;background:rgba(201,160,99,.06);padding:1.15rem 1.3rem;margin-top:2rem}
+.note p:last-child{margin-bottom:0}
+.box{border:1px solid var(--line);border-radius:3px;padding:1.2rem 1.3rem;background:var(--ink2)}
+.box.good{border-left:2px solid var(--gold)}
+.box.bad{border-left:2px solid #A45B4A}
+.box h4{margin-bottom:.65rem}
+.box ul{margin:0;padding-left:1.05rem}
+.box li{margin-bottom:.5rem;color:var(--dim);font-size:.93rem}
+.box li::marker{color:var(--faint)}
+.box li b{color:var(--cream);font-weight:500}
+.dd{display:grid;gap:15px;grid-template-columns:1fr;margin-top:1.7rem}
+@media(min-width:760px){.dd.cols2{grid-template-columns:1fr 1fr}}
+.person-img{border:1px solid var(--line);border-radius:3px;overflow:hidden}
+.cap{font-size:.8rem;color:var(--faint);margin-top:.8rem}
+
+/* ---------- hublinks ---------- */
+.hub{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));margin-top:2.4rem}
+.hubcard{display:flex;flex-direction:column;gap:.5rem;padding:1.35rem 1.4rem 1.5rem;background:var(--ink2);
+  border:1px solid var(--line);border-radius:3px;text-decoration:none;color:inherit;transition:.22s}
+.hubcard:hover{border-color:var(--gold);transform:translateY(-3px)}
+.hubcard .n{font-size:.62rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.hubcard h3{font-size:1.42rem}
+.hubcard p{font-size:.92rem;color:var(--dim);margin:0;flex:1}
+.hubcard .go{font-size:.64rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--cream);
+  margin-top:.55rem;padding-top:.85rem;border-top:1px solid var(--line)}
+
+/* ---------- voettekst ---------- */
+footer.site{background:#0B1421;border-top:1px solid var(--line);padding-block:clamp(44px,6vw,72px)}
+.sig{border:1px solid var(--gold);border-radius:3px;padding:clamp(20px,3.2vw,30px);background:rgba(201,160,99,.055)}
+.sig .name{font-family:var(--display);font-size:1.35rem;margin:1.3rem 0 0}
+.sig .date{font-size:.64rem;font-weight:600;letter-spacing:.17em;text-transform:uppercase;color:var(--gold);margin:.25rem 0 0}
+.foot-meta{display:flex;flex-wrap:wrap;gap:.55rem 1.9rem;margin-top:2.3rem;font-size:.66rem;
+  letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--faint)}
+.foot-meta a{color:inherit}
+
+.page-head{padding-block:clamp(46px,7vw,92px) clamp(40px,6vw,76px)}
+.mark{width:clamp(112px,12vw,150px);height:auto;margin-bottom:clamp(22px,4vw,40px)}
+.page-head h1{max-width:18ch;font-size:clamp(2.5rem,5.6vw,4.2rem)}
+.page-head .note{max-width:70ch}
+.page-head .note p{font-size:.9rem;color:var(--dim)}
+
+.tiers{display:grid;gap:15px;grid-template-columns:1fr;margin-top:2rem}
+@media(min-width:860px){.tiers{grid-template-columns:repeat(3,1fr)}}
+.tiers .qa{display:block;padding:1.2rem 1.3rem;border:1px solid var(--line);
+  border-top:2px solid var(--gold);border-radius:3px;background:var(--ink2)}
+.tiers .qa:nth-child(1){border-top-color:var(--t1)}
+.tiers .qa:nth-child(2){border-top-color:var(--t2)}
+.tiers .qa:nth-child(3){border-top-color:var(--t3)}
+.tiers .qa h4{margin-bottom:.55rem}
+.tiers .qa p{margin:0;color:var(--dim);font-size:.93rem}
+
+/* grafiek */
+.chart{margin-top:2.4rem;border:1px solid var(--line);border-radius:3px;background:var(--ink2);overflow:hidden}
+.chart-head{padding:1.2rem 1.35rem;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;
+  gap:1rem 2rem;align-items:baseline;justify-content:space-between}
+.total{font-family:var(--display);font-size:clamp(2.2rem,5vw,3.1rem);line-height:1}
+.total .unit{font-size:.36em;letter-spacing:.13em;text-transform:uppercase;font-family:var(--ui);
+  font-weight:600;color:var(--dim)}
+.legend{display:flex;flex-wrap:wrap;gap:.4rem 1.25rem;padding:0;margin:0;list-style:none;
+  font-size:.65rem;letter-spacing:.11em;text-transform:uppercase;font-weight:600;color:var(--dim)}
+.legend li{display:flex;align-items:center;gap:.45rem}
+.sw-dot{width:13px;height:13px;border-radius:2px;flex:none}
+.bars{padding:1.25rem 1.35rem 1.4rem;display:grid;gap:2px}
+.bar-row{display:grid;gap:.28rem;padding:.6rem .5rem;border-radius:2px;transition:background .18s}
+.bar-row:hover,.bar-row:focus-within{background:rgba(237,227,210,.055)}
+.bar-top{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
+.bar-name{font-size:.92rem;color:var(--cream)}
+.bar-val{font-size:.85rem;color:var(--dim);white-space:nowrap;font-weight:600}
+.track{height:12px;background:rgba(237,227,210,.07);border-radius:2px;overflow:hidden}
+.fill{height:100%;border-radius:0 4px 4px 0;transform-origin:left;animation:grow .9s cubic-bezier(.2,.7,.3,1) both}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.bar-note{font-size:.79rem;color:var(--faint);line-height:1.5;margin:0}
+
+/* bronnen */
+.fin-list{display:grid;gap:14px;margin-top:2rem}
+.fin{border:1px solid var(--line);border-left-width:2px;border-radius:3px;background:var(--ink2);
+  padding:1.15rem 1.3rem}
+.fin.t1{border-left-color:#EDE3D2}
+.fin.t2{border-left-color:#C9A063}
+.fin.t3{border-left-color:#94734A}
+.fin .top{display:flex;flex-wrap:wrap;gap:.35rem 1rem;align-items:baseline;
+  justify-content:space-between;margin-bottom:.5rem}
+.fin h4{font-size:1.14rem}
+.fin .tier{font-size:.6rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+.fin p{font-size:.92rem;color:var(--dim);margin-bottom:.7rem}
+.fin .need{font-size:.85rem;color:var(--faint);border-top:1px solid var(--line);
+  padding-top:.68rem;margin:0}
+.fin .need b{color:var(--gold);font-weight:600;font-size:.63rem;letter-spacing:.14em;
+  text-transform:uppercase;margin-right:.4rem}
+.srclist{margin:.9rem 0 0;padding-left:1.05rem;color:var(--dim);font-size:.9rem;line-height:1.7}
+.srclist li::marker{color:var(--faint)}
+</style>
+</head>
+<body>
+<div class="chrome">
+  <div class="chrome-in">
+    <a class="home" href="/">&larr;&nbsp; Loek Luijbregts</a>
+    <span class="crumb"><span class="langblock" lang="en">Client work</span><span class="langblock" lang="nl">Werk voor een klant</span> &middot; <b>Warana Film Company</b></span>
+    <div class="langtoggle" role="group" aria-label="Language">
+      <button type="button" data-set="en" aria-pressed="true">EN</button>
+      <button type="button" data-set="nl" aria-pressed="false">NL</button>
+    </div>
+  </div>
+</div>
+<nav class="subnav" aria-label="Sections">
+  <div class="subnav-in"><a href="../"><span class="langblock" lang="en">Overview</span><span class="langblock" lang="nl">Overzicht</span></a><a href="../pitch/"><span class="langblock" lang="en">The pitch page</span><span class="langblock" lang="nl">De pitchpagina</span></a><a href="../brand/"><span class="langblock" lang="en">Brand book</span><span class="langblock" lang="nl">Merkboek</span></a><a href="../social/"><span class="langblock" lang="en">Social</span><span class="langblock" lang="nl">Social</span></a><a href="../funding/" aria-current="page"><span class="langblock" lang="en">Funding</span><span class="langblock" lang="nl">Financiering</span></a></div>
+</nav>
+<div class="langblock" lang="en">
+<div class="page-head">
+  <div class="wrap">
+    <img class="mark" src="../img/warana-logo.svg" alt="Warana Film Company" width="401" height="241">
+    <p class="eyebrow">Funding map · August 2026</p>
+    <h1>Nobody writes one cheque for a slate.</h1>
+    <p class="lede" style="margin-top:1.2rem">The Dutch Production Incentive pays out a maximum of €3 million per year per production company. That one rule decides the shape of everything that follows. Below: eight sources, what each one actually is, and what has to be on the table before you knock.</p>
+    <div class="note"><p>The amounts are a model, not a commitment. The percentages, ceilings and conditions were checked against the Netherlands Film Fund, the UK Screen Alliance, Eurimages and Creative Europe. This is a description of a landscape, not financial advice — verify amounts and deadlines at the source before anything is built on them.</p></div>
+  </div>
+</div>
+
+<hr class="rule">
+
+<section id="soorten">
+  <div class="wrap">
+    <p class="eyebrow">Three kinds of money</p>
+    <h2>The ratio matters more than the total</h2>
+    <div class="tiers"><div class="qa"><h4>Rule-based</h4><p>Arrives if you meet the conditions. Incentives, rebates, tax credits. Slow, bureaucratic, and almost certain — this is the floor the rest of the stack stands on.</p></div>
+<div class="qa"><h4>Contractual</h4><p>Has to be negotiated. Co-producers, pre-sales, distributors, European funds. Every deal here makes the next one easier, which is why the order you approach them in decides the price.</p></div>
+<div class="qa"><h4>At risk</h4><p>Somebody has to believe in it. Impact capital, private investors, gap. Small in amount, decisive in effect: this is the part that determines whether the whole thing closes.</p></div></div>
+
+    <div class="chart">
+      <div class="chart-head">
+        <div>
+          <p class="eyebrow" style="margin-bottom:.45rem">Total slate financing</p>
+          <span class="total tnum">€20.0 <span class="unit">million</span></span>
+        </div>
+        <ul class="legend">
+          <li><span class="sw-dot" style="background:var(--t1)"></span>Rule-based</li>
+          <li><span class="sw-dot" style="background:var(--t2)"></span>Contractual</li>
+          <li><span class="sw-dot" style="background:var(--t3)"></span>At risk</li>
+        </ul>
+      </div>
+      <div class="bars"><div class="bar-row" tabindex="0">
+  <div class="bar-top"><span class="bar-name">Netherlands Film Production Incentive</span>
+    <span class="bar-val tnum">&euro;4.5 m</span></div>
+  <div class="track"><div class="fill" style="width:100.0%;background:var(--t1);animation-delay:0ms"></div></div>
+  <p class="bar-note">Cash rebate of up to 35% on qualifying spend, ceiling €3m per year per applicant.</p>
+</div>
+<div class="bar-row" tabindex="0">
+  <div class="bar-top"><span class="bar-name">Pre-sales, licences and distribution</span>
+    <span class="bar-val tnum">&euro;3.5 m</span></div>
+  <div class="track"><div class="fill" style="width:77.8%;background:var(--t2);animation-delay:70ms"></div></div>
+  <p class="bar-note">Broadcasters, streamers, theatrical, and a minimum guarantee from a sales agent.</p>
+</div>
+<div class="bar-row" tabindex="0">
+  <div class="bar-top"><span class="bar-name">Netherlands Film Fund</span>
+    <span class="bar-val tnum">&euro;3.0 m</span></div>
+  <div class="track"><div class="fill" style="width:66.7%;background:var(--t1);animation-delay:140ms"></div></div>
+  <p class="bar-note">Development and production grants per title, in the regular rounds.</p>
+</div>
+<div class="bar-row" tabindex="0">
+  <div class="bar-top"><span class="bar-name">Co-producers with their own national support</span>
+    <span class="bar-val tnum">&euro;3.0 m</span></div>
+  <div class="track"><div class="fill" style="width:66.7%;background:var(--t2);animation-delay:210ms"></div></div>
+  <p class="bar-note">SunnyMarch in the UK and A Team Productions in Belgium each bring their own national support.</p>
+</div>
+<div class="bar-row" tabindex="0">
+  <div class="bar-top"><span class="bar-name">UK Independent Film Tax Credit</span>
+    <span class="bar-val tnum">&euro;2.5 m</span></div>
+  <div class="track"><div class="fill" style="width:55.6%;background:var(--t1);animation-delay:280ms"></div></div>
+  <p class="bar-note">Up to 39.75% net on qualifying UK spend, below £23.5m core budget.</p>
+</div>
+<div class="bar-row" tabindex="0">
+  <div class="bar-top"><span class="bar-name">Eurimages and Creative Europe MEDIA</span>
+    <span class="bar-val tnum">&euro;1.5 m</span></div>
+  <div class="track"><div class="fill" style="width:33.3%;background:var(--t2);animation-delay:350ms"></div></div>
+  <p class="bar-note">Co-production support and slate development, once half the budget is in place.</p>
+</div>
+<div class="bar-row" tabindex="0">
+  <div class="bar-top"><span class="bar-name">Impact and philanthropic capital</span>
+    <span class="bar-val tnum">&euro;1.0 m</span></div>
+  <div class="track"><div class="fill" style="width:22.2%;background:var(--t3);animation-delay:420ms"></div></div>
+  <p class="bar-note">For Kachhua only. The one source that sits outside the film chain entirely.</p>
+</div>
+<div class="bar-row" tabindex="0">
+  <div class="bar-top"><span class="bar-name">Private equity, family offices and gap</span>
+    <span class="bar-val tnum">&euro;1.0 m</span></div>
+  <div class="track"><div class="fill" style="width:22.2%;background:var(--t3);animation-delay:490ms"></div></div>
+  <p class="bar-note">The final gap, covered against unsold territories.</p>
+</div></div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section id="bronnen">
+  <div class="wrap">
+    <p class="eyebrow">Source by source</p>
+    <h2>Eight doors, and what to bring to each</h2>
+    <div class="fin-list"><div class="fin t1">
+  <div class="top"><h4>Netherlands Film Production Incentive</h4><span class="tier">Rule-based · ± €4.5m</span></div>
+  <p>A cash rebate of up to 35% on qualifying production spend in the Netherlands, with a minimum budget of €1 million for a feature. The ceiling is €3 million per year per applicant, which by definition spreads it across several financial years and several titles. In 2026 there is €20 million available over four rounds, with priority for international co-productions.</p>
+  <p class="need"><b>Bring</b> A fully costed budget per title, a demonstrable share of the financing already in place, and a production schedule that fits inside the rounds.</p>
+</div>
+<div class="fin t1">
+  <div class="top"><h4>Netherlands Film Fund</h4><span class="tier">Rule-based · ± €3.0m</span></div>
+  <p>Development and production grants, applied for title by title in the regular rounds. For a producer with nineteen credits this is the most predictable money on the whole stack.</p>
+  <p class="need"><b>Bring</b> A screenplay or treatment, an attached writer and director, and a substantiated audience plan. That last one is where most applications come apart.</p>
+</div>
+<div class="fin t1">
+  <div class="top"><h4>UK Independent Film Tax Credit</h4><span class="tier">Rule-based · ± €2.5m</span></div>
+  <p>Up to 39.75% net on qualifying UK expenditure, for films with core production spend below £23.5 million. Above £15 million it tapers back towards the standard 25.5%. This is the strongest incentive this slate can reach, and it applies only to <em>Kachhua</em>, through the co-production with SunnyMarch.</p>
+  <p class="need"><b>Bring</b> A UK co-production structure that passes the cultural test, and clarity about which share of the spend actually lands in the UK.</p>
+</div>
+<div class="fin t2">
+  <div class="top"><h4>Co-producers with their own national support</h4><span class="tier">Contractual · ± €3.0m</span></div>
+  <p>SunnyMarch in London and A Team Productions in Belgium bring more than money. They bring access: their own national funds, regional schemes and broadcaster relationships. A co-producer is often worth more than the figure they put on paper.</p>
+  <p class="need"><b>Bring</b> A co-production agreement with a clear division of rights and territories. The sooner this is fixed, the sooner the rest of the stack can move.</p>
+</div>
+<div class="fin t2">
+  <div class="top"><h4>Pre-sales, licences and distribution</h4><span class="tier">Contractual · ± €3.5m</span></div>
+  <p>Dutch public broadcasting and streamers for the Dutch titles, theatrical distribution in the Netherlands and Belgium, and a minimum guarantee from an international sales agent for the English-language work. This money is the evidence every other party looks at.</p>
+  <p class="need"><b>Bring</b> A package per title: logline, treatment, attached talent, and comparable titles with real returns. For <em>See You Tomorrow</em>, the route through public broadcasting is the obvious one.</p>
+</div>
+<div class="fin t2">
+  <div class="top"><h4>Eurimages and Creative Europe MEDIA</h4><span class="tier">Contractual · ± €1.5m</span></div>
+  <p>Eurimages supports European co-productions with at least two co-producers from two member states, and requires 50% of the budget to be confirmed before you apply. Creative Europe MEDIA has a separate scheme for slate development — and a slate of eight titles is exactly what that is for.</p>
+  <p class="need"><b>Bring</b> Signed co-production contracts and a financing plan that is already half covered. Apply without that and you waste the round.</p>
+</div>
+<div class="fin t3">
+  <div class="top"><h4>Impact and philanthropic capital</h4><span class="tier">At risk · ± €1.0m</span></div>
+  <p>Funds and foundations working on oceans, plastic and climate, plus companies with a credible programme in that area. This is the only money on the whole slate that comes from outside the film chain, and <em>Kachhua</em> is the only title that can reach it. These parties are not buying a return; they are buying reach — how many people will look at a beach differently because of this film.</p>
+  <p class="need"><b>Bring</b> An impact plan alongside the production plan — what happens after the film, with whom, and how you measure whether it worked. That document does not exist yet and is probably the most underestimated piece of work in this entire stack.</p>
+</div>
+<div class="fin t3">
+  <div class="top"><h4>Private equity, family offices and gap</h4><span class="tier">At risk · ± €1.0m</span></div>
+  <p>The final gap, usually covered against unsold territories. Small in amount, decisive in effect: this is the part that determines whether the whole thing closes. Dutch family offices with a connection to film or to the subject are more realistic here than institutional parties.</p>
+  <p class="need"><b>Bring</b> A complete financing overview in which this piece is demonstrably the last one. Nobody wants to be first; everybody wants to be last.</p>
+</div></div>
+
+    <div class="two" style="margin-top:clamp(38px,5vw,60px)">
+      <div>
+        <h3>The order is the strategy</h3>
+        <p style="color:var(--dim);margin-top:1rem">Co-production first, then pre-sales, then the funds, then the money at risk. Every step makes the next one cheaper. Starting at the other end — finding an investor first and the rest afterwards — is the most expensive route and the most commonly taken.</p>
+        <p style="color:var(--dim)">There is one thing on this slate that no producer can buy and Bart already has: five years of being on the ground with the person the film is about, and photographs to prove it. In a room full of decks that all look the same, that is the only thing nobody can copy.</p>
+      </div>
+      <div>
+        <h4>Sources checked</h4>
+        <ul class="srclist"><li>Netherlands Film Production Incentive — filmfonds.nl</li>
+<li>UK Screen Alliance — film and high-end TV tax incentives (AVEC and IFTC)</li>
+<li>Eurimages — co-production requirements</li>
+<li>Creative Europe MEDIA — European Slate Development 2026</li>
+<li>UN Environment Programme — Champions of the Earth 2016</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="sig">
+      <p class="eyebrow">What you are looking at</p>
+      <p>This is not a live page from Warana Film Company. It is a proposal. I read the Slate 2026, found the public sources around it, and in one evening built what I think the story deserves. Every image, project and logline comes from Bart's own slate.</p>
+      <p style="margin-bottom:0">The funding stack is my model, not a commitment. The percentages and ceilings inside it were checked against the Netherlands Film Fund, the UK Screen Alliance and Eurimages.</p>
+      <p class="name">Loek Luijbregts</p>
+      <p class="date">August 2026</p>
+    </div>
+    <p class="foot-meta"><span>Warana Film Company</span><span>Amsterdam, the Netherlands</span>
+      <span><a href="mailto:bart@waranafilm.com">bart@waranafilm.com</a></span>
+      <span>Built by Loek Luijbregts</span></p>
+  </div>
+</footer>
+
+</div>
+<div class="langblock" lang="nl">
+<div class="page-head">
+  <div class="wrap">
+    <img class="mark" src="../img/warana-logo.svg" alt="Warana Film Company" width="401" height="241">
+    <p class="eyebrow">Financieringskaart · augustus 2026</p>
+    <h1>Niemand schrijft één cheque uit voor een slate.</h1>
+    <p class="lede" style="margin-top:1.2rem">De Nederlandse Production Incentive keert maximaal €3 miljoen per jaar per productiemaatschappij uit. Die ene regel bepaalt de vorm van de hele vraag. Hieronder: acht bronnen, wat ze werkelijk zijn, en wat er moet liggen voordat je aanklopt.</p>
+    <div class="note"><p>De bedragen zijn een model, geen toezegging. De percentages, plafonds en voorwaarden zijn nagekeken bij het Filmfonds, de UK Screen Alliance, Eurimages en Creative Europe. Dit is een landschapsschets, geen financieel advies — controleer bedragen en termijnen bij de bron voordat er iets op wordt gebouwd.</p></div>
+  </div>
+</div>
+
+<hr class="rule">
+
+<section id="soorten">
+  <div class="wrap">
+    <p class="eyebrow">Drie soorten geld</p>
+    <h2>De verhouding telt zwaarder dan het totaal</h2>
+    <div class="tiers"><div class="qa"><h4>Regelgebonden</h4><p>Krijg je als je aan de voorwaarden voldoet. Incentives, rebates, tax credits. Traag, formeel en bijna zeker — dit is de vloer waar de rest van de stapel op staat.</p></div>
+<div class="qa"><h4>Contractueel</h4><p>Daarover moet je onderhandelen. Coproducenten, voorverkoop, distributeurs, Europese fondsen. Elke deal maakt de volgende makkelijker. De volgorde waarin je ze benadert bepaalt dus de prijs.</p></div>
+<div class="qa"><h4>Risicodragend</h4><p>Iemand moet erin geloven. Impactkapitaal, private investeerders, gap. Klein in bedrag, bepalend in effect: dit is het deel dat beslist of het geheel sluit.</p></div></div>
+
+    <div class="chart">
+      <div class="chart-head">
+        <div>
+          <p class="eyebrow" style="margin-bottom:.45rem">Totale slate-financiering</p>
+          <span class="total tnum">€20,0 <span class="unit">miljoen</span></span>
+        </div>
+        <ul class="legend">
+          <li><span class="sw-dot" style="background:var(--t1)"></span>Regelgebonden</li>
+          <li><span class="sw-dot" style="background:var(--t2)"></span>Contractueel</li>
+          <li><span class="sw-dot" style="background:var(--t3)"></span>Risicodragend</li>
+        </ul>
+      </div>
+      <div class="bars"><div class="bar-row" tabindex="0">
+  <div class="bar-top"><span class="bar-name">Netherlands Film Production Incentive</span>
+    <span class="bar-val tnum">&euro;4,5 mln</span></div>
+  <div class="track"><div class="fill" style="width:100.0%;background:var(--t1);animation-delay:0ms"></div></div>
+  <p class="bar-note">Cash rebate tot 35% op kwalificerende kosten, plafond €3 mln per jaar per aanvrager.</p>
+</div>
+<div class="bar-row" tabindex="0">
+  <div class="bar-top"><span class="bar-name">Voorverkoop, licenties en distributie</span>
+    <span class="bar-val tnum">&euro;3,5 mln</span></div>
+  <div class="track"><div class="fill" style="width:77.8%;background:var(--t2);animation-delay:70ms"></div></div>
+  <p class="bar-note">Omroepen, streamers, bioscoop, en een minimumgarantie van een sales agent.</p>
+</div>
+<div class="bar-row" tabindex="0">
+  <div class="bar-top"><span class="bar-name">Nederlands Filmfonds</span>
+    <span class="bar-val tnum">&euro;3,0 mln</span></div>
+  <div class="track"><div class="fill" style="width:66.7%;background:var(--t1);animation-delay:140ms"></div></div>
+  <p class="bar-note">Ontwikkelings- en realiseringsbijdragen per titel, in de reguliere rondes.</p>
+</div>
+<div class="bar-row" tabindex="0">
+  <div class="bar-top"><span class="bar-name">Coproducenten met eigen landensteun</span>
+    <span class="bar-val tnum">&euro;3,0 mln</span></div>
+  <div class="track"><div class="fill" style="width:66.7%;background:var(--t2);animation-delay:210ms"></div></div>
+  <p class="bar-note">SunnyMarch in het VK en A Team Productions in België brengen hun eigen toegang mee.</p>
+</div>
+<div class="bar-row" tabindex="0">
+  <div class="bar-top"><span class="bar-name">Britse Independent Film Tax Credit</span>
+    <span class="bar-val tnum">&euro;2,5 mln</span></div>
+  <div class="track"><div class="fill" style="width:55.6%;background:var(--t1);animation-delay:280ms"></div></div>
+  <p class="bar-note">Tot 39,75% netto op kwalificerende Britse uitgaven, onder £23,5 mln kernbudget.</p>
+</div>
+<div class="bar-row" tabindex="0">
+  <div class="bar-top"><span class="bar-name">Eurimages en Creative Europe MEDIA</span>
+    <span class="bar-val tnum">&euro;1,5 mln</span></div>
+  <div class="track"><div class="fill" style="width:33.3%;background:var(--t2);animation-delay:350ms"></div></div>
+  <p class="bar-note">Coproductiesteun en slate development, zodra de helft van het budget vaststaat.</p>
+</div>
+<div class="bar-row" tabindex="0">
+  <div class="bar-top"><span class="bar-name">Impact- en filantropiekapitaal</span>
+    <span class="bar-val tnum">&euro;1,0 mln</span></div>
+  <div class="track"><div class="fill" style="width:22.2%;background:var(--t3);animation-delay:420ms"></div></div>
+  <p class="bar-note">Alleen voor Kachhua. De enige bron die volledig buiten de filmketen staat.</p>
+</div>
+<div class="bar-row" tabindex="0">
+  <div class="bar-top"><span class="bar-name">Private equity, family offices en gap</span>
+    <span class="bar-val tnum">&euro;1,0 mln</span></div>
+  <div class="track"><div class="fill" style="width:22.2%;background:var(--t3);animation-delay:490ms"></div></div>
+  <p class="bar-note">Het laatste gat, gedekt door onverkochte territoria.</p>
+</div></div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section id="bronnen">
+  <div class="wrap">
+    <p class="eyebrow">Bron voor bron</p>
+    <h2>Acht deuren, en wat je bij elke deur meeneemt</h2>
+    <div class="fin-list"><div class="fin t1">
+  <div class="top"><h4>Netherlands Film Production Incentive</h4><span class="tier">Regelgebonden · ± €4,5 mln</span></div>
+  <p>Cash rebate tot 35% op kwalificerende productiekosten in Nederland, bij een minimumbudget van €1 miljoen voor een speelfilm. Het plafond is €3 miljoen per jaar per aanvrager, dus loopt een slate per definitie over meerdere boekjaren en meerdere titels. In 2026 is er €20 miljoen beschikbaar over vier rondes, met voorrang voor internationale coproducties.</p>
+  <p class="need"><b>Meenemen</b> Een sluitende begroting per titel, een aantoonbaar deel van de financiering al rond, en een productieplanning die binnen de rondes past.</p>
+</div>
+<div class="fin t1">
+  <div class="top"><h4>Nederlands Filmfonds</h4><span class="tier">Regelgebonden · ± €3,0 mln</span></div>
+  <p>Ontwikkelings- en realiseringsbijdragen, per titel aangevraagd in de reguliere rondes. Voor een producent met negentien credits is dit het meest voorspelbare geld op de hele stapel.</p>
+  <p class="need"><b>Meenemen</b> Scenario of treatment, een verbonden schrijver en regisseur, en een onderbouwd publieksplan. Op dat laatste lopen de meeste aanvragen stuk.</p>
+</div>
+<div class="fin t1">
+  <div class="top"><h4>Britse Independent Film Tax Credit</h4><span class="tier">Regelgebonden · ± €2,5 mln</span></div>
+  <p>Tot 39,75% netto op kwalificerende Britse uitgaven, voor films met een kernbudget onder £23,5 miljoen. Boven £15 miljoen loopt het af naar het gewone tarief van 25,5%. Dit is de sterkste regeling die voor deze slate binnen bereik ligt, en die geldt alleen voor <em>Kachhua</em>, via de coproductie met SunnyMarch.</p>
+  <p class="need"><b>Meenemen</b> Een Britse coproductiestructuur die de culturele toets haalt, en helderheid over welk deel van de uitgaven daadwerkelijk in het VK landt.</p>
+</div>
+<div class="fin t2">
+  <div class="top"><h4>Coproducenten met eigen landensteun</h4><span class="tier">Contractueel · ± €3,0 mln</span></div>
+  <p>SunnyMarch in Londen en A Team Productions in België brengen niet alleen geld mee maar toegang: hun eigen nationale fondsen, regionale regelingen en omroeprelaties. Een coproducent is daarmee vaak meer waard dan zijn inbreng op papier.</p>
+  <p class="need"><b>Meenemen</b> Een coproductieovereenkomst met een heldere verdeling van rechten en territoria. Hoe eerder dit vaststaat, hoe eerder de rest van de stapel kan bewegen.</p>
+</div>
+<div class="fin t2">
+  <div class="top"><h4>Voorverkoop, licenties en distributie</h4><span class="tier">Contractueel · ± €3,5 mln</span></div>
+  <p>NPO en streamers voor de Nederlandse titels, bioscoopdistributie in Nederland en België, en een minimumgarantie van een internationale sales agent voor het Engelstalige werk. Dit geld is het bewijsstuk waar alle andere partijen naar kijken.</p>
+  <p class="need"><b>Meenemen</b> Een pakket per titel: logline, treatment, verbonden talent en vergelijkbare titels met echte opbrengsten. Voor <em>Tot Morgen</em> ligt de weg via de publieke omroep het meest voor de hand.</p>
+</div>
+<div class="fin t2">
+  <div class="top"><h4>Eurimages en Creative Europe MEDIA</h4><span class="tier">Contractueel · ± €1,5 mln</span></div>
+  <p>Eurimages steunt Europese coproducties met minimaal twee coproducenten uit twee lidstaten en verlangt dat 50% van het budget vaststaat voordat je indient. Creative Europe MEDIA heeft daarnaast een aparte regeling voor slate development — en een slate van acht titels is precies waar die voor bedoeld is.</p>
+  <p class="need"><b>Meenemen</b> Getekende coproductiecontracten en een financieringsplan waarin de helft al is afgedekt. Zonder dat is indienen zonde van de ronde.</p>
+</div>
+<div class="fin t3">
+  <div class="top"><h4>Impact- en filantropiekapitaal</h4><span class="tier">Risicodragend · ± €1,0 mln</span></div>
+  <p>Fondsen en stichtingen rond oceaan, plastic en klimaat, plus bedrijven met een geloofwaardig programma op dat terrein. Dit is het enige geld op de hele slate dat van buiten de filmketen komt, en het is uitsluitend bereikbaar via <em>Kachhua</em>. Deze partijen kopen geen rendement maar bereik: hoeveel mensen gaan hierdoor anders naar een strand kijken.</p>
+  <p class="need"><b>Meenemen</b> Een impactplan naast het productieplan — wat er ná de film gebeurt, met wie, en hoe je meet of het werkte. Dat document bestaat nog niet en is waarschijnlijk het meest onderschatte stuk werk in deze hele stapel.</p>
+</div>
+<div class="fin t3">
+  <div class="top"><h4>Private equity, family offices en gap</h4><span class="tier">Risicodragend · ± €1,0 mln</span></div>
+  <p>Het laatste gat, meestal gedekt door onverkochte territoria. Klein in bedrag, bepalend in effect: dit is het deel dat beslist of het geheel sluit. Nederlandse family offices met een band met film of met het onderwerp zijn hier realistischer dan institutionele partijen.</p>
+  <p class="need"><b>Meenemen</b> Een compleet financieringsoverzicht waarin dit stuk aantoonbaar het laatste is. Niemand wil de eerste zijn; iedereen wil de laatste zijn.</p>
+</div></div>
+
+    <div class="two" style="margin-top:clamp(38px,5vw,60px)">
+      <div>
+        <h3>De volgorde is de strategie</h3>
+        <p style="color:var(--dim);margin-top:1rem">Coproductie eerst, dan voorverkoop, dan de fondsen, dan het risicodragende deel. Elke stap maakt de volgende goedkoper. Andersom beginnen — eerst een investeerder zoeken en dan de rest — is de duurste route en de meest gelopen.</p>
+        <p style="color:var(--dim)">Er is één ding op deze slate dat geen producent kan kopen en dat Bart al heeft: vijf jaar ter plaatse zijn bij de mens over wie de film gaat, en foto's die dat bewijzen. In een kamer vol decks die allemaal op elkaar lijken, is dat het enige wat niemand kan namaken.</p>
+      </div>
+      <div>
+        <h4>Gecontroleerde bronnen</h4>
+        <ul class="srclist"><li>Netherlands Film Production Incentive — filmfonds.nl</li>
+<li>UK Screen Alliance — film- en high-end TV-belastingregelingen (AVEC en IFTC)</li>
+<li>Eurimages — coproductievoorwaarden</li>
+<li>Creative Europe MEDIA — European Slate Development 2026</li>
+<li>UN Environment Programme — Champions of the Earth 2016</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="sig">
+      <p class="eyebrow">Wat je hier ziet</p>
+      <p>Dit is geen live pagina van Warana Film Company. Het is een voorstel. Ik heb de Slate 2026 gelezen, de openbare bronnen erbij gezocht en in één avond gebouwd wat het verhaal volgens mij verdient. Alle beelden, projecten en loglines komen uit de slate van Bart zelf.</p>
+      <p style="margin-bottom:0">De financieringsstapel is mijn model, geen toezegging. De percentages en plafonds erin zijn nagekeken bij het Filmfonds, de UK Screen Alliance en Eurimages.</p>
+      <p class="name">Loek Luijbregts</p>
+      <p class="date">Augustus 2026</p>
+    </div>
+    <p class="foot-meta"><span>Warana Film Company</span><span>Amsterdam, Nederland</span>
+      <span><a href="mailto:bart@waranafilm.com">bart@waranafilm.com</a></span>
+      <span>Gebouwd door Loek Luijbregts</span></p>
+  </div>
+</footer>
+
+</div>
+<script>
+(function(){
+  var r=document.documentElement, KEY='warana-lang';
+  function set(l,save){
+    r.dataset.lang=l; r.setAttribute('lang',l);
+    document.querySelectorAll('.langtoggle button').forEach(function(b){
+      b.setAttribute('aria-pressed', String(b.dataset.set===l));
+    });
+    var t=document.querySelector('title[data-'+l+']');
+    if(t) document.title=t.getAttribute('data-'+l);
+    if(save){ try{ localStorage.setItem(KEY,l); }catch(e){} }
+  }
+  var q=new URLSearchParams(location.search).get('lang');
+  var saved=null; try{ saved=localStorage.getItem(KEY); }catch(e){}
+  set(q==='nl'||q==='en' ? q : (saved==='nl'||saved==='en' ? saved : 'en'), false);
+  document.addEventListener('click', function(e){
+    var b=e.target.closest('.langtoggle button'); if(!b) return;
+    set(b.dataset.set,true);
+  });
+})();
+</script>
+</body>
+</html>

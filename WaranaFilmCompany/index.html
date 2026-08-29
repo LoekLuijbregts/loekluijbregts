@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-en="Warana Film Company — a proposal" data-nl="Warana Film Company — een voorstel">Warana Film Company — a proposal</title>
+<meta name="description" content="A pitch page, a brand book, a social plan and a funding map for Warana Film Company. Built by Loek Luijbregts from the Slate 2026.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#101B2B">
+<meta property="og:title" content="Warana Film Company — a proposal">
+<meta property="og:description" content="A pitch page, a brand book, a social plan and a funding map for Warana Film Company. Built by Loek Luijbregts from the Slate 2026.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap">
+<style>
+/* ============================================================
+   Warana Film Company — case section on loekluijbregts.com
+   Chrome: Loek's site tokens (cream / orange / DM Mono)
+   Content: Warana's world (navy / cream / gold)
+   Type: Instrument Serif (display) + Archivo (everything else)
+   ============================================================ */
+:root{
+  /* Warana */
+  --ink:#101B2B; --ink2:#16243A; --ink3:#1E3050;
+  --line:rgba(237,227,210,.14); --line2:rgba(237,227,210,.26);
+  --cream:#EDE3D2; --dim:rgba(237,227,210,.68); --faint:rgba(237,227,210,.44);
+  --gold:#C9A063; --gold-2:#94734A; --sea:#3D8CA8;
+  --t1:#EDE3D2; --t2:#C9A063; --t3:#94734A;
+  /* Loek chrome */
+  --loek-cream:#F8F5F0; --loek-ink:#1C1814; --loek-orange:#D94F0A; --loek-border:#E5DFD6;
+  /* type */
+  --display:"Instrument Serif",Georgia,"Times New Roman",serif;
+  --ui:"Archivo",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --wrap:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:var(--cream);font-family:var(--ui);
+  font-weight:400;font-size:17px;line-height:1.66;-webkit-font-smoothing:antialiased;
+  font-synthesis-weight:none}
+img{max-width:100%;display:block}
+h1,h2,h3,h4{font-family:var(--display);font-weight:400;margin:0;text-wrap:balance;letter-spacing:0}
+h1{font-size:clamp(2.9rem,7.2vw,5.4rem);line-height:1.0}
+h2{font-size:clamp(2rem,4.3vw,3.15rem);line-height:1.08}
+h3{font-size:1.55rem;line-height:1.18}
+h4{font-size:1.16rem;line-height:1.25}
+p{margin:0 0 1.05em}
+a{color:var(--gold)}
+hr.rule{height:1px;background:var(--line);border:0;margin:0}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:2px}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:clamp(20px,5vw,40px)}
+section{padding-block:clamp(58px,8vw,104px);position:relative}
+.eyebrow{font-family:var(--ui);font-weight:600;font-size:.66rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--gold);margin:0 0 1rem}
+.lede{font-size:clamp(1.06rem,1.8vw,1.26rem);color:var(--dim);max-width:62ch}
+.tnum{font-variant-numeric:tabular-nums}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* ---------- taal ---------- */
+[lang]:where(.langblock){display:contents}
+:root[data-lang="nl"] .langblock[lang="en"]{display:none}
+:root[data-lang="en"] .langblock[lang="nl"]{display:none}
+
+/* ---------- Loek-balk ---------- */
+.chrome{position:sticky;top:0;z-index:60;background:var(--loek-cream);color:var(--loek-ink);
+  border-bottom:1px solid var(--loek-border)}
+.chrome-in{max-width:var(--wrap);margin-inline:auto;padding:10px clamp(20px,5vw,40px);
+  display:flex;flex-wrap:wrap;gap:.7rem 1.2rem;align-items:center;justify-content:space-between}
+.chrome a.home{display:inline-flex;align-items:center;gap:.55rem;color:var(--loek-ink);text-decoration:none;
+  font-size:.66rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase}
+.chrome a.home:hover{color:var(--loek-orange)}
+.chrome .crumb{font-size:.66rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:#827C76}
+.chrome .crumb b{color:var(--loek-orange);font-weight:600}
+.langtoggle{display:inline-flex;border:1px solid var(--loek-border);border-radius:3px;overflow:hidden;background:#fff}
+.langtoggle button{appearance:none;border:0;background:transparent;cursor:pointer;padding:.42rem .78rem;
+  font-family:var(--ui);font-size:.64rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;
+  color:#827C76;transition:.18s}
+.langtoggle button+button{border-left:1px solid var(--loek-border)}
+.langtoggle button:hover{color:var(--loek-ink)}
+.langtoggle button[aria-pressed="true"]{background:var(--loek-orange);color:#fff}
+
+/* ---------- sectienavigatie ---------- */
+.subnav{background:var(--ink2);border-bottom:1px solid var(--line)}
+.subnav-in{max-width:var(--wrap);margin-inline:auto;padding:0 clamp(20px,5vw,40px);
+  display:flex;gap:.2rem;overflow-x:auto;scrollbar-width:none}
+.subnav-in::-webkit-scrollbar{display:none}
+.subnav a{flex:none;padding:.9rem .95rem;color:var(--faint);text-decoration:none;white-space:nowrap;
+  font-size:.66rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  border-bottom:2px solid transparent;transition:.18s}
+.subnav a:hover{color:var(--cream)}
+.subnav a[aria-current="page"]{color:var(--cream);border-bottom-color:var(--gold)}
+
+/* ---------- knoppen ---------- */
+.btn{display:inline-flex;align-items:center;gap:.55rem;padding:.82rem 1.45rem;border-radius:2px;
+  font-family:var(--ui);font-size:.68rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;
+  text-decoration:none;border:1px solid var(--gold);cursor:pointer;transition:.2s}
+.btn-solid{background:var(--gold);color:#101B2B}
+.btn-solid:hover{background:var(--cream);border-color:var(--cream)}
+.btn-ghost{background:transparent;color:var(--cream);border-color:var(--line2)}
+.btn-ghost:hover{border-color:var(--cream)}
+.cta-row{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2.2rem}
+
+/* ---------- bouwstenen ---------- */
+.two{display:grid;gap:clamp(30px,5vw,64px);grid-template-columns:1fr}
+@media(min-width:900px){.two{grid-template-columns:1.05fr .95fr;align-items:start}}
+.facts{display:grid;margin:1.9rem 0 0;border-top:1px solid var(--line)}
+.facts>div{display:grid;grid-template-columns:minmax(108px,.32fr) 1fr;gap:1.1rem;padding:.8rem 0;
+  border-bottom:1px solid var(--line)}
+.facts .k{font-size:.63rem;font-weight:600;letter-spacing:.17em;text-transform:uppercase;color:var(--gold);padding-top:.42em}
+.facts .v{color:var(--dim);font-size:.95rem}
+.facts .v b{color:var(--cream);font-weight:500}
+.badges{display:flex;flex-wrap:wrap;gap:.45rem;margin:1.5rem 0 0;padding:0;list-style:none}
+.badges li{border:1px solid var(--line);padding:.4rem .78rem;font-size:.64rem;font-weight:500;
+  letter-spacing:.13em;text-transform:uppercase;color:var(--dim)}
+.badges li b{color:var(--cream);font-weight:600}
+.stat-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(122px,1fr));gap:1px;
+  background:var(--line);border:1px solid var(--line);border-radius:3px;overflow:hidden;margin-top:1.9rem}
+.stat{background:var(--ink2);padding:1.05rem 1.1rem}
+.stat b{display:block;font-family:var(--display);font-size:2rem;line-height:1;margin-bottom:.35rem;font-variant-numeric:tabular-nums}
+.stat span{font-size:.62rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--faint);line-height:1.45;display:block}
+.callout{border-left:2px solid var(--gold);padding:.15rem 0 .15rem 1.3rem;margin:2rem 0;
+  font-family:var(--display);font-size:clamp(1.2rem,2.4vw,1.62rem);line-height:1.34;color:var(--cream)}
+.callout cite{display:block;font-family:var(--ui);font-style:normal;font-size:.64rem;font-weight:600;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-top:.85rem}
+.note{border:1px solid var(--gold);border-radius:3px;background:rgba(201,160,99,.06);padding:1.15rem 1.3rem;margin-top:2rem}
+.note p:last-child{margin-bottom:0}
+.box{border:1px solid var(--line);border-radius:3px;padding:1.2rem 1.3rem;background:var(--ink2)}
+.box.good{border-left:2px solid var(--gold)}
+.box.bad{border-left:2px solid #A45B4A}
+.box h4{margin-bottom:.65rem}
+.box ul{margin:0;padding-left:1.05rem}
+.box li{margin-bottom:.5rem;color:var(--dim);font-size:.93rem}
+.box li::marker{color:var(--faint)}
+.box li b{color:var(--cream);font-weight:500}
+.dd{display:grid;gap:15px;grid-template-columns:1fr;margin-top:1.7rem}
+@media(min-width:760px){.dd.cols2{grid-template-columns:1fr 1fr}}
+.person-img{border:1px solid var(--line);border-radius:3px;overflow:hidden}
+.cap{font-size:.8rem;color:var(--faint);margin-top:.8rem}
+
+/* ---------- hublinks ---------- */
+.hub{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));margin-top:2.4rem}
+.hubcard{display:flex;flex-direction:column;gap:.5rem;padding:1.35rem 1.4rem 1.5rem;background:var(--ink2);
+  border:1px solid var(--line);border-radius:3px;text-decoration:none;color:inherit;transition:.22s}
+.hubcard:hover{border-color:var(--gold);transform:translateY(-3px)}
+.hubcard .n{font-size:.62rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.hubcard h3{font-size:1.42rem}
+.hubcard p{font-size:.92rem;color:var(--dim);margin:0;flex:1}
+.hubcard .go{font-size:.64rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--cream);
+  margin-top:.55rem;padding-top:.85rem;border-top:1px solid var(--line)}
+
+/* ---------- voettekst ---------- */
+footer.site{background:#0B1421;border-top:1px solid var(--line);padding-block:clamp(44px,6vw,72px)}
+.sig{border:1px solid var(--gold);border-radius:3px;padding:clamp(20px,3.2vw,30px);background:rgba(201,160,99,.055)}
+.sig .name{font-family:var(--display);font-size:1.35rem;margin:1.3rem 0 0}
+.sig .date{font-size:.64rem;font-weight:600;letter-spacing:.17em;text-transform:uppercase;color:var(--gold);margin:.25rem 0 0}
+.foot-meta{display:flex;flex-wrap:wrap;gap:.55rem 1.9rem;margin-top:2.3rem;font-size:.66rem;
+  letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--faint)}
+.foot-meta a{color:inherit}
+
+.hero-plain{padding-block:clamp(52px,8vw,110px) clamp(46px,7vw,92px);
+  background:radial-gradient(120% 90% at 12% 0%,rgba(61,140,168,.16) 0%,transparent 62%),var(--ink)}
+.mark{width:clamp(122px,14vw,168px);height:auto;margin-bottom:clamp(26px,4.5vw,46px)}
+.hero-plain h1{max-width:19ch}
+.hero-plain .lede{max-width:58ch}
+.hero-meta{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;margin-top:2.1rem;font-size:.66rem;
+  letter-spacing:.17em;text-transform:uppercase;font-weight:600;color:var(--faint)}
+
+.qalist{display:grid;gap:0;margin-top:2.2rem;border-top:1px solid var(--line)}
+.qa{padding:1.5rem 0;border-bottom:1px solid var(--line);display:grid;gap:.6rem;
+  grid-template-columns:1fr}
+@media(min-width:880px){.qa{grid-template-columns:minmax(0,.42fr) minmax(0,.58fr);gap:2.4rem}}
+.qa h4{color:var(--cream)}
+.qa p{margin:0;color:var(--dim);font-size:.97rem}
+.qalist.tight .qa h4{color:var(--gold)}
+</style>
+</head>
+<body>
+<div class="chrome">
+  <div class="chrome-in">
+    <a class="home" href="/">&larr;&nbsp; Loek Luijbregts</a>
+    <span class="crumb"><span class="langblock" lang="en">Client work</span><span class="langblock" lang="nl">Werk voor een klant</span> &middot; <b>Warana Film Company</b></span>
+    <div class="langtoggle" role="group" aria-label="Language">
+      <button type="button" data-set="en" aria-pressed="true">EN</button>
+      <button type="button" data-set="nl" aria-pressed="false">NL</button>
+    </div>
+  </div>
+</div>
+<nav class="subnav" aria-label="Sections">
+  <div class="subnav-in"><a href="./" aria-current="page"><span class="langblock" lang="en">Overview</span><span class="langblock" lang="nl">Overzicht</span></a><a href="./pitch/"><span class="langblock" lang="en">The pitch page</span><span class="langblock" lang="nl">De pitchpagina</span></a><a href="./brand/"><span class="langblock" lang="en">Brand book</span><span class="langblock" lang="nl">Merkboek</span></a><a href="./social/"><span class="langblock" lang="en">Social</span><span class="langblock" lang="nl">Social</span></a><a href="./funding/"><span class="langblock" lang="en">Funding</span><span class="langblock" lang="nl">Financiering</span></a></div>
+</nav>
+<div class="langblock" lang="en">
+<div class="hero-plain">
+  <div class="wrap">
+    <img class="mark" src="./img/warana-logo.svg" alt="Warana Film Company" width="401" height="241">
+    <p class="eyebrow">Proposal · August 2026</p>
+    <h1>Nineteen producer credits. One website showing a short film from 2020.</h1>
+    <p class="lede" style="margin-top:1.3rem">Bart Willemsen is developing eight films and series. One of them, <em>Kachhua</em>, is in funded development with a London co-producer and a BAFTA-winning writer. None of it is visible anywhere. This is what it looks like when it is.</p>
+    <div class="cta-row">
+      <a class="btn btn-solid" href="./pitch/">Start with the pitch page</a>
+      <a class="btn btn-ghost" href="#gevonden">What I found</a>
+    </div>
+    <p class="hero-meta"><span>Four documents</span>
+<span>Two languages</span>
+<span>Built in one evening</span></p>
+  </div>
+</div>
+
+<hr class="rule">
+
+<section id="onderdelen">
+  <div class="wrap">
+    <p class="eyebrow">Four parts</p>
+    <h2>Where to go</h2>
+    <p class="lede" style="margin-top:1rem">The first one is what a financier would see. The other three are the work behind it.</p>
+    <div class="hub"><a class="hubcard" href="./pitch/">
+  <span class="n">One</span>
+  <h3>The pitch page</h3>
+  <p>A beach in Mumbai you can drag from 2015 to 2018 with your thumb. Kachhua, all eight titles with a status filter, the €20 million as a stack, and a working way to book a call.</p>
+  <span class="go">Open the pitch page &rarr;</span>
+</a>
+<a class="hubcard" href="./brand/">
+  <span class="n">Two</span>
+  <h3>Brand book</h3>
+  <p>Warana already has a house style. Nobody had written it down. Colour, type, image rules, and three before-and-afters using Bart's own sentences.</p>
+  <span class="go">Open the brand book &rarr;</span>
+</a>
+<a class="hubcard" href="./social/">
+  <span class="n">Three</span>
+  <h3>Social</h3>
+  <p>An Instagram grid of nine posts instead of two. Three stories that build to one link. Three LinkedIn posts over three weeks, from no ask to the real one.</p>
+  <span class="go">Open the social plan &rarr;</span>
+</a>
+<a class="hubcard" href="./funding/">
+  <span class="n">Four</span>
+  <h3>Funding</h3>
+  <p>Eight kinds of money for one slate, sorted by how certain each one is — and what has to be on the table before you knock on each door.</p>
+  <span class="go">Open the funding map &rarr;</span>
+</a></div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section id="gevonden">
+  <div class="wrap">
+    <p class="eyebrow">Reading the slate</p>
+    <h2>Four things that were already there</h2>
+    <p class="lede" style="margin-top:1rem">None of this is invented. It was all sitting in the deck, in the logo, and on IMDb — just never named.</p>
+    <div class="qalist"><div class="qa"><h4>The film is not called Warana. It is called Kachhua.</h4><p>Warana is the company; <em>Kachhua</em> is the film — Hindi for turtle. It is in co-production with SunnyMarch in London, in development with Grain Media, written by Ayub Khan Din, who wrote <em>East is East</em>. Status: funded development, writer attached. That is the furthest-advanced thing on the entire slate and it appears nowhere online.</p></div>
+<div class="qa"><h4>The slate already has a colour system.</h4><p>Every title in the deck carries its own colour wash over the image. Eight colours, used consistently, never named. That is a working brand system that happened by accident. In the brand book I pulled them out of the file and gave each one a name.</p></div>
+<div class="qa"><h4>The logo tells the story of the film.</h4><p>An arc with a small winged shape underneath — a horizon with a bird above the sea. That is <em>Kachhua</em>, drawn into a logo that sits on a website where <em>Kachhua</em> does not appear.</p></div>
+<div class="qa"><h4>His best writing is about someone else's project.</h4><p>About <em>Máxima</em> he wrote: "the international ambition of the project and the royal richness of the script grabbed me immediately… cast and crew from different countries." Word for word, that is the profile of <em>Kachhua</em>. He can say it clearly the moment it is not about him.</p></div></div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section id="controle">
+  <div class="wrap">
+    <p class="eyebrow">Before anything goes further</p>
+    <h2>Three things to check with Bart</h2>
+    <div class="qalist tight"><div class="qa"><h4>SunnyMarch is not the same as Benedict Cumberbatch</h4><p>The slate says "in co-production with SunnyMarch, London", and that is exactly how it appears here. SunnyMarch is publicly known as Benedict Cumberbatch's production company. A company-level co-production is a different claim from an actor attaching himself to a film, and financiers hold you to that difference. His name is nowhere on these pages until Bart says what is actually signed.</p></div>
+<div class="qa"><h4>The €20 million is a model, not Bart's number</h4><p>Bart never said he is raising €20 million. The figure came from the brief, and I built a credible stack around it to show what a sum like that looks like in practice. The percentages and ceilings in it are real and checked. The split is illustrative. If the real number is €6 million, the page only gets stronger.</p></div>
+<div class="qa"><h4>This page is not indexed</h4><p>Eight unannounced titles, an IP licence still under negotiation, and a project being developed with a suicide-prevention foundation. All of it carries a noindex tag and is excluded from the sitemap, so search engines leave it alone. The link works for anyone Bart chooses to send it to. Whether it ever becomes public is his call, not mine.</p></div></div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="sig">
+      <p class="eyebrow">What you are looking at</p>
+      <p>This is not a live page from Warana Film Company. It is a proposal. I read the Slate 2026, found the public sources around it, and in one evening built what I think the story deserves. Every image, project and logline comes from Bart's own slate.</p>
+      <p style="margin-bottom:0">The funding stack is my model, not a commitment. The percentages and ceilings inside it were checked against the Netherlands Film Fund, the UK Screen Alliance and Eurimages.</p>
+      <p class="name">Loek Luijbregts</p>
+      <p class="date">August 2026</p>
+    </div>
+    <p class="foot-meta"><span>Warana Film Company</span><span>Amsterdam, the Netherlands</span>
+      <span><a href="mailto:bart@waranafilm.com">bart@waranafilm.com</a></span>
+      <span>Built by Loek Luijbregts</span></p>
+  </div>
+</footer>
+
+</div>
+<div class="langblock" lang="nl">
+<div class="hero-plain">
+  <div class="wrap">
+    <img class="mark" src="./img/warana-logo.svg" alt="Warana Film Company" width="401" height="241">
+    <p class="eyebrow">Voorstel · augustus 2026</p>
+    <h1>Negentien producentencredits. Eén website met een korte film uit 2020.</h1>
+    <p class="lede" style="margin-top:1.3rem">Bart Willemsen ontwikkelt acht films en series. Eén daarvan, <em>Kachhua</em>, is in gefinancierde ontwikkeling met een Londense coproducent en een BAFTA-winnende schrijver. Daar is nergens iets van te zien. Zo ziet het eruit als dat wel zo is.</p>
+    <div class="cta-row">
+      <a class="btn btn-solid" href="./pitch/">Begin bij de pitchpagina</a>
+      <a class="btn btn-ghost" href="#gevonden">Wat mij opviel</a>
+    </div>
+    <p class="hero-meta"><span>Vier documenten</span>
+<span>Twee talen</span>
+<span>In één avond gebouwd</span></p>
+  </div>
+</div>
+
+<hr class="rule">
+
+<section id="onderdelen">
+  <div class="wrap">
+    <p class="eyebrow">Vier onderdelen</p>
+    <h2>Waar je heen kunt</h2>
+    <p class="lede" style="margin-top:1rem">Het eerste is wat een financier zou zien. De andere drie zijn het werk daarachter.</p>
+    <div class="hub"><a class="hubcard" href="./pitch/">
+  <span class="n">Eén</span>
+  <h3>De pitchpagina</h3>
+  <p>Een strand in Mumbai dat je met je duim van 2015 naar 2018 sleept. Kachhua, alle acht titels met een statusfilter, de €20 miljoen als stapel, en een werkende manier om een gesprek te plannen.</p>
+  <span class="go">Open de pitchpagina &rarr;</span>
+</a>
+<a class="hubcard" href="./brand/">
+  <span class="n">Twee</span>
+  <h3>Merkboek</h3>
+  <p>Warana heeft al een huisstijl. Niemand had hem opgeschreven. Kleur, letters, beeldregels, en drie keer voor-en-na met Barts eigen zinnen.</p>
+  <span class="go">Open het merkboek &rarr;</span>
+</a>
+<a class="hubcard" href="./social/">
+  <span class="n">Drie</span>
+  <h3>Social</h3>
+  <p>Een Instagram-raster van negen posts in plaats van twee. Drie stories die naar één link lopen. Drie LinkedIn-posts over drie weken, van geen vraag naar de echte.</p>
+  <span class="go">Open het socialplan &rarr;</span>
+</a>
+<a class="hubcard" href="./funding/">
+  <span class="n">Vier</span>
+  <h3>Financiering</h3>
+  <p>Acht soorten geld voor één slate, gesorteerd op hoe zeker ze zijn — en wat er moet liggen voordat je bij elke deur aanklopt.</p>
+  <span class="go">Open de financieringskaart &rarr;</span>
+</a></div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section id="gevonden">
+  <div class="wrap">
+    <p class="eyebrow">Bij het lezen van de slate</p>
+    <h2>Vier dingen die er al waren</h2>
+    <p class="lede" style="margin-top:1rem">Niets hiervan is verzonnen. Het zat allemaal al in de deck, in het logo en op IMDb — alleen nooit benoemd.</p>
+    <div class="qalist"><div class="qa"><h4>De film heet niet Warana. Hij heet Kachhua.</h4><p>Warana is het bedrijf; <em>Kachhua</em> is de film — Hindi voor schildpad. De film is een coproductie met SunnyMarch in Londen en wordt ontwikkeld met Grain Media. De schrijver is Ayub Khan Din, die <em>East is East</em> schreef. Status: gefinancierde ontwikkeling, schrijver verbonden. Dat is het verst gevorderde project van de hele slate en het staat nergens online.</p></div>
+<div class="qa"><h4>De slate heeft al een kleursysteem.</h4><p>Elke titel in de deck heeft een eigen kleurwaas over het beeld. Acht kleuren, consequent gebruikt, nooit benoemd. Dat is een werkend merksysteem dat per ongeluk is ontstaan. In het merkboek heb ik ze uit het bestand gelezen en elk een naam gegeven.</p></div>
+<div class="qa"><h4>Het logo vertelt het verhaal van de film.</h4><p>Een boog met een klein gevleugeld vormpje eronder — een horizon met een vogel boven zee. Dat is <em>Kachhua</em>, getekend in een logo dat op een website staat waar <em>Kachhua</em> niet op voorkomt.</p></div>
+<div class="qa"><h4>Zijn sterkste tekst gaat over andermans project.</h4><p>Over <em>Máxima</em> schreef hij: "de internationale ambitie van het project en de koninklijke rijkheid van het script grepen mij direct aan… cast en crew uit verschillende landen." Woord voor woord is dat het profiel van <em>Kachhua</em>. Hij kan het scherp formuleren zodra het niet over hemzelf gaat.</p></div></div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section id="controle">
+  <div class="wrap">
+    <p class="eyebrow">Voordat dit ergens heen gaat</p>
+    <h2>Drie dingen om met Bart na te lopen</h2>
+    <div class="qalist tight"><div class="qa"><h4>SunnyMarch is niet hetzelfde als Benedict Cumberbatch</h4><p>De slate zegt "in coproductie met SunnyMarch, Londen", en zo staat het hier ook. SunnyMarch is publiek bekend als het productiebedrijf van Benedict Cumberbatch. Een coproductie op bedrijfsniveau is iets anders dan een acteur die zich aan een film verbindt, en op dat verschil word je afgerekend. Zijn naam staat nergens op deze pagina's tot Bart zegt wat er werkelijk getekend is.</p></div>
+<div class="qa"><h4>De €20 miljoen is een model, niet Barts getal</h4><p>Bart heeft nergens gezegd dat hij €20 miljoen zoekt. Dat getal kwam uit de opdracht, en ik heb er een geloofwaardige stapel omheen gebouwd om te laten zien hoe zo'n bedrag er in de praktijk uitziet. De percentages en plafonds erin zijn echt en nagekeken. De verdeling is een voorbeeld. Als het werkelijke bedrag €6 miljoen is, wordt de pagina alleen maar sterker.</p></div>
+<div class="qa"><h4>Deze pagina wordt niet geïndexeerd</h4><p>Acht nog niet aangekondigde titels, een IP-licentie die nog in onderhandeling is, en een project dat wordt ontwikkeld met een stichting voor zelfmoordpreventie. Alles draagt een noindex-tag en staat niet in de sitemap, dus zoekmachines laten het met rust. De link werkt voor iedereen aan wie Bart hem stuurt. Of het ooit openbaar wordt, is zijn beslissing en niet de mijne.</p></div></div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="sig">
+      <p class="eyebrow">Wat je hier ziet</p>
+      <p>Dit is geen live pagina van Warana Film Company. Het is een voorstel. Ik heb de Slate 2026 gelezen, de openbare bronnen erbij gezocht en in één avond gebouwd wat het verhaal volgens mij verdient. Alle beelden, projecten en loglines komen uit de slate van Bart zelf.</p>
+      <p style="margin-bottom:0">De financieringsstapel is mijn model, geen toezegging. De percentages en plafonds erin zijn nagekeken bij het Filmfonds, de UK Screen Alliance en Eurimages.</p>
+      <p class="name">Loek Luijbregts</p>
+      <p class="date">Augustus 2026</p>
+    </div>
+    <p class="foot-meta"><span>Warana Film Company</span><span>Amsterdam, Nederland</span>
+      <span><a href="mailto:bart@waranafilm.com">bart@waranafilm.com</a></span>
+      <span>Gebouwd door Loek Luijbregts</span></p>
+  </div>
+</footer>
+
+</div>
+<script>
+(function(){
+  var r=document.documentElement, KEY='warana-lang';
+  function set(l,save){
+    r.dataset.lang=l; r.setAttribute('lang',l);
+    document.querySelectorAll('.langtoggle button').forEach(function(b){
+      b.setAttribute('aria-pressed', String(b.dataset.set===l));
+    });
+    var t=document.querySelector('title[data-'+l+']');
+    if(t) document.title=t.getAttribute('data-'+l);
+    if(save){ try{ localStorage.setItem(KEY,l); }catch(e){} }
+  }
+  var q=new URLSearchParams(location.search).get('lang');
+  var saved=null; try{ saved=localStorage.getItem(KEY); }catch(e){}
+  set(q==='nl'||q==='en' ? q : (saved==='nl'||saved==='en' ? saved : 'en'), false);
+  document.addEventListener('click', function(e){
+    var b=e.target.closest('.langtoggle button'); if(!b) return;
+    set(b.dataset.set,true);
+  });
+})();
+</script>
+</body>
+</html>

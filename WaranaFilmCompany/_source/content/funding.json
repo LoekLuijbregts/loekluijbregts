@@ -1,0 +1,416 @@
+{
+  "meta": {
+    "title": {
+      "en": "Warana Funding Map",
+      "nl": "Warana Financieringskaart"
+    },
+    "description": {
+      "en": "Eight kinds of money for one slate, sorted by how certain each one is, and what has to be on the table before you knock.",
+      "nl": "Acht soorten geld voor één slate, gesorteerd op hoe zeker ze zijn, en wat er moet liggen voordat je aanklopt."
+    }
+  },
+  "hero_eyebrow": {
+    "en": "Funding map · August 2026",
+    "nl": "Financieringskaart · augustus 2026"
+  },
+  "hero_h1": {
+    "en": "Nobody writes one cheque for a slate.",
+    "nl": "Niemand schrijft één cheque uit voor een slate."
+  },
+  "hero_lede": {
+    "en": "The Dutch Production Incentive pays out a maximum of €3 million per year per production company. That one rule decides the shape of everything that follows. Below: eight sources, what each one actually is, and what has to be on the table before you knock.",
+    "nl": "De Nederlandse Production Incentive keert maximaal €3 miljoen per jaar per productiemaatschappij uit. Die ene regel bepaalt de vorm van de hele vraag. Hieronder: acht bronnen, wat ze werkelijk zijn, en wat er moet liggen voordat je aanklopt."
+  },
+  "hero_warn": {
+    "en": "The amounts are a model, not a commitment. The percentages, ceilings and conditions were checked against the Netherlands Film Fund, the UK Screen Alliance, Eurimages and Creative Europe. This is a description of a landscape, not financial advice — verify amounts and deadlines at the source before anything is built on them.",
+    "nl": "De bedragen zijn een model, geen toezegging. De percentages, plafonds en voorwaarden zijn nagekeken bij het Filmfonds, de UK Screen Alliance, Eurimages en Creative Europe. Dit is een landschapsschets, geen financieel advies — controleer bedragen en termijnen bij de bron voordat er iets op wordt gebouwd."
+  },
+  "t_eyebrow": {
+    "en": "Three kinds of money",
+    "nl": "Drie soorten geld"
+  },
+  "t_h2": {
+    "en": "The ratio matters more than the total",
+    "nl": "De verhouding telt zwaarder dan het totaal"
+  },
+  "tiers": [
+    {
+      "h": {
+        "en": "Rule-based",
+        "nl": "Regelgebonden"
+      },
+      "p": {
+        "en": "Arrives if you meet the conditions. Incentives, rebates, tax credits. Slow, bureaucratic, and almost certain — this is the floor the rest of the stack stands on.",
+        "nl": "Krijg je als je aan de voorwaarden voldoet. Incentives, rebates, tax credits. Traag, formeel en bijna zeker — dit is de vloer waar de rest van de stapel op staat."
+      }
+    },
+    {
+      "h": {
+        "en": "Contractual",
+        "nl": "Contractueel"
+      },
+      "p": {
+        "en": "Has to be negotiated. Co-producers, pre-sales, distributors, European funds. Every deal here makes the next one easier, which is why the order you approach them in decides the price.",
+        "nl": "Daarover moet je onderhandelen. Coproducenten, voorverkoop, distributeurs, Europese fondsen. Elke deal maakt de volgende makkelijker. De volgorde waarin je ze benadert bepaalt dus de prijs."
+      }
+    },
+    {
+      "h": {
+        "en": "At risk",
+        "nl": "Risicodragend"
+      },
+      "p": {
+        "en": "Somebody has to believe in it. Impact capital, private investors, gap. Small in amount, decisive in effect: this is the part that determines whether the whole thing closes.",
+        "nl": "Iemand moet erin geloven. Impactkapitaal, private investeerders, gap. Klein in bedrag, bepalend in effect: dit is het deel dat beslist of het geheel sluit."
+      }
+    }
+  ],
+  "c_total_label": {
+    "en": "Total slate financing",
+    "nl": "Totale slate-financiering"
+  },
+  "c_total": {
+    "en": "€20.0",
+    "nl": "€20,0"
+  },
+  "c_million": {
+    "en": "million",
+    "nl": "miljoen"
+  },
+  "c_l1": {
+    "en": "Rule-based",
+    "nl": "Regelgebonden"
+  },
+  "c_l2": {
+    "en": "Contractual",
+    "nl": "Contractueel"
+  },
+  "c_l3": {
+    "en": "At risk",
+    "nl": "Risicodragend"
+  },
+  "bars": [
+    {
+      "value": 4.5,
+      "tier": 1,
+      "name": {
+        "en": "Netherlands Film Production Incentive",
+        "nl": "Netherlands Film Production Incentive"
+      },
+      "note": {
+        "en": "Cash rebate of up to 35% on qualifying spend, ceiling €3m per year per applicant.",
+        "nl": "Cash rebate tot 35% op kwalificerende kosten, plafond €3 mln per jaar per aanvrager."
+      }
+    },
+    {
+      "value": 3.5,
+      "tier": 2,
+      "name": {
+        "en": "Pre-sales, licences and distribution",
+        "nl": "Voorverkoop, licenties en distributie"
+      },
+      "note": {
+        "en": "Broadcasters, streamers, theatrical, and a minimum guarantee from a sales agent.",
+        "nl": "Omroepen, streamers, bioscoop, en een minimumgarantie van een sales agent."
+      }
+    },
+    {
+      "value": 3.0,
+      "tier": 1,
+      "name": {
+        "en": "Netherlands Film Fund",
+        "nl": "Nederlands Filmfonds"
+      },
+      "note": {
+        "en": "Development and production grants per title, in the regular rounds.",
+        "nl": "Ontwikkelings- en realiseringsbijdragen per titel, in de reguliere rondes."
+      }
+    },
+    {
+      "value": 3.0,
+      "tier": 2,
+      "name": {
+        "en": "Co-producers with their own national support",
+        "nl": "Coproducenten met eigen landensteun"
+      },
+      "note": {
+        "en": "SunnyMarch in the UK and A Team Productions in Belgium each bring their own national support.",
+        "nl": "SunnyMarch in het VK en A Team Productions in België brengen hun eigen toegang mee."
+      }
+    },
+    {
+      "value": 2.5,
+      "tier": 1,
+      "name": {
+        "en": "UK Independent Film Tax Credit",
+        "nl": "Britse Independent Film Tax Credit"
+      },
+      "note": {
+        "en": "Up to 39.75% net on qualifying UK spend, below £23.5m core budget.",
+        "nl": "Tot 39,75% netto op kwalificerende Britse uitgaven, onder £23,5 mln kernbudget."
+      }
+    },
+    {
+      "value": 1.5,
+      "tier": 2,
+      "name": {
+        "en": "Eurimages and Creative Europe MEDIA",
+        "nl": "Eurimages en Creative Europe MEDIA"
+      },
+      "note": {
+        "en": "Co-production support and slate development, once half the budget is in place.",
+        "nl": "Coproductiesteun en slate development, zodra de helft van het budget vaststaat."
+      }
+    },
+    {
+      "value": 1.0,
+      "tier": 3,
+      "name": {
+        "en": "Impact and philanthropic capital",
+        "nl": "Impact- en filantropiekapitaal"
+      },
+      "note": {
+        "en": "For Kachhua only. The one source that sits outside the film chain entirely.",
+        "nl": "Alleen voor Kachhua. De enige bron die volledig buiten de filmketen staat."
+      }
+    },
+    {
+      "value": 1.0,
+      "tier": 3,
+      "name": {
+        "en": "Private equity, family offices and gap",
+        "nl": "Private equity, family offices en gap"
+      },
+      "note": {
+        "en": "The final gap, covered against unsold territories.",
+        "nl": "Het laatste gat, gedekt door onverkochte territoria."
+      }
+    }
+  ],
+  "d_eyebrow": {
+    "en": "Source by source",
+    "nl": "Bron voor bron"
+  },
+  "d_h2": {
+    "en": "Eight doors, and what to bring to each",
+    "nl": "Acht deuren, en wat je bij elke deur meeneemt"
+  },
+  "funding": [
+    {
+      "tier": 1,
+      "name": {
+        "en": "Netherlands Film Production Incentive",
+        "nl": "Netherlands Film Production Incentive"
+      },
+      "tierLabel": {
+        "en": "Rule-based · ± €4.5m",
+        "nl": "Regelgebonden · ± €4,5 mln"
+      },
+      "what": {
+        "en": "A cash rebate of up to 35% on qualifying production spend in the Netherlands, with a minimum budget of €1 million for a feature. The ceiling is €3 million per year per applicant, which by definition spreads it across several financial years and several titles. In 2026 there is €20 million available over four rounds, with priority for international co-productions.",
+        "nl": "Cash rebate tot 35% op kwalificerende productiekosten in Nederland, bij een minimumbudget van €1 miljoen voor een speelfilm. Het plafond is €3 miljoen per jaar per aanvrager, dus loopt een slate per definitie over meerdere boekjaren en meerdere titels. In 2026 is er €20 miljoen beschikbaar over vier rondes, met voorrang voor internationale coproducties."
+      },
+      "needLabel": {
+        "en": "Bring",
+        "nl": "Meenemen"
+      },
+      "need": {
+        "en": "A fully costed budget per title, a demonstrable share of the financing already in place, and a production schedule that fits inside the rounds.",
+        "nl": "Een sluitende begroting per titel, een aantoonbaar deel van de financiering al rond, en een productieplanning die binnen de rondes past."
+      }
+    },
+    {
+      "tier": 1,
+      "name": {
+        "en": "Netherlands Film Fund",
+        "nl": "Nederlands Filmfonds"
+      },
+      "tierLabel": {
+        "en": "Rule-based · ± €3.0m",
+        "nl": "Regelgebonden · ± €3,0 mln"
+      },
+      "what": {
+        "en": "Development and production grants, applied for title by title in the regular rounds. For a producer with nineteen credits this is the most predictable money on the whole stack.",
+        "nl": "Ontwikkelings- en realiseringsbijdragen, per titel aangevraagd in de reguliere rondes. Voor een producent met negentien credits is dit het meest voorspelbare geld op de hele stapel."
+      },
+      "needLabel": {
+        "en": "Bring",
+        "nl": "Meenemen"
+      },
+      "need": {
+        "en": "A screenplay or treatment, an attached writer and director, and a substantiated audience plan. That last one is where most applications come apart.",
+        "nl": "Scenario of treatment, een verbonden schrijver en regisseur, en een onderbouwd publieksplan. Op dat laatste lopen de meeste aanvragen stuk."
+      }
+    },
+    {
+      "tier": 1,
+      "name": {
+        "en": "UK Independent Film Tax Credit",
+        "nl": "Britse Independent Film Tax Credit"
+      },
+      "tierLabel": {
+        "en": "Rule-based · ± €2.5m",
+        "nl": "Regelgebonden · ± €2,5 mln"
+      },
+      "what": {
+        "en": "Up to 39.75% net on qualifying UK expenditure, for films with core production spend below £23.5 million. Above £15 million it tapers back towards the standard 25.5%. This is the strongest incentive this slate can reach, and it applies only to <em>Kachhua</em>, through the co-production with SunnyMarch.",
+        "nl": "Tot 39,75% netto op kwalificerende Britse uitgaven, voor films met een kernbudget onder £23,5 miljoen. Boven £15 miljoen loopt het af naar het gewone tarief van 25,5%. Dit is de sterkste regeling die voor deze slate binnen bereik ligt, en die geldt alleen voor <em>Kachhua</em>, via de coproductie met SunnyMarch."
+      },
+      "needLabel": {
+        "en": "Bring",
+        "nl": "Meenemen"
+      },
+      "need": {
+        "en": "A UK co-production structure that passes the cultural test, and clarity about which share of the spend actually lands in the UK.",
+        "nl": "Een Britse coproductiestructuur die de culturele toets haalt, en helderheid over welk deel van de uitgaven daadwerkelijk in het VK landt."
+      }
+    },
+    {
+      "tier": 2,
+      "name": {
+        "en": "Co-producers with their own national support",
+        "nl": "Coproducenten met eigen landensteun"
+      },
+      "tierLabel": {
+        "en": "Contractual · ± €3.0m",
+        "nl": "Contractueel · ± €3,0 mln"
+      },
+      "what": {
+        "en": "SunnyMarch in London and A Team Productions in Belgium bring more than money. They bring access: their own national funds, regional schemes and broadcaster relationships. A co-producer is often worth more than the figure they put on paper.",
+        "nl": "SunnyMarch in Londen en A Team Productions in België brengen niet alleen geld mee maar toegang: hun eigen nationale fondsen, regionale regelingen en omroeprelaties. Een coproducent is daarmee vaak meer waard dan zijn inbreng op papier."
+      },
+      "needLabel": {
+        "en": "Bring",
+        "nl": "Meenemen"
+      },
+      "need": {
+        "en": "A co-production agreement with a clear division of rights and territories. The sooner this is fixed, the sooner the rest of the stack can move.",
+        "nl": "Een coproductieovereenkomst met een heldere verdeling van rechten en territoria. Hoe eerder dit vaststaat, hoe eerder de rest van de stapel kan bewegen."
+      }
+    },
+    {
+      "tier": 2,
+      "name": {
+        "en": "Pre-sales, licences and distribution",
+        "nl": "Voorverkoop, licenties en distributie"
+      },
+      "tierLabel": {
+        "en": "Contractual · ± €3.5m",
+        "nl": "Contractueel · ± €3,5 mln"
+      },
+      "what": {
+        "en": "Dutch public broadcasting and streamers for the Dutch titles, theatrical distribution in the Netherlands and Belgium, and a minimum guarantee from an international sales agent for the English-language work. This money is the evidence every other party looks at.",
+        "nl": "NPO en streamers voor de Nederlandse titels, bioscoopdistributie in Nederland en België, en een minimumgarantie van een internationale sales agent voor het Engelstalige werk. Dit geld is het bewijsstuk waar alle andere partijen naar kijken."
+      },
+      "needLabel": {
+        "en": "Bring",
+        "nl": "Meenemen"
+      },
+      "need": {
+        "en": "A package per title: logline, treatment, attached talent, and comparable titles with real returns. For <em>See You Tomorrow</em>, the route through public broadcasting is the obvious one.",
+        "nl": "Een pakket per titel: logline, treatment, verbonden talent en vergelijkbare titels met echte opbrengsten. Voor <em>Tot Morgen</em> ligt de weg via de publieke omroep het meest voor de hand."
+      }
+    },
+    {
+      "tier": 2,
+      "name": {
+        "en": "Eurimages and Creative Europe MEDIA",
+        "nl": "Eurimages en Creative Europe MEDIA"
+      },
+      "tierLabel": {
+        "en": "Contractual · ± €1.5m",
+        "nl": "Contractueel · ± €1,5 mln"
+      },
+      "what": {
+        "en": "Eurimages supports European co-productions with at least two co-producers from two member states, and requires 50% of the budget to be confirmed before you apply. Creative Europe MEDIA has a separate scheme for slate development — and a slate of eight titles is exactly what that is for.",
+        "nl": "Eurimages steunt Europese coproducties met minimaal twee coproducenten uit twee lidstaten en verlangt dat 50% van het budget vaststaat voordat je indient. Creative Europe MEDIA heeft daarnaast een aparte regeling voor slate development — en een slate van acht titels is precies waar die voor bedoeld is."
+      },
+      "needLabel": {
+        "en": "Bring",
+        "nl": "Meenemen"
+      },
+      "need": {
+        "en": "Signed co-production contracts and a financing plan that is already half covered. Apply without that and you waste the round.",
+        "nl": "Getekende coproductiecontracten en een financieringsplan waarin de helft al is afgedekt. Zonder dat is indienen zonde van de ronde."
+      }
+    },
+    {
+      "tier": 3,
+      "name": {
+        "en": "Impact and philanthropic capital",
+        "nl": "Impact- en filantropiekapitaal"
+      },
+      "tierLabel": {
+        "en": "At risk · ± €1.0m",
+        "nl": "Risicodragend · ± €1,0 mln"
+      },
+      "what": {
+        "en": "Funds and foundations working on oceans, plastic and climate, plus companies with a credible programme in that area. This is the only money on the whole slate that comes from outside the film chain, and <em>Kachhua</em> is the only title that can reach it. These parties are not buying a return; they are buying reach — how many people will look at a beach differently because of this film.",
+        "nl": "Fondsen en stichtingen rond oceaan, plastic en klimaat, plus bedrijven met een geloofwaardig programma op dat terrein. Dit is het enige geld op de hele slate dat van buiten de filmketen komt, en het is uitsluitend bereikbaar via <em>Kachhua</em>. Deze partijen kopen geen rendement maar bereik: hoeveel mensen gaan hierdoor anders naar een strand kijken."
+      },
+      "needLabel": {
+        "en": "Bring",
+        "nl": "Meenemen"
+      },
+      "need": {
+        "en": "An impact plan alongside the production plan — what happens after the film, with whom, and how you measure whether it worked. That document does not exist yet and is probably the most underestimated piece of work in this entire stack.",
+        "nl": "Een impactplan naast het productieplan — wat er ná de film gebeurt, met wie, en hoe je meet of het werkte. Dat document bestaat nog niet en is waarschijnlijk het meest onderschatte stuk werk in deze hele stapel."
+      }
+    },
+    {
+      "tier": 3,
+      "name": {
+        "en": "Private equity, family offices and gap",
+        "nl": "Private equity, family offices en gap"
+      },
+      "tierLabel": {
+        "en": "At risk · ± €1.0m",
+        "nl": "Risicodragend · ± €1,0 mln"
+      },
+      "what": {
+        "en": "The final gap, usually covered against unsold territories. Small in amount, decisive in effect: this is the part that determines whether the whole thing closes. Dutch family offices with a connection to film or to the subject are more realistic here than institutional parties.",
+        "nl": "Het laatste gat, meestal gedekt door onverkochte territoria. Klein in bedrag, bepalend in effect: dit is het deel dat beslist of het geheel sluit. Nederlandse family offices met een band met film of met het onderwerp zijn hier realistischer dan institutionele partijen."
+      },
+      "needLabel": {
+        "en": "Bring",
+        "nl": "Meenemen"
+      },
+      "need": {
+        "en": "A complete financing overview in which this piece is demonstrably the last one. Nobody wants to be first; everybody wants to be last.",
+        "nl": "Een compleet financieringsoverzicht waarin dit stuk aantoonbaar het laatste is. Niemand wil de eerste zijn; iedereen wil de laatste zijn."
+      }
+    }
+  ],
+  "o_h3": {
+    "en": "The order is the strategy",
+    "nl": "De volgorde is de strategie"
+  },
+  "o_p1": {
+    "en": "Co-production first, then pre-sales, then the funds, then the money at risk. Every step makes the next one cheaper. Starting at the other end — finding an investor first and the rest afterwards — is the most expensive route and the most commonly taken.",
+    "nl": "Coproductie eerst, dan voorverkoop, dan de fondsen, dan het risicodragende deel. Elke stap maakt de volgende goedkoper. Andersom beginnen — eerst een investeerder zoeken en dan de rest — is de duurste route en de meest gelopen."
+  },
+  "o_p2": {
+    "en": "There is one thing on this slate that no producer can buy and Bart already has: five years of being on the ground with the person the film is about, and photographs to prove it. In a room full of decks that all look the same, that is the only thing nobody can copy.",
+    "nl": "Er is één ding op deze slate dat geen producent kan kopen en dat Bart al heeft: vijf jaar ter plaatse zijn bij de mens over wie de film gaat, en foto's die dat bewijzen. In een kamer vol decks die allemaal op elkaar lijken, is dat het enige wat niemand kan namaken."
+  },
+  "src_h": {
+    "en": "Sources checked",
+    "nl": "Gecontroleerde bronnen"
+  },
+  "src": {
+    "en": [
+      "<li>Netherlands Film Production Incentive — filmfonds.nl</li>",
+      "<li>UK Screen Alliance — film and high-end TV tax incentives (AVEC and IFTC)</li>",
+      "<li>Eurimages — co-production requirements</li>",
+      "<li>Creative Europe MEDIA — European Slate Development 2026</li>",
+      "<li>UN Environment Programme — Champions of the Earth 2016</li>"
+    ],
+    "nl": [
+      "<li>Netherlands Film Production Incentive — filmfonds.nl</li>",
+      "<li>UK Screen Alliance — film- en high-end TV-belastingregelingen (AVEC en IFTC)</li>",
+      "<li>Eurimages — coproductievoorwaarden</li>",
+      "<li>Creative Europe MEDIA — European Slate Development 2026</li>",
+      "<li>UN Environment Programme — Champions of the Earth 2016</li>"
+    ]
+  }
+}

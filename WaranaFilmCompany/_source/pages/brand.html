@@ -1,0 +1,85 @@
+<div class="page-head">
+  <div class="wrap">
+    <img class="mark" src="{{ROOT}}/img/warana-logo.svg" alt="Warana Film Company" width="401" height="241">
+    <p class="eyebrow">{{hero_eyebrow}}</p>
+    <h1>{{hero_h1}}</h1>
+    <p class="lede" style="margin-top:1.2rem">{{hero_lede}}</p>
+  </div>
+</div>
+
+<hr class="rule">
+
+<section id="kleur">
+  <div class="wrap">
+    <p class="eyebrow">{{c_eyebrow}}</p>
+    <h2>{{c_h2}}</h2>
+    <p class="lede" style="margin-top:1rem">{{c_lede}}</p>
+    <div class="sw-grid">{{#swatches:base}}</div>
+    <h3 style="margin-top:2.8rem">{{c2_h3}}</h3>
+    <p style="color:var(--dim);margin-top:.8rem;max-width:64ch">{{c2_p}}</p>
+    <div class="sw-grid">{{#swatches:projects}}</div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section id="letters">
+  <div class="wrap">
+    <p class="eyebrow">{{t_eyebrow}}</p>
+    <h2>{{t_h2}}</h2>
+    <div class="note" style="margin-top:1.6rem"><p>{{t_change}}</p></div>
+    <div class="spec">
+      <div class="big">{{t_spec1_line}}</div>
+      <p style="color:var(--dim);margin:0">{{t_spec1_p}}</p>
+      <p class="row">{{t_spec1_meta}}</p>
+    </div>
+    <div class="spec">
+      <div class="big sans">{{t_spec2_line}}</div>
+      <p style="color:var(--dim);margin:0">{{t_spec2_p}}</p>
+      <p class="row">{{t_spec2_meta}}</p>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section id="beeld">
+  <div class="wrap">
+    <p class="eyebrow">{{b_eyebrow}}</p>
+    <h2>{{b_h2}}</h2>
+    <div class="dd cols2">
+      <div class="box good"><h4>{{b_do_h}}</h4><ul>{{b_do}}</ul></div>
+      <div class="box bad"><h4>{{b_dont_h}}</h4><ul>{{b_dont}}</ul></div>
+    </div>
+    <div class="note"><p>{{b_note}}</p></div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section id="schrijfstijl">
+  <div class="wrap">
+    <p class="eyebrow">{{w_eyebrow}}</p>
+    <h2>{{w_h2}}</h2>
+    <p class="lede" style="margin-top:1rem">{{w_lede}}</p>
+    <h3 style="margin-top:2.4rem">{{w_rules_h}}</h3>
+    <div class="box" style="margin-top:1.4rem"><ul style="margin:0">{{w_rules}}</ul></div>
+    <h3 style="margin-top:2.6rem">{{w_ba_h}}</h3>
+    {{#ba}}
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="sig">
+      <p class="eyebrow">{{sig_eyebrow}}</p>
+      <p>{{sig_p1}}</p>
+      <p style="margin-bottom:0">{{sig_p2}}</p>
+      <p class="name">{{sig_name}}</p>
+      <p class="date">{{sig_date}}</p>
+    </div>
+    <p class="foot-meta"><span>{{foot_1}}</span><span>{{foot_2}}</span>
+      <span><a href="mailto:bart@waranafilm.com">bart@waranafilm.com</a></span>
+      <span>{{foot_3}}</span></p>
+  </div>
+</footer>

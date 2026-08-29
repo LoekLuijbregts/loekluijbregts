@@ -1,0 +1,371 @@
+{
+  "meta": {
+    "title": {
+      "en": "Warana Social Plan",
+      "nl": "Warana Socialplan"
+    },
+    "description": {
+      "en": "An Instagram grid of nine posts, three stories that build to one link, and three LinkedIn posts over three weeks.",
+      "nl": "Een Instagram-raster van negen posts, drie stories die naar één link lopen, en drie LinkedIn-posts over drie weken."
+    }
+  },
+  "hero_eyebrow": {
+    "en": "Social plan · August 2026",
+    "nl": "Socialplan · augustus 2026"
+  },
+  "hero_h1": {
+    "en": "Two posts and thirty-two followers is not a problem. It is a starting position.",
+    "nl": "Twee posts en tweeëndertig volgers is geen probleem. Het is een uitgangspositie."
+  },
+  "hero_lede": {
+    "en": "This account does not need reach. It needs to look considered to the fifty people who check it after they have spoken to Bart. That is the only audience that matters right now, and it changes everything about what you post.",
+    "nl": "Dit account heeft geen bereik nodig. Het moet er verzorgd uitzien voor de vijftig mensen die het opzoeken nadat ze Bart hebben gesproken. Dat is het enige publiek dat er nu toe doet, en dat verandert alles aan wat je post."
+  },
+  "f_eyebrow": {
+    "en": "1 · Instagram",
+    "nl": "1 · Instagram"
+  },
+  "f_h2": {
+    "en": "Nine posts instead of two",
+    "nl": "Negen posts in plaats van twee"
+  },
+  "f_lede": {
+    "en": "Images and text cards alternating, so the grid has a rhythm and every row reads on its own. Newest top left.",
+    "nl": "Beeld en tekstkaart om en om, zodat het raster ritme krijgt en elke rij op zichzelf te lezen is. Nieuwste linksboven."
+  },
+  "f_handle": {
+    "en": "waranafilmcompany",
+    "nl": "waranafilmcompany"
+  },
+  "f_tagline": {
+    "en": "Cinema That Endures",
+    "nl": "Cinema That Endures"
+  },
+  "feed": [
+    {
+      "type": "img",
+      "img": "sq-2018",
+      "alt": {
+        "en": "Versova Beach clean, October 2018",
+        "nl": "Versova Beach schoon, oktober 2018"
+      }
+    },
+    {
+      "type": "quote",
+      "tone": "cream",
+      "text": {
+        "en": "I am an ocean lover and feel that we owe a duty to our ocean to make it free of plastic.",
+        "nl": "Ik hou van de oceaan en vind dat we de plicht hebben hem vrij van plastic te maken."
+      },
+      "cite": {
+        "en": "Afroz Shah",
+        "nl": "Afroz Shah"
+      }
+    },
+    {
+      "type": "img",
+      "img": "sq-india",
+      "alt": {
+        "en": "Bart Willemsen on the beach in Mumbai",
+        "nl": "Bart Willemsen op het strand in Mumbai"
+      }
+    },
+    {
+      "type": "img",
+      "img": "sq-ijsbeer",
+      "alt": {
+        "en": "Image from Polar Bear in the War",
+        "nl": "Beeld uit IJsbeer in de Oorlog"
+      }
+    },
+    {
+      "type": "quote",
+      "tone": "navy",
+      "text": {
+        "en": "Eight projects. Four stages of development. One question.",
+        "nl": "Acht projecten. Vier ontwikkelfases. Eén vraag."
+      },
+      "cite": {
+        "en": "Slate 2026",
+        "nl": "Slate 2026"
+      }
+    },
+    {
+      "type": "img",
+      "img": "sq-set",
+      "alt": {
+        "en": "Bart Willemsen on set",
+        "nl": "Bart Willemsen op de set"
+      }
+    },
+    {
+      "type": "img",
+      "img": "sq-2015",
+      "alt": {
+        "en": "Versova Beach under plastic, October 2015",
+        "nl": "Versova Beach onder het plastic, oktober 2015"
+      }
+    },
+    {
+      "type": "img",
+      "img": "sq-monkey",
+      "alt": {
+        "en": "Image from Monkey",
+        "nl": "Beeld uit Monkey"
+      }
+    },
+    {
+      "type": "logo",
+      "tone": "green"
+    }
+  ],
+  "f_captions_h": {
+    "en": "What goes under each tile",
+    "nl": "Wat er per tegel onder staat"
+  },
+  "f_captions": {
+    "en": [
+      "<li><b>Versova, 2018.</b> The same beach as post 7, three years later. Keep the two deliberately far apart in the grid, so that anyone scrolling makes the connection for themselves.</li>",
+      "<li><b>Afroz Shah quote.</b> Cream card. Source alongside: UN Environment Programme, 2016.</li>",
+      "<li><b>Research on location.</b> A carousel of three: the beach, the gloves, the people. Caption about what you learned there that you could not have worked out in Amsterdam.</li>",
+      "<li><b>Polar Bear in the War.</b> Title announcement with the logline. Colour wash <code>#2A3841</code>.</li>",
+      "<li><b>The slate.</b> Navy card, link in bio to the pitch page.</li>",
+      "<li><b>On set.</b> Twelve days from idea to release, May 2020.</li>",
+      "<li><b>Versova, 2015.</b> The reason. Just the image and the year — not another word.</li>",
+      "<li><b>Monkey.</b> Co-production with A Team Productions, Belgium.</li>",
+      "<li><b>The brand.</b> The existing post stays as an anchor at the bottom.</li>"
+    ],
+    "nl": [
+      "<li><b>Versova, 2018.</b> Zelfde strand als post 7, drie jaar later. Zet de twee bewust uit elkaar in het raster, zodat iemand die scrollt het verband zelf legt.</li>",
+      "<li><b>Citaat Afroz Shah.</b> Crème kaart. Bron erbij: UN Environment Programme, 2016.</li>",
+      "<li><b>Onderzoek ter plaatse.</b> Carrousel van drie: het strand, de handschoenen, de mensen. Bijschrift over wat je daar leerde dat je in Amsterdam niet kon bedenken.</li>",
+      "<li><b>IJsbeer in de Oorlog.</b> Titelaankondiging met de logline. Kleurwaas <code>#2A3841</code>.</li>",
+      "<li><b>De slate.</b> Navy kaart, link in bio naar de pitchpagina.</li>",
+      "<li><b>Op de set.</b> Twaalf dagen van idee naar publiek, mei 2020.</li>",
+      "<li><b>Versova, 2015.</b> De aanleiding. Alleen het beeld en het jaartal — verder geen woord.</li>",
+      "<li><b>Monkey.</b> Coproductie met A Team Productions, België.</li>",
+      "<li><b>Het merk.</b> De bestaande post blijft staan als anker onderin.</li>"
+    ]
+  },
+  "f_rules_h": {
+    "en": "Two rules for the grid",
+    "nl": "Twee regels voor het raster"
+  },
+  "f_rules_p": {
+    "en": "Never two text cards next to each other, and never two images with the same colour wash in the same row. That is the whole system — nothing else has to be designed.",
+    "nl": "Nooit twee tekstkaarten naast elkaar en nooit twee beelden met dezelfde kleurwaas in dezelfde rij. Dat is het hele systeem — verder hoeft er niets ontworpen te worden."
+  },
+  "f_rhythm_h": {
+    "en": "Rhythm",
+    "nl": "Ritme"
+  },
+  "f_rhythm_p": {
+    "en": "One post a week is enough. Posting more would be work for an audience that is not there yet.",
+    "nl": "Eén post per week is genoeg. Meer posten is werk voor een publiek dat er nog niet is."
+  },
+  "s_eyebrow": {
+    "en": "2 · Stories",
+    "nl": "2 · Stories"
+  },
+  "s_h2": {
+    "en": "Three screens that lead to one link",
+    "nl": "Drie schermen die naar één link lopen"
+  },
+  "s_lede": {
+    "en": "To be posted one after the other, in this order. The first screen asks a question without asking it, the second answers it and the third asks something back. Save as a highlight called Kachhua.",
+    "nl": "Achter elkaar te plaatsen, in deze volgorde. Het eerste scherm stelt een vraag zonder hem te stellen, het tweede beantwoordt hem, het derde vraagt iets terug. Bewaren als highlight onder de naam Kachhua."
+  },
+  "stories": [
+    {
+      "img": "st-1",
+      "n": 0,
+      "alt": {
+        "en": "Versova Beach under plastic in 2015",
+        "nl": "Versova Beach onder het plastic in 2015"
+      },
+      "txt": {
+        "en": "This is a beach.",
+        "nl": "Dit is een strand."
+      },
+      "sub": {
+        "en": "Versova Beach, Mumbai. October 2015. Two and a half kilometres, buried under plastic.",
+        "nl": "Versova Beach, Mumbai. Oktober 2015. Twee en een halve kilometer, bedolven onder plastic."
+      },
+      "noteH": {
+        "en": "Screen 1 · the hook",
+        "nl": "Scherm 1 · de haak"
+      },
+      "note": {
+        "en": "No explanation, no logo, no link. Only the image and the place. Anyone who sees this wants to know what happened next.",
+        "nl": "Geen uitleg, geen logo, geen link. Alleen het beeld en de plek. Wie dit ziet wil weten wat er daarna gebeurde."
+      }
+    },
+    {
+      "img": "st-2",
+      "n": 1,
+      "alt": {
+        "en": "Versova Beach clean in 2018",
+        "nl": "Versova Beach schoon in 2018"
+      },
+      "txt": {
+        "en": "One hundred weeks later.",
+        "nl": "Honderd weken later."
+      },
+      "sub": {
+        "en": "One lawyer started on his own. With his 84-year-old neighbour. That is 4,000 tonnes of waste gone.",
+        "nl": "Eén advocaat begon in zijn eentje. Met zijn buurman van 84. Er ligt nu 4.000 ton minder afval."
+      },
+      "noteH": {
+        "en": "Screen 2 · the answer",
+        "nl": "Scherm 2 · het antwoord"
+      },
+      "note": {
+        "en": "Same frame, same place. The number arrives here, and it is the only number in the sequence.",
+        "nl": "Zelfde kader, zelfde plek. Het getal komt hier pas, en het is het enige getal in de reeks."
+      }
+    },
+    {
+      "img": "st-3",
+      "n": 2,
+      "sticker": true,
+      "alt": {
+        "en": "Afroz Shah and a boy releasing turtles at the waterline",
+        "nl": "Afroz Shah en een jongen zetten schildpadden uit bij de vloedlijn"
+      },
+      "txt": {
+        "en": "This is what we are making a film about.",
+        "nl": "Hier maken we een film over."
+      },
+      "sub": {
+        "en": "Kachhua. In co-production with SunnyMarch, London. Now in funded development.",
+        "nl": "Kachhua. In coproductie met SunnyMarch, Londen. Nu in gefinancierde ontwikkeling."
+      },
+      "stickerText": {
+        "en": "See the slate",
+        "nl": "Bekijk de slate"
+      },
+      "noteH": {
+        "en": "Screen 3 · the ask",
+        "nl": "Scherm 3 · de vraag"
+      },
+      "note": {
+        "en": "Link sticker to the pitch page. This is the only screen with a brand name on it, which is exactly why it stands out.",
+        "nl": "Linksticker naar de pitchpagina. Dit is het enige scherm met een merknaam erop, en daarom valt het op."
+      }
+    }
+  ],
+  "l_eyebrow": {
+    "en": "3 · LinkedIn",
+    "nl": "3 · LinkedIn"
+  },
+  "l_h2": {
+    "en": "Three posts over three weeks",
+    "nl": "Drie posts over drie weken"
+  },
+  "l_lede": {
+    "en": "From Bart's personal profile, not a company page — people fund people. The first post asks for nothing. The second asks for something small. The third makes the real ask. Anyone who has read the first two reads the third as a continuation rather than a sales pitch.",
+    "nl": "Vanaf Barts persoonlijke profiel, niet vanaf een bedrijfspagina — mensen financieren mensen. De eerste post vraagt niets. De tweede vraagt iets kleins. De derde stelt de echte vraag. Wie de eerste twee heeft gelezen, leest de derde als een vervolg en niet als een verkooppraatje."
+  },
+  "posts": [
+    {
+      "head": {
+        "en": "Post 1 · week 1",
+        "nl": "Post 1 · week 1"
+      },
+      "meta": {
+        "en": "No ask · ± 190 words",
+        "nl": "Geen vraag · ± 190 woorden"
+      },
+      "body": {
+        "en": [
+          "Five years ago I read about a lawyer in Mumbai who started clearing a beach on his own.",
+          "Not as a project. Not with a plan. He lived next to it, he saw what was lying there, and he started. For the first weeks he did it with his 84-year-old neighbour.",
+          "What stayed with me was not the heroism. It was the repetition. Coming back one hundred weeks in a row to the same two and a half kilometres, while the sea washes up new plastic every night. That is not a moment of courage. That is deciding a hundred times over that you are not going to stop.",
+          "I am a producer. By now I know that making a film looks exactly like that. Not the premiere, but the four hundredth time you explain the same story to someone who still says no.",
+          "I have been there three times since. I have stood on that beach with him, gloves on, and I have seen what is left of it.",
+          "That is what my first film of my own is about."
+        ],
+        "nl": [
+          "Vijf jaar geleden las ik over een advocaat in Mumbai die in zijn eentje een strand ging schoonmaken.",
+          "Niet als project. Niet met een plan. Hij woonde ernaast, hij zag wat er lag, en hij begon. De eerste weken deed hij het samen met zijn buurman van 84.",
+          "Wat me bijbleef was niet de heldenmoed. Het was de herhaling. Honderd weken achter elkaar teruggaan naar dezelfde twee en een halve kilometer, terwijl de zee elke nacht nieuw plastic aanspoelt. Dat is geen moment van moed. Dat is honderd keer opnieuw besluiten dat je niet stopt.",
+          "Ik ben producent. Ik weet inmiddels dat een film maken daar precies op lijkt. Niet de première, maar de vierhonderdste keer dat je hetzelfde verhaal uitlegt aan iemand die nog nee zegt.",
+          "Ik ben er sindsdien drie keer naartoe geweest. Ik heb met hem op dat strand gestaan, met handschoenen aan, en ik heb gezien wat ervan over is.",
+          "Daar gaat mijn eerste eigen film over."
+        ]
+      },
+      "foot": {
+        "en": "<b>Image:</b> the photograph of Bart on the beach with gloves. No link, no hashtag, no company name. This post only builds trust.",
+        "nl": "<b>Beeld:</b> de foto van Bart op het strand met handschoenen. Geen link, geen hashtag, geen bedrijfsnaam. Deze post bouwt alleen vertrouwen."
+      }
+    },
+    {
+      "head": {
+        "en": "Post 2 · week 2",
+        "nl": "Post 2 · week 2"
+      },
+      "meta": {
+        "en": "Small ask · ± 200 words",
+        "nl": "Kleine vraag · ± 200 woorden"
+      },
+      "body": {
+        "en": [
+          "The most invisible part of my job is the part where everything is decided.",
+          "When a film is in cinemas, everyone can see the work. The shoot, the cast, the premiere. What nobody sees are the years before it: securing rights, finding a writer willing to take it on, getting three countries around a table because the budget does not close in any single one of them.",
+          "I have produced nineteen films and series. On almost all of them I came in when the money was already there.",
+          "Now I am doing it the other way round for the first time. Warana has eight projects in development. A war drama set in a zoo. A survival story in the Red Sea. A Christmas film with a monkey in Antwerp. And an English-language film in co-production with a London partner.",
+          "One of those eight is the one I have been working on for five years. It is the furthest along and the hardest to explain in a single sentence.",
+          "I am putting the whole slate online next week. If you work in film, financing or co-production and want an early look, say so and I will send it to you first."
+        ],
+        "nl": [
+          "Het onzichtbaarste deel van mijn vak is het deel waar alles wordt beslist.",
+          "Als een film in de bioscoop draait, ziet iedereen het werk. De opnames, de cast, de première. Wat niemand ziet zijn de jaren ervoor: rechten verwerven, een schrijver vinden die het aandurft, drie landen aan tafel krijgen omdat het budget in geen enkel land op zichzelf rondkomt.",
+          "Ik heb negentien films en series geproduceerd. Bij bijna allemaal kwam ik erbij toen het geld er al was.",
+          "Nu doe ik het voor het eerst andersom. Warana heeft acht projecten in ontwikkeling. Een oorlogsdrama in een dierentuin. Een survivalverhaal in de Rode Zee. Een kerstfilm met een aapje in Antwerpen. En een Engelstalige film in coproductie met een Londense partner.",
+          "Van die acht is er één waar ik vijf jaar aan werk. Die staat het verst en die is het moeilijkst uit te leggen in één zin.",
+          "Ik zet volgende week de hele slate online. Als je in film, financiering of coproductie zit en er eerder naar wilt kijken: laat het weten, dan stuur ik hem vast toe."
+        ]
+      },
+      "foot": {
+        "en": "<b>Image:</b> a set photograph. <b>Ask:</b> a comment or a DM. This is the post that builds your list of interested people before the launch.",
+        "nl": "<b>Beeld:</b> een setfoto. <b>Vraag:</b> een reactie of DM. Dit is de post die je lijst met belangstellenden opbouwt vóór de lancering."
+      }
+    },
+    {
+      "head": {
+        "en": "Post 3 · week 3",
+        "nl": "Post 3 · week 3"
+      },
+      "meta": {
+        "en": "The real ask · ± 210 words",
+        "nl": "De echte vraag · ± 210 woorden"
+      },
+      "body": {
+        "en": [
+          "Eight projects are online from today. This is what I am looking for.",
+          "Warana Film Company is developing eight titles: two English-language and international, four Dutch family and mainstream films, one drama series, and one film we are making together with bereaved families and 113 Suicide Prevention.",
+          "The furthest along is <em>Kachhua</em>, about the life of Afroz Shah, in co-production with SunnyMarch in London and in development with Grain Media. The writer is Ayub Khan Din. That one is in funded development.",
+          "What I am looking for is not one big cheque. Across eight titles we are talking about roughly twenty million, and that never comes from one place. It comes from funds, from rebates in three countries, from co-producers who bring their own national support, from pre-sales — and from a slice somebody has to be willing to carry.",
+          "Right now I am looking for three things: a co-producer for the Red Sea title, a Dutch distributor for the family films, and conversations with investors who understand that development takes years.",
+          "The slate is in the first comment. Twenty minutes is enough to know whether it is a fit."
+        ],
+        "nl": [
+          "Acht projecten staan vanaf vandaag online. Dit is wat ik zoek.",
+          "Warana Film Company ontwikkelt acht titels: twee Engelstalig en internationaal, vier Nederlandse publieks- en familiefilms, één dramaserie en één film die we samen met nabestaanden en 113 Zelfmoordpreventie maken.",
+          "Het verst gevorderd is <em>Kachhua</em>, over het leven van Afroz Shah, in coproductie met SunnyMarch in Londen en in ontwikkeling met Grain Media. De schrijver is Ayub Khan Din. Die titel zit in gefinancierde ontwikkeling.",
+          "Wat ik zoek is niet één zak geld. Voor acht titels gaat het om ongeveer twintig miljoen, en dat komt nooit van één plek. Het komt uit fondsen, uit rebates in drie landen, uit coproducenten die hun eigen landensteun meebrengen, uit voorverkoop — en uit een deel dat iemand moet durven dragen.",
+          "Concreet zoek ik nu drie dingen: een coproducent voor de Rode Zee-titel, een Nederlandse distributeur voor de familiefilms, en gesprekken met investeerders die begrijpen dat ontwikkeling jaren duurt.",
+          "De slate staat in de eerste reactie. Twintig minuten is genoeg om te weten of het bij je past."
+        ]
+      },
+      "foot": {
+        "en": "<b>Image:</b> the beach of 2015 next to the beach of 2018, as one carousel. <b>Link:</b> in the first comment, not in the post itself.",
+        "nl": "<b>Beeld:</b> het strand van 2015 naast dat van 2018, als één carrousel. <b>Link:</b> in de eerste reactie, niet in de post zelf."
+      }
+    }
+  ],
+  "n_note": {
+    "en": "<b>One title stays out of all of this on purpose.</b> <em>See You Tomorrow</em> is about suicide and is being developed with bereaved families and 113 Suicide Prevention. It belongs in a conversation with a broadcaster, not in a post built to be shared.",
+    "nl": "<b>Eén titel blijft hier bewust buiten.</b> <em>Tot Morgen</em> gaat over zelfdoding en wordt ontwikkeld met nabestaanden en 113 Zelfmoordpreventie. Die hoort thuis in een gesprek met een omroep, niet in een post die gemaakt is om gedeeld te worden."
+  }
+}
