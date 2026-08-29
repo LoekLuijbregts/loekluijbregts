@@ -41,6 +41,33 @@
     "en": "Cinema That Endures",
     "nl": "Cinema That Endures"
   },
+  "study_eyebrow": {
+    "en": "Visual study",
+    "nl": "Visuele studie"
+  },
+  "study_h3": {
+    "en": "Warana in nine posts",
+    "nl": "Warana in negen posts"
+  },
+  "study_lede": {
+    "en": "Nine editorial feed posts built from real production and research imagery. Click any image to open it at full size.",
+    "nl": "Negen redactionele feedposts, opgebouwd uit echte productie- en onderzoeksbeelden. Klik op een beeld om het groot te openen."
+  },
+  "study_note": {
+    "en": "A visual direction for the first public-facing posts: restrained, cinematic, and built around the work rather than reach.",
+    "nl": "Een visuele richting voor de eerste publieke posts: ingetogen, filmisch en gebouwd rond het werk in plaats van bereik."
+  },
+  "socialconcepts": [
+    {"file": "01-verhalen-beginnen-met-kijken.jpg", "alt": {"en": "Social concept: Stories begin by looking", "nl": "Socialconcept: Verhalen beginnen met kijken"}},
+    {"file": "02-op-set.jpg", "alt": {"en": "Social concept: On set", "nl": "Socialconcept: Op set"}},
+    {"file": "03-maxima-uitvoerend-producent.jpg", "alt": {"en": "Social concept: Executive producer of Máxima", "nl": "Socialconcept: Uitvoerend producent van Máxima"}},
+    {"file": "04-het-werk-zit-in-de-keuze.jpg", "alt": {"en": "Social concept: The work is in the choice", "nl": "Socialconcept: Het werk zit in de keuze"}},
+    {"file": "05-bart-willemsen.jpg", "alt": {"en": "Social concept: Bart Willemsen", "nl": "Socialconcept: Bart Willemsen"}},
+    {"file": "06-de-wereld-is-geen-decor.jpg", "alt": {"en": "Social concept: The world is not a backdrop", "nl": "Socialconcept: De wereld is geen decor"}},
+    {"file": "07-schaal-en-detail.jpg", "alt": {"en": "Social concept: Scale and detail", "nl": "Socialconcept: Schaal en detail"}},
+    {"file": "08-richting-op-set.jpg", "alt": {"en": "Social concept: Direction on set", "nl": "Socialconcept: Richting op set"}},
+    {"file": "09-warana-film-company.jpg", "alt": {"en": "Social concept: Warana Film Company", "nl": "Socialconcept: Warana Film Company"}}
+  ],
   "feed": [
     {
       "type": "img",
