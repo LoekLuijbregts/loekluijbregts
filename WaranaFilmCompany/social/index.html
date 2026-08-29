@@ -193,6 +193,21 @@ footer.site{background:#0B1421;border-top:1px solid var(--line);padding-block:cl
 .caplist b{color:var(--cream);font-weight:500}
 .caplist code{color:var(--gold);font-size:.88em}
 
+/* uitgewerkte posts */
+.warana-posts{margin-top:clamp(46px,7vw,82px);padding-top:clamp(38px,5vw,62px);border-top:1px solid var(--line)}
+.warana-posts-intro{display:grid;gap:1.2rem;grid-template-columns:1fr;align-items:end;margin-bottom:1.6rem}
+@media(min-width:760px){.warana-posts-intro{grid-template-columns:1fr minmax(260px,.78fr);gap:3rem}}
+.warana-posts h3{font-family:var(--display);font-size:clamp(1.9rem,3.4vw,2.7rem);line-height:1;margin:.55rem 0 0}
+.warana-posts-intro>p{color:var(--dim);font-size:.96rem;line-height:1.65;margin:0}
+.social-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(6px,1.2vw,14px)}
+.social-concept{display:block;position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--ink2);border:1px solid var(--line)}
+.social-concept img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+.social-concept:hover img{transform:scale(1.025)}
+.social-concept span{position:absolute;top:9px;right:9px;width:25px;height:25px;border-radius:50%;display:grid;place-items:center;
+  background:rgba(13,28,44,.78);color:var(--cream);font-family:var(--ui);font-size:.57rem;font-weight:600;letter-spacing:.08em}
+.social-gallery-note{color:var(--faint);font-size:.78rem;line-height:1.55;margin:1rem 0 0}
+@media(max-width:520px){.social-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
 /* stories */
 .storyrow{display:grid;gap:clamp(20px,3vw,32px);
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin-top:2.2rem;align-items:start}
@@ -276,6 +291,52 @@ footer.site{background:#0B1421;border-top:1px solid var(--line);padding-block:cl
 <div class="tile"><span class="num">7</span><img src="../img/sq-2015.jpg" alt="Versova Beach under plastic, October 2015"></div>
 <div class="tile"><span class="num">8</span><img src="../img/sq-monkey.jpg" alt="Image from Monkey"></div>
 <div class="tile card c-green"><span class="num">9</span><img class="tilelogo" src="../img/warana-logo.svg" alt="Warana Film Company"></div></div>
+    </div>
+    <div class="warana-posts">
+      <div class="warana-posts-intro">
+        <div>
+          <p class="eyebrow">Visual study</p>
+          <h3>Warana in nine posts</h3>
+        </div>
+        <p>Nine editorial feed posts built from real production and research imagery. Click any image to open it at full size.</p>
+      </div>
+      <div class="social-gallery"><a class="social-concept" href="../img/social/01-verhalen-beginnen-met-kijken.jpg" target="_blank" rel="noopener">
+  <img src="../img/social/01-verhalen-beginnen-met-kijken.jpg" alt="Social concept: Stories begin by looking" loading="lazy">
+  <span>01</span>
+</a>
+<a class="social-concept" href="../img/social/02-op-set.jpg" target="_blank" rel="noopener">
+  <img src="../img/social/02-op-set.jpg" alt="Social concept: On set" loading="lazy">
+  <span>02</span>
+</a>
+<a class="social-concept" href="../img/social/03-maxima-uitvoerend-producent.jpg" target="_blank" rel="noopener">
+  <img src="../img/social/03-maxima-uitvoerend-producent.jpg" alt="Social concept: Executive producer of Máxima" loading="lazy">
+  <span>03</span>
+</a>
+<a class="social-concept" href="../img/social/04-het-werk-zit-in-de-keuze.jpg" target="_blank" rel="noopener">
+  <img src="../img/social/04-het-werk-zit-in-de-keuze.jpg" alt="Social concept: The work is in the choice" loading="lazy">
+  <span>04</span>
+</a>
+<a class="social-concept" href="../img/social/05-bart-willemsen.jpg" target="_blank" rel="noopener">
+  <img src="../img/social/05-bart-willemsen.jpg" alt="Social concept: Bart Willemsen" loading="lazy">
+  <span>05</span>
+</a>
+<a class="social-concept" href="../img/social/06-de-wereld-is-geen-decor.jpg" target="_blank" rel="noopener">
+  <img src="../img/social/06-de-wereld-is-geen-decor.jpg" alt="Social concept: The world is not a backdrop" loading="lazy">
+  <span>06</span>
+</a>
+<a class="social-concept" href="../img/social/07-schaal-en-detail.jpg" target="_blank" rel="noopener">
+  <img src="../img/social/07-schaal-en-detail.jpg" alt="Social concept: Scale and detail" loading="lazy">
+  <span>07</span>
+</a>
+<a class="social-concept" href="../img/social/08-richting-op-set.jpg" target="_blank" rel="noopener">
+  <img src="../img/social/08-richting-op-set.jpg" alt="Social concept: Direction on set" loading="lazy">
+  <span>08</span>
+</a>
+<a class="social-concept" href="../img/social/09-warana-film-company.jpg" target="_blank" rel="noopener">
+  <img src="../img/social/09-warana-film-company.jpg" alt="Social concept: Warana Film Company" loading="lazy">
+  <span>09</span>
+</a></div>
+      <p class="social-gallery-note">A visual direction for the first public-facing posts: restrained, cinematic, and built around the work rather than reach.</p>
     </div>
     <div class="two" style="margin-top:2.3rem">
       <div>
@@ -443,6 +504,52 @@ footer.site{background:#0B1421;border-top:1px solid var(--line);padding-block:cl
 <div class="tile"><span class="num">7</span><img src="../img/sq-2015.jpg" alt="Versova Beach onder het plastic, oktober 2015"></div>
 <div class="tile"><span class="num">8</span><img src="../img/sq-monkey.jpg" alt="Beeld uit Monkey"></div>
 <div class="tile card c-green"><span class="num">9</span><img class="tilelogo" src="../img/warana-logo.svg" alt="Warana Film Company"></div></div>
+    </div>
+    <div class="warana-posts">
+      <div class="warana-posts-intro">
+        <div>
+          <p class="eyebrow">Visuele studie</p>
+          <h3>Warana in negen posts</h3>
+        </div>
+        <p>Negen redactionele feedposts, opgebouwd uit echte productie- en onderzoeksbeelden. Klik op een beeld om het groot te openen.</p>
+      </div>
+      <div class="social-gallery"><a class="social-concept" href="../img/social/01-verhalen-beginnen-met-kijken.jpg" target="_blank" rel="noopener">
+  <img src="../img/social/01-verhalen-beginnen-met-kijken.jpg" alt="Socialconcept: Verhalen beginnen met kijken" loading="lazy">
+  <span>01</span>
+</a>
+<a class="social-concept" href="../img/social/02-op-set.jpg" target="_blank" rel="noopener">
+  <img src="../img/social/02-op-set.jpg" alt="Socialconcept: Op set" loading="lazy">
+  <span>02</span>
+</a>
+<a class="social-concept" href="../img/social/03-maxima-uitvoerend-producent.jpg" target="_blank" rel="noopener">
+  <img src="../img/social/03-maxima-uitvoerend-producent.jpg" alt="Socialconcept: Uitvoerend producent van Máxima" loading="lazy">
+  <span>03</span>
+</a>
+<a class="social-concept" href="../img/social/04-het-werk-zit-in-de-keuze.jpg" target="_blank" rel="noopener">
+  <img src="../img/social/04-het-werk-zit-in-de-keuze.jpg" alt="Socialconcept: Het werk zit in de keuze" loading="lazy">
+  <span>04</span>
+</a>
+<a class="social-concept" href="../img/social/05-bart-willemsen.jpg" target="_blank" rel="noopener">
+  <img src="../img/social/05-bart-willemsen.jpg" alt="Socialconcept: Bart Willemsen" loading="lazy">
+  <span>05</span>
+</a>
+<a class="social-concept" href="../img/social/06-de-wereld-is-geen-decor.jpg" target="_blank" rel="noopener">
+  <img src="../img/social/06-de-wereld-is-geen-decor.jpg" alt="Socialconcept: De wereld is geen decor" loading="lazy">
+  <span>06</span>
+</a>
+<a class="social-concept" href="../img/social/07-schaal-en-detail.jpg" target="_blank" rel="noopener">
+  <img src="../img/social/07-schaal-en-detail.jpg" alt="Socialconcept: Schaal en detail" loading="lazy">
+  <span>07</span>
+</a>
+<a class="social-concept" href="../img/social/08-richting-op-set.jpg" target="_blank" rel="noopener">
+  <img src="../img/social/08-richting-op-set.jpg" alt="Socialconcept: Richting op set" loading="lazy">
+  <span>08</span>
+</a>
+<a class="social-concept" href="../img/social/09-warana-film-company.jpg" target="_blank" rel="noopener">
+  <img src="../img/social/09-warana-film-company.jpg" alt="Socialconcept: Warana Film Company" loading="lazy">
+  <span>09</span>
+</a></div>
+      <p class="social-gallery-note">Een visuele richting voor de eerste publieke posts: ingetogen, filmisch en gebouwd rond het werk in plaats van bereik.</p>
     </div>
     <div class="two" style="margin-top:2.3rem">
       <div>
