@@ -2,15 +2,15 @@
 """
 Statische tweetalige generator voor /WaranaFilmCompany op loekluijbregts.com.
 
-  src/content/<slug>.json   alle tekst, per sleutel {"en": ..., "nl": ...}
-  src/pages/<slug>.html     de opmaak van die pagina, met {{sleutel}} erin
-  src/pagecss/<slug>.css    opmaak die alleen deze pagina nodig heeft (optioneel)
-  src/shared.css            de gedeelde opmaak
+  _source/content/<slug>.json   alle tekst, per sleutel {"en": ..., "nl": ...}
+  _source/pages/<slug>.html     de opmaak van die pagina, met {{sleutel}} erin
+  _source/pagecss/<slug>.css    opmaak die alleen deze pagina nodig heeft (optioneel)
+  _source/shared.css            de gedeelde opmaak
 
 Elke pagina wordt twee keer gerenderd — Engels en Nederlands — en allebei in de
 uitvoer gezet. De taalknop laat er één zien. Eén bron, twee talen, geen drift.
 
-  python3 src/render.py            bouwt alles naar build/WaranaFilmCompany/
+  python3 _source/render.py        bouwt alles naar /WaranaFilmCompany/
 """
 import html
 import json
@@ -20,8 +20,8 @@ import shutil
 import sys
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SRC = os.path.join(BASE, 'src')
-OUT = os.path.join(BASE, 'build', 'WaranaFilmCompany')
+SRC = os.path.join(BASE, '_source')
+OUT = BASE
 
 # slug -> (mapnaam onder /WaranaFilmCompany/, navlabel-sleutel)
 PAGES = [
@@ -200,10 +200,22 @@ def block_qa(items, lang, root):
     return '\n'.join(out)
 
 
+def block_socialconcepts(items, lang, root):
+    out = []
+    for i, item in enumerate(items, 1):
+        src = f'{root}/img/social/{item["file"]}'
+        out.append(f'''<a class="social-concept" href="{src}" target="_blank" rel="noopener">
+  <img src="{src}" alt="{html.escape(item["alt"])}" loading="lazy">
+  <span>{i:02d}</span>
+</a>''')
+    return '\n'.join(out)
+
+
 BLOCKS = {'slate': block_slate, 'bars': block_bars, 'funding': block_funding,
           'swatches': block_swatches, 'ba': block_ba, 'posts': block_posts,
           'hubcards': block_hubcards, 'qa': block_qa, 'bookcfg': block_bookcfg,
-          'feed': block_feed, 'stories': block_stories}
+          'feed': block_feed, 'stories': block_stories,
+          'socialconcepts': block_socialconcepts}
 
 
 # --------------------------------------------------------------- render
