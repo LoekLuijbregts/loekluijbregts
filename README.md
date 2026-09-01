@@ -16,7 +16,7 @@ This is a bilingual personal introduction — the person behind Cycling Incubato
 2. What has he actually done?
 3. Is working together worth a 30-minute conversation?
 
-It is intentionally separate from the business site. This site introduces Loek's cross-industry Outside-In work, directie- en teamsessies, The Pacer and his writing. Cycling Incubators remains the specialist practice for cycling, outdoor and destination assignments.
+It is intentionally separate from the business site. This site introduces Loek's cross-industry Outside-In work, directie- en teamsessies, The Pacer and his practical DIY library. Cycling Incubators remains the specialist practice for cycling, outdoor and destination assignments.
 
 ---
 
@@ -31,7 +31,7 @@ loekluijbregts/
 ├── assets/site.css     ← shared homepage design system
 ├── guidance.html       ← The Pacer (EN) — served at /guidance
 ├── begeleiding.html    ← The Pacer (NL) — served at /begeleiding
-├── writing/            ← essay & case study index
+├── diy/                ← Dutch DIY, article and case-study library
 ├── */index.html        ← individual essays and case studies
 ├── images/             ← site images (extracted from former inline base64)
 ├── sitemap.xml         ← all indexable pages

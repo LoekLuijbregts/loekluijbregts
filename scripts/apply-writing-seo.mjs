@@ -570,7 +570,7 @@ function seoGraph(slug, item) {
         '@type': 'BreadcrumbList', '@id': `${canonical}#breadcrumb`,
         itemListElement: [
           {'@type': 'ListItem', position: 1, name: 'Home', item: `${site}/`},
-          {'@type': 'ListItem', position: 2, name: 'Writing', item: `${site}/writing/`},
+          {'@type': 'ListItem', position: 2, name: 'DIY', item: `${site}/diy/`},
           {'@type': 'ListItem', position: 3, name: headline, item: canonical}
         ]
       },
@@ -613,7 +613,7 @@ function headBlock(slug, item) {
 <meta name="twitter:image" content="${image}">
 <meta name="twitter:image:alt" content="${esc(item.imageAlt)}">
 <script type="application/ld+json">${JSON.stringify(seoGraph(slug, item))}</script>
-<link rel="stylesheet" href="/writing/seo-enhancements.css">`;
+<link rel="stylesheet" href="/diy/seo-enhancements.css">`;
 }
 
 function replaceSeoHead(html, slug, item) {
@@ -658,7 +658,7 @@ function articleCta(slug, item, oldTemplate) {
 for (const [slug, item] of Object.entries(articles)) {
   const file = path.join(root, slug, 'index.html');
   let html = replaceSeoHead(read(file), slug, item);
-  const oldTemplate = !html.includes('/writing/article.css');
+  const oldTemplate = !html.includes('/diy/article.css');
 
   html = html
     .replace(/<div class="eyebrow">[\s\S]*?<\/div>/i, `<div class="eyebrow">${esc(item.intent)} · ${esc(item.category)}</div>`)
@@ -683,7 +683,7 @@ for (const [slug, item] of Object.entries(articles)) {
   }
 
   html = html.replaceAll('—', '-').replaceAll('–', '-');
-  html = html.replaceAll('href="/writing"', 'href="/writing/"');
+  html = html.replaceAll('href="/diy/"', 'href="/diy/"');
   for (const target of Object.keys(articles)) {
     html = html.replaceAll(`href="/${target}"`, `href="/${target}/"`);
   }
@@ -705,7 +705,7 @@ for (const [slug, item] of Object.entries(articles)) {
   const graph = {
     '@context': 'https://schema.org', '@graph': [
       {'@type': 'Person', '@id': `${site}/#loek-luijbregts`, name: 'Loek Luijbregts', url: `${site}/`, jobTitle: 'Strategic Outside-In Partner and Founder', sameAs: ['https://www.linkedin.com/in/loekluijbregts/', 'https://cyclingincubators.com/']},
-      {'@type': 'CollectionPage', '@id': `${site}/writing/#collection`, url: `${site}/writing/`, name: 'Communication, Founder Positioning, Earned Media and Growth Articles', description: 'Practical essays and case studies on communication, founder positioning, earned media, creator partnerships, content systems and cycling or destination marketing.', author: {'@id': `${site}/#loek-luijbregts`}, mainEntity: {'@type': 'ItemList', itemListElement: items}}
+      {'@type': 'CollectionPage', '@id': `${site}/diy/#collection`, url: `${site}/diy/`, name: 'Communication, Founder Positioning, Earned Media and Growth Articles', description: 'Practical essays and case studies on communication, founder positioning, earned media, creator partnerships, content systems and cycling or destination marketing.', author: {'@id': `${site}/#loek-luijbregts`}, mainEntity: {'@type': 'ItemList', itemListElement: items}}
     ]
   };
   const desc = 'Practical essays and case studies on communication, founder positioning, earned media, creator partnerships, content systems and cycling or destination marketing.';
@@ -713,11 +713,11 @@ for (const [slug, item] of Object.entries(articles)) {
 <meta name="description" content="${desc}">
 <meta name="author" content="Loek Luijbregts">
 <meta name="robots" content="index,follow,max-image-preview:large">
-<link rel="canonical" href="${site}/writing/">
+<link rel="canonical" href="${site}/diy/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Useful Thinking. Visible Proof. - Loek Luijbregts">
 <meta property="og:description" content="${desc}">
-<meta property="og:url" content="${site}/writing/">
+<meta property="og:url" content="${site}/diy/">
 <meta property="og:site_name" content="Loek Luijbregts">
 <meta property="og:locale" content="en_GB">
 <meta property="og:image" content="${site}/images/real-loek-strategy-panel.webp">

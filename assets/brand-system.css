@@ -375,7 +375,7 @@ body:has(.content) :where(.content p, .content li) {
 }
 
 body:has(.content) .content strong { color: var(--brand-navy); font-weight: 700; }
-body:has(.content) .content a { color: var(--brand-blue); text-decoration: underline; }
+body:has(.content) .content a:not(.button) { color: var(--brand-blue); text-decoration: underline; }
 
 body:has(.content) :where(.article-hero img) {
   background: var(--brand-surface);
