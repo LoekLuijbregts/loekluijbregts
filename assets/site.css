@@ -138,7 +138,7 @@ nav {
   padding: 14px 16px;
 }
 
-.transformation-strip { background: #fff; border-bottom: 1px solid var(--border); border-top: 1px solid var(--border); }
+.transformation-strip { background: #fff; border-bottom: 1px solid var(--border); border-top: 1px solid var(--border); padding: 0; }
 .transformation-row { display: grid; grid-template-columns: repeat(4, 1fr); }
 .transformation-item { border-right: 1px solid var(--border); padding: 27px 24px; }
 .transformation-item:last-child { border-right: 0; }
