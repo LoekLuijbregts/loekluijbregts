@@ -122,6 +122,80 @@ body :where(.nav-link, .nav-links a:not(.btn):not(.nav-cta)) {
 
 body :where(.nav-link, .nav-links a):hover { color: var(--brand-blue); }
 
+/* Homepage navigation, shared by the DIY overview and its articles. */
+body nav.standard-site-nav {
+  display: block;
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+body .standard-site-nav .nav-inner {
+  align-items: center;
+  display: flex;
+  gap: 28px;
+  height: 76px;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: min(1180px, calc(100% - 112px));
+}
+
+body .standard-site-nav :where(.nav-right, .nav-links) {
+  align-items: center;
+  display: flex;
+  gap: 24px;
+}
+
+body .standard-site-nav .nav-links a:not(.btn) {
+  color: var(--brand-body);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-decoration: none;
+  text-transform: none;
+}
+
+body .standard-site-nav .nav-links a:hover,
+body .standard-site-nav .nav-links a[aria-current="page"] {
+  color: var(--brand-blue);
+}
+
+body .standard-site-nav .lang-switch {
+  align-items: center;
+  background: var(--brand-white);
+  border: 1px solid var(--brand-border);
+  border-radius: 999px;
+  display: flex;
+  gap: 0;
+  padding: 3px;
+}
+
+body .standard-site-nav .lang-switch a {
+  border-radius: 999px;
+  color: var(--brand-muted);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+  min-width: 33px;
+  padding: 7px 8px;
+  text-align: center;
+  text-decoration: none;
+}
+
+body .standard-site-nav .lang-switch a[aria-current="page"] {
+  background: var(--brand-navy);
+  color: var(--brand-white);
+}
+
+body .standard-site-nav .btn {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
 body :where(.btn, .button, .nav-cta, .nav-links .nav-cta, .nav-links .btn, a.button) {
   background: var(--brand-blue);
   border: 1px solid var(--brand-blue);
@@ -441,6 +515,24 @@ body :where(.facts span, .capability-list li) {
 }
 
 @media (max-width: 700px) {
+  body nav.standard-site-nav { position: relative; }
+  body .standard-site-nav .nav-inner {
+    gap: 12px;
+    height: 68px;
+    width: calc(100% - 32px);
+  }
+  body .standard-site-nav .nav-links { display: none; }
+  body .standard-site-nav .nav-right { gap: 9px; }
+  body .standard-site-nav .nav-right > .btn {
+    font-size: 12px;
+    min-height: 40px;
+    padding: 10px 13px;
+  }
+  body .standard-site-nav .lang-switch a {
+    min-width: 31px;
+    padding: 5px 6px;
+  }
+
   body :where(.brand, .nav-name) { font-size: 14px; }
   body :where(.btn, .button, .nav-cta, .nav-links .nav-cta, .nav-links .btn, a.button) {
     font-size: 13px;
