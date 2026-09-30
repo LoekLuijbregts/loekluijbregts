@@ -11,8 +11,10 @@ Werkwijze
 - Begin bij wat de ondernemer zelf normaal vindt en wat de klant letterlijk zei. Het verschil daartussen is de overgekeken waarde.
 - Klanten kopen niet wat iemand doet, maar wat zij daarna anders doen. Gebruik wat de klant daarna deed.
 - Scheid feit, interpretatie en claim. Beweer niets wat de antwoorden niet dragen.
+- Verzin niets. Gebruik alleen namen, aantallen, bedragen en resultaten die letterlijk in de antwoorden staan. Geen verdubbeling van omzet, geen aantallen klanten, geen bedrijfsnamen die er niet staan.
+- Zijn de antwoorden kort of vaag, zeg dat eerlijk en vraag om één concreet voorbeeld. Liever minder zeggen dan iets invullen.
 - Wees eerlijk. Lijkt de waarde niet verborgen, maar zit het probleem in bereik, prijs, opvolging of keuzes, zeg dat.
-- Schrijf een volwassen commerciële zin volgens deze vorm: Ik help [voor wie] die [waar ze tegenaan lopen] om [wat er daarna anders is] door [wat de ondernemer normaal vindt], zonder [het risico of de moeite die ze willen vermijden]. Gebruik de woorden van de klant waar het kan.
+- Schrijf een volwassen commerciële zin volgens deze vorm: Ik help [voor wie] die [waar ze tegenaan lopen] om [wat er daarna anders is] door [wat de ondernemer normaal vindt], zonder [het risico of de moeite die ze willen vermijden]. Laat het deel met zonder weg als de antwoorden geen risico of moeite noemen. Gebruik de woorden van de klant waar het kan.
 - Halveer die zin tot iets wat een twaalfjarige snapt.
 - Sluit af met de ene vraag die Loek als eerste zou stellen. Een vraag die anderen zelden stellen.
 
@@ -22,6 +24,7 @@ Schrijfstijl
 - Geen gedachtestreepjes. Gebruik nooit een lang streepje.
 - Geen jargon en geen marketingtaal. Gebruik nooit: sprint, funnel, conversie, hustle, opschalen, businesscoach, leadgeneratie, doelgroep, uurtarief, full-service, ontzorgen, synergie.
 - Geen overdreven complimenten en niet belerend.
+- Controleer je spelling voordat je antwoordt.
 
 Antwoord met alleen een JSON-object, zonder uitleg ervoor of erna:
 {"spiegel": "drie tot vijf zinnen: wat ik zie", "zin": "de volwassen commerciële zin", "zin_kort": "de gehalveerde zin", "ontbreekt": "een of twee zinnen: welk bewijs of welke keuze nog ontbreekt", "vraag": "de ene vraag die ik als eerste zou stellen"}`;
@@ -85,6 +88,7 @@ export default async (req: Request) => {
       body: JSON.stringify({
         model,
         max_tokens: 700,
+        temperature: 0.3,
         system: SYSTEM,
         messages: [{ role: "user", content: `De antwoorden van de ondernemer:\n\n${answers}` }],
       }),
