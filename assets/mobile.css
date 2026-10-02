@@ -1,0 +1,161 @@
+/* mobile.css - mobiele correcties, laadt als laatste op elke pagina.
+   Twee dingen: (1) beeld niet kapotsnijden op smalle schermen,
+   (2) niets breder laten worden dan het scherm. */
+
+/* Elke afbeelding heeft nu width- en height-attributen, zodat de pagina
+   niet verspringt tijdens het laden. Zonder deze regel zou de browser die
+   hoogte letterlijk nemen en het beeld uitrekken. Lagere specificiteit dan
+   elke bestaande .klasse img-regel, dus die blijven gewoon gelden. */
+img { height: auto; }
+
+/* ---------------------------------------------------------------
+   1. BEELD
+   Op desktop zitten foto's in vaste liggende kaders met object-fit:
+   cover. Op een telefoon wordt een staande foto daardoor voor 30 tot
+   65 procent weggesneden. Onder 760 px krijgt elk beeld zijn eigen
+   verhouding terug.
+   --------------------------------------------------------------- */
+@media (max-width: 760px) {
+
+  /* artikelkoppen */
+  .article-hero img {
+    height: auto !important;
+    max-height: none !important;
+    aspect-ratio: auto !important;
+    object-fit: contain !important;
+  }
+
+  /* casekaarten op /work/ - beeld staat daar absoluut gepositioneerd */
+  .media:not(.proof-field):not(.media-list):not(.media-item) {
+    position: static !important;
+    min-height: 0 !important;
+    height: auto !important;
+  }
+  .media:not(.proof-field) > img {
+    position: static !important;
+    inset: auto !important;
+    height: auto !important;
+    aspect-ratio: auto !important;
+    object-fit: contain !important;
+  }
+
+  /* casekaarten op de homepage */
+  .case-media:not(.words) {
+    min-height: 0 !important;
+    height: auto !important;
+  }
+  .case-media:not(.words) img {
+    height: auto !important;
+    aspect-ratio: auto !important;
+    object-fit: contain !important;
+  }
+
+  /* hero-beeld op /the-pacer/ en /begeleiding/ */
+  .hero-right {
+    height: auto !important;
+  }
+  .hero-img {
+    height: auto !important;
+    aspect-ratio: auto !important;
+    object-fit: contain !important;
+  }
+
+  /* bewijskaarten op /the-pacer/ */
+  .proof-card-img {
+    height: auto !important;
+    aspect-ratio: auto !important;
+    object-fit: contain !important;
+  }
+
+  /* /pack/ - drie beelden met drie verschillende verhoudingen in één 4:5-kader */
+  .photostrip img {
+    aspect-ratio: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+}
+
+/* ---------------------------------------------------------------
+   2. GEEN HORIZONTALE SCROLL
+   Grid- en flexkinderen krijgen standaard min-width:auto, dus een
+   brede rij cijfers, een lange URL of een te brede navigatie duwt de
+   hele pagina breder dan het scherm. Op 390 px deden vijftien pagina's
+   dat, op 768 px zevenendertig. Dit blok loopt daarom door tot 1100 px.
+   --------------------------------------------------------------- */
+@media (max-width: 1100px) {
+
+  /* navigatie: de links mogen binnen hun eigen balk schuiven in plaats
+     van de pagina op te rekken */
+  .nav-inner, .nav-right, .nav-links { min-width: 0; }
+  .nav-links {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .nav-links::-webkit-scrollbar { display: none; }
+  .nav-links > * { flex: none; }
+}
+
+/* Onder 760 px passen woordmerk en losse links niet meer op een rij.
+   De site doet dit elders al zo (brand-system.css verbergt .nav-links
+   onder 700 px): alleen het woordmerk en de knop blijven staan, de
+   losse links zijn bereikbaar via de pagina zelf en de voetregel. */
+@media (max-width: 760px) {
+  nav .nav-right { flex-wrap: nowrap; min-width: 0; }
+  nav .nav-right > .nav-link { display: none; }
+  nav { flex-wrap: nowrap !important; }
+}
+
+@media (max-width: 1100px) {
+
+  .hero > *,
+  .hero-left,
+  .hero-right,
+  [class*="grid"] > *,
+  [class*="-row"] > *,
+  [class*="-inner"] > *,
+  [class*="-cards"] > *,
+  [class*="-list"] > * {
+    min-width: 0;
+  }
+
+  /* lange woorden, e-mailadressen en URL's breken af in plaats van
+     de pagina op te rekken */
+  p, li, td, th, dd, dt,
+  h1, h2, h3, h4, h5, h6,
+  a, blockquote, figcaption, cite, span, strong, em, small, code {
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  /* rijen met kerncijfers die als flex zijn gezet: laten afbreken */
+  .hero-proof {
+    flex-wrap: wrap;
+    gap: 22px 28px;
+  }
+
+  /* rijen met kerncijfers: twee kolommen in plaats van vier */
+  .proof-grid,
+  .transformation-row,
+  .stat-row,
+  .stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  /* navigatie en voetrij mogen afbreken */
+  .nav-right,
+  .nav-inner,
+  .footer-links,
+  .footer-inner {
+    flex-wrap: wrap;
+    min-width: 0;
+  }
+
+  /* brede tabellen en codeblokken scrollen in hun eigen kader */
+  table, pre {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+}
