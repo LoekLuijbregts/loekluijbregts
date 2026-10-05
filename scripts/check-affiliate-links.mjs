@@ -35,8 +35,9 @@ const failures = [];
 
 // Client proposals can contain their own booking links. They are not part of
 // this site's affiliate-link programme, so keep this audit scoped to the
-// first-party pages it is designed to protect.
-const excludedDirectories = new Set([".git", "node_modules", "WaranaFilmCompany"]);
+// first-party pages it is designed to protect. The /links page holds Loek's
+// own booking links (zcal), which are not tool recommendations either.
+const excludedDirectories = new Set([".git", "node_modules", "WaranaFilmCompany", "links"]);
 
 function normalize(raw) {
   const url = new URL(raw.replaceAll("&amp;", "&"));
