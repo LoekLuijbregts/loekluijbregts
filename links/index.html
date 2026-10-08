@@ -8,7 +8,7 @@
 <link rel="canonical" href="https://loekluijbregts.com/links/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Loek. links">
-<meta property="og:description" content="For business, for cycling & DMO's, and short-notice calls. Pick the route that fits you.">
+<meta property="og:description" content="All routes to Loek Luijbregts in one place: for business owners, for cycling brands and DMO's, and short-notice calls.">
 <meta property="og:url" content="https://loekluijbregts.com/links/">
 <meta property="og:image" content="https://loekluijbregts.com/images/social-share-logo.png">
 <meta name="theme-color" content="#152041">
@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap">
 <style>
-  /* Layout: one quiet column for the intro, two lanes side by side on desktop, stacked on phones; short-notice row spans both */
+  /* Layout: centred wordmark and its meaning, language switch in the middle, slim short-notice bar, two lanes of three, company line at the foot */
   :root {
     --bg: #F7F9FC;
     --surface: #FFFFFF;
@@ -27,47 +27,96 @@
     --line: #E2E8F0;
     --accent: #0B63E5;
     --tint: #EAF2FF;
+    --track: #152041;
     --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
       --bg: #0B1226; --surface: #121B34; --ink: #EEF2FA; --muted: #A6B0C5;
-      --line: #23304F; --accent: #5B9BFF; --tint: #18264A; color-scheme: dark;
+      --line: #23304F; --accent: #5B9BFF; --tint: #18264A; --track: #152041; color-scheme: dark;
     }
   }
   :root[data-theme="dark"] {
     --bg: #0B1226; --surface: #121B34; --ink: #EEF2FA; --muted: #A6B0C5;
-    --line: #23304F; --accent: #5B9BFF; --tint: #18264A; color-scheme: dark;
+    --line: #23304F; --accent: #5B9BFF; --tint: #18264A; --track: #152041; color-scheme: dark;
   }
 
   * { box-sizing: border-box; }
-  html { color-scheme: light; }
   :root { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
   body {
     margin: 0; background: var(--bg); color: var(--ink);
     font-family: var(--font); font-size: 16px; line-height: 1.5;
     -webkit-font-smoothing: antialiased;
   }
-  .wrap { max-width: 960px; margin: 0 auto; padding: 48px 20px 40px; display: grid; gap: 40px; }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 56px 20px 40px; display: grid; gap: 32px; }
 
-  header { display: grid; gap: 14px; }
-  .mark { font-weight: 800; font-size: 44px; letter-spacing: -0.04em; line-height: 1; margin: 0; }
+  /* Language: hide the other one */
+  [data-lang="en"] [data-l="nl"], [data-lang="nl"] [data-l="en"] { display: none; }
+
+  header { display: grid; justify-items: center; text-align: center; gap: 10px; }
+  .id { display: flex; align-items: center; gap: 16px; }
+  .face { width: 68px; height: 68px; border-radius: 50%; display: block; flex: none; }
+  .mark { font-weight: 800; font-size: 72px; letter-spacing: -0.045em; line-height: .9; margin: 0; }
   .mark span { color: var(--accent); }
-  .who { margin: 0; font-size: 15px; color: var(--muted); max-width: 46ch; }
-  .who strong { color: var(--ink); font-weight: 600; }
+  .meaning { margin: 0; font-size: 19px; font-weight: 600; letter-spacing: -0.01em; text-wrap: balance; }
+  .who { margin: 0; font-size: 14px; color: var(--muted); }
+  .story { font-size: 15px; font-weight: 600; color: var(--accent); text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--accent) 35%, transparent); text-underline-offset: 4px; max-width: 32ch; text-wrap: balance; }
+  .story:hover, .story:focus-visible { text-decoration-color: var(--accent); outline: none; }
 
-  .lanes { display: grid; grid-template-columns: 1fr; gap: 20px; }
-  @media (min-width: 760px) { .lanes { grid-template-columns: 1fr 1fr; } }
-
-  .lane {
-    background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
-    padding: 24px 24px 8px; min-width: 0;
+  /* EN / NL switch: dark navy track, the Loek. dot is the knob */
+  .lang { display: flex; justify-content: center; align-items: center; gap: 12px; }
+  .lang-label {
+    font: 600 12px/1 var(--font); letter-spacing: .08em; color: var(--muted);
+    background: none; border: 0; padding: 6px 2px; cursor: pointer; transition: color .2s;
   }
+  .lang-label.on { color: var(--ink); }
+  .switch {
+    position: relative; width: 64px; height: 30px; border-radius: 99px; padding: 0; cursor: pointer;
+    background: var(--track); border: 1px solid color-mix(in srgb, var(--ink) 14%, transparent);
+    touch-action: pan-y;
+  }
+  .switch .dot {
+    position: absolute; top: 50%; left: 7px; width: 16px; height: 16px; border-radius: 50%;
+    background: #1C78FE; transform: translateY(-50%);
+    box-shadow: 0 0 0 4px rgba(28,120,254,.18);
+    transition: left .28s cubic-bezier(.3,1.4,.5,1);
+  }
+  .switch[aria-checked="true"] .dot { left: 39px; }
+  .switch:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  /* Short notice bar */
+  .fast {
+    background: var(--ink); color: var(--bg); border-radius: 12px; padding: 14px 18px;
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 20px;
+  }
+  .fast .eyebrow { color: color-mix(in srgb, var(--bg) 70%, transparent); font-size: 11px; margin: 0 0 2px; }
+  .fast h2 { margin: 0; font-size: 16px; font-weight: 600; letter-spacing: -0.01em; }
+  .slots { display: flex; gap: 6px; flex-wrap: wrap; }
+  .slot {
+    display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px;
+    border-radius: 99px; text-decoration: none; font-weight: 600; font-size: 15px; white-space: nowrap;
+    background: color-mix(in srgb, var(--bg) 10%, transparent); color: var(--bg);
+    border: 1px solid color-mix(in srgb, var(--bg) 25%, transparent);
+    transition: background .15s, border-color .15s;
+  }
+  .slot:hover, .slot:focus-visible { background: var(--accent); border-color: var(--accent); color: #fff; outline: none; }
+
   .eyebrow {
     display: flex; align-items: center; gap: 8px; margin: 0 0 4px;
     font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
   }
   .eyebrow::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); flex: none; }
+
+  /* Lanes */
+  .lanes { display: grid; grid-template-columns: 1fr; gap: 20px; }
+  @media (min-width: 760px) { .lanes { grid-template-columns: 1fr 1fr; } }
+  .lane {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
+    padding: 22px 24px 8px; min-width: 0;
+  }
+  .lane-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .site { font-size: 13px; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--line); }
+  .site:hover { color: var(--accent); border-color: var(--accent); }
   .lane h2 { margin: 0 0 12px; font-size: 22px; font-weight: 600; letter-spacing: -0.02em; text-wrap: balance; }
 
   ul { list-style: none; margin: 0; padding: 0; }
@@ -78,7 +127,7 @@
   }
   .link > div { min-width: 0; }
   .t { display: block; font-weight: 600; font-size: 16px; line-height: 1.35; }
-  .s { display: block; font-size: 13.5px; color: var(--muted); overflow-wrap: anywhere; }
+  .s { display: block; font-size: 13.5px; color: var(--muted); }
   .tag {
     display: inline-block; margin-left: 6px; padding: 1px 7px; border-radius: 99px;
     font-size: 11px; font-weight: 600; letter-spacing: 0.02em; vertical-align: 2px;
@@ -93,94 +142,133 @@
   .link:hover .t { color: var(--accent); }
   .link:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 6px; }
 
-  .fast {
-    background: var(--ink); color: var(--bg); border-radius: 14px; padding: 24px;
-    display: grid; gap: 16px;
-  }
-  .fast .eyebrow { color: color-mix(in srgb, var(--bg) 70%, transparent); }
-  .fast h2 { margin: 0; font-size: 22px; font-weight: 600; letter-spacing: -0.02em; }
-  .fast p { margin: 0; font-size: 14.5px; color: color-mix(in srgb, var(--bg) 78%, transparent); max-width: 52ch; }
-  .slots { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; }
-  .slot {
-    display: flex; justify-content: space-between; align-items: center; gap: 10px;
-    padding: 14px 16px; border-radius: 10px; text-decoration: none; font-weight: 600;
-    background: color-mix(in srgb, var(--bg) 10%, transparent); color: var(--bg);
-    border: 1px solid color-mix(in srgb, var(--bg) 22%, transparent);
-    transition: background .15s, border-color .15s;
-  }
-  .slot small { font-weight: 400; font-size: 13px; opacity: .75; }
-  .slot:hover, .slot:focus-visible { background: var(--accent); border-color: var(--accent); color: #fff; outline: none; }
-
-  footer { font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 6px 16px; }
-  footer a { color: inherit; }
+  footer { display: grid; justify-items: center; text-align: center; gap: 6px; padding-top: 8px; font-size: 13px; color: var(--muted); }
+  footer p { margin: 0; max-width: 52ch; text-wrap: balance; }
+  footer a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line); }
+  footer a:hover { color: var(--accent); border-color: var(--accent); }
 
   @media (max-width: 480px) {
-    .wrap { padding-top: 32px; gap: 28px; }
-    .mark { font-size: 38px; }
+    .wrap { padding-top: 40px; gap: 26px; }
+    .mark { font-size: 56px; }
+    .face { width: 54px; height: 54px; }
+    .meaning { font-size: 17px; }
     .lane { padding: 20px 18px 4px; }
-    .fast { padding: 20px 18px; }
+    .fast { padding: 14px 16px; }
   }
   @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
 </head>
 <body>
 
-<main class="wrap">
+<main class="wrap" id="page" data-lang="en">
   <header>
-    <p class="mark">Loek<span>.</span></p>
-    <p class="who"><strong>Loek Luijbregts</strong> · See what matters. Make it work.<br>Pick the route that fits you.</p>
+    <div class="id">
+      <img class="face" src="/images/loek-profile-navy.webp" width="68" height="68" alt="Loek Luijbregts">
+      <p class="mark" aria-label="Loek.">Loek<span>.</span></p>
+    </div>
+    <p class="meaning"><span data-l="en">See what matters. Make it work.</span><span data-l="nl">Zie wat ertoe doet. Maak er werk van.</span></p>
+    <p class="who">Loek Luijbregts · Tilburg</p>
+    <a class="story" href="/start/"><span data-l="en">Do you see everything your clients get from you?</span><span data-l="nl">Zie jij zelf alles wat klanten van je krijgen?</span> →</a>
   </header>
+
+  <div class="lang">
+    <button class="lang-label on" type="button" id="to-en">EN</button>
+    <button class="switch" type="button" role="switch" aria-checked="false" aria-label="Nederlands" id="lang-switch"><span class="dot"></span></button>
+    <button class="lang-label" type="button" id="to-nl">NL</button>
+  </div>
 
   <section class="fast" aria-labelledby="fast">
     <div>
-      <p class="eyebrow">Short notice · 20 minutes · paid</p>
-      <h2 id="fast">Need a sharp answer fast?</h2>
+      <p class="eyebrow"><span data-l="en">Short notice · 20 minutes · paid</span><span data-l="nl">Op korte termijn · 20 minuten · betaald</span></p>
+      <h2 id="fast"><span data-l="en">Need a sharp debate or answer fast?</span><span data-l="nl">Snel een scherp gesprek of antwoord nodig?</span></h2>
     </div>
-    <p>I'm easy to reach, and my network often comes to me with one sharp question. Book 20 focused minutes for yours.</p>
     <div class="slots">
-      <a class="slot" href="https://zcal.co/i/yuEUfA_O">ASAP <small>→</small></a>
-      <a class="slot" href="https://zcal.co/i/EVp0H255">Tomorrow <small>→</small></a>
-      <a class="slot" href="https://zcal.co/i/cj0VQOEN">Later this week <small>→</small></a>
+      <a class="slot" href="https://zcal.co/i/yuEUfA_O"><span data-l="en">ASAP</span><span data-l="nl">Zo snel mogelijk</span></a>
+      <a class="slot" href="https://zcal.co/i/EVp0H255"><span data-l="en">Tomorrow</span><span data-l="nl">Morgen</span></a>
+      <a class="slot" href="https://zcal.co/i/cj0VQOEN"><span data-l="en">This week</span><span data-l="nl">Deze week</span></a>
     </div>
   </section>
 
   <section class="lanes">
     <article class="lane" aria-labelledby="biz">
-      <p class="eyebrow">For business</p>
-      <h2 id="biz">Owners and makers</h2>
+      <div class="lane-head">
+        <p class="eyebrow"><span data-l="en">For business</span><span data-l="nl">Voor ondernemers</span></p>
+        <a class="site" href="https://www.loekluijbregts.com">loekluijbregts.com</a>
+      </div>
+      <h2 id="biz"><span data-l="en">Owners and makers</span><span data-l="nl">Eigenaren en makers</span></h2>
       <ul>
-        <li><a class="link" href="https://www.loekluijbregts.com">
-          <div><span class="t">Website</span><span class="s">loekluijbregts.com</span></div><span class="arrow" aria-hidden="true">→</span></a></li>
         <li><a class="link" href="https://mkb-scan.scoreapp.com">
-          <div><span class="t">Take the MKB scan <span class="tag">Free</span></span><span class="s">See where your business stands</span></div><span class="arrow" aria-hidden="true">→</span></a></li>
+          <div><span class="t"><span data-l="en">Take the MKB scan</span><span data-l="nl">Doe de MKB-scan</span> <span class="tag"><span data-l="en">Free</span><span data-l="nl">Gratis</span></span></span><span class="s"><span data-l="en">See where your business stands</span><span data-l="nl">Zie waar je bedrijf staat</span></span></div><span class="arrow" aria-hidden="true">→</span></a></li>
         <li><a class="link" href="https://zcal.co/cycling-incubators/15min">
-          <div><span class="t">Outside-in Perspective <span class="tag">Free</span></span><span class="s">10 minutes, one fresh look from outside</span></div><span class="arrow" aria-hidden="true">→</span></a></li>
+          <div><span class="t">Outside-in Perspective <span class="tag"><span data-l="en">Free</span><span data-l="nl">Gratis</span></span></span><span class="s"><span data-l="en">10 minutes, one fresh look from outside</span><span data-l="nl">10 minuten, een frisse blik van buiten</span></span></div><span class="arrow" aria-hidden="true">→</span></a></li>
         <li><a class="link" href="https://zcal.co/i/vcLERywI">
-          <div><span class="t">Introduction video call <span class="tag">Free</span></span><span class="s">30 minutes to get to know each other</span></div><span class="arrow" aria-hidden="true">→</span></a></li>
+          <div><span class="t"><span data-l="en">Introduction video call</span><span data-l="nl">Kennismaking via video</span> <span class="tag"><span data-l="en">Free</span><span data-l="nl">Gratis</span></span></span><span class="s"><span data-l="en">30 minutes to get to know each other</span><span data-l="nl">30 minuten om elkaar te leren kennen</span></span></div><span class="arrow" aria-hidden="true">→</span></a></li>
       </ul>
     </article>
 
     <article class="lane" aria-labelledby="dmo">
-      <p class="eyebrow">For cycling &amp; DMO's</p>
-      <h2 id="dmo">Brands and destinations</h2>
+      <div class="lane-head">
+        <p class="eyebrow"><span data-l="en">For cycling &amp; DMO's</span><span data-l="nl">Voor fietsmerken &amp; DMO's</span></p>
+        <a class="site" href="https://cyclingincubators.com/">cyclingincubators.com</a>
+      </div>
+      <h2 id="dmo"><span data-l="en">Brands and destinations</span><span data-l="nl">Merken en bestemmingen</span></h2>
       <ul>
-        <li><a class="link" href="https://cyclingincubators.com/">
-          <div><span class="t">Website</span><span class="s">cyclingincubators.com</span></div><span class="arrow" aria-hidden="true">→</span></a></li>
         <li><a class="link" href="https://loek-nacmfupk.scoreapp.com">
-          <div><span class="t">Take the scorecard <span class="tag">Free</span></span><span class="s">For cycling brands and destinations</span></div><span class="arrow" aria-hidden="true">→</span></a></li>
+          <div><span class="t"><span data-l="en">Take the scorecard</span><span data-l="nl">Doe de scorecard</span> <span class="tag"><span data-l="en">Free</span><span data-l="nl">Gratis</span></span></span><span class="s"><span data-l="en">For cycling brands and destinations</span><span data-l="nl">Voor fietsmerken en bestemmingen</span></span></div><span class="arrow" aria-hidden="true">→</span></a></li>
         <li><a class="link" href="https://zcal.co/i/vcLERywI">
-          <div><span class="t">Introduction video call <span class="tag">Free</span></span><span class="s">30 minutes to get to know each other</span></div><span class="arrow" aria-hidden="true">→</span></a></li>
+          <div><span class="t"><span data-l="en">Introduction video call</span><span data-l="nl">Kennismaking via video</span> <span class="tag"><span data-l="en">Free</span><span data-l="nl">Gratis</span></span></span><span class="s"><span data-l="en">30 minutes to get to know each other</span><span data-l="nl">30 minuten om elkaar te leren kennen</span></span></div><span class="arrow" aria-hidden="true">→</span></a></li>
         <li><a class="link" href="https://zcal.co/i/yf2a3JvF">
-          <div><span class="t">Plan your Key Person session</span><span class="s">2 hours to build your Key Person of Cycling Content Cluster™</span></div><span class="arrow" aria-hidden="true">→</span></a></li>
+          <div><span class="t"><span data-l="en">Plan your Key Person session</span><span data-l="nl">Plan je Key Person-sessie</span></span><span class="s"><span data-l="en">2 hours to build your Key Person of Cycling Content Cluster™</span><span data-l="nl">2 uur om je Key Person of Cycling Content Cluster™ te bouwen</span></span></div><span class="arrow" aria-hidden="true">→</span></a></li>
       </ul>
     </article>
   </section>
 
   <footer>
-    <span>Loek Luijbregts · Tilburg</span>
-    <a href="https://www.loekluijbregts.com">loekluijbregts.com</a>
-    <a href="https://cyclingincubators.com/">cyclingincubators.com</a>
+    <p><span data-l="en"><a href="https://www.loekluijbregts.com">Loek.</a>, <a href="https://gravelboost.com">GravelBoost</a> and <a href="https://cyclingincubators.com/">Cycling Incubators B.V.</a> are companies for exploration, development and growth by Loek Luijbregts.</span><span data-l="nl"><a href="https://www.loekluijbregts.com">Loek.</a>, <a href="https://gravelboost.com">GravelBoost</a> en <a href="https://cyclingincubators.com/">Cycling Incubators B.V.</a> zijn bedrijven voor verkenning, ontwikkeling en ontplooiing door Loek Luijbregts.</span></p>
   </footer>
 </main>
+
+<script>
+(function () {
+  var page = document.getElementById('page');
+  var sw = document.getElementById('lang-switch');
+  var en = document.getElementById('to-en');
+  var nl = document.getElementById('to-nl');
+
+  function setLang(lang) {
+    page.setAttribute('data-lang', lang);
+    document.documentElement.lang = lang;
+    sw.setAttribute('aria-checked', lang === 'nl' ? 'true' : 'false');
+    sw.setAttribute('aria-label', lang === 'nl' ? 'English' : 'Nederlands');
+    en.classList.toggle('on', lang === 'en');
+    nl.classList.toggle('on', lang === 'nl');
+    try { localStorage.setItem('loek-links-lang', lang); } catch (e) {}
+  }
+
+  var start = 'en';
+  if (location.hash === '#nl') start = 'nl';
+  else { try { if (localStorage.getItem('loek-links-lang') === 'nl') start = 'nl'; } catch (e) {} }
+  setLang(start);
+
+  var downX = null;
+  sw.addEventListener('pointerdown', function (e) { downX = e.clientX; });
+  sw.addEventListener('click', function (e) {
+    var cur = page.getAttribute('data-lang');
+    if (downX !== null && e.clientX) {
+      var dx = e.clientX - downX;
+      if (dx > 8) { setLang('nl'); downX = null; return; }
+      if (dx < -8) { setLang('en'); downX = null; return; }
+    }
+    downX = null;
+    setLang(cur === 'en' ? 'nl' : 'en');
+  });
+  sw.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowRight') { setLang('nl'); e.preventDefault(); }
+    if (e.key === 'ArrowLeft') { setLang('en'); e.preventDefault(); }
+  });
+  en.addEventListener('click', function () { setLang('en'); });
+  nl.addEventListener('click', function () { setLang('nl'); });
+})();
+</script>
 </body>
 </html>

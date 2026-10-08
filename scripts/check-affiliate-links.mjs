@@ -37,7 +37,8 @@ const failures = [];
 // this site's affiliate-link programme, so keep this audit scoped to the
 // first-party pages it is designed to protect. The /links page holds Loek's
 // own booking links (zcal), which are not tool recommendations either.
-const excludedDirectories = new Set([".git", "node_modules", "WaranaFilmCompany", "links"]);
+// The same goes for /start, the story page that leads to the same routes.
+const excludedDirectories = new Set([".git", "node_modules", "WaranaFilmCompany", "links", "start"]);
 
 function normalize(raw) {
   const url = new URL(raw.replaceAll("&amp;", "&"));
