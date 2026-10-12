@@ -5,3 +5,7 @@
 # tijdelijke overzetbestanden
 _to_delete/
 *.tar.gz
+
+/_local/
+
+/.agents/skills/loek-voorbij/
