@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap">
 <style>
-  /* Layout: centred wordmark and its meaning, language switch in the middle, slim short-notice bar, two lanes of three, company line at the foot */
+  /* Layout: the meaning in two big lines, then portrait + wordmark, language switch, the two lanes, the short-notice bar and the company line at the foot */
   :root {
     --bg: #F7F9FC;
     --surface: #FFFFFF;
@@ -55,13 +55,11 @@
 
   header { display: grid; justify-items: center; text-align: center; gap: 10px; }
   .id { display: flex; align-items: center; gap: 16px; }
-  .face { width: 68px; height: 68px; border-radius: 50%; display: block; flex: none; }
-  .mark { font-weight: 800; font-size: 72px; letter-spacing: -0.045em; line-height: .9; margin: 0; }
+  .face { width: 56px; height: 56px; border-radius: 50%; display: block; flex: none; }
+  .mark { font-weight: 800; font-size: 52px; letter-spacing: -0.045em; line-height: .9; margin: 0; }
   .mark span { color: var(--accent); }
-  .meaning { margin: 0; font-size: 19px; font-weight: 600; letter-spacing: -0.01em; text-wrap: balance; }
+  .meaning { margin: 0 0 8px; font-size: clamp(28px, 4.6vw, 40px); font-weight: 700; line-height: 1.12; letter-spacing: -0.025em; }
   .who { margin: 0; font-size: 14px; color: var(--muted); }
-  .story { font-size: 15px; font-weight: 600; color: var(--accent); text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--accent) 35%, transparent); text-underline-offset: 4px; max-width: 32ch; text-wrap: balance; }
-  .story:hover, .story:focus-visible { text-decoration-color: var(--accent); outline: none; }
 
   /* EN / NL switch: dark navy track, the Loek. dot is the knob */
   .lang { display: flex; justify-content: center; align-items: center; gap: 12px; }
@@ -108,7 +106,7 @@
   .eyebrow::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); flex: none; }
 
   /* Lanes */
-  .lanes { display: grid; grid-template-columns: 1fr; gap: 20px; }
+  .lanes { display: grid; grid-template-columns: 1fr; gap: 20px; align-items: start; }
   @media (min-width: 760px) { .lanes { grid-template-columns: 1fr 1fr; } }
   .lane {
     background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
@@ -149,9 +147,8 @@
 
   @media (max-width: 480px) {
     .wrap { padding-top: 40px; gap: 26px; }
-    .mark { font-size: 56px; }
-    .face { width: 54px; height: 54px; }
-    .meaning { font-size: 17px; }
+    .mark { font-size: 44px; }
+    .face { width: 48px; height: 48px; }
     .lane { padding: 20px 18px 4px; }
     .fast { padding: 14px 16px; }
   }
@@ -162,13 +159,12 @@
 
 <main class="wrap" id="page" data-lang="en">
   <header>
+    <p class="meaning"><span data-l="en">See what matters.<br>Make it work.</span><span data-l="nl">Zie wat ertoe doet.<br>Maak er werk van.</span></p>
     <div class="id">
-      <img class="face" src="/images/loek-profile-navy.webp" width="68" height="68" alt="Loek Luijbregts">
+      <img class="face" src="/images/loek-profile-navy.webp" width="56" height="56" alt="Loek Luijbregts">
       <p class="mark" aria-label="Loek.">Loek<span>.</span></p>
     </div>
-    <p class="meaning"><span data-l="en">See what matters. Make it work.</span><span data-l="nl">Zie wat ertoe doet. Maak er werk van.</span></p>
     <p class="who">Loek Luijbregts</p>
-    <a class="story" href="/start/"><span data-l="en">Do you see how much more your clients get from you?</span><span data-l="nl">Zie jij hoeveel meer klanten van je krijgen?</span> →</a>
   </header>
 
   <div class="lang">
@@ -176,18 +172,6 @@
     <button class="switch" type="button" role="switch" aria-checked="false" aria-label="Nederlands" id="lang-switch"><span class="dot"></span></button>
     <button class="lang-label" type="button" id="to-nl">NL</button>
   </div>
-
-  <section class="fast" aria-labelledby="fast">
-    <div>
-      <p class="eyebrow"><span data-l="en">Short notice · 20 minutes · paid</span><span data-l="nl">Op korte termijn · 20 minuten · betaald</span></p>
-      <h2 id="fast"><span data-l="en">Need a sharp debate or answer fast?</span><span data-l="nl">Snel een scherp gesprek of antwoord nodig?</span></h2>
-    </div>
-    <div class="slots">
-      <a class="slot" href="https://zcal.co/i/yuEUfA_O"><span data-l="en">ASAP</span><span data-l="nl">Zo snel mogelijk</span></a>
-      <a class="slot" href="https://zcal.co/i/EVp0H255"><span data-l="en">Tomorrow</span><span data-l="nl">Morgen</span></a>
-      <a class="slot" href="https://zcal.co/i/cj0VQOEN"><span data-l="en">This week</span><span data-l="nl">Deze week</span></a>
-    </div>
-  </section>
 
   <section class="lanes">
     <article class="lane" aria-labelledby="biz">
@@ -199,10 +183,8 @@
       <ul>
         <li><a class="link" href="https://mkb-scan.scoreapp.com">
           <div><span class="t"><span data-l="en">Take the MKB scan</span><span data-l="nl">Doe de MKB-scan</span> <span class="tag"><span data-l="en">Free</span><span data-l="nl">Gratis</span></span></span><span class="s"><span data-l="en">See where your business stands</span><span data-l="nl">Zie waar je bedrijf staat</span></span></div><span class="arrow" aria-hidden="true">→</span></a></li>
-        <li><a class="link" href="https://zcal.co/cycling-incubators/15min">
-          <div><span class="t">Outside-in Perspective <span class="tag"><span data-l="en">Free</span><span data-l="nl">Gratis</span></span></span><span class="s"><span data-l="en">10 minutes, one fresh look from outside</span><span data-l="nl">10 minuten, een frisse blik van buiten</span></span></div><span class="arrow" aria-hidden="true">→</span></a></li>
         <li><a class="link" href="https://zcal.co/i/vcLERywI">
-          <div><span class="t"><span data-l="en">Introduction video call</span><span data-l="nl">Kennismaking via video</span> <span class="tag"><span data-l="en">Free</span><span data-l="nl">Gratis</span></span></span><span class="s"><span data-l="en">30 minutes to get to know each other</span><span data-l="nl">30 minuten om elkaar te leren kennen</span></span></div><span class="arrow" aria-hidden="true">→</span></a></li>
+          <div><span class="t"><span data-l="en">Free intake</span><span data-l="nl">Gratis intake</span></span><span class="s"><span data-l="en">30 minutes to see if and how I can help</span><span data-l="nl">30 minuten om te zien of en hoe ik je kan helpen</span></span></div><span class="arrow" aria-hidden="true">→</span></a></li>
       </ul>
     </article>
 
@@ -216,11 +198,22 @@
         <li><a class="link" href="https://loek-nacmfupk.scoreapp.com">
           <div><span class="t"><span data-l="en">Take the scorecard</span><span data-l="nl">Doe de scorecard</span> <span class="tag"><span data-l="en">Free</span><span data-l="nl">Gratis</span></span></span><span class="s"><span data-l="en">For cycling brands and destinations</span><span data-l="nl">Voor fietsmerken en bestemmingen</span></span></div><span class="arrow" aria-hidden="true">→</span></a></li>
         <li><a class="link" href="https://zcal.co/i/vcLERywI">
-          <div><span class="t"><span data-l="en">Introduction video call</span><span data-l="nl">Kennismaking via video</span> <span class="tag"><span data-l="en">Free</span><span data-l="nl">Gratis</span></span></span><span class="s"><span data-l="en">30 minutes to get to know each other</span><span data-l="nl">30 minuten om elkaar te leren kennen</span></span></div><span class="arrow" aria-hidden="true">→</span></a></li>
+          <div><span class="t"><span data-l="en">Free intake</span><span data-l="nl">Gratis intake</span></span><span class="s"><span data-l="en">30 minutes to see if and how I can help</span><span data-l="nl">30 minuten om te zien of en hoe ik je kan helpen</span></span></div><span class="arrow" aria-hidden="true">→</span></a></li>
         <li><a class="link" href="https://zcal.co/i/yf2a3JvF">
           <div><span class="t"><span data-l="en">Plan your Key Person session</span><span data-l="nl">Plan je Key Person-sessie</span></span><span class="s"><span data-l="en">2 hours to build your Key Person of Cycling Content Cluster™</span><span data-l="nl">2 uur om je Key Person of Cycling Content Cluster™ te bouwen</span></span></div><span class="arrow" aria-hidden="true">→</span></a></li>
       </ul>
     </article>
+  </section>
+
+  <section class="fast" aria-labelledby="fast">
+    <div>
+      <p class="eyebrow"><span data-l="en">Short notice · 20 minutes · paid</span><span data-l="nl">Op korte termijn · 20 minuten · betaald</span></p>
+      <h2 id="fast"><span data-l="en">Need a sharp debate or answer fast?</span><span data-l="nl">Snel een scherp gesprek of antwoord nodig?</span></h2>
+    </div>
+    <div class="slots">
+      <a class="slot" href="https://zcal.co/i/yuEUfA_O"><span data-l="en">ASAP</span><span data-l="nl">Zo snel mogelijk</span></a>
+      <a class="slot" href="https://zcal.co/i/cj0VQOEN"><span data-l="en">Next week</span><span data-l="nl">Volgende week</span></a>
+    </div>
   </section>
 
   <footer>
