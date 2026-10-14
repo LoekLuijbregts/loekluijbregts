@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Stijlgids voor Ventoux-reels en -stories: twee Canva-templates, één handschrift. Concept en beeld: Loek Luijbregts.">
+<meta name="theme-color" content="#FFFFFF">
+<title>Ventoux Reels-stijl · Loek Luijbregts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap">
+<style>
+/* Layout: lichte, luchtige gids. Bovenaan twee reels naast elkaar (één familie), daarna de regels per onderwerp met veel wit. */
+:root{
+  --zwart:#1D1D1B;      /* Ventoux-zwart uit het logo */
+  --rood:#E53011;       /* antenne-rood uit het logo */
+  --rots:#C6C6C6;       /* linkervlak schild */
+  --kalk:#ECECEC;       /* rechtervlak schild */
+  --schaduw:#9D9D9C;    /* torenvoet */
+  --wit:#FFFFFF;
+  --grijstekst:#5B5B58; /* alleen voor deze pagina, kleine tekst */
+  --kop:"Barlow Condensed","Oswald","Arial Narrow",sans-serif;
+  --tekst:"Barlow","Inter","Helvetica Neue",Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{background:var(--wit);color:var(--zwart);font-family:var(--tekst);font-size:17px;line-height:1.55;margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--kop);font-weight:600;line-height:1.02;text-wrap:balance;margin:0;letter-spacing:-.005em}
+h1{font-size:clamp(44px,7vw,78px)}
+h2{font-size:clamp(30px,4vw,42px)}
+h3{font-size:22px;font-weight:600}
+p{margin:0}
+.muted{color:var(--grijstekst)}
+.label{font-family:var(--kop);font-weight:600;text-transform:uppercase;letter-spacing:.09em;font-size:14px;display:inline-flex;align-items:center;gap:10px}
+.antenne{display:inline-block;width:5px;height:22px;flex:none;background:linear-gradient(var(--rood) 0 33%,var(--wit) 33% 55%,var(--rood) 55% 100%);box-shadow:0 0 0 1px rgba(29,29,27,.08)}
+
+header.top{padding-block:28px 0}
+header.top .row{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+header.top img{height:46px;width:auto}
+
+/* HERO */
+.hero{padding-block:44px 64px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:48px;align-items:start}
+.hero .intro{display:grid;gap:22px;max-width:500px;padding-top:12px}
+.hero .lead{font-size:20px}
+.vast{display:grid;grid-template-columns:1fr 1fr;gap:12px 28px;margin-top:6px}
+.vast div{display:grid;gap:2px}
+.vast b{font-family:var(--kop);font-weight:600;font-size:19px}
+.duo{display:grid;grid-template-columns:repeat(2,260px);gap:24px}
+.player{display:grid;gap:12px;justify-items:center;min-width:0}
+.player .naam{display:grid;gap:2px;text-align:center}
+.player .naam b{font-family:var(--kop);font-weight:600;font-size:19px}
+.player .naam span{font-size:14px}
+.controls{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:center}
+.dna-bar{grid-column:1/-1;display:flex;gap:14px;align-items:center;justify-content:center;flex-wrap:wrap;margin-top:6px}
+button{font-family:var(--kop);font-weight:600;font-size:14px;letter-spacing:.06em;text-transform:uppercase;background:var(--zwart);color:var(--wit);border:0;padding:9px 14px;cursor:pointer}
+button.ghost{background:var(--kalk);color:var(--zwart)}
+button.rood{background:var(--rood)}
+button[aria-pressed="true"]{background:var(--rood);color:var(--wit)}
+button:focus-visible{outline:3px solid var(--rood);outline-offset:2px}
+.timeline{display:flex;gap:3px;width:100%}
+.timeline span{height:4px;background:var(--kalk);flex:var(--d) 1 0;position:relative;overflow:hidden}
+.timeline span i{position:absolute;inset:0;background:var(--zwart);transform:scaleX(0);transform-origin:left}
+
+/* ====== HET REEL-FRAME (1080x1920, alles in cqw zodat het schaalt) ====== */
+.reel{position:relative;width:100%;aspect-ratio:9/16;container-type:inline-size;background:var(--zwart);overflow:hidden;box-shadow:0 30px 60px -30px rgba(29,29,27,.45)}
+.reel video,.reel img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .25s}
+.reel video.on,.reel img.bg{opacity:1}
+.scene{position:absolute;inset:0;opacity:0;pointer-events:none;transition:filter .3s}
+.scene.on,.scene.static{opacity:1}
+.schild{position:absolute;left:6.48cqw;top:21cqw;width:7.4cqw;height:auto;z-index:3;transition:opacity .2s,outline-color .3s}
+.vlak{position:absolute;left:6.48cqw;right:12.96cqw;bottom:38.9cqw;background:rgba(255,255,255,.95);padding:4cqw 4.4cqw 6.6cqw;
+  clip-path:polygon(0 0,100% 0,100% calc(100% - 2.6cqw),50% 100%,0 calc(100% - 2.6cqw));display:grid;gap:1.8cqw}
+.vlak .k{font-family:var(--kop);font-weight:600;font-size:8.5cqw;line-height:1.0;color:var(--zwart)}
+.vlak .r{font-family:var(--tekst);font-weight:500;font-size:4.26cqw;line-height:1.3;color:var(--zwart)}
+.vlak .l{font-family:var(--kop);font-weight:600;font-size:2.9cqw;letter-spacing:.09em;text-transform:uppercase;display:flex;align-items:center;gap:1.6cqw}
+.vlak .l .antenne{width:.75cqw;height:3.4cqw}
+/* stappenvlak (template B): groot rood stapnummer, kop ernaast */
+.vlak.stap{grid-template-columns:auto minmax(0,1fr);column-gap:3.6cqw;align-items:center}
+.vlak.stap .l{grid-column:1/-1}
+.stapnr{font-family:var(--kop);font-weight:700;font-size:19cqw;line-height:.78;color:var(--rood);display:grid;justify-items:center}
+.stapnr small{font-size:2.8cqw;font-weight:600;letter-spacing:.09em;color:var(--schaduw);line-height:1;margin-top:1.4cqw}
+.vlak.stap .k{font-size:7.6cqw}
+.kw{position:relative;color:var(--rood);display:inline-block}
+.kw::after{content:"";position:absolute;inset:-.02em -.06em;background:var(--rood);transform:scaleX(0)}
+
+/* eindkaart met bergrand */
+.eind{position:absolute;left:0;right:0;bottom:0;top:46%;background:var(--wit);
+  clip-path:polygon(0 4.5cqw,50% 0,100% 4.5cqw,100% 100%,0 100%);display:grid;align-content:start;justify-items:center;gap:2.2cqw;padding:7.5cqw 6.48cqw 0;text-align:center}
+.eind img{width:32cqw;height:auto}
+.eind .k{font-family:var(--kop);font-weight:600;font-size:8cqw;line-height:1}
+.eind .a{font-size:3cqw;font-weight:500}
+.eind .s{font-family:var(--kop);font-weight:600;font-size:2.8cqw;letter-spacing:.09em;text-transform:uppercase;color:var(--schaduw)}
+.eind .cta{background:var(--zwart);color:var(--wit);font-family:var(--kop);font-weight:600;font-size:4.4cqw;padding:2cqw 4.4cqw;letter-spacing:.02em}
+.eind .cta b{color:var(--wit);border-bottom:.6cqw solid var(--rood)}
+
+/* animaties: alles beweegt omhoog, één rood ding per scène */
+.scene.on .vlak{animation:op .55s cubic-bezier(.2,.8,.2,1) both}
+.scene.on .vlak > *{animation:op .5s cubic-bezier(.2,.8,.2,1) both}
+.scene.on .vlak > *:nth-child(2){animation-delay:.08s}
+.scene.on .vlak > *:nth-child(3){animation-delay:.16s}
+.scene.on .kw{animation:kwtekst .8s .35s both}
+.scene.on .kw::after{animation:blok .8s .35s both}
+.scene.on .stapnr{animation:op .5s .1s cubic-bezier(.2,.8,.2,1) both}
+.scene.on .eind{animation:op .6s cubic-bezier(.2,.8,.2,1) both}
+.scene.on .eind > *{animation:op .5s cubic-bezier(.2,.8,.2,1) both}
+.scene.on .eind > *:nth-child(2){animation-delay:.12s}
+.scene.on .eind > *:nth-child(3){animation-delay:.2s}
+.scene.on .eind > *:nth-child(4){animation-delay:.28s}
+@keyframes op{from{transform:translateY(6cqw);opacity:0}to{transform:none;opacity:1}}
+@keyframes blok{0%{transform:scaleX(0);transform-origin:left}49%{transform:scaleX(1);transform-origin:left}51%{transform:scaleX(1);transform-origin:right}100%{transform:scaleX(0);transform-origin:right}}
+@keyframes kwtekst{0%,49%{color:transparent}50%,100%{color:var(--rood)}}
+.wipe{position:absolute;inset:0;z-index:5;pointer-events:none;transform:translateY(100%)}
+.wipe.go{animation:wipe .45s cubic-bezier(.6,0,.3,1)}
+.wipe::before,.wipe::after{content:"";position:absolute;left:0;right:0}
+.wipe::before{top:0;height:100%;background:var(--wit)}
+.wipe::after{top:0;height:2.2cqw;background:var(--rood)}
+@keyframes wipe{0%{transform:translateY(100%)}50%{transform:translateY(0)}100%{transform:translateY(-100%)}}
+.reel.paused *,.reel.paused *::after{animation-play-state:paused!important}
+.player .reel{cursor:pointer}
+.pauze-teken{position:absolute;right:4cqw;bottom:4cqw;z-index:6;width:11cqw;height:11cqw;background:rgba(29,29,27,.72);display:none;place-items:center;pointer-events:none}
+.pauze-teken::before{content:"";width:0;height:0;border-left:3.6cqw solid var(--wit);border-top:2.2cqw solid transparent;border-bottom:2.2cqw solid transparent;margin-left:.8cqw}
+.reel.paused .pauze-teken{display:grid}
+button.pp{min-width:112px}
+
+/* gedeelde stijl zichtbaar maken */
+.dna .reel video{filter:grayscale(1) brightness(.55)}
+.dna .scene{filter:drop-shadow(0 0 .5cqw var(--rood)) drop-shadow(0 0 .5cqw var(--rood))}
+.dna .schild{outline:.5cqw dashed var(--rood);outline-offset:1cqw}
+.legend{display:none;gap:8px 14px;flex-wrap:wrap;justify-content:center;font-size:14px}
+.dna .legend{display:flex}
+.legend span{display:inline-flex;gap:6px;align-items:center}
+.legend i{width:12px;height:12px;background:var(--rood);display:inline-block}
+
+/* SECTIES */
+section.blok{padding-block:64px;border-top:1px solid var(--kalk)}
+.sec-head{display:grid;grid-template-columns:240px minmax(0,1fr);gap:40px}
+.sec-head .intro{display:grid;gap:12px;max-width:640px}
+.sec-body{margin-top:36px;margin-left:280px}
+
+.familie{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) minmax(0,1fr);border-top:2px solid var(--zwart)}
+.familie > div{padding:12px 14px 12px 0;border-bottom:1px solid var(--kalk);font-size:15px;min-width:0}
+.familie .h{font-family:var(--kop);font-weight:600;font-size:15px;text-transform:uppercase;letter-spacing:.08em}
+.familie .rij{font-family:var(--kop);font-weight:600;font-size:17px}
+.familie .gelijk{grid-column:2/-1;display:flex;gap:10px;align-items:center}
+.familie .gelijk::before{content:"";width:5px;height:18px;flex:none;background:linear-gradient(var(--rood) 0 33%,var(--wit) 33% 55%,var(--rood) 55% 100%);box-shadow:0 0 0 1px rgba(29,29,27,.08)}
+.familie .sub{grid-column:1/-1;padding-top:26px;font-family:var(--kop);font-weight:600;font-size:15px;text-transform:uppercase;letter-spacing:.08em;color:var(--grijstekst)}
+
+.storyrij{display:grid;gap:14px}
+.storyrij + .storyrij{margin-top:44px}
+.story{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}
+.story figure{margin:0;display:grid;gap:10px;align-content:start;min-width:0}
+.story figcaption{display:grid;gap:3px;font-size:14px}
+.story figcaption b{font-family:var(--kop);font-weight:600;font-size:17px}
+.tijd{font-variant-numeric:tabular-nums;font-family:var(--kop);font-weight:600;color:var(--rood);letter-spacing:.04em}
+
+.kleuren{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}
+.sw{display:grid;gap:8px;font-size:14px;min-width:0}
+.sw .c{aspect-ratio:1/1.15;border:1px solid var(--kalk)}
+.sw b{font-family:var(--kop);font-size:17px;font-weight:600}
+.sw code{font-family:ui-monospace,Menlo,monospace;font-size:13px}
+.verhouding{display:flex;height:16px;margin-top:22px;border:1px solid var(--kalk)}
+
+.type{display:grid;gap:22px}
+.trow{display:grid;grid-template-columns:200px minmax(0,1fr);gap:24px;align-items:baseline;padding-bottom:20px;border-bottom:1px solid var(--kalk)}
+.trow .meta{font-size:14px;color:var(--grijstekst)}
+.trow .meta b{display:block;color:var(--zwart);font-family:var(--kop);font-size:17px;font-weight:600}
+
+.logos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.logo-card{display:grid;gap:10px;font-size:14px;min-width:0;align-content:start}
+.logo-card .vlakje{aspect-ratio:4/3;display:grid;place-items:center;padding:18px}
+.logo-card .vlakje img{max-height:100%;width:auto;max-width:100%}
+.logo-card b{font-family:var(--kop);font-size:17px;font-weight:600}
+
+.regels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 28px}
+.regel{display:grid;gap:8px;align-content:start}
+.regel .demo{height:120px;background:var(--kalk);position:relative;overflow:hidden;margin-bottom:6px}
+.regel .tag{font-family:var(--kop);font-weight:600;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--grijstekst)}
+
+.veilig{display:grid;grid-template-columns:260px minmax(0,1fr);gap:40px;align-items:start}
+.zone{position:relative;width:100%;aspect-ratio:9/16;background:url(/ventoux-stijl/media/still4.jpg) center/cover;container-type:inline-size}
+.zone .z{position:absolute;background:rgba(229,48,17,.35);display:grid;place-items:center;color:var(--wit);font-family:var(--kop);font-weight:600;font-size:4.2cqw;letter-spacing:.06em;text-transform:uppercase;text-align:center}
+.zone .ok{position:absolute;left:6.48cqw;right:12.96cqw;top:23.15cqw;bottom:38.9cqw;outline:2px dashed var(--wit)}
+ul.plain{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+ul.plain li{display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px;padding-bottom:10px;border-bottom:1px solid var(--kalk)}
+ul.plain li b{font-family:var(--kop);font-weight:600;font-size:17px}
+
+ol.stappen{margin:0;padding:0;list-style:none;counter-reset:s;display:grid;gap:18px;max-width:760px}
+ol.stappen li{counter-increment:s;display:grid;grid-template-columns:44px minmax(0,1fr);gap:16px}
+ol.stappen li::before{content:counter(s);font-family:var(--kop);font-weight:700;font-size:30px;line-height:1;color:var(--rood)}
+ol.stappen b{font-family:var(--kop);font-weight:600;font-size:19px;display:block}
+
+.clipset + .clipset{margin-top:36px}
+.clipset h3{margin-bottom:14px}
+.clips{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:12px}
+.clips figure{margin:0;display:grid;gap:6px;font-size:13px;min-width:0}
+.clips img{aspect-ratio:9/16;object-fit:cover;width:100%}
+.clips b{font-family:var(--kop);font-weight:600;font-size:15px}
+
+.open{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 40px;max-width:900px}
+.open div{display:grid;gap:6px}
+footer{padding-block:48px 64px;border-top:1px solid var(--kalk);font-size:14px;color:var(--grijstekst)}
+
+@media (max-width:1000px){
+  .hero{grid-template-columns:1fr;gap:36px}
+  .hero .intro{max-width:none}
+  .duo{grid-template-columns:repeat(2,minmax(0,260px));justify-content:center}
+  .sec-head{grid-template-columns:1fr;gap:12px}
+  .sec-body{margin-left:0}
+  .story{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .kleuren{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .logos{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .regels{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .veilig{grid-template-columns:1fr}
+  .veilig .zone{max-width:260px}
+  .clips{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .open{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .duo{gap:12px}
+  .vast{grid-template-columns:1fr}
+  .story{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .regels{grid-template-columns:1fr}
+  .trow{grid-template-columns:1fr;gap:6px}
+  ul.plain li{grid-template-columns:1fr;gap:2px}
+  .clips{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .familie{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .familie .rij{grid-column:1/-1;padding-bottom:0;border-bottom:0}
+  .familie .gelijk{grid-column:1/-1}
+  .familie .h:first-child{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  .scene.on .vlak,.scene.on .vlak>*,.scene.on .eind,.scene.on .eind>*,.scene.on .kw,.scene.on .kw::after,.scene.on .stapnr,.wipe.go{animation:none!important}
+  .kw{color:var(--rood)}
+}
+</style>
+</head>
+<body>
+
+
+<header class="top">
+  <div class="wrap row">
+    <img src="/ventoux-stijl/media/logo-zwart.png" alt="Ventoux">
+    <span class="label"><span class="antenne"></span>Concept · Loek Luijbregts</span>
+  </div>
+</header>
+
+<main>
+<div class="wrap hero" id="hero">
+  <div class="intro">
+    <span class="label"><span class="antenne"></span>Stijlgids reels en stories</span>
+    <h1>Ventoux in anderhalve seconde</h1>
+    <p class="lead">Twee templates voor Canva, elk met een eigen taak. Ze verschillen in opbouw, maar je herkent ze allebei meteen als Ventoux. Jullie wisselen alleen beeld, tekst en muziek.</p>
+    <div class="vast">
+      <div><b>A · Merkverhaal</b><span class="muted">Laat zien waar Ventoux voor staat. Hier: de bikefitting bij elke nieuwe fiets.</span></div>
+      <div><b>B · Nieuwe dienst</b><span class="muted">Introduceren, uitleggen in drie stappen, en direct laten reageren. Hier: de fietsmeting.</span></div>
+      <div><b>Altijd gelijk</b><span class="muted">Kleuren, letters, tekstvlak, schild, beweging, eindkaart.</span></div>
+      <div><b>Gevoel</b><span class="muted">Licht, vriendelijk, vakkundig. Benaderbaar voor iedereen die fietst.</span></div>
+    </div>
+  </div>
+
+  <div class="duo">
+    <!-- TEMPLATE A -->
+    <div class="player" data-player="a">
+      <div class="reel" aria-label="Voorbeeld A, merkverhaal, 12 seconden">
+        <video data-v="0" src="/ventoux-stijl/media/clip1.mp4" poster="/ventoux-stijl/media/still1.jpg" muted playsinline preload="auto" class="on"></video>
+        <video data-v="1" src="/ventoux-stijl/media/clip2.mp4" poster="/ventoux-stijl/media/still2.jpg" muted playsinline preload="auto"></video>
+        <video data-v="2" src="/ventoux-stijl/media/clip3.mp4" poster="/ventoux-stijl/media/still3.jpg" muted playsinline preload="auto"></video>
+        <video data-v="3" src="/ventoux-stijl/media/clip5.mp4" poster="/ventoux-stijl/media/still5.jpg" muted playsinline preload="auto"></video>
+        <img class="schild" src="/ventoux-stijl/media/schild.png" alt="">
+        <div class="scene on" data-d="1.6"><div class="vlak"><div class="k">21 km klimmen.</div><div class="r">Elke <span class="kw">millimeter</span> telt.</div></div></div>
+        <div class="scene" data-d="3.2"><div class="vlak"><div class="k">Ook op je rondje door <span class="kw">Brabant</span>.</div></div></div>
+        <div class="scene" data-d="3.6"><div class="vlak"><div class="l"><span class="antenne"></span>Bikefitting</div><div class="k">Elke nieuwe fiets krijgt bij ons een <span class="kw">bikefitting</span>.</div><div class="r">Zodat je fiets past, vanaf de eerste meter.</div></div></div>
+        <div class="scene" data-d="4" data-eind><div class="eind"><img src="/ventoux-stijl/media/logo-zwart.png" alt="Ventoux"><div class="k">Plan je bikefitting.</div><div class="a">Besterdring 163, Tilburg · Teteringsedijk 275, Breda</div><div class="s">Specialist in sportief fietsplezier</div></div></div>
+        <div class="wipe"></div>
+        <div class="pauze-teken"></div>
+      </div>
+      <div class="timeline"></div>
+      <button class="pp ghost" type="button" aria-pressed="false">❚❚ Pauze</button>
+      <div class="naam"><b>A · Merkverhaal</b><span class="muted">Bergbeeld · 12 s · 4 pagina's</span></div>
+    </div>
+
+    <!-- TEMPLATE B -->
+    <div class="player" data-player="b">
+      <div class="reel" aria-label="Voorbeeld B, nieuwe dienst, 14 seconden">
+        <video data-v="0" src="/ventoux-stijl/media/w3.mp4" poster="/ventoux-stijl/media/ws3.jpg" muted playsinline preload="auto" class="on"></video>
+        <video data-v="1" src="/ventoux-stijl/media/w5.mp4" poster="/ventoux-stijl/media/ws5.jpg" muted playsinline preload="auto"></video>
+        <video data-v="2" src="/ventoux-stijl/media/w1.mp4" poster="/ventoux-stijl/media/ws1.jpg" muted playsinline preload="auto"></video>
+        <video data-v="3" src="/ventoux-stijl/media/w4.mp4" poster="/ventoux-stijl/media/ws4.jpg" muted playsinline preload="auto"></video>
+        <video data-v="4" src="/ventoux-stijl/media/w6.mp4" poster="/ventoux-stijl/media/ws6.jpg" muted playsinline preload="auto"></video>
+        <video data-v="5" src="/ventoux-stijl/media/w7.mp4" poster="/ventoux-stijl/media/ws7.jpg" muted playsinline preload="auto"></video>
+        <img class="schild" src="/ventoux-stijl/media/schild.png" alt="">
+        <div class="scene on" data-d="1.6"><div class="vlak"><div class="l"><span class="antenne"></span>Nieuw bij Ventoux</div><div class="k">De <span class="kw">fietsmeting</span>.</div><div class="r">Zo past je fiets echt bij jou.</div></div></div>
+        <div class="scene" data-d="2.4"><div class="vlak"><div class="k">Stijve <span class="kw">nek</span> na een lange rit?</div><div class="r">Vaak zit het in je houding op de fiets.</div></div></div>
+        <div class="scene" data-d="1.8"><div class="vlak stap"><div class="l"><span class="antenne"></span>Zo werkt het</div><div class="stapnr">1<small>VAN 3</small></div><div class="k">We meten jou en je fiets.</div></div></div>
+        <div class="scene" data-d="1.8"><div class="vlak stap"><div class="l"><span class="antenne"></span>Zo werkt het</div><div class="stapnr">2<small>VAN 3</small></div><div class="k">We stellen alles op je af.</div></div></div>
+        <div class="scene" data-d="1.8"><div class="vlak stap"><div class="l"><span class="antenne"></span>Zo werkt het</div><div class="stapnr">3<small>VAN 3</small></div><div class="k">Je krijgt je maten mee.</div></div></div>
+        <div class="scene" data-d="4.5" data-eind><div class="eind"><img src="/ventoux-stijl/media/logo-zwart.png" alt="Ventoux"><div class="k">Plan je fietsmeting.</div><div class="cta">Reageer met <b>METEN</b>, wij sturen je de link</div><div class="a">Tilburg · Breda</div></div></div>
+        <div class="wipe"></div>
+        <div class="pauze-teken"></div>
+      </div>
+      <div class="timeline"></div>
+      <button class="pp ghost" type="button" aria-pressed="false">❚❚ Pauze</button>
+      <div class="naam"><b>B · Nieuwe dienst</b><span class="muted">Winkelbeeld · 14 s · 6 pagina's</span></div>
+    </div>
+
+    <div class="dna-bar">
+      <button id="speel" class="rood">Speel samen af</button>
+      <button id="allepauze" class="ghost" aria-pressed="false">❚❚ Pauzeer beide</button>
+      <button id="dna" class="ghost" aria-pressed="false">Toon de gedeelde stijl</button>
+    </div>
+    <div class="legend dna-bar" aria-live="polite">
+      <span><i></i>Schild linksboven</span><span><i></i>Tekstvlak met V-voet</span><span><i></i>Eén rood ding per scène</span><span><i></i>Eindkaart met bergrand</span>
+    </div>
+  </div>
+</div>
+
+<section class="blok">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="label"><span class="antenne"></span>01 · Eén familie</span>
+      <div class="intro"><h2>Andere taak, zelfde handschrift</h2><p class="muted">Een nieuw template begin je altijd als kopie van een bestaand template. Zo blijft alles wat herkenning geeft staan, en verander je alleen wat de taak vraagt.</p></div>
+    </div>
+    <div class="sec-body familie">
+      <div class="h">Onderdeel</div><div class="h">A · Merkverhaal</div><div class="h">B · Nieuwe dienst</div>
+      <div class="sub">Verschilt per template</div>
+      <div class="rij">Taak</div><div>Laten voelen waar Ventoux voor staat</div><div>Iets nieuws uitleggen en een afspraak opleveren</div>
+      <div class="rij">Beeld</div><div>Berg en toren, buiten</div><div>Eigen winkel en werkplaats, binnen</div>
+      <div class="rij">Opbouw</div><div>Haak · herkenning · wat wij doen · uitnodiging</div><div>Haak · probleem · drie stappen · actie</div>
+      <div class="rij">Rood ding</div><div>Kernwoord in de kop</div><div>Kernwoord, daarna het stapnummer</div>
+      <div class="rij">Eindactie</div><div>Plan je bikefitting</div><div>Reageer met één woord, de link volgt</div>
+      <div class="sub">Altijd gelijk</div>
+      <div class="rij">Kleur</div><div class="gelijk">Wit, Ventoux-zwart, drie grijzen, antenne-rood spaarzaam</div>
+      <div class="rij">Letters</div><div class="gelijk">Barlow Condensed voor koppen, Barlow voor regels</div>
+      <div class="rij">Vormen</div><div class="gelijk">Tekstvlak met V-voet, schild linksboven, eindkaart met bergrand</div>
+      <div class="rij">Beweging</div><div class="gelijk">Alles komt van onderen, overgangen vegen omhoog</div>
+      <div class="rij">Logo</div><div class="gelijk">Pas op de eindkaart, nooit als intro</div>
+    </div>
+  </div>
+</section>
+
+<section class="blok">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="label"><span class="antenne"></span>02 · Opbouw</span>
+      <div class="intro"><h2>Elke pagina in Canva is één scène</h2><p class="muted">De boodschap staat in de eerste anderhalve seconde. Het logo komt pas aan het eind, als iemand al kijkt.</p></div>
+    </div>
+    <div class="sec-body">
+      <div class="storyrij">
+        <span class="label"><span class="antenne"></span>A · Merkverhaal · 12,4 s</span>
+        <div class="story" id="storyA"></div>
+      </div>
+      <div class="storyrij">
+        <span class="label"><span class="antenne"></span>B · Nieuwe dienst · 13,9 s</span>
+        <div class="story" id="storyB"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blok">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="label"><span class="antenne"></span>03 · Kleur</span>
+      <div class="intro"><h2>Kleur komt uit het beeld, niet uit de vlakken</h2><p class="muted">Alle kleuren komen rechtstreeks uit het Ventoux-logo. Lucht, kalksteen en winkel brengen de rest mee. Rood is spaarzaam: één woord, één stapnummer of één streep per scène.</p></div>
+    </div>
+    <div class="sec-body">
+      <div class="kleuren">
+        <div class="sw"><div class="c" style="background:var(--wit)"></div><b>Wit</b><code>#FFFFFF</code><span class="muted">Tekstvlak, eindkaart</span></div>
+        <div class="sw"><div class="c" style="background:var(--zwart)"></div><b>Ventoux-zwart</b><code>#1D1D1B</code><span class="muted">Alle tekst, actieknop</span></div>
+        <div class="sw"><div class="c" style="background:var(--rood)"></div><b>Antenne-rood</b><code>#E53011</code><span class="muted">Kernwoord, stapnummer</span></div>
+        <div class="sw"><div class="c" style="background:var(--kalk)"></div><b>Kalk</b><code>#ECECEC</code><span class="muted">Rustige achtergrond</span></div>
+        <div class="sw"><div class="c" style="background:var(--rots)"></div><b>Rots</b><code>#C6C6C6</code><span class="muted">Lijnen, kaders</span></div>
+        <div class="sw"><div class="c" style="background:var(--schaduw)"></div><b>Schaduw</b><code>#9D9D9C</code><span class="muted">Slogan, "van 3"</span></div>
+      </div>
+      <div class="verhouding" aria-label="Verhouding 60 wit, 30 zwart, 6 grijs, 4 rood">
+        <span style="flex:60;background:var(--wit)"></span><span style="flex:30;background:var(--zwart)"></span><span style="flex:6;background:var(--kalk)"></span><span style="flex:4;background:var(--rood)"></span>
+      </div>
+      <p class="muted" style="font-size:14px;margin-top:8px">Op de grafische laag: 60 wit · 30 zwart · 6 grijs · hooguit 4 rood. Geen verlopen, geen extra kleuren.</p>
+    </div>
+  </div>
+</section>
+
+<section class="blok">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="label"><span class="antenne"></span>04 · Letters</span>
+      <div class="intro"><h2>Strak als het logo, vriendelijk in de zin</h2><p class="muted">Het hoekige Ventoux-woordmerk blijft het enige blokletterwerk. Teksten staan in een smalle, rechte letter in gewone zinsopbouw: geen hoofdletters, gewoon zeggen wat je bedoelt. Maten gelden voor een frame van 1080 × 1920.</p></div>
+    </div>
+    <div class="sec-body type">
+      <div class="trow"><div class="meta"><b>Kop</b>Barlow Condensed SemiBold · 92 px · regelafstand 1,0 · max. 7 woorden</div><div style="font-family:var(--kop);font-weight:600;font-size:clamp(34px,5vw,52px);line-height:1">Elke nieuwe fiets krijgt een bikefitting.</div></div>
+      <div class="trow"><div class="meta"><b>Regel</b>Barlow Medium · 46 px · regelafstand 1,3 · max. 2 regels</div><div style="font-weight:500;font-size:22px">Zodat je fiets past, vanaf de eerste meter.</div></div>
+      <div class="trow"><div class="meta"><b>Label</b>Barlow Condensed SemiBold · 30 px · hoofdletters · spatiëring 9%</div><div class="label" style="font-size:16px"><span class="antenne"></span>Nieuw bij Ventoux</div></div>
+      <div class="trow"><div class="meta"><b>Stapnummer</b>Barlow Condensed Bold · 200 px · antenne-rood · met "van 3" eronder</div><div style="display:flex;gap:18px;align-items:center"><span style="font-family:var(--kop);font-weight:700;font-size:72px;line-height:.8;color:var(--rood)">2</span><span style="font-family:var(--kop);font-weight:600;font-size:clamp(28px,4vw,40px);line-height:1">We stellen alles op je af.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="blok">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="label"><span class="antenne"></span>05 · Logo</span>
+      <div class="intro"><h2>Welk logo, wanneer</h2><p class="muted">Tijdens de reel staat alleen het schild met de toren linksboven, klein. Het volledige logo komt op de eindkaart. Gaat een post over één winkel, gebruik dan de versie met netnummer.</p></div>
+    </div>
+    <div class="sec-body logos">
+      <div class="logo-card"><div class="vlakje" style="background:var(--kalk)"><img src="/ventoux-stijl/media/schild.png" alt="Schild met toren" style="height:90px"></div><b>Schild</b><span class="muted">Altijd linksboven tijdens de reel, 80 px breed. Ook genoeg voor posts over aanbod of acties.</span></div>
+      <div class="logo-card"><div class="vlakje" style="background:var(--wit);border:1px solid var(--kalk)"><img src="/ventoux-stijl/media/logo-zwart.png" alt="Ventoux-logo zwart"></div><b>Volledig, zwart</b><span class="muted">Op wit of kalk. Eindkaart, met slogan erbij voor mensen die Ventoux nog niet kennen.</span></div>
+      <div class="logo-card"><div class="vlakje" style="background:url(/ventoux-stijl/media/still4.jpg) center 30%/cover"><img src="/ventoux-stijl/media/logo-wit.png" alt="Ventoux-logo wit"></div><b>Volledig, wit</b><span class="muted">Alleen op rustig, donker beeld. Liever niet over drukke lucht.</span></div>
+      <div class="logo-card"><div class="vlakje" style="background:var(--wit);border:1px solid var(--kalk)"><img src="/ventoux-stijl/media/logo-zwart-013.png" alt="Ventoux 013"></div><b>013 en 076</b><span class="muted">Post over één winkel: 013 voor Tilburg, 076 voor Breda. Gaat het over allebei, dan zonder nummer.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="blok">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="label"><span class="antenne"></span>06 · Vormen en beweging</span>
+      <div class="intro"><h2>Vaste onderdelen, alles beweegt omhoog</h2><p class="muted">Ventoux gaat over klimmen. Daarom komt elke tekst van onderen en gaat elke overgang naar boven. Speels, maar nooit druk. Nieuwe onderdelen bouw je uit deze bouwstenen.</p></div>
+    </div>
+    <div class="sec-body regels">
+      <div class="regel"><span class="tag">A en B</span><div class="demo"><div style="position:absolute;left:18px;right:18px;bottom:18px;height:62px;background:var(--wit);clip-path:polygon(0 0,100% 0,100% 80%,50% 100%,0 80%)"></div></div><h3>Tekstvlak met V-voet</h3><p class="muted">Wit vlak (95%) met een flauwe punt onderaan, zoals de onderkant van het woordmerk. Geen ronde hoeken, geen schaduw. Animatie: <i>Rise</i>.</p></div>
+      <div class="regel"><span class="tag">A en B</span><div class="demo" style="display:grid;place-items:center"><span style="font-family:var(--kop);font-weight:600;font-size:40px">Elke <span style="color:var(--rood)">millimeter</span></span></div><h3>Rood kernwoord</h3><p class="muted">Eén woord per scène, als los tekstvak in antenne-rood. Een rood blok schuift eroverheen en laat het woord achter. Animatie: <i>Block</i>.</p></div>
+      <div class="regel"><span class="tag">A en B</span><div class="demo" style="background:linear-gradient(var(--kalk) 0 45%,var(--rood) 45% 52%,var(--wit) 52%)"></div><h3>Antenne-overgang</h3><p class="muted">Tussen scènes veegt een wit vlak met een rode rand omhoog, 0,4 s. Paginaovergang: <i>Wipe</i>, richting omhoog.</p></div>
+      <div class="regel"><span class="tag">B</span><div class="demo" style="display:flex;gap:14px;align-items:center;padding:0 22px"><span style="font-family:var(--kop);font-weight:700;font-size:72px;line-height:.8;color:var(--rood)">1</span><span style="font-family:var(--kop);font-weight:600;font-size:24px;line-height:1">We meten jou en je fiets.</span></div><h3>Stappenvlak</h3><p class="muted">Hetzelfde tekstvlak, met het stapnummer als het rode ding. Altijd drie stappen, elk 1,8 s. Meer stappen wordt een uitlegvideo.</p></div>
+      <div class="regel"><span class="tag">B</span><div class="demo" style="display:grid;place-items:center"><span style="background:var(--zwart);color:var(--wit);font-family:var(--kop);font-weight:600;font-size:20px;padding:8px 16px">Reageer met <b style="border-bottom:3px solid var(--rood)">METEN</b></span></div><h3>Actieknop</h3><p class="muted">Zwarte balk op de eindkaart met één woord om te reageren. Koppel dat woord aan een automatisch DM-bericht met de boekingslink.</p></div>
+      <div class="regel"><span class="tag">A en B</span><div class="demo" style="background:linear-gradient(#9fb4c7,#c9d3dc)"><div style="position:absolute;left:0;right:0;bottom:0;top:42%;background:var(--wit);clip-path:polygon(0 18px,50% 0,100% 18px,100% 100%,0 100%)"></div></div><h3>Eindkaart met bergrand</h3><p class="muted">Witte onderhelft met een flauwe piek, als de top van de berg. Logo, één zin, adressen.</p></div>
+    </div>
+    <p class="sec-body muted" style="font-size:14px;margin-top:20px">Namen van animaties zijn die uit de Engelstalige Canva. In de Nederlandse versie kunnen ze iets anders heten.</p>
+  </div>
+</section>
+
+<section class="blok">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="label"><span class="antenne"></span>07 · Beeld en veilige zone</span>
+      <div class="intro"><h2>Echt beeld, en buiten de knoppen blijven</h2><p class="muted">Bergbeeld vertelt het verhaal van het merk. Winkelbeeld laat zien wie het werk doet. Allebei echt, allebei rechtop gefilmd.</p></div>
+    </div>
+    <div class="sec-body veilig">
+      <div class="zone" aria-label="Veilige zone op een 1080 bij 1920 frame">
+        <div class="z" style="left:0;right:0;top:0;height:23.15cqw">Profiel en tijdbalk</div>
+        <div class="z" style="left:0;right:0;bottom:0;height:38.9cqw">Bijschrift en knoppen</div>
+        <div class="z" style="right:0;top:23.15cqw;bottom:38.9cqw;width:12.96cqw"></div>
+        <div class="ok"></div>
+      </div>
+      <ul class="plain">
+        <li><b>Veilig vlak</b><span>70 px links, 140 px rechts, 250 px boven, 420 px onder. Werkt voor reels én stories.</span></li>
+        <li><b>Filmen</b><span>Rechtop, telefoon stil, dichtbij. Liever 4 seconden rustig dan 2 seconden schokkerig.</span></li>
+        <li><b>In de winkel</b><span>Handen aan het werk, een meter in beeld, iemand die uitlegt. Merknamen op producten niet in de hoofdrol.</span></li>
+        <li><b>Licht</b><span>Daglicht bij de etalage of de werkbank. Geen filters.</span></li>
+        <li><b>Eerste beeld</b><span>Er gebeurt iets vanaf frame één. Geen logo-intro, geen zwart.</span></li>
+        <li><b>Muziek</b><span>Eén nummer per reel, rond 100 tot 120 BPM. Zet <i>Beat Sync</i> aan, dan valt elke overgang op de tel.</span></li>
+        <li><b>Ondertitels</b><span>De meeste mensen kijken zonder geluid. Wat gezegd wordt, staat ook in beeld.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="blok">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="label"><span class="antenne"></span>08 · Bouwen in Canva</span>
+      <div class="intro"><h2>Eén keer goed neerzetten</h2><p class="muted">Daarna kost een nieuwe reel een kwartier op de telefoon.</p></div>
+    </div>
+    <div class="sec-body">
+      <ol class="stappen">
+        <li><div><b>Merkkit vullen</b><span class="muted">Logo's (zwart, wit, 013, 076, schild), de zes kleuren en Barlow Condensed plus Barlow. Staat Barlow niet in jullie Canva, neem dan Oswald voor koppen en Inter voor tekst.</span></div></li>
+        <li><div><b>Template A bouwen</b><span class="muted">Instagram Reel, 1080 × 1920, vier pagina's van 1,6 · 3,2 · 3,6 · 4,0 s. Per pagina: video, tekstvlak (SVG uit de kit), kop, kernwoord, regel, schild.</span></div></li>
+        <li><div><b>Vastzetten wat vast hoort</b><span class="muted">Tekstvlak, schild, eindkaart en logo vergrendelen. Dan kan op de telefoon alleen beeld en tekst veranderen.</span></div></li>
+        <li><div><b>Template B als kopie van A</b><span class="muted">Dupliceer A, zet het op zes pagina's (1,6 · 2,4 · 1,8 · 1,8 · 1,8 · 4,5 s), maak drie stappenvlakken en zet de actieknop op de eindkaart.</span></div></li>
+        <li><div><b>Beweging instellen</b><span class="muted">Tekstvlak en kop: Rise. Kernwoord en stapnummer: Block. Tussen de pagina's: Wipe omhoog, 0,4 s.</span></div></li>
+        <li><div><b>Opslaan als merksjablonen</b><span class="muted">Delen met het team. Wie een reel maakt, kiest het juiste sjabloon en vervangt alleen video, tekst en muziek.</span></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="blok">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="label"><span class="antenne"></span>09 · Klaar voor gebruik</span>
+      <div class="intro"><h2>Elf clips, al rechtop gesneden</h2><p class="muted">1080 × 1920, zonder geluid, direct te uploaden in Canva. Alle beelden: Loek Luijbregts.</p></div>
+    </div>
+    <div class="sec-body">
+      <div class="clipset"><h3>Berg en toren</h3>
+        <div class="clips">
+          <figure><img src="/ventoux-stijl/media/still1.jpg" alt=""><b>01 Haak</b><span class="muted">Renner naar de toren</span></figure>
+          <figure><img src="/ventoux-stijl/media/still2.jpg" alt=""><b>02 De weg</b><span class="muted">Slingerweg naar de top</span></figure>
+          <figure><img src="/ventoux-stijl/media/still3.jpg" alt=""><b>03 Wolkendek</b><span class="muted">Toren onder grijze lucht</span></figure>
+          <figure><img src="/ventoux-stijl/media/still4.jpg" alt=""><b>04 Panorama</b><span class="muted">Toren en bergruggen</span></figure>
+          <figure><img src="/ventoux-stijl/media/still5.jpg" alt=""><b>05 Dichtbij</b><span class="muted">Antenne vult het beeld</span></figure>
+        </div>
+      </div>
+      <div class="clipset"><h3>Winkels Tilburg en Breda</h3>
+        <div class="clips">
+          <figure><img src="/ventoux-stijl/media/ws3.jpg" alt=""><b>W3 Uitleg</b><span class="muted">Collega legt uit</span></figure>
+          <figure><img src="/ventoux-stijl/media/ws5.jpg" alt=""><b>W5 Stuur</b><span class="muted">Stuur en wiel van dichtbij</span></figure>
+          <figure><img src="/ventoux-stijl/media/ws1.jpg" alt=""><b>W1 Meter</b><span class="muted">Meting in beeld</span></figure>
+          <figure><img src="/ventoux-stijl/media/ws4.jpg" alt=""><b>W4 Afstellen</b><span class="muted">Handen aan de fiets</span></figure>
+          <figure><img src="/ventoux-stijl/media/ws6.jpg" alt=""><b>W6 Werkplek</b><span class="muted">Balie en werkplaats Breda</span></figure>
+          <figure><img src="/ventoux-stijl/media/ws7.jpg" alt=""><b>W7 Winkel</b><span class="muted">Winkelvloer Breda</span></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blok">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="label"><span class="antenne"></span>10 · Nog te checken</span>
+      <div class="intro"><h2>Drie dingen voor we bouwen</h2></div>
+    </div>
+    <div class="sec-body open">
+      <div><h3>Fietsmeting</h3><p class="muted">De drie stappen en de eindzin zijn voorbeeldtekst. Laat de fitter zeggen wat er echt gebeurt en wat je meekrijgt, dan klopt elke zin.</p></div>
+      <div><h3>Google-profiel</h3><p class="muted">Google toont nog de oude winkel. De eindkaart noemt daarom altijd de actuele plaatsen, en het profiel bijwerken is een kleine moeite met direct effect.</p></div>
+      <div><h3>Lettertype</h3><p class="muted">Barlow in jullie Canva-account controleren. Anders Oswald en Inter, de rest van de regels blijft gelijk.</p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">Concept voor Ventoux · Loek Luijbregts · Alle beelden: Loek Luijbregts. Echte ritten, echte verhalen. Voor fietsers, door fietsers.</div>
+</footer>
+
+<script>
+(function(){
+  const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const players=[...document.querySelectorAll('[data-player]')].map(root=>{
+    const reel=root.querySelector('.reel');
+    const vids=[...reel.querySelectorAll('video')];
+    const scenes=[...reel.querySelectorAll('.scene')];
+    const durs=scenes.map(s=>parseFloat(s.dataset.d));
+    const tl=root.querySelector('.timeline');
+    tl.innerHTML=durs.map(d=>'<span style="--d:'+d+'"><i></i></span>').join('');
+    const bars=[...tl.querySelectorAll('i')];
+    const wipe=reel.querySelector('.wipe');
+    const schild=reel.querySelector('.schild');
+    const btn=root.querySelector('.pp');
+    const st={i:0,running:false,paused:false,timer:null,t0:0,left:0};
+    function setBtn(){
+      btn.textContent=st.paused?'▶ Afspelen':'❚❚ Pauze';
+      btn.setAttribute('aria-pressed',st.paused?'true':'false');
+      reel.classList.toggle('paused',st.paused);
+    }
+    function arm(ms){clearTimeout(st.timer);st.t0=performance.now();st.left=ms;st.timer=setTimeout(next,ms);}
+    function show(n){
+      st.i=n;
+      vids.forEach((v,k)=>{v.classList.toggle('on',k===n);if(k!==n)v.pause();});
+      scenes.forEach(e=>e.classList.remove('on'));
+      void reel.offsetWidth;
+      scenes[n].classList.add('on');
+      schild.style.opacity=scenes[n].hasAttribute('data-eind')?0:1;
+      const v=vids[n];
+      try{v.currentTime=0;}catch(e){}
+      if(st.running){const p=v.play();if(p&&p.catch)p.catch(()=>{});}
+      bars.forEach((b,k)=>{b.style.transition='none';b.style.transform='scaleX('+(k<n?1:0)+')';});
+      if(st.running){requestAnimationFrame(()=>{const b=bars[n];b.style.transition='transform '+durs[n]+'s linear';b.style.transform='scaleX(1)';});}
+    }
+    function next(){
+      if(!st.running||st.paused)return;
+      const n=(st.i+1)%scenes.length;
+      if(!reduce){wipe.classList.remove('go');void wipe.offsetWidth;wipe.classList.add('go');}
+      st.timer=setTimeout(()=>{if(st.paused)return;show(n);arm(durs[n]*1000);},reduce?0:200);
+    }
+    function play(from){st.paused=false;setBtn();st.running=true;show(from??st.i);arm(durs[st.i]*1000);}
+    function pause(){
+      if(!st.running||st.paused)return;
+      st.paused=true;clearTimeout(st.timer);
+      st.left=Math.max(0,st.left-(performance.now()-st.t0));
+      vids.forEach(v=>v.pause());
+      bars.forEach(b=>{const t=getComputedStyle(b).transform;b.style.transition='none';b.style.transform=t;});
+      setBtn();
+    }
+    function resume(){
+      if(!st.paused)return;
+      st.paused=false;setBtn();
+      const v=vids[st.i];const p=v.play();if(p&&p.catch)p.catch(()=>{});
+      const b=bars[st.i];b.style.transition='transform '+(st.left/1000)+'s linear';b.style.transform='scaleX(1)';
+      arm(st.left);
+    }
+    function toggle(){if(!st.running){play(0);}else if(st.paused){resume();}else{pause();}}
+    btn.addEventListener('click',toggle);
+    reel.addEventListener('click',toggle);
+    show(0);
+    return {play,pause,resume,toggle,reel,scenes,vids,st};
+  });
+  document.getElementById('speel').addEventListener('click',()=>{players.forEach(p=>p.play(0));setAlle(false);});
+  const alle=document.getElementById('allepauze');
+  function setAlle(p){alle.textContent=p?'▶ Speel beide verder':'❚❚ Pauzeer beide';alle.setAttribute('aria-pressed',p?'true':'false');}
+  alle.addEventListener('click',()=>{
+    const anyPlaying=players.some(p=>p.st.running&&!p.st.paused);
+    if(anyPlaying){players.forEach(p=>p.pause());setAlle(true);}
+    else{players.forEach(p=>p.st.running?p.resume():p.play(0));setAlle(false);}
+  });
+  const dnaBtn=document.getElementById('dna');
+  dnaBtn.addEventListener('click',()=>{
+    const on=document.getElementById('hero').classList.toggle('dna');
+    dnaBtn.setAttribute('aria-pressed',on?'true':'false');
+    dnaBtn.textContent=on?'Verberg de gedeelde stijl':'Toon de gedeelde stijl';
+  });
+  if(!reduce)players.forEach(p=>p.play(0));
+
+  // storyboards: statische kopieën van elke scène met het eerste beeld
+  const meta={
+    storyA:{p:0,stills:['still1','still2','still3','still5'],t:['Haak','Herkenning','Wat wij doen','Uitnodiging']},
+    storyB:{p:1,stills:['ws3','ws5','ws1','ws4','ws6','ws7'],t:['Haak','Probleem','Stap 1','Stap 2','Stap 3','Actie']}
+  };
+  Object.entries(meta).forEach(([id,m])=>{
+    const host=document.getElementById(id);const pl=players[m.p];let t=0;
+    pl.scenes.forEach((sc,k)=>{
+      const d=parseFloat(sc.dataset.d);
+      const fig=document.createElement('figure');
+      const reel=document.createElement('div');reel.className='reel';
+      reel.innerHTML='<img class="bg" src="/ventoux-stijl/media/'+m.stills[k]+'.jpg" alt="">'+(sc.hasAttribute('data-eind')?'':'<img class="schild" src="/ventoux-stijl/media/schild.png" alt="">');
+      const c=sc.cloneNode(true);c.className='scene static';reel.appendChild(c);
+      const cap=document.createElement('figcaption');
+      cap.innerHTML='<span class="tijd">'+t.toFixed(1).replace('.',',')+' - '+(t+d).toFixed(1).replace('.',',')+' s</span><b>'+m.t[k]+'</b>';
+      t+=d;fig.appendChild(reel);fig.appendChild(cap);host.appendChild(fig);
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
