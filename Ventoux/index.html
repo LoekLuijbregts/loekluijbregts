@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ventoux · Loek Luijbregts</title>
+<meta name="description" content="Van gesprek naar behoefte: een stijlgids en twee Canva-templates voor Ventoux, gemaakt door Loek Luijbregts.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#152042">
+<meta property="og:title" content="Ventoux heeft geen fulltime designer nodig">
+<meta property="og:description" content="Wel iemand die zegt waar het op staat: jullie tijd is te kostbaar, en jullie marketing verdient beter.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://loekluijbregts.com/Ventoux/reel-a.jpg">
+<link rel="icon" href="/images/logo-mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<style>
+  /* Layout: navy kop met de stelling, twee echte reels naast elkaar, dan van gesprek naar behoefte, werkwijze, wie er wint, wat er gemaakt is, en een navy slot met contact */
+  :root{
+    --navy:#152042; --navy-deep:#0F1730; --blue:#0B63E5; --electric:#1C78FE;
+    --ink:#152042; --body:#4F5B70; --muted:#7A8497; --line:#E2E8F0;
+    --surface:#F7F9FC; --pale:#EAF2FF; --white:#FFFFFF;
+    --rood:#E53011;
+    --font:"Inter",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    --wrap:1080px;
+  }
+  *{box-sizing:border-box}
+  html{background:var(--white);-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--white);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  img,video{display:block;max-width:100%}
+  a{color:var(--blue)}
+  :focus-visible{outline:2px solid var(--electric);outline-offset:3px;border-radius:4px}
+  .wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:clamp(16px,5vw,40px)}
+  h1,h2,h3{margin:0;color:var(--navy);letter-spacing:-.035em;text-wrap:balance}
+  h1{font-size:clamp(2.3rem,6.4vw,4.4rem);line-height:1.02;font-weight:800}
+  h2{font-size:clamp(1.7rem,3.8vw,2.6rem);line-height:1.08;font-weight:700}
+  h3{font-size:1.12rem;line-height:1.3;font-weight:650;letter-spacing:-.015em}
+  p{margin:0 0 1em;color:var(--body)}
+  .eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin:0 0 14px}
+  .lede{font-size:clamp(1.08rem,1.9vw,1.3rem);line-height:1.55;max-width:40ch}
+  section{padding-block:clamp(56px,8vw,96px)}
+  .rule{height:3px;width:44px;background:var(--blue);border:0;margin:16px 0 0}
+
+  /* top bar */
+  .bar{background:var(--navy);color:#fff}
+  .bar .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:16px}
+  .brand{color:#fff;text-decoration:none;font-weight:800;font-size:1.25rem;letter-spacing:-.04em}
+  .brand span{color:var(--electric)}
+  .bar small{color:rgba(255,255,255,.7);font-size:.8rem}
+
+  /* hero */
+  .hero{background:var(--navy);color:#fff;padding-block:clamp(40px,7vw,88px) clamp(56px,8vw,96px)}
+  .hero .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,64px);align-items:center}
+  .hero h1{color:#fff}
+  .hero .eyebrow{color:#8FB6FF}
+  .hero .lede{color:rgba(255,255,255,.82);margin-top:22px}
+  .hero .lede strong{color:#fff;font-weight:650}
+  .reels{display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,2vw,20px)}
+  figure{margin:0}
+  .reel{position:relative;aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:#1d1d1b;box-shadow:0 30px 60px -28px rgba(0,0,0,.6)}
+  .reel video{width:100%;height:100%;object-fit:cover}
+  .pp{position:absolute;right:10px;bottom:10px;width:38px;height:38px;border-radius:50%;border:0;background:rgba(15,23,48,.72);color:#fff;font:600 13px/1 var(--font);cursor:pointer;display:grid;place-items:center}
+  .pp:hover{background:rgba(15,23,48,.9)}
+  figcaption{margin-top:10px;font-size:.86rem;line-height:1.4;color:rgba(255,255,255,.75)}
+  figcaption b{display:block;color:#fff;font-weight:650}
+  .hero .note{margin-top:18px;font-size:.92rem;color:rgba(255,255,255,.7)}
+
+  /* gesprek */
+  .heard{display:grid;gap:0;margin-top:36px;border-top:1px solid var(--line)}
+  .heard .row{display:grid;grid-template-columns:1fr 1.25fr;gap:clamp(16px,4vw,48px);padding:22px 0;border-bottom:1px solid var(--line)}
+  .heard .said{font-weight:600;color:var(--navy);font-size:1.06rem;line-height:1.45}
+  .heard .said small{display:block;font-weight:500;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+  .heard .so{margin:0}
+  .heard .so b{color:var(--blue);font-weight:650}
+  .intro{max-width:62ch}
+
+  /* werkwijze */
+  .soft{background:var(--surface)}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px);align-items:start}
+  .chips{list-style:none;padding:0;margin:18px 0 22px;display:flex;flex-wrap:wrap;gap:10px}
+  .chips li{background:var(--white);border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-weight:600;color:var(--navy);font-size:.95rem}
+  .nots{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+  .nots li{display:grid;grid-template-columns:28px 1fr;gap:10px;color:var(--body)}
+  .nots li::before{content:"";width:18px;height:18px;margin-top:5px;border-radius:50%;background:var(--pale);box-shadow:inset 0 0 0 5px var(--blue)}
+  .wins{display:grid;gap:14px}
+  .win{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:22px 22px 18px}
+  .win h3{margin-bottom:6px}
+  .win p{margin:0;font-size:.98rem}
+  .win .tag{font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:6px;display:block}
+
+  /* gemaakt */
+  .steps{counter-reset:s;display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:36px}
+  .step{border:1px solid var(--line);border-radius:14px;padding:24px;position:relative}
+  .step::before{counter-increment:s;content:counter(s,decimal-leading-zero);font-size:.78rem;font-weight:700;letter-spacing:.12em;color:var(--blue);display:block;margin-bottom:10px}
+  .step h3{margin-bottom:8px}
+  .step p{margin:0;font-size:.98rem}
+  .step ul{margin:10px 0 0;padding-left:18px;color:var(--body);font-size:.95rem}
+  .swatches{display:flex;gap:6px;margin-top:14px}
+  .swatches i{width:28px;height:28px;border-radius:6px;border:1px solid var(--line)}
+  .rules{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:14px}
+  .rules div{background:var(--surface);border-radius:12px;padding:18px;font-weight:600;color:var(--navy);font-size:.98rem;line-height:1.4}
+  .rules div span{display:block;font-weight:400;color:var(--body);font-size:.9rem;margin-top:4px}
+  .rules em{font-style:normal;color:var(--rood)}
+
+  /* slot */
+  .close{background:var(--navy);color:#fff}
+  .close h2{color:#fff;font-size:clamp(1.9rem,4.6vw,3.2rem);max-width:20ch}
+  .close p{color:rgba(255,255,255,.8);max-width:58ch}
+  .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 22px;border-radius:999px;font-weight:650;text-decoration:none;font-size:1rem}
+  .btn.primary{background:var(--blue);color:#fff}
+  .btn.primary:hover{background:#084FB8}
+  .btn.ghost{color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.45)}
+  .btn.ghost:hover{box-shadow:inset 0 0 0 1.5px #fff}
+  footer{background:var(--navy-deep);color:rgba(255,255,255,.6);font-size:.85rem}
+  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;padding-block:22px}
+  footer a{color:rgba(255,255,255,.85)}
+
+  @media (max-width:860px){
+    .hero .grid,.two{grid-template-columns:1fr}
+    .heard .row{grid-template-columns:1fr;gap:6px}
+    .steps{grid-template-columns:1fr}
+    .rules{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:420px){.rules{grid-template-columns:1fr}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="bar"><div class="wrap">
+  <a class="brand" href="/">Loek<span>.</span></a>
+  <small>Voor Ventoux · Tilburg en Breda</small>
+</div></div>
+
+<header class="hero">
+  <div class="wrap grid">
+    <div>
+      <p class="eyebrow">Van gesprek naar werkende templates</p>
+      <h1>Ventoux heeft geen fulltime designer nodig.</h1>
+      <p class="lede">Wel iemand die zegt waar het op staat: <strong>jullie tijd is te kostbaar, en jullie marketing verdient beter.</strong> In uiterlijk én in resultaat.</p>
+    </div>
+    <div>
+      <div class="reels">
+        <figure>
+          <div class="reel">
+            <video src="reel-a.mp4" poster="reel-a.jpg" muted loop playsinline preload="metadata" aria-label="Voorbeeldreel A, merkverhaal, bergbeeld"></video>
+            <button class="pp" type="button" aria-label="Pauzeer reel A">❚❚</button>
+          </div>
+          <figcaption><b>A · Merkverhaal</b>Berg en toren, 4 scènes</figcaption>
+        </figure>
+        <figure>
+          <div class="reel">
+            <video src="reel-b.mp4" poster="reel-b.jpg" muted loop playsinline preload="metadata" aria-label="Voorbeeldreel B, nieuwe dienst, winkelbeeld"></video>
+            <button class="pp" type="button" aria-label="Pauzeer reel B">❚❚</button>
+          </div>
+          <figcaption><b>B · Nieuwe dienst</b>Eigen winkel, 6 scènes</figcaption>
+        </figure>
+      </div>
+      <p class="note">Allebei gebouwd in Canva. Je wisselt alleen beeld, tekst en muziek, dus een nieuwe reel kost een kwartier op de telefoon.</p>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">01 · Van gesprek naar behoefte</p>
+      <h2>De vraag was templates. De behoefte was tijd.</h2>
+      <hr class="rule">
+      <p class="intro" style="margin-top:24px">De vraag was helder: het moet er beter uitzien, en posten moet makkelijker. Uit mijn aantekeningen van ons gesprek haalde ik wat erachter zit. Elke keuze in de templates komt daar rechtstreeks uit.</p>
+      <div class="heard">
+        <div class="row">
+          <div class="said"><small>Wat ik hoorde</small>Posten kost tijd en voelt al snel als een moetje.</div>
+          <p class="so"><b>Dus:</b> geen extra werk, maar minder werk per post. Vaste templates waarin je alleen beeld, tekst en muziek wisselt. Alles wat herkenning geeft, staat vast.</p>
+        </div>
+        <div class="row">
+          <div class="said"><small>Wat ik hoorde</small>Licht, vriendelijk, professioneel, speels.</div>
+          <p class="so"><b>Dus:</b> kleuren en vormen rechtstreeks uit jullie eigen logo. Wit en zwart als basis, het rood van de antenne spaarzaam. Speels in beweging, nooit druk.</p>
+        </div>
+        <div class="row">
+          <div class="said"><small>Wat ik hoorde</small>De bikefitting en de werkplaats laten zien wat jullie echt doen.</div>
+          <p class="so"><b>Dus:</b> niet het aanbod van merken in de hoofdrol, maar het vakwerk van jullie team. Handen aan de fiets, iemand die uitlegt.</p>
+        </div>
+        <div class="row">
+          <div class="said"><small>Wat ik hoorde</small>De toren op de Mont Ventoux is jullie herkenningspunt.</div>
+          <p class="so"><b>Dus:</b> de echte berg als merkbeeld, gefilmd tijdens een echte rit. Het schild met de toren staat klein in elke scène, het volledige logo pas aan het eind.</p>
+        </div>
+        <div class="row">
+          <div class="said"><small>Wat ik zag</small>Google toont nog de oude winkel.</div>
+          <p class="so"><b>Dus:</b> elke eindkaart noemt de actuele plaatsen. En het profiel bijwerken is een kleine moeite met direct effect.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="soft">
+    <div class="wrap two">
+      <div>
+        <p class="eyebrow">02 · Hoe ik werk</p>
+        <h2>Ik ontwerp geen posts om het posten.</h2>
+        <hr class="rule">
+        <p style="margin-top:24px">Ik luister naar wat een ondernemer nodig heeft, en zoek waar commerciële ruimte ligt die nu te weinig aandacht krijgt. Bij een fietsenwinkel zijn dat bijvoorbeeld:</p>
+        <ul class="chips">
+          <li>Fietsmetingen</li>
+          <li>Afspraken over leasefietsen</li>
+          <li>Halfjaarlijkse servicecontracten</li>
+        </ul>
+        <p>Daar maak ik strategie, marketing en hulpmiddelen bij die de ondernemer én de ideale klant helpen.</p>
+        <ul class="nots">
+          <li>Zonder dat het voelt als irritante reclame.</li>
+          <li>Zonder dat het zeeën van tijd kost.</li>
+          <li>En wel zo dat het iets oplevert.</li>
+        </ul>
+      </div>
+      <div class="wins" aria-label="Wie er wint">
+        <div class="win"><span class="tag">Win 1</span><h3>Ventoux</h3><p>Meer geplande afspraken en terugkerende omzet uit diensten die er al zijn. Met minder tijd per post.</p></div>
+        <div class="win"><span class="tag">Win 2</span><h3>De fietser</h3><p>Een fiets die past en blijft rijden, en een makkelijke eerste stap: reageer met één woord, de link volgt.</p></div>
+        <div class="win"><span class="tag">Win 3</span><h3>Het team</h3><p>Vakwerk dat gezien wordt, zonder dat iemand marketeer hoeft te worden.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">03 · Wat ik maakte</p>
+      <h2>Eén stijl, twee templates, elk met een eigen taak.</h2>
+      <hr class="rule">
+      <div class="steps">
+        <div class="step">
+          <h3>Behoefte op papier</h3>
+          <p>Uit de gespreksaantekeningen: wat jullie vroegen, wat erachter zit, en welke diensten nu te weinig aandacht krijgen. De fietsmeting kwam bovenaan.</p>
+        </div>
+        <div class="step">
+          <h3>Stijl-, vorm- en templategids</h3>
+          <p>Kleuren uit het logo, Barlow-letters, een tekstvlak met de V-voet van het woordmerk, alles beweegt omhoog zoals een klim. Plus veilige zones, filmtips en hoe je in Canva een nieuw template maakt.</p>
+          <div class="swatches" aria-hidden="true"><i style="background:#fff"></i><i style="background:#1D1D1B"></i><i style="background:#ECECEC"></i><i style="background:#C6C6C6"></i><i style="background:#9D9D9C"></i><i style="background:#E53011"></i></div>
+        </div>
+        <div class="step">
+          <h3>Template A · Merkverhaal</h3>
+          <p>Laat voelen waar Ventoux voor staat.</p>
+          <ul><li>Haak, herkenning, wat wij doen, uitnodiging</li><li>Bergbeeld, rond 12 seconden</li><li>Eindigt met: plan je bikefitting</li></ul>
+        </div>
+        <div class="step">
+          <h3>Template B · Nieuwe dienst</h3>
+          <p>Introduceert iets nieuws, legt het uit in drie stappen en laat mensen direct reageren.</p>
+          <ul><li>Haak, probleem, drie stappen, actie</li><li>Winkelbeeld uit Tilburg en Breda, rond 14 seconden</li><li>Eindigt met: reageer met METEN</li></ul>
+        </div>
+      </div>
+      <div class="rules">
+        <div>Boodschap in 1,5 seconde<span>Er gebeurt iets vanaf het eerste beeld.</span></div>
+        <div>Eén <em>rood</em> ding per scène<span>Eén woord of één stapnummer.</span></div>
+        <div>Logo pas aan het eind<span>Als iemand al kijkt.</span></div>
+        <div>Echt beeld<span>Elf eigen clips, rechtop gesneden.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="close">
+    <div class="wrap">
+      <p class="eyebrow" style="color:#8FB6FF">Waar het op staat</p>
+      <h2>Jullie tijd is te kostbaar. Jullie marketing verdient beter.</h2>
+      <p style="margin-top:22px">Ventoux heeft geen fulltime designer nodig. Wel iemand die meedenkt over de omzet die nu blijft liggen, en het zo maakt dat jullie team het zelf draait, in een kwartier per reel.</p>
+      <div class="cta">
+        <a class="btn primary" href="tel:+31650939434">Bel of app Loek · 06 50 93 94 34</a>
+        <a class="btn ghost" href="mailto:loek@cyclingincubators.com?subject=Ventoux">loek@cyclingincubators.com</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">
+  <span>Loek Luijbregts · <a href="/">loekluijbregts.com</a> · Tilburg</span>
+  <span>Echte ritten, echte verhalen. Voor fietsers, door fietsers. Alle beelden: Loek Luijbregts.</span>
+</div></footer>
+
+<script>
+(function(){
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('.reel').forEach(function(r,i){
+    var v=r.querySelector('video'),b=r.querySelector('.pp'),name=i?'B':'A';
+    function set(){var p=v.paused;b.textContent=p?'▶':'❚❚';b.setAttribute('aria-label',(p?'Speel reel ':'Pauzeer reel ')+name+' af'.slice(p?0:3));}
+    b.addEventListener('click',function(){if(v.paused){var x=v.play();if(x&&x.catch)x.catch(function(){});}else{v.pause();}});
+    v.addEventListener('play',set);v.addEventListener('pause',set);
+    if(!reduce){v.preload='auto';var x=v.play();if(x&&x.catch)x.catch(function(){set();});}
+    set();
+  });
+})();
+</script>
+</body>
+</html>
