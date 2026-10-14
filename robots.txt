@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /WaranaFilmCompany/
+Disallow: /Ventoux/
 
 Sitemap: https://loekluijbregts.com/sitemap.xml
