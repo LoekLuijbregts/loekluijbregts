@@ -1,0 +1,692 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cyclite Reels-stijl</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Stijlgids voor Cyclite-reels en -stories in de Benelux: twee Canva-templates, één handschrift. Concept: Loek Luijbregts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,700&display=swap">
+<style>
+/* Layout: lichte, rustige gids. Bovenaan twee reels naast elkaar (één familie), daarna de regels per onderwerp. Alles leunt licht naar rechts, zoals het woordmerk. */
+:root{
+  --zwart:#000000;      /* logo */
+  --wit:#FFFFFF;        /* logo */
+  --rood:#DD2E16;       /* Cyclite-rood: knoppen op cyclite.cc */
+  --inkt:#171717;       /* lopende tekst op cyclite.cc */
+  --licht:#F5F5F5;      /* rustvlak op cyclite.cc */
+  --steen:#E5E3DF;      /* warm grijs op cyclite.cc */
+  --grijstekst:#5C5B58; /* alleen voor deze pagina, kleine tekst */
+  --font:"DM Sans","TT Norms Pro","Helvetica Neue",Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{background:var(--wit);color:var(--inkt);font-family:var(--font);font-size:17px;line-height:1.55;margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-weight:700;line-height:1.04;text-wrap:balance;margin:0;letter-spacing:-.025em;color:var(--zwart)}
+h1{font-size:clamp(40px,6.4vw,72px)}
+h2{font-size:clamp(28px,3.6vw,40px)}
+h3{font-size:21px;letter-spacing:-.01em}
+p{margin:0}
+.muted{color:var(--grijstekst)}
+.label{font-weight:500;text-transform:uppercase;letter-spacing:.1em;font-size:13px;display:inline-flex;align-items:center;gap:10px;color:var(--zwart)}
+.streep{display:inline-block;width:18px;height:6px;flex:none;background:var(--rood);transform:skewX(-12deg)}
+svg.ico{display:block}
+
+header.top{padding-block:28px 0}
+header.top .row{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+header.top svg{height:34px;width:auto}
+
+/* HERO */
+.hero{padding-block:44px 64px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:48px;align-items:start}
+.hero .intro{display:grid;gap:22px;max-width:500px;padding-top:12px}
+.hero .lead{font-size:20px}
+.vast{display:grid;grid-template-columns:1fr 1fr;gap:12px 28px;margin-top:6px}
+.vast div{display:grid;gap:2px;min-width:0}
+.vast b{font-weight:700;font-size:17px;color:var(--zwart)}
+.duo{display:grid;grid-template-columns:repeat(2,260px);gap:24px}
+.player{display:grid;gap:12px;justify-items:center;min-width:0}
+.player .naam{display:grid;gap:2px;text-align:center}
+.player .naam b{font-weight:700;font-size:17px}
+.player .naam span{font-size:14px}
+.dna-bar{grid-column:1/-1;display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap;margin-top:6px}
+button{font-family:var(--font);font-weight:500;font-size:14px;letter-spacing:.02em;background:var(--zwart);color:var(--wit);border:0;border-radius:6px;padding:10px 16px;cursor:pointer}
+button.ghost{background:var(--licht);color:var(--zwart)}
+button.rood{background:var(--rood)}
+button[aria-pressed="true"]{background:var(--rood);color:var(--wit)}
+button:focus-visible{outline:3px solid var(--rood);outline-offset:2px}
+.timeline{display:flex;gap:3px;width:100%}
+.timeline span{height:4px;background:var(--steen);flex:var(--d) 1 0;position:relative;overflow:hidden}
+.timeline span i{position:absolute;inset:0;background:var(--zwart);transform:scaleX(0);transform-origin:left}
+
+/* ====== HET REEL-FRAME (1080x1920, alles in cqw zodat het schaalt) ====== */
+.reel{position:relative;width:100%;max-width:100%;aspect-ratio:9/16;container-type:inline-size;background:var(--zwart);overflow:hidden;box-shadow:0 30px 60px -30px rgba(0,0,0,.45);color:var(--wit)}
+.reel.licht{color:var(--zwart)}
+.scene{position:absolute;inset:0;opacity:0;pointer-events:none}
+.scene.on,.scene.static{opacity:1}
+.bg{position:absolute;inset:0}
+.bg svg{width:100%;height:100%;display:block}
+.teken{position:absolute;left:6.48cqw;top:23.6cqw;width:12cqw;height:4cqw;z-index:3;fill:currentColor;transition:opacity .2s}
+.vlak{position:absolute;left:6.48cqw;right:12.96cqw;bottom:38.9cqw;background:rgba(255,255,255,.96);padding:4.2cqw 6cqw 4.6cqw;
+  clip-path:polygon(3.4cqw 0,100% 0,calc(100% - 3.4cqw) 100%,0 100%);display:grid;gap:1.8cqw;color:var(--zwart)}
+.vlak .k{font-weight:700;font-size:8.2cqw;line-height:1.02;letter-spacing:-.03em}
+.vlak .r{font-weight:500;font-size:4.26cqw;line-height:1.3;color:var(--inkt)}
+.vlak .l{font-weight:500;font-size:2.9cqw;letter-spacing:.1em;text-transform:uppercase;display:flex;align-items:center;gap:1.6cqw}
+.vlak .l .streep{width:3.6cqw;height:1.2cqw}
+.vlak.stap{grid-template-columns:auto minmax(0,1fr);column-gap:3.6cqw;align-items:center}
+.vlak.stap .l{grid-column:1/-1}
+.stapnr{font-weight:700;font-style:italic;font-size:19cqw;line-height:.8;color:var(--rood);display:grid;justify-items:center;letter-spacing:-.04em}
+.stapnr small{font-size:2.6cqw;font-style:normal;font-weight:500;letter-spacing:.1em;color:var(--grijstekst);line-height:1;margin-top:1.4cqw}
+.vlak.stap .k{font-size:7.4cqw}
+.kw{position:relative;color:var(--rood);display:inline-block}
+.kw::after{content:"";position:absolute;inset:-.02em -.06em;background:var(--rood);transform:scaleX(0)}
+
+/* eindkaart met schuine rand, oplopend naar rechts zoals het woordmerk */
+.eind{position:absolute;left:0;right:0;bottom:0;top:46%;background:var(--wit);color:var(--zwart);
+  clip-path:polygon(0 8cqw,100% 0,100% 100%,0 100%);display:grid;align-content:start;justify-items:center;gap:2.6cqw;padding:12cqw 6.48cqw 0;text-align:center}
+.eind svg{width:34cqw;height:auto;fill:var(--zwart)}
+.eind .k{font-weight:700;font-size:7.8cqw;line-height:1.02;letter-spacing:-.03em}
+.eind .a{font-size:3.2cqw;font-weight:500;color:var(--inkt)}
+.eind .s{font-weight:500;font-size:2.8cqw;letter-spacing:.1em;text-transform:uppercase;color:var(--grijstekst)}
+.eind .cta{background:var(--zwart);color:var(--wit);font-weight:500;font-size:4.2cqw;padding:2.2cqw 4.6cqw;border-radius:1.2cqw}
+.eind .cta b{color:var(--wit);border-bottom:.6cqw solid var(--rood)}
+
+/* animaties: alles komt van links, één rood ding per scène */
+.scene.on .vlak{animation:in .55s cubic-bezier(.2,.8,.2,1) both}
+.scene.on .vlak > *{animation:in .5s cubic-bezier(.2,.8,.2,1) both}
+.scene.on .vlak > *:nth-child(2){animation-delay:.08s}
+.scene.on .vlak > *:nth-child(3){animation-delay:.16s}
+.scene.on .kw{animation:kwtekst .8s .35s both}
+.scene.on .kw::after{animation:blok .8s .35s both}
+.scene.on .stapnr{animation:in .5s .1s cubic-bezier(.2,.8,.2,1) both}
+.scene.on .eind{animation:op .6s cubic-bezier(.2,.8,.2,1) both}
+.scene.on .eind > *{animation:in .5s cubic-bezier(.2,.8,.2,1) both}
+.scene.on .eind > *:nth-child(2){animation-delay:.12s}
+.scene.on .eind > *:nth-child(3){animation-delay:.2s}
+.scene.on .eind > *:nth-child(4){animation-delay:.28s}
+.scene.on .zoom{animation:zoom 4s linear both}
+@keyframes in{from{transform:translateX(-7cqw);opacity:0}to{transform:none;opacity:1}}
+@keyframes op{from{transform:translateY(6cqw);opacity:0}to{transform:none;opacity:1}}
+@keyframes zoom{from{transform:scale(1)}to{transform:scale(1.06)}}
+@keyframes blok{0%{transform:scaleX(0);transform-origin:left}49%{transform:scaleX(1);transform-origin:left}51%{transform:scaleX(1);transform-origin:right}100%{transform:scaleX(0);transform-origin:right}}
+@keyframes kwtekst{0%,49%{color:transparent}50%,100%{color:var(--rood)}}
+.wipe{position:absolute;inset:0;z-index:5;pointer-events:none;transform:translateX(-110%) skewX(-12deg)}
+.wipe.go{animation:wipe .45s cubic-bezier(.6,0,.3,1)}
+.wipe::before,.wipe::after{content:"";position:absolute;top:0;bottom:0}
+.wipe::before{left:0;right:0;background:var(--wit)}
+.wipe::after{right:0;width:2.6cqw;background:var(--rood)}
+@keyframes wipe{0%{transform:translateX(-110%) skewX(-12deg)}50%{transform:translateX(0) skewX(-12deg)}100%{transform:translateX(110%) skewX(-12deg)}}
+.reel.paused *,.reel.paused *::after{animation-play-state:paused!important}
+.player .reel{cursor:pointer}
+.pauze-teken{position:absolute;right:4cqw;bottom:4cqw;z-index:6;width:11cqw;height:11cqw;border-radius:2cqw;background:rgba(0,0,0,.72);display:none;place-items:center;pointer-events:none}
+.pauze-teken::before{content:"";width:0;height:0;border-left:3.6cqw solid var(--wit);border-top:2.2cqw solid transparent;border-bottom:2.2cqw solid transparent;margin-left:.8cqw}
+.reel.paused .pauze-teken{display:grid}
+button.pp{min-width:112px}
+
+/* gedeelde stijl zichtbaar maken */
+.dna .bg{opacity:.3}
+.dna .vlak,.dna .eind{outline:.6cqw dashed var(--rood);outline-offset:-.6cqw}
+.dna .teken{outline:.5cqw dashed var(--rood);outline-offset:1cqw}
+.legend{display:none;gap:8px 14px;flex-wrap:wrap;justify-content:center;font-size:14px}
+.dna .legend{display:flex}
+.legend span{display:inline-flex;gap:6px;align-items:center}
+.legend i{width:12px;height:12px;background:var(--rood);display:inline-block}
+
+/* SECTIES */
+section.blok{padding-block:64px;border-top:1px solid var(--steen)}
+.sec-head{display:grid;grid-template-columns:240px minmax(0,1fr);gap:40px}
+.sec-head .intro{display:grid;gap:12px;max-width:640px;min-width:0}
+.sec-body{margin-top:36px;margin-left:280px}
+
+.familie{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) minmax(0,1fr);border-top:2px solid var(--zwart)}
+.familie > div{padding:12px 14px 12px 0;border-bottom:1px solid var(--steen);font-size:15px;min-width:0}
+.familie .h{font-weight:500;font-size:13px;text-transform:uppercase;letter-spacing:.1em}
+.familie .rij{font-weight:700;font-size:16px;color:var(--zwart)}
+.familie .gelijk{grid-column:2/-1;display:flex;gap:10px;align-items:center}
+.familie .gelijk::before{content:"";width:14px;height:5px;flex:none;background:var(--rood);transform:skewX(-12deg)}
+.familie .sub{grid-column:1/-1;padding-top:26px;font-weight:500;font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:var(--grijstekst)}
+
+.storyrij{display:grid;gap:14px}
+.storyrij + .storyrij{margin-top:44px}
+.story{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}
+.story figure{margin:0;display:grid;gap:10px;align-content:start;min-width:0}
+.story figcaption{display:grid;gap:3px;font-size:14px}
+.story figcaption b{font-weight:700;font-size:16px}
+.tijd{font-variant-numeric:tabular-nums;font-weight:500;color:var(--rood);letter-spacing:.02em}
+
+.kleuren{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}
+.sw{display:grid;gap:6px;font-size:14px;min-width:0}
+.sw .c{aspect-ratio:1/1.15;max-width:100%;border:1px solid var(--steen);border-radius:4px}
+.sw b{font-size:16px;font-weight:700}
+.sw code{font-family:ui-monospace,Menlo,monospace;font-size:13px}
+.verhouding{display:flex;height:16px;margin-top:22px;border:1px solid var(--steen)}
+
+.type{display:grid;gap:22px}
+.trow{display:grid;grid-template-columns:200px minmax(0,1fr);gap:24px;align-items:baseline;padding-bottom:20px;border-bottom:1px solid var(--steen)}
+.trow > div{min-width:0}
+.trow .meta{font-size:14px;color:var(--grijstekst)}
+.trow .meta b{display:block;color:var(--zwart);font-size:16px}
+
+.logos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.logo-card{display:grid;gap:10px;font-size:14px;min-width:0;align-content:start}
+.logo-card .vlakje{aspect-ratio:4/3;max-width:100%;display:grid;place-items:center;padding:18px;border-radius:4px}
+.logo-card .vlakje svg{width:70%;height:auto}
+.logo-card b{font-size:16px}
+
+.regels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.regel{display:grid;gap:8px;align-content:start;min-width:0}
+.regel .demo{height:120px;background:var(--licht);position:relative;overflow:hidden;margin-bottom:6px;border-radius:4px}
+.regel .tag{font-weight:500;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--grijstekst)}
+
+.veilig{display:grid;grid-template-columns:260px minmax(0,1fr);gap:40px;align-items:start}
+.zone{position:relative;width:100%;max-width:100%;aspect-ratio:9/16;background:var(--zwart);container-type:inline-size;overflow:hidden}
+.zone .bg{opacity:.9}
+.zone .z{position:absolute;background:rgba(221,46,22,.4);display:grid;place-items:center;color:var(--wit);font-weight:500;font-size:4.2cqw;letter-spacing:.08em;text-transform:uppercase;text-align:center}
+.zone .ok{position:absolute;left:6.48cqw;right:12.96cqw;top:23.15cqw;bottom:38.9cqw;outline:2px dashed var(--wit)}
+ul.plain{list-style:none;margin:0;padding:0;display:grid;gap:10px;min-width:0}
+ul.plain li{display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px;padding-bottom:10px;border-bottom:1px solid var(--steen)}
+ul.plain li b{font-size:16px;color:var(--zwart)}
+
+ol.stappen{margin:0;padding:0;list-style:none;counter-reset:s;display:grid;gap:18px;max-width:760px}
+ol.stappen li{counter-increment:s;display:grid;grid-template-columns:44px minmax(0,1fr);gap:16px}
+ol.stappen li::before{content:counter(s);font-weight:700;font-style:italic;font-size:30px;line-height:1;color:var(--rood)}
+ol.stappen b{font-size:18px;display:block;color:var(--zwart)}
+
+.shots{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px}
+.shots ol{margin:12px 0 0;padding:0;list-style:none;display:grid;gap:8px;counter-reset:sh}
+.shots li{display:grid;grid-template-columns:48px minmax(0,1fr);gap:10px;padding-bottom:8px;border-bottom:1px solid var(--steen);font-size:15px}
+.shots li span{font-variant-numeric:tabular-nums;font-weight:500;color:var(--rood)}
+
+.open{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px 32px}
+.open div{display:grid;gap:6px;min-width:0}
+footer{padding-block:48px 64px;border-top:1px solid var(--steen);font-size:14px;color:var(--grijstekst)}
+
+@media (max-width:1000px){
+  .hero{grid-template-columns:1fr;gap:36px}
+  .hero .intro{max-width:none}
+  .duo{grid-template-columns:repeat(2,minmax(0,260px));justify-content:center}
+  .sec-head{grid-template-columns:1fr;gap:12px}
+  .sec-body{margin-left:0}
+  .story{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .kleuren{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .logos{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .regels{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .veilig{grid-template-columns:1fr}
+  .veilig .zone{max-width:260px}
+  .shots{grid-template-columns:1fr}
+  .open{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .duo{gap:12px}
+  .vast{grid-template-columns:1fr}
+  .story{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .regels{grid-template-columns:1fr}
+  .trow{grid-template-columns:1fr;gap:6px}
+  ul.plain li{grid-template-columns:1fr;gap:2px}
+  .familie{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .familie .rij{grid-column:1/-1;padding-bottom:0;border-bottom:0}
+  .familie .gelijk{grid-column:1/-1}
+  .familie .h:first-child{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  .scene.on .vlak,.scene.on .vlak>*,.scene.on .eind,.scene.on .eind>*,.scene.on .kw,.scene.on .kw::after,.scene.on .stapnr,.scene.on .zoom,.wipe.go{animation:none!important}
+  .kw{color:var(--rood)}
+}
+</style>
+</head>
+<body>
+
+
+<!-- Bouwstenen: logo, beeldmerk en de getekende scènes (staan in voor eigen beeld tot dat er is) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="logo" viewBox="0 0 800 240"><path d="M500.0884,0l-39.0866,184.8691h-36.5751L463.5134,0h36.5751ZM497.5724,184.8691h36.5751l27.0102-128.4289h-36.5751l-27.0102,128.4289ZM800,110.5508c0,3.3291-.3127,7.0208-.928,10.9754-.4136,2.6425-.928,5.0939-1.5434,7.303-.3026,1.1196-1.1096,3.5409-1.1096,3.5409h-92.6928c.8171,6.3849,4.1157,11.9635,9.8251,16.6038,5.9112,4.7915,13.6079,7.2222,22.8882,7.2222,8.5541,0,15.9141-2.4341,24.0715-8.0063l22.0682,22.0685c-5.5461,4.8027-13.4768,9.1087-22.5957,12.3467-9.119,3.2483-18.8936,4.8925-29.0617,4.8925-11.9334,0-22.8781-2.6228-32.5519-7.8079-9.6637-5.1846-17.3704-12.4073-22.9185-21.4657-5.538-9.0584-8.3423-19.4487-8.3423-30.8773,0-12.6397,3.3792-24.7446,10.047-35.982,3.2582-5.4875,7.1217-10.5006,11.5601-14.9695,4.6099-4.6703,9.8554-8.7659,15.6758-12.2561,6.3954-3.8433,13.1237-6.6174,20.1242-8.3221,5.4875-1.3318,11.1264-1.9973,16.9064-1.9973,11.5904,0,21.9299,2.5824,30.7362,7.6867,8.7861,5.1043,15.706,12.0644,20.548,20.6889,4.8419,8.6146,7.2931,18.1573,7.2931,28.3554ZM764.1999,106.8488c-.464-6.0623-2.9153-11.3483-7.283-15.726-4.5192-4.5093-10.6926-6.7888-18.3792-6.7888-7.0208,0-13.396,2.2091-18.9541,6.577-3.0968,2.4312-5.7498,5.2353-7.9388,8.4029-1.6039,2.3199-2.9556,4.8417-4.0551,7.535h56.6103ZM661.95,56.4368h-27.5033l8.605-40.6962h-36.5765l-35.7621,169.1251h36.577l19.9839-94.5038h27.5401l7.1359-33.9251ZM245.639,56.4402l-43.2949,76.1798-15.7162-76.1798h-36.5765l25.4706,123.3887-34.1961,60.1712h41.1966l104.3136-183.5598h-41.1971ZM95.2754,143.3756c-8.7053,6.7686-18.0361,10.1977-27.7806,10.1977-3.5508,0-6.8494-.4236-9.8756-1.2511-4.7309-1.2905-8.8063-3.5907-12.1856-6.8691-5.5481-5.3766-8.3625-12.3472-8.3625-20.7293,0-6.345,1.6545-12.4378,4.9127-18.0972,1.9973-3.4695,4.4585-6.5469,7.3439-9.1998,1.8259-1.6845,3.8227-3.1878,5.9918-4.5186,5.5682-3.4301,11.8728-5.1648,18.7321-5.1648,7.7271,0,13.9711,1.6441,18.5808,4.8821,4.6501,3.2685,9.0168,7.8573,11.994,12.69l24.1289-24.1289c-4.3172-6.7385-10.7228-12.8112-19.0951-18.0967-9.7549-6.1534-21.3854-9.2702-34.5492-9.2702-4.1059,0-8.1305.3226-12.0649.958-8.8767,1.4323-17.3298,4.4689-25.2386,9.089-4.6097,2.7031-8.8767,5.8002-12.7703,9.2702-5.7195,5.0939-10.6425,11.0148-14.7178,17.6928C3.47,102.0676,0,114.3537,0,127.3461c0,4.9028.5246,9.6234,1.5737,14.143,1.3417,5.8505,3.5611,11.3581,6.6376,16.4619,5.4471,9.0589,13.0732,16.322,22.6562,21.5972,9.5731,5.2762,20.3969,7.9487,32.1584,7.9487,6.1839,0,12.0851-.6255,17.6632-1.8756,4.7211-1.06,9.1895-2.5524,13.416-4.4792,9.2101-4.2064,17.3345-9.6728,23.2315-15.6955l-22.0612-22.071ZM380.6153,143.3756c-8.7053,6.7686-18.0361,10.1977-27.7806,10.1977-3.5508,0-6.8494-.4236-9.8756-1.2511-4.7309-1.2905-8.8063-3.5907-12.1856-6.8691-5.5481-5.3766-8.3625-12.3472-8.3625-20.7293,0-6.345,1.6545-12.4378,4.9127-18.0972,1.9973-3.4695,4.4585-6.5469,7.3439-9.1998,1.8259-1.6845,3.8227-3.1878,5.9918-4.5186,5.5682-3.4301,11.8728-5.1648,18.7321-5.1648,7.7271,0,13.9711,1.6441,18.5808,4.8821,4.6501,3.2685,9.0168,7.8573,11.994,12.69l24.1289-24.1289c-4.3172-6.7385-10.7228-12.8112-19.0951-18.0967-9.7549-6.1534-21.3854-9.2702-34.5492-9.2702-4.1059,0-8.1305.3226-12.0649.958-8.8767,1.4323-17.3298,4.4689-25.2386,9.089-4.6097,2.7031-8.8767,5.8002-12.7703,9.2702-5.7195,5.0939-10.6425,11.0148-14.7178,17.6928-6.8494,11.238-10.3194,23.5241-10.3194,36.5165,0,4.9028.5246,9.6234,1.5737,14.143,1.3417,5.8505,3.5611,11.3581,6.6376,16.4619,5.4471,9.0589,13.0732,16.322,22.6562,21.5972,9.5731,5.2762,20.3969,7.9487,32.1584,7.9487,6.1839,0,12.0851-.6255,17.6632-1.8756,4.7211-1.06,9.1895-2.5524,13.416-4.4792,9.2101-4.2064,17.3345-9.6728,23.2315-15.6955l-22.0612-22.071Z"/></symbol>
+    <symbol id="teken" viewBox="0 0 1020 340"><path d="M1020,339.999l-113.333.001-226.6658-226.6676c-15.648-15.6482-41.0187-15.6482-56.667,0l-226.6675,226.6667h-56.6697S0,0,0,0h113.3315s226.667,226.6676,226.667,226.6676c15.6483,15.6482,41.019,15.6482,56.667,0L623.3333,0h56.6687s339.998,339.999,339.998,339.999Z"/></symbol>
+
+    <!-- Merkbeeld: fiets met lichte tassen, rijdend door een donker landschap -->
+    <symbol id="buiten" viewBox="0 0 1080 1920" preserveAspectRatio="xMidYMid slice">
+      <rect width="1080" height="1920" fill="#0B0B0B"/>
+      <g fill="#1A1A1A"><path d="M0 860 C160 760 300 800 430 740 S700 690 860 780 S1010 820 1080 800 L1080 1020 L0 1020Z M1080 860 C1240 760 1380 800 1510 740 S1780 690 1940 780 S2090 820 2160 800 L2160 1020 L1080 1020Z"/><animateTransform attributeName="transform" type="translate" from="0 0" to="-1080 0" dur="22s" repeatCount="indefinite"/></g>
+      <g fill="#242424"><path d="M0 930 C200 880 330 920 520 880 S820 860 1080 920 L1080 1020 L0 1020Z M1080 930 C1280 880 1410 920 1600 880 S1900 860 2160 920 L2160 1020 L1080 1020Z"/><animateTransform attributeName="transform" type="translate" from="0 0" to="-1080 0" dur="11s" repeatCount="indefinite"/></g>
+      <rect y="1020" width="1080" height="900" fill="#111111"/>
+      <rect y="1020" width="1080" height="6" fill="#2E2E2E"/>
+      <line x1="0" x2="1080" y1="1090" y2="1090" stroke="#2A2A2A" stroke-width="8" stroke-dasharray="70 90"><animate attributeName="stroke-dashoffset" from="0" to="160" dur=".8s" repeatCount="indefinite"/></line>
+      <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <g><circle cx="330" cy="830" r="190" stroke="#6E6E6A" stroke-width="18"/><circle cx="330" cy="830" r="168" stroke="#2C2C2C" stroke-width="5"/>
+          <g stroke="#4A4A47" stroke-width="3"><line x1="330" y1="645" x2="330" y2="1015"/><line x1="145" y1="830" x2="515" y2="830"/><line x1="199" y1="699" x2="461" y2="961"/><line x1="199" y1="961" x2="461" y2="699"/><animateTransform attributeName="transform" type="rotate" from="0 330 830" to="360 330 830" dur="1.4s" repeatCount="indefinite"/></g></g>
+        <g><circle cx="770" cy="830" r="190" stroke="#6E6E6A" stroke-width="18"/><circle cx="770" cy="830" r="168" stroke="#2C2C2C" stroke-width="5"/>
+          <g stroke="#4A4A47" stroke-width="3"><line x1="770" y1="645" x2="770" y2="1015"/><line x1="585" y1="830" x2="955" y2="830"/><line x1="639" y1="699" x2="901" y2="961"/><line x1="639" y1="961" x2="901" y2="699"/><animateTransform attributeName="transform" type="rotate" from="0 770 830" to="360 770 830" dur="1.4s" repeatCount="indefinite"/></g></g>
+        <g stroke="#B9B9B5" stroke-width="15"><path d="M330 830 L520 840 L470 540 M470 560 L330 830 M470 540 L720 560 L745 640 L520 840 M745 640 L770 830 M720 560 L705 520 L770 505 C820 500 830 560 790 575"/></g>
+        <path d="M420 510 L505 512" stroke="#B9B9B5" stroke-width="16"/>
+        <g stroke="#8A8A86" stroke-width="10"><line x1="520" y1="840" x2="565" y2="905"><animateTransform attributeName="transform" type="rotate" from="0 520 840" to="360 520 840" dur="1.4s" repeatCount="indefinite"/></line></g>
+      </g>
+      <g fill="#E5E3DF">
+        <path d="M488 572 L708 588 L726 640 L532 812 L503 700Z"/>
+        <path d="M462 525 L455 585 L300 545 L290 518Z"/>
+        <ellipse cx="800" cy="545" rx="44" ry="58"/>
+        <path d="M615 556 L700 563 L698 594 L615 588Z" fill="#F5F5F5"/>
+      </g>
+    </symbol>
+
+    <!-- Pasbeeld: uitleg in lijnen op warm grijs -->
+    <symbol id="pas-maten" viewBox="0 0 1080 1920" preserveAspectRatio="xMidYMid slice">
+      <rect width="1080" height="1920" fill="#E5E3DF"/>
+      <g fill="none" stroke-linejoin="round">
+        <path d="M300 470 L820 510 L860 670 L420 1030Z" stroke="#000" stroke-width="16"/>
+        <path d="M367 520 L790 553 L822 676 L438 966Z" stroke="#8B8A87" stroke-width="5" stroke-dasharray="14 12"/>
+        <path d="M420 568 L765 594 L790 683 L452 916Z" stroke="#000" stroke-width="9"/>
+        <path d="M470 615 L740 635 L758 690 L465 866Z" stroke="#8B8A87" stroke-width="5" stroke-dasharray="14 12"/>
+        <path d="M520 662 L714 676 L726 697 L479 817Z" stroke="#8B8A87" stroke-width="5" stroke-dasharray="14 12"/>
+      </g>
+    </symbol>
+    <symbol id="pas-afstand" viewBox="0 0 1080 1920" preserveAspectRatio="xMidYMid slice">
+      <rect width="1080" height="1920" fill="#E5E3DF"/>
+      <g stroke="#CFCCC6" stroke-width="3"><path d="M0 300H1080M0 450H1080M0 600H1080M0 750H1080M0 900H1080M0 1050H1080M180 0V1920M360 0V1920M540 0V1920M720 0V1920M900 0V1920"/></g>
+      <path d="M290 1000 C420 860 380 720 560 660 S760 520 830 400" fill="none" stroke="#000" stroke-width="10" stroke-dasharray="4 26" stroke-linecap="round"/>
+      <circle cx="290" cy="1000" r="26" fill="#000"/><circle cx="290" cy="1000" r="50" fill="none" stroke="#000" stroke-width="5"/>
+      <path d="M830 410 C790 360 780 330 780 300 A50 50 0 1 1 880 300 C880 330 870 360 830 410Z" fill="#000"/><circle cx="830" cy="300" r="18" fill="#E5E3DF"/>
+    </symbol>
+    <symbol id="pas-meten" viewBox="0 0 1080 1920" preserveAspectRatio="xMidYMid slice">
+      <rect width="1080" height="1920" fill="#E5E3DF"/>
+      <path d="M300 470 L820 510 L860 670 L420 1030Z" fill="none" stroke="#000" stroke-width="16" stroke-linejoin="round"/>
+      <g stroke="#000" stroke-width="5" fill="none"><path d="M296 400 L824 440 M296 380 V420 M824 420 V460"/><path d="M215 478 L335 1035 M195 482 L235 474 M315 1039 L355 1031"/></g>
+      <g font-family="DM Sans,Arial,sans-serif" font-weight="700" font-size="76" fill="#000"><text x="545" y="392">A</text><text x="180" y="790">B</text></g>
+    </symbol>
+    <symbol id="pas-bericht" viewBox="0 0 1080 1920" preserveAspectRatio="xMidYMid slice">
+      <rect width="1080" height="1920" fill="#E5E3DF"/>
+      <rect x="330" y="300" width="420" height="800" rx="60" fill="#F5F5F5" stroke="#000" stroke-width="12"/>
+      <rect x="480" y="330" width="120" height="16" rx="8" fill="#000"/>
+      <rect x="380" y="420" width="250" height="110" rx="26" fill="#FFFFFF" stroke="#CFCCC6" stroke-width="3"/>
+      <rect x="410" y="455" width="150" height="14" rx="7" fill="#8B8A87"/><rect x="410" y="485" width="100" height="14" rx="7" fill="#8B8A87"/>
+      <rect x="470" y="570" width="230" height="200" rx="26" fill="#000"/>
+      <path d="M505 730 L560 640 L600 690 L630 655 L670 730Z" fill="#E5E3DF"/>
+      <rect x="500" y="800" width="200" height="90" rx="26" fill="#000"/>
+      <rect x="530" y="832" width="120" height="14" rx="7" fill="#F5F5F5"/>
+    </symbol>
+    <symbol id="pas-keuze" viewBox="0 0 1080 1920" preserveAspectRatio="xMidYMid slice">
+      <rect width="1080" height="1920" fill="#E5E3DF"/>
+      <g font-family="DM Sans,Arial,sans-serif" font-weight="700" font-size="52" text-anchor="middle">
+        <rect x="130" y="520" width="380" height="130" rx="65" fill="none" stroke="#000" stroke-width="6"/><text x="320" y="603">Small</text>
+        <rect x="570" y="520" width="380" height="130" rx="65" fill="none" stroke="#000" stroke-width="6"/><text x="760" y="603">Standaard</text>
+        <rect x="130" y="700" width="380" height="130" rx="65" fill="#000"/><text x="320" y="783" fill="#FFF">XT</text>
+        <rect x="570" y="700" width="380" height="130" rx="65" fill="none" stroke="#000" stroke-width="6"/><text x="760" y="783">Large</text>
+      </g>
+      <path d="M410 765 l24 24 l46 -52" fill="none" stroke="#FFF" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="wrap row">
+    <svg class="ico" viewBox="0 0 800 240" role="img" aria-label="Cyclite"><use href="#logo"/></svg>
+    <span class="label"><span class="streep"></span>Concept · Loek Luijbregts</span>
+  </div>
+</header>
+
+<main>
+<div class="wrap hero" id="hero">
+  <div class="intro">
+    <span class="label"><span class="streep"></span>Stijlgids reels en stories · Benelux</span>
+    <h1>Cyclite in anderhalve seconde</h1>
+    <p class="lead">Twee templates voor Canva, elk met een eigen taak. Ze verschillen in opbouw, maar je herkent ze allebei meteen als Cyclite. Je wisselt alleen beeld, tekst en muziek.</p>
+    <div class="vast">
+      <div><b>A · Merkverhaal</b><span class="muted">Laat zien waar Cyclite voor staat. Hier: licht pakken, verder rijden.</span></div>
+      <div><b>B · Nieuwe dienst</b><span class="muted">Introduceren, uitleggen in drie stappen, en direct laten reageren. Hier: pasadvies voor de framebag.</span></div>
+      <div><b>Altijd gelijk</b><span class="muted">Kleuren, letter, schuin tekstvlak, beeldmerk, beweging naar rechts, eindkaart.</span></div>
+      <div><b>Gevoel</b><span class="muted">Licht, rustig, vooruit. Voor wie verder wil met minder.</span></div>
+    </div>
+  </div>
+
+  <div class="duo">
+    <!-- TEMPLATE A -->
+    <div class="player" data-player="a">
+      <div class="reel" aria-label="Voorbeeld A, merkverhaal, 12 seconden">
+        <svg class="teken" viewBox="0 0 1020 340" aria-hidden="true"><use href="#teken"/></svg>
+        <div class="scene on" data-d="1.6"><div class="bg"><svg viewBox="0 0 1080 1920" preserveAspectRatio="xMidYMid slice"><use href="#buiten" width="1080" height="1920"/></svg></div><div class="vlak"><div class="k">Minder gewicht.</div><div class="k">Meer <span class="kw">vrijheid</span>.</div></div></div>
+        <div class="scene" data-d="3.2"><div class="bg zoom"><svg viewBox="270 330 640 1138" preserveAspectRatio="xMidYMid slice"><use href="#buiten" width="1080" height="1920"/></svg></div><div class="vlak"><div class="k">Je <span class="kw">herkent</span> ze van ver.</div><div class="r">Licht van kleur. Licht van gewicht.</div></div></div>
+        <div class="scene" data-d="3.6"><div class="bg zoom"><svg viewBox="380 420 400 711" preserveAspectRatio="xMidYMid slice"><use href="#buiten" width="1080" height="1920"/></svg></div><div class="vlak"><div class="l"><span class="streep"></span>Bikepackingtassen</div><div class="k">Tassen die je <span class="kw">niet voelt</span> onder het trappen.</div><div class="r">Waterdicht en gemaakt om lang mee te gaan.</div></div></div>
+        <div class="scene" data-d="4" data-eind><div class="bg"><svg viewBox="0 0 1080 1920" preserveAspectRatio="xMidYMid slice"><use href="#buiten" width="1080" height="1920"/></svg></div><div class="eind"><svg viewBox="0 0 800 240" role="img" aria-label="Cyclite"><use href="#logo"/></svg><div class="k">Ga verder met minder.</div><div class="a">Vind een winkel bij jou in de buurt · cyclite.cc</div><div class="s">Lightness without limits</div></div></div>
+        <div class="wipe"></div>
+        <div class="pauze-teken"></div>
+      </div>
+      <div class="timeline"></div>
+      <button class="pp ghost" type="button" aria-pressed="false">❚❚ Pauze</button>
+      <div class="naam"><b>A · Merkverhaal</b><span class="muted">Merkbeeld · 12 s · 4 pagina's</span></div>
+    </div>
+
+    <!-- TEMPLATE B -->
+    <div class="player" data-player="b">
+      <div class="reel" aria-label="Voorbeeld B, nieuwe dienst, 14 seconden">
+        <svg class="teken" viewBox="0 0 1020 340" aria-hidden="true"><use href="#teken"/></svg>
+        <div class="scene on" data-d="1.6" data-licht><div class="bg"><svg viewBox="0 0 1080 1920" preserveAspectRatio="xMidYMid slice"><use href="#pas-maten" width="1080" height="1920"/></svg></div><div class="vlak"><div class="l"><span class="streep"></span>Nieuw: pasadvies</div><div class="k">Welke <span class="kw">framebag</span> past?</div><div class="r">Vier maten. Eén past precies.</div></div></div>
+        <div class="scene" data-d="2.4" data-licht><div class="bg"><svg viewBox="0 0 1080 1920" preserveAspectRatio="xMidYMid slice"><use href="#pas-afstand" width="1080" height="1920"/></svg></div><div class="vlak"><div class="k">Geen winkel in de <span class="kw">buurt</span>?</div><div class="r">Dan meet je het gewoon thuis.</div></div></div>
+        <div class="scene" data-d="1.8" data-licht><div class="bg"><svg viewBox="0 0 1080 1920" preserveAspectRatio="xMidYMid slice"><use href="#pas-meten" width="1080" height="1920"/></svg></div><div class="vlak stap"><div class="l"><span class="streep"></span>Zo werkt het</div><div class="stapnr">1<small>VAN 3</small></div><div class="k">Meet de binnenkant van je frame.</div></div></div>
+        <div class="scene" data-d="1.8" data-licht><div class="bg"><svg viewBox="0 0 1080 1920" preserveAspectRatio="xMidYMid slice"><use href="#pas-bericht" width="1080" height="1920"/></svg></div><div class="vlak stap"><div class="l"><span class="streep"></span>Zo werkt het</div><div class="stapnr">2<small>VAN 3</small></div><div class="k">Stuur je maten of een foto.</div></div></div>
+        <div class="scene" data-d="1.8" data-licht><div class="bg"><svg viewBox="0 0 1080 1920" preserveAspectRatio="xMidYMid slice"><use href="#pas-keuze" width="1080" height="1920"/></svg></div><div class="vlak stap"><div class="l"><span class="streep"></span>Zo werkt het</div><div class="stapnr">3<small>VAN 3</small></div><div class="k">Je hoort welke maat past.</div></div></div>
+        <div class="scene" data-d="4.5" data-eind><div class="bg"><svg viewBox="0 0 1080 1920" preserveAspectRatio="xMidYMid slice"><use href="#buiten" width="1080" height="1920"/></svg></div><div class="eind"><svg viewBox="0 0 800 240" role="img" aria-label="Cyclite"><use href="#logo"/></svg><div class="k">Vind je maat.</div><div class="cta">Reageer met <b>MAAT</b>, wij sturen je de pashulp</div><div class="a">Nederland · België · Luxemburg</div></div></div>
+        <div class="wipe"></div>
+        <div class="pauze-teken"></div>
+      </div>
+      <div class="timeline"></div>
+      <button class="pp ghost" type="button" aria-pressed="false">❚❚ Pauze</button>
+      <div class="naam"><b>B · Nieuwe dienst</b><span class="muted">Pasbeeld · 14 s · 6 pagina's</span></div>
+    </div>
+
+    <div class="dna-bar">
+      <button id="speel" class="rood" type="button">Speel samen af</button>
+      <button id="allepauze" class="ghost" type="button" aria-pressed="false">❚❚ Pauzeer beide</button>
+      <button id="dna" class="ghost" type="button" aria-pressed="false">Toon de gedeelde stijl</button>
+    </div>
+    <div class="legend dna-bar" aria-live="polite">
+      <span><i></i>Beeldmerk linksboven</span><span><i></i>Schuin tekstvlak</span><span><i></i>Eén rood ding per scène</span><span><i></i>Eindkaart met oplopende rand</span>
+    </div>
+  </div>
+</div>
+
+<section class="blok">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="label"><span class="streep"></span>01 · Eén familie</span>
+      <div class="intro"><h2>Andere taak, zelfde handschrift</h2><p class="muted">Een nieuw template begin je altijd als kopie van een bestaand template. Zo blijft alles wat herkenning geeft staan, en verander je alleen wat de taak vraagt.</p></div>
+    </div>
+    <div class="sec-body familie">
+      <div class="h">Onderdeel</div><div class="h">A · Merkverhaal</div><div class="h">B · Nieuwe dienst</div>
+      <div class="sub">Verschilt per template</div>
+      <div class="rij">Taak</div><div>Laten voelen waar Cyclite voor staat</div><div>Iets nieuws uitleggen en een reactie opleveren</div>
+      <div class="rij">Beeld</div><div>Onderweg, buiten, de tassen aan de fiets</div><div>Thuis of in de winkel: meten, inpakken, handen aan het werk</div>
+      <div class="rij">Opbouw</div><div>Haak · herkenning · wat wij doen · uitnodiging</div><div>Haak · probleem · drie stappen · actie</div>
+      <div class="rij">Rood ding</div><div>Kernwoord in de kop</div><div>Kernwoord, daarna het stapnummer</div>
+      <div class="rij">Eindactie</div><div>Vind een winkel of ga naar cyclite.cc</div><div>Reageer met één woord, de link volgt</div>
+      <div class="sub">Altijd gelijk</div>
+      <div class="rij">Kleur</div><div class="gelijk">Zwart en wit uit het logo, warm grijs, Cyclite-rood spaarzaam</div>
+      <div class="rij">Letter</div><div class="gelijk">Eén schreefloze letter in drie gewichten, koppen vet</div>
+      <div class="rij">Vormen</div><div class="gelijk">Schuin tekstvlak, beeldmerk linksboven, eindkaart met oplopende rand</div>
+      <div class="rij">Beweging</div><div class="gelijk">Alles komt van links, overgangen vegen naar rechts</div>
+      <div class="rij">Logo</div><div class="gelijk">Pas op de eindkaart, nooit als intro</div>
+    </div>
+  </div>
+</section>
+
+<section class="blok">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="label"><span class="streep"></span>02 · Opbouw</span>
+      <div class="intro"><h2>Elke pagina in Canva is één scène</h2><p class="muted">De boodschap staat in de eerste anderhalve seconde. Het logo komt pas aan het eind, als iemand al kijkt.</p></div>
+    </div>
+    <div class="sec-body">
+      <div class="storyrij">
+        <span class="label"><span class="streep"></span>A · Merkverhaal · 12,4 s</span>
+        <div class="story" id="storyA"></div>
+      </div>
+      <div class="storyrij">
+        <span class="label"><span class="streep"></span>B · Nieuwe dienst · 13,9 s</span>
+        <div class="story" id="storyB"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blok">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="label"><span class="streep"></span>03 · Kleur</span>
+      <div class="intro"><h2>Zwart, wit en één keer rood</h2><p class="muted">Het logo is zwart of wit, verder niets. De grijzen en het rood komen van cyclite.cc zelf. Rood is spaarzaam: één woord, één stapnummer of één streep per scène. Eén accent per scène.</p></div>
+    </div>
+    <div class="sec-body">
+      <div class="kleuren">
+        <div class="sw"><div class="c" style="background:var(--wit)"></div><b>Wit</b><code>#FFFFFF</code><span class="muted">Logo, tekstvlak, eindkaart</span></div>
+        <div class="sw"><div class="c" style="background:var(--zwart)"></div><b>Zwart</b><code>#000000</code><span class="muted">Logo, koppen, actieknop</span></div>
+        <div class="sw"><div class="c" style="background:var(--rood)"></div><b>Cyclite-rood</b><code>#DD2E16</code><span class="muted">Kernwoord, stapnummer</span></div>
+        <div class="sw"><div class="c" style="background:var(--inkt)"></div><b>Inkt</b><code>#171717</code><span class="muted">Regels onder de kop</span></div>
+        <div class="sw"><div class="c" style="background:var(--steen)"></div><b>Steen</b><code>#E5E3DF</code><span class="muted">Rustige achtergrond</span></div>
+        <div class="sw"><div class="c" style="background:var(--licht)"></div><b>Licht</b><code>#F5F5F5</code><span class="muted">Vlakken, kaders</span></div>
+      </div>
+      <div class="verhouding" aria-label="Verhouding 60 wit, 30 zwart, 6 grijs, 4 rood">
+        <span style="flex:60;background:var(--wit)"></span><span style="flex:30;background:var(--zwart)"></span><span style="flex:6;background:var(--steen)"></span><span style="flex:4;background:var(--rood)"></span>
+      </div>
+      <p class="muted" style="font-size:14px;margin-top:8px">Op de grafische laag: 60 wit · 30 zwart · 6 grijs · hooguit 4 rood. Geen verlopen, geen extra kleuren.</p>
+    </div>
+  </div>
+</section>
+
+<section class="blok">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="label"><span class="streep"></span>04 · Letters</span>
+      <div class="intro"><h2>Eén letter, strak en vriendelijk</h2><p class="muted">Het schuine woordmerk blijft het enige schuine letterwerk, op het stapnummer na. Teksten staan in gewone zinsopbouw: geen hoofdletters, gewoon zeggen wat je bedoelt. Maten gelden voor een frame van 1080 × 1920.</p></div>
+    </div>
+    <div class="sec-body type">
+      <div class="trow"><div class="meta"><b>Kop</b>TT Norms Pro Bold · 88 px · regelafstand 1,0 · spatiëring -3% · max. 7 woorden</div><div style="font-weight:700;font-size:clamp(32px,5vw,50px);line-height:1;letter-spacing:-.03em;color:var(--zwart)">Tassen die je niet voelt onder het trappen.</div></div>
+      <div class="trow"><div class="meta"><b>Regel</b>TT Norms Pro Medium · 46 px · regelafstand 1,3 · max. 2 regels</div><div style="font-weight:500;font-size:22px">Waterdicht en gemaakt om lang mee te gaan.</div></div>
+      <div class="trow"><div class="meta"><b>Label</b>TT Norms Pro Medium · 30 px · hoofdletters · spatiëring 10%</div><div class="label" style="font-size:15px"><span class="streep"></span>Nieuw: pasadvies</div></div>
+      <div class="trow"><div class="meta"><b>Stapnummer</b>TT Norms Pro Bold Italic · 200 px · Cyclite-rood · met "van 3" eronder</div><div style="display:flex;gap:18px;align-items:center"><span style="font-weight:700;font-style:italic;font-size:72px;line-height:.8;color:var(--rood)">2</span><span style="font-weight:700;font-size:clamp(26px,4vw,38px);line-height:1;letter-spacing:-.03em;color:var(--zwart)">Stuur je maten of een foto.</span></div></div>
+      <p class="muted" style="font-size:14px">Staat TT Norms Pro niet in jullie Canva, neem dan DM Sans: zelfde ronde, rustige vorm. Deze pagina gebruikt DM Sans.</p>
+    </div>
+  </div>
+</section>
+
+<section class="blok">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="label"><span class="streep"></span>05 · Logo</span>
+      <div class="intro"><h2>Welk logo, wanneer</h2><p class="muted">Tijdens de reel staat alleen het beeldmerk linksboven, klein. Het volledige woordmerk komt pas op de eindkaart.</p></div>
+    </div>
+    <div class="sec-body logos">
+      <div class="logo-card"><div class="vlakje" style="background:var(--zwart)"><svg viewBox="0 0 1020 340" fill="#FFFFFF" role="img" aria-label="Beeldmerk wit"><use href="#teken"/></svg></div><b>Beeldmerk, wit</b><span class="muted">Linksboven op donker beeld, 130 px breed.</span></div>
+      <div class="logo-card"><div class="vlakje" style="background:var(--steen)"><svg viewBox="0 0 1020 340" fill="#000000" role="img" aria-label="Beeldmerk zwart"><use href="#teken"/></svg></div><b>Beeldmerk, zwart</b><span class="muted">Linksboven op licht beeld. Ook genoeg voor posts over aanbod of acties.</span></div>
+      <div class="logo-card"><div class="vlakje" style="background:var(--wit);border:1px solid var(--steen)"><svg viewBox="0 0 800 240" fill="#000000" role="img" aria-label="Cyclite zwart"><use href="#logo"/></svg></div><b>Woordmerk, zwart</b><span class="muted">Op de witte eindkaart, met het adres of de actie eronder.</span></div>
+      <div class="logo-card"><div class="vlakje" style="background:var(--inkt)"><svg viewBox="0 0 800 240" fill="#FFFFFF" role="img" aria-label="Cyclite wit"><use href="#logo"/></svg></div><b>Woordmerk, wit</b><span class="muted">Alleen op rustig, donker beeld. Nooit in rood.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="blok">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="label"><span class="streep"></span>06 · Vormen en beweging</span>
+      <div class="intro"><h2>Vaste onderdelen, alles gaat vooruit</h2><p class="muted">Het woordmerk leunt naar voren, en bikepacking gaat over onderweg zijn. Daarom komt elke tekst van links en gaat elke overgang naar rechts. Rustig, nooit druk.</p></div>
+    </div>
+    <div class="sec-body regels">
+      <div class="regel"><span class="tag">A en B</span><div class="demo"><div style="position:absolute;left:18px;right:18px;bottom:24px;height:62px;background:var(--wit);clip-path:polygon(14px 0,100% 0,calc(100% - 14px) 100%,0 100%)"></div></div><h3>Schuin tekstvlak</h3><p class="muted">Wit vlak (96%) met zijkanten onder dezelfde hoek als de i en de l in het woordmerk, 12 graden. Geen ronde hoeken, geen schaduw. Animatie: <i>Pan</i>, van links.</p></div>
+      <div class="regel"><span class="tag">A en B</span><div class="demo" style="display:grid;place-items:center"><span style="font-weight:700;font-size:38px;letter-spacing:-.03em;color:var(--zwart)">Meer <span style="color:var(--rood)">vrijheid</span>.</span></div><h3>Rood kernwoord</h3><p class="muted">Eén woord per scène, als los tekstvak in Cyclite-rood. Een rood blok schuift er van links overheen en laat het woord achter. Animatie: <i>Block</i>.</p></div>
+      <div class="regel"><span class="tag">A en B</span><div class="demo" style="background:linear-gradient(100deg,var(--inkt) 0 46%,var(--wit) 46% 66%,var(--rood) 66% 70%,var(--steen) 70%)"></div><h3>Veeg naar rechts</h3><p class="muted">Tussen scènes veegt een wit vlak met een rode voorrand naar rechts, 0,4 s. Paginaovergang: <i>Color wipe</i>, wit, richting rechts.</p></div>
+      <div class="regel"><span class="tag">B</span><div class="demo" style="display:flex;gap:14px;align-items:center;padding:0 22px"><span style="font-weight:700;font-style:italic;font-size:72px;line-height:.8;color:var(--rood)">1</span><span style="font-weight:700;font-size:22px;line-height:1.05;color:var(--zwart)">Meet de binnenkant van je frame.</span></div><h3>Stappenvlak</h3><p class="muted">Hetzelfde tekstvlak, met het schuine stapnummer als het rode ding. Altijd drie stappen, elk 1,8 s.</p></div>
+      <div class="regel"><span class="tag">B</span><div class="demo" style="display:grid;place-items:center"><span style="background:var(--zwart);color:var(--wit);font-weight:500;font-size:18px;padding:9px 16px;border-radius:6px">Reageer met <b style="border-bottom:3px solid var(--rood)">MAAT</b></span></div><h3>Actieknop</h3><p class="muted">Zwarte knop met de afronding van cyclite.cc, één woord om te reageren. Koppel dat woord aan een automatisch bericht met de pashulp.</p></div>
+      <div class="regel"><span class="tag">A en B</span><div class="demo" style="background:var(--inkt)"><div style="position:absolute;left:0;right:0;bottom:0;top:40%;background:var(--wit);clip-path:polygon(0 22px,100% 0,100% 100%,0 100%)"></div></div><h3>Eindkaart met oplopende rand</h3><p class="muted">Witte onderhelft met een rand die naar rechts oploopt. Woordmerk, één zin, actie of winkels.</p></div>
+    </div>
+    <p class="sec-body muted" style="font-size:14px;margin-top:20px">Namen van animaties zijn die uit de Engelstalige Canva. In de Nederlandse versie kunnen ze iets anders heten.</p>
+  </div>
+</section>
+
+<section class="blok">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="label"><span class="streep"></span>07 · Beeld en veilige zone</span>
+      <div class="intro"><h2>Echt beeld, en buiten de knoppen blijven</h2><p class="muted">Merkbeeld laat zien waar de tassen heen gaan. Pasbeeld laat zien hoe het werkt. Allebei echt, allebei rechtop gefilmd.</p></div>
+    </div>
+    <div class="sec-body veilig">
+      <div class="zone" aria-label="Veilige zone op een 1080 bij 1920 frame">
+        <div class="bg"><svg viewBox="0 0 1080 1920" preserveAspectRatio="xMidYMid slice"><use href="#buiten" width="1080" height="1920"/></svg></div>
+        <div class="z" style="left:0;right:0;top:0;height:23.15cqw">Profiel en tijdbalk</div>
+        <div class="z" style="left:0;right:0;bottom:0;height:38.9cqw">Bijschrift en knoppen</div>
+        <div class="z" style="right:0;top:23.15cqw;bottom:38.9cqw;width:12.96cqw"></div>
+        <div class="ok"></div>
+      </div>
+      <ul class="plain">
+        <li><b>Veilig vlak</b><span>70 px links, 140 px rechts, 250 px boven, 420 px onder. Werkt voor reels én stories.</span></li>
+        <li><b>Filmen</b><span>Rechtop, telefoon stil, laag bij de grond. Een fiets van opzij die van links naar rechts rijdt, past bij de beweging van het template.</span></li>
+        <li><b>De tassen</b><span>Dichtbij: rits, sluiting, het inpakken op de grond. Laat zien hoe klein en licht het is, niet alleen dát het er is.</span></li>
+        <li><b>Licht</b><span>Vroeg of laat op de dag. Geen filters, het lichtgrijs moet lichtgrijs blijven.</span></li>
+        <li><b>Eerste beeld</b><span>Er gebeurt iets vanaf frame één. Geen logo-intro, geen zwart.</span></li>
+        <li><b>Muziek</b><span>Eén nummer per reel, rond 100 tot 120 BPM. Zet <i>Beat Sync</i> aan, dan valt elke overgang op de tel.</span></li>
+        <li><b>Ondertitels</b><span>De meeste mensen kijken zonder geluid. Wat gezegd wordt, staat ook in beeld.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="blok">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="label"><span class="streep"></span>08 · Bouwen in Canva</span>
+      <div class="intro"><h2>Eén keer goed neerzetten</h2><p class="muted">Daarna kost een nieuwe reel een kwartier op de telefoon.</p></div>
+    </div>
+    <div class="sec-body">
+      <ol class="stappen">
+        <li><div><b>Merkkit vullen</b><span class="muted">Woordmerk en beeldmerk in zwart en wit, de zes kleuren, en TT Norms Pro (anders DM Sans).</span></div></li>
+        <li><div><b>Template A bouwen</b><span class="muted">Instagram Reel, 1080 × 1920, vier pagina's van 1,6 · 3,2 · 3,6 · 4,0 s. Per pagina: video, tekstvlak (SVG uit de kit), kop, kernwoord als los tekstvak, regel, beeldmerk.</span></div></li>
+        <li><div><b>Vastzetten wat vast hoort</b><span class="muted">Tekstvlak, beeldmerk, eindkaart en logo vergrendelen. Dan kan op de telefoon alleen beeld en tekst veranderen.</span></div></li>
+        <li><div><b>Template B als kopie van A</b><span class="muted">Dupliceer A, zet het op zes pagina's (1,6 · 2,4 · 1,8 · 1,8 · 1,8 · 4,5 s), maak drie stappenvlakken en zet de actieknop op de eindkaart.</span></div></li>
+        <li><div><b>Beweging instellen</b><span class="muted">Tekstvlak en kop: Pan van links. Kernwoord en stapnummer: Block. Tussen de pagina's: Color wipe, wit, naar rechts, 0,4 s.</span></div></li>
+        <li><div><b>Opslaan als merksjablonen</b><span class="muted">Delen met het team. Wie een reel maakt, kiest het juiste sjabloon en vervangt alleen video, tekst en muziek.</span></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="blok">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="label"><span class="streep"></span>09 · Klaar voor gebruik</span>
+      <div class="intro"><h2>Twaalf shots voor één draaidag</h2><p class="muted">De reels hierboven gebruiken getekende scènes tot het eigen beeld er is. Met deze lijst is dat in één dag gedraaid, daarna rechtop gesneden: 1080 × 1920, zonder geluid, direct te uploaden in Canva.</p></div>
+    </div>
+    <div class="sec-body shots">
+      <div><h3>Merkbeeld · onderweg</h3>
+        <ol>
+          <li><span>01</span>Fiets met volle tassen rijdt van links het beeld in</li>
+          <li><span>02</span>Tassen van opzij, laag bij de grond, in beweging</li>
+          <li><span>03</span>Zadeltas van dichtbij, weg loopt eronder door</li>
+          <li><span>04</span>Grindpad in de Kempen of de Ardennen, rijder klein in beeld</li>
+          <li><span>05</span>Bovenaf: alle tassen naast elkaar op de grond</li>
+          <li><span>06</span>Avond: tas open, slaapzak eruit</li>
+        </ol>
+      </div>
+      <div><h3>Pasbeeld · meten en inpakken</h3>
+        <ol>
+          <li><span>P1</span>Rolmaat langs de bovenbuis</li>
+          <li><span>P2</span>Rolmaat langs de zitbuis</li>
+          <li><span>P3</span>Telefoon maakt een foto van het frame</li>
+          <li><span>P4</span>Framebag gaat erin, banden worden aangetrokken</li>
+          <li><span>P5</span>Hand duwt de tas: hij zit stil</li>
+          <li><span>P6</span>Iemand rijdt weg met de nieuwe tas</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blok">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="label"><span class="streep"></span>10 · Nog te checken</span>
+      <div class="intro"><h2>Drie dingen voor we bouwen</h2></div>
+    </div>
+    <div class="sec-body open">
+      <div><h3>Pasadvies</h3><p class="muted">Wie beantwoordt de reacties op MAAT, en waar gaat de link heen? Op de framebag-pagina staat nu geen maattabel. De drie stappen zijn voorbeeldtekst tot dat vastligt.</p></div>
+      <div><h3>Winkels</h3><p class="muted">"Vind een winkel bij jou in de buurt" werkt pas als er genoeg winkels in de Benelux bij komen. Tot dan noemt de eindkaart cyclite.cc.</p></div>
+      <div><h3>Lettertype</h3><p class="muted">TT Norms Pro in jullie Canva-account controleren. Anders DM Sans, de rest van de regels blijft gelijk.</p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">Concept voor Cyclite · Loek Luijbregts · Woordmerk en beeldmerk: Cyclite. Echte ritten, echte verhalen. Voor fietsers, door fietsers.</div>
+</footer>
+
+<script>
+(function(){
+  const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const players=[...document.querySelectorAll('[data-player]')].map(root=>{
+    const reel=root.querySelector('.reel');
+    const scenes=[...reel.querySelectorAll('.scene')];
+    const durs=scenes.map(s=>parseFloat(s.dataset.d));
+    const tl=root.querySelector('.timeline');
+    tl.innerHTML=durs.map(d=>'<span style="--d:'+d+'"><i></i></span>').join('');
+    const bars=[...tl.querySelectorAll('i')];
+    const wipe=reel.querySelector('.wipe');
+    const teken=reel.querySelector('.teken');
+    const btn=root.querySelector('.pp');
+    const st={i:0,running:false,paused:false,timer:null,t0:0,left:0};
+    function setBtn(){
+      btn.textContent=st.paused?'▶ Afspelen':'❚❚ Pauze';
+      btn.setAttribute('aria-pressed',st.paused?'true':'false');
+      reel.classList.toggle('paused',st.paused);
+    }
+    function arm(ms){clearTimeout(st.timer);st.t0=performance.now();st.left=ms;st.timer=setTimeout(next,ms);}
+    function show(n){
+      st.i=n;
+      scenes.forEach(e=>e.classList.remove('on'));
+      void reel.offsetWidth;
+      scenes[n].classList.add('on');
+      reel.classList.toggle('licht',scenes[n].hasAttribute('data-licht'));
+      teken.style.opacity=scenes[n].hasAttribute('data-eind')?0:1;
+      bars.forEach((b,k)=>{b.style.transition='none';b.style.transform='scaleX('+(k<n?1:0)+')';});
+      if(st.running){requestAnimationFrame(()=>{const b=bars[n];b.style.transition='transform '+durs[n]+'s linear';b.style.transform='scaleX(1)';});}
+    }
+    function next(){
+      if(!st.running||st.paused)return;
+      const n=(st.i+1)%scenes.length;
+      if(!reduce){wipe.classList.remove('go');void wipe.offsetWidth;wipe.classList.add('go');}
+      st.timer=setTimeout(()=>{if(st.paused)return;show(n);arm(durs[n]*1000);},reduce?0:200);
+    }
+    function play(from){st.paused=false;setBtn();st.running=true;show(from??st.i);arm(durs[st.i]*1000);}
+    function pause(){
+      if(!st.running||st.paused)return;
+      st.paused=true;clearTimeout(st.timer);
+      st.left=Math.max(0,st.left-(performance.now()-st.t0));
+      bars.forEach(b=>{const t=getComputedStyle(b).transform;b.style.transition='none';b.style.transform=t;});
+      setBtn();
+    }
+    function resume(){
+      if(!st.paused)return;
+      st.paused=false;setBtn();
+      const b=bars[st.i];b.style.transition='transform '+(st.left/1000)+'s linear';b.style.transform='scaleX(1)';
+      arm(st.left);
+    }
+    function toggle(){if(!st.running){play(0);}else if(st.paused){resume();}else{pause();}}
+    btn.addEventListener('click',toggle);
+    reel.addEventListener('click',toggle);
+    show(0);
+    return {play,pause,resume,toggle,reel,scenes,st};
+  });
+  window.__reels=players;
+  document.getElementById('speel').addEventListener('click',()=>{players.forEach(p=>p.play(0));setAlle(false);});
+  const alle=document.getElementById('allepauze');
+  function setAlle(p){alle.textContent=p?'▶ Speel beide verder':'❚❚ Pauzeer beide';alle.setAttribute('aria-pressed',p?'true':'false');}
+  alle.addEventListener('click',()=>{
+    const anyPlaying=players.some(p=>p.st.running&&!p.st.paused);
+    if(anyPlaying){players.forEach(p=>p.pause());setAlle(true);}
+    else{players.forEach(p=>p.st.running?p.resume():p.play(0));setAlle(false);}
+  });
+  const dnaBtn=document.getElementById('dna');
+  dnaBtn.addEventListener('click',()=>{
+    const on=document.getElementById('hero').classList.toggle('dna');
+    dnaBtn.setAttribute('aria-pressed',on?'true':'false');
+    dnaBtn.textContent=on?'Verberg de gedeelde stijl':'Toon de gedeelde stijl';
+  });
+  if(!reduce && !/[?&]stil\b/.test(location.search))players.forEach(p=>p.play(0));
+
+  // storyboards: statische kopieën van elke scène
+  const meta={storyA:{p:0,t:['Haak','Herkenning','Wat wij doen','Uitnodiging']},storyB:{p:1,t:['Haak','Probleem','Stap 1','Stap 2','Stap 3','Actie']}};
+  Object.entries(meta).forEach(([id,m])=>{
+    const host=document.getElementById(id);const pl=players[m.p];let t=0;
+    pl.scenes.forEach((sc,k)=>{
+      const d=parseFloat(sc.dataset.d);
+      const fig=document.createElement('figure');
+      const reel=document.createElement('div');reel.className='reel'+(sc.hasAttribute('data-licht')?' licht':'');
+      if(!sc.hasAttribute('data-eind'))reel.innerHTML='<svg class="teken" viewBox="0 0 1020 340" aria-hidden="true"><use href="#teken"/></svg>';
+      const c=sc.cloneNode(true);c.className='scene static';reel.appendChild(c);
+      const cap=document.createElement('figcaption');
+      cap.innerHTML='<span class="tijd">'+t.toFixed(1).replace('.',',')+' - '+(t+d).toFixed(1).replace('.',',')+' s</span><b>'+m.t[k]+'</b>';
+      t+=d;fig.appendChild(reel);fig.appendChild(cap);host.appendChild(fig);
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

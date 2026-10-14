@@ -3,5 +3,7 @@ Allow: /
 Disallow: /WaranaFilmCompany/
 Disallow: /Ventoux/
 Disallow: /ventoux-stijl/
+Disallow: /Cyclite/
+Disallow: /cyclite-stijl/
 
 Sitemap: https://loekluijbregts.com/sitemap.xml
