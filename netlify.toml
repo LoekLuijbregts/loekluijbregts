@@ -1,2 +1,13 @@
-[build]
+[[redirects]]
+  from = "/mirror/*"
+  to = "https://ornate-donut-1191ef.netlify.app/mirror/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/mirror"
+  to = "https://ornate-donut-1191ef.netlify.app/mirror"
+  status = 200
+  force = true
+  [build]
   command = "node scripts/check-affiliate-links.mjs"
