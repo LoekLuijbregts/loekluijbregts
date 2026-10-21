@@ -66,6 +66,29 @@ section{padding-block:clamp(48px,7vw,88px)}
 .step p{margin:8px 0 0;font-size:.98rem}
 .stage{display:grid;grid-template-columns:.62fr 1fr 1fr;gap:12px;margin-top:24px}
 .stage img{border-radius:12px;width:100%;height:100%;object-fit:cover}
+.case h3,.route h3,.film h3{margin-bottom:10px}
+.photo{margin:0}
+.photo img{width:100%;border-radius:14px;object-fit:cover}
+.photo figcaption{margin-top:10px;font-size:.88rem;color:var(--muted);line-height:1.45}
+.photo.wide{margin-top:34px}
+.photo.wide img{aspect-ratio:16/7}
+.route{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(20px,4vw,48px);align-items:center;padding-top:clamp(28px,4vw,48px);border-top:1px solid var(--line);margin-top:clamp(12px,2vw,24px)}
+.route .num{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:10px}
+.route .molen img{aspect-ratio:16/9}
+.stories{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+.stories img{border-radius:12px;aspect-ratio:480/668;object-fit:cover;width:100%;border:1px solid var(--line)}
+.film{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,4vw,48px);align-items:center;padding-top:clamp(28px,4vw,48px);border-top:1px solid var(--line);margin-top:clamp(28px,4vw,48px)}
+.film .num{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:10px}
+.vid{position:relative;display:block;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:var(--navy);box-shadow:0 18px 40px -26px rgba(21,32,66,.6)}
+.vid img{width:100%;height:100%;object-fit:cover}
+.vid i{position:absolute;inset:0;margin:auto;width:68px;height:68px;border-radius:50%;background:rgba(21,32,66,.78);display:grid;place-items:center}
+.vid i:after{content:"";margin-left:5px;border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff}
+.vid:hover i{background:var(--blue)}
+.band{padding:0;background:var(--navy)}
+.band img{border-radius:0;width:100%;height:clamp(220px,38vw,460px);object-fit:cover;object-position:center 45%}
+.band figcaption{padding:12px clamp(16px,5vw,40px);font-size:.85rem;color:rgba(255,255,255,.72);max-width:var(--wrap);margin-inline:auto}
+.contact .grid2{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(24px,5vw,60px);align-items:center}
+.contact .photo figcaption{color:rgba(255,255,255,.72)}
 .contact{background:var(--navy);color:#fff}
 .contact h2{color:#fff}
 .contact p{color:rgba(255,255,255,.82)}
@@ -73,7 +96,7 @@ section{padding-block:clamp(48px,7vw,88px)}
 .contact .btn{background:#fff;color:var(--navy)}
 footer{padding-block:24px;font-size:.82rem;color:var(--muted)}
 @media (max-width:860px){
- .hero .grid,.two,.case,.steps{grid-template-columns:1fr}
+ .hero .grid,.two,.case,.steps,.route,.film,.contact .grid2{grid-template-columns:1fr}
  .case.flip .txt{order:0}
  .docs{grid-template-columns:repeat(2,1fr)}
  .stage{grid-template-columns:1fr 1fr}
@@ -109,6 +132,7 @@ footer{padding-block:24px;font-size:.82rem;color:var(--muted)}
       <li><b>Communicatie.</b> Verhalen die het verdienen om gezien te worden, en daarom gepubliceerd worden in plaats van gekocht.</li>
     </ul>
   </div>
+  <figure class="photo wide"><img src="assets/img/shorttrack.webp" width="1400" height="788" loading="lazy" alt="Het WK short track-ijs in Tilburg, met reclameborden langs de baan waaronder BrabantSport"><figcaption>Short track in Tilburg. Langs de baan hangt de naam van BrabantSport.</figcaption></figure>
   <p class="note" style="margin-top:18px">Dit is mijn lezing op basis van wat BrabantSport zelf openbaar deelt. In een gesprek hoor ik graag wat ik mis.</p>
 </div>
 </section>
@@ -162,6 +186,32 @@ footer{padding-block:24px;font-size:.82rem;color:var(--muted)}
       <img src="assets/img/izmir.webp" width="1300" height="974" loading="lazy" alt="EuroVelo en Cycling Tourism Conference 2023 in Izmir">
     </div>
   </div>
+
+  <div class="route">
+    <div>
+      <div class="num">Een Brabants voorbeeld</div>
+      <h3>Een bikepackroute die zichzelf deelde</h3>
+      <p>Ik maakte en fietste een bikepackroute langs de Zuiderwaterlinie. De verhalen onderweg, van Slot Loevestein tot het pontje bij Woudrichem en Kasteel Dussen, werden opgepikt en bereikten 800.000 vertoningen. Dat is wat gebeurt als je iets maakt dat mensen zelf willen doorgeven.</p>
+    </div>
+    <div>
+      <figure class="photo molen"><img src="assets/img/molen.webp" width="1400" height="788" loading="lazy" alt="Fietser met bikepacktassen bij een molen langs de Zuiderwaterlinie"></figure>
+      <div class="stories">
+        <img src="assets/img/story-loevestein.webp" width="480" height="668" loading="lazy" alt="Instagram-story bij Slot Loevestein">
+        <img src="assets/img/story-woudrichem.webp" width="480" height="668" loading="lazy" alt="Instagram-story op het pontje bij Woudrichem">
+        <img src="assets/img/story-dussen.webp" width="480" height="668" loading="lazy" alt="Instagram-story bij Kasteel Dussen">
+      </div>
+    </div>
+  </div>
+
+  <div class="film">
+    <div>
+      <div class="num">Een kantelpunt</div>
+      <h3>De film waarmee een hoofdstuk eindigde</h3>
+      <p>Met deze film sloot ik mijn Fatpigeon.cc-tijd af. Daarna ging ik me richten op de ontwikkeling van meer dan alleen het fietsplezier van onze community.</p>
+      <div class="links"><a class="btn" href="https://youtu.be/kaed8Gpdbhs?t=13" target="_blank" rel="noopener">Bekijk de film op YouTube</a></div>
+    </div>
+    <a class="vid" href="https://youtu.be/kaed8Gpdbhs?t=13" target="_blank" rel="noopener" aria-label="Bekijk de film op YouTube"><img src="https://i.ytimg.com/vi/kaed8Gpdbhs/hqdefault.jpg" width="480" height="360" loading="lazy" alt=""><i></i></a>
+  </div>
 </div>
 </section>
 
@@ -198,15 +248,21 @@ footer{padding-block:24px;font-size:.82rem;color:var(--muted)}
 </div>
 </section>
 
+<figure class="photo band"><img src="assets/img/sneeuw.webp" width="1024" height="768" loading="lazy" alt="Drie fietsers in de winter in de duinen, van boven gezien"><figcaption>Winter in de duinen.</figcaption></figure>
+
 <section class="contact">
-<div class="wrap">
+<div class="wrap grid2">
+<div>
   <h2>Liever samen tien keer een 8</h2>
   <p style="margin-top:14px;max-width:56ch">Ik help anderen al jaren winnen, maar ik ben geen type solo winnaar. Liever samen tien keer een 8 dan alleen drie keer een 10. Samen winnen is meer dan goud.</p>
   <p style="max-width:56ch">Ik werk al mijn hele leven vanuit Brabant. Via de Tilburgse sportprogramma's ontdekte ik als jongere allerlei sporten, nu doen mijn twee kinderen er weer verschillende. Daar begint mijn betrokkenheid. Wat ik hierboven laat zien is hoe ik die omzet in werk.</p>
+  <p style="max-width:56ch">Mijn opa fietste op zijn tachtigste nog zo'n 10.000 kilometer per jaar, bij zijn club in Tilburg.</p>
   <div class="links" style="margin-top:18px">
     <a class="btn" href="mailto:loek@cyclingincubators.com">loek@cyclingincubators.com</a>
     <a class="btn" href="tel:+31650939434">06 50 93 94 34</a>
   </div>
+</div>
+<figure class="photo"><img src="assets/img/samen.webp" width="1400" height="788" loading="lazy" alt="Een groep fietsers met opgestoken armen in een weids heuvellandschap, van boven gezien"><figcaption>Samen onderweg.</figcaption></figure>
 </div>
 </section>
 
