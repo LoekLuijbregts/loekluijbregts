@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /WaranaFilmCompany/
+Disallow: /example/
 Disallow: /Ventoux/
 Disallow: /ventoux-stijl/
 
