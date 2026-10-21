@@ -56,6 +56,10 @@ section{padding-block:clamp(48px,7vw,88px)}
 .doc b{display:block;margin-top:10px;font-size:.95rem;line-height:1.25}
 .doc span{display:block;font-size:.82rem;color:var(--muted);line-height:1.35;margin-top:2px}
 .doc:hover b{color:var(--blue)}
+.tag{display:block;font-style:normal;font-size:.78rem;font-weight:650;margin-top:6px;color:var(--muted)}
+.tag.open{color:var(--blue)}
+.locked{cursor:default}
+.locked .th{opacity:.75}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
 .step{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px}
 .step .m{font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:8px}
@@ -122,7 +126,7 @@ footer{padding-block:24px;font-size:.82rem;color:var(--muted)}
       <div class="links">
         <a class="btn" href="https://portal.cyclingincubators.com" target="_blank" rel="noopener">Open de portal</a>
       </div>
-      <p class="note" style="margin-top:10px">De portal is inlogbaar op uitnodiging. De plaatjes hiernaast tonen de demo. Wil je zelf kijken, dan stuur ik een uitnodiging.</p>
+      <p class="note" style="margin-top:10px">Inloggen kan op uitnodiging. HR van BrabantSport heeft toegang. De plaatjes hiernaast tonen de demo.</p>
     </div>
     <div class="shots">
       <div class="shot"><img src="assets/shots/portal-home.jpg" width="1280" height="820" loading="lazy" alt="Overzicht van de klantomgeving met zes stappen"></div>
@@ -165,18 +169,18 @@ footer{padding-block:24px;font-size:.82rem;color:var(--muted)}
 <div class="wrap">
   <p class="eyebrow">De tien documenten</p>
   <h2>Het stramien waarmee ik een samenwerking opzet</h2>
-  <p class="lede" style="margin-top:14px">Tien korte documenten, in vaste volgorde. Ze zijn bedoeld om snel duidelijk te hebben wat er ligt, wie wat doet en hoe we laten zien wat het oplevert. Klik om de pdf te openen. Voorstel en prijsblad zijn sjablonen.</p>
+  <p class="lede" style="margin-top:14px">Tien korte documenten, in vaste volgorde. Ze zijn bedoeld om snel duidelijk te hebben wat er ligt, wie wat doet en hoe we laten zien wat het oplevert. Vier ervan kun je openen en downloaden: klik op het document met "Klik om te openen". De andere zes zijn werkdocumenten voor een samenwerking die ik graag in een gesprek laat zien.</p>
   <div class="docs">
-    <a class="doc" href="assets/pdf/portfolio.pdf"><div class="th"><img src="assets/docs/portfolio.jpg" width="877" height="621" loading="lazy" alt=""></div><b>Portfolio</b><span>Voorbeelden van verdiende aandacht</span></a>
-    <a class="doc" href="assets/pdf/vragenlijst.pdf"><div class="th"><img src="assets/docs/vragenlijst.jpg" width="621" height="877" loading="lazy" alt=""></div><b>Vragenlijst</b><span>Waar sta je nu en wat kost wachten</span></a>
-    <a class="doc" href="assets/pdf/brief.pdf"><div class="th"><img src="assets/docs/brief.jpg" width="621" height="877" loading="lazy" alt=""></div><b>Opdrachtbrief</b><span>Wat willen we bereiken en na hoeveel dagen</span></a>
-    <a class="doc" href="assets/pdf/prijsblad.pdf"><div class="th"><img src="assets/docs/prijsblad.jpg" width="877" height="621" loading="lazy" alt=""></div><b>Prijsblad</b><span>Wat je krijgt en wat het kost</span></a>
-    <a class="doc" href="assets/pdf/voorstel.pdf"><div class="th"><img src="assets/docs/voorstel.jpg" width="621" height="877" loading="lazy" alt=""></div><b>Voorstel</b><span>Het plan op één pagina</span></a>
-    <a class="doc" href="assets/pdf/overeenkomst.pdf"><div class="th"><img src="assets/docs/overeenkomst.jpg" width="621" height="877" loading="lazy" alt=""></div><b>Overeenkomst</b><span>Afspraken, helder en kort</span></a>
-    <a class="doc" href="assets/pdf/onboarding.pdf"><div class="th"><img src="assets/docs/onboarding.jpg" width="621" height="877" loading="lazy" alt=""></div><b>Startlijst</b><span>De eerste stappen, in vaste volgorde</span></a>
-    <a class="doc" href="assets/pdf/toegang.pdf"><div class="th"><img src="assets/docs/toegang.jpg" width="877" height="621" loading="lazy" alt=""></div><b>Toegangslijst</b><span>Welke kanalen en welke rechten</span></a>
-    <a class="doc" href="assets/pdf/contentplan.pdf"><div class="th"><img src="assets/docs/contentplan.jpg" width="621" height="877" loading="lazy" alt=""></div><b>Contentplan</b><span>Wat we maken, waar en wanneer</span></a>
-    <a class="doc" href="assets/pdf/rapport.pdf"><div class="th"><img src="assets/docs/rapport.jpg" width="621" height="877" loading="lazy" alt=""></div><b>Maandrapport</b><span>Wat het opleverde en wat we nu doen</span></a>
+    <a class="doc" href="assets/pdf/portfolio.pdf"><div class="th"><img src="assets/docs/portfolio.jpg" width="877" height="621" loading="lazy" alt=""></div><b>Portfolio</b><span>Voorbeelden van verdiende aandacht</span><em class="tag open">Klik om te openen</em></a>
+    <a class="doc" href="assets/pdf/vragenlijst.pdf"><div class="th"><img src="assets/docs/vragenlijst.jpg" width="621" height="877" loading="lazy" alt=""></div><b>Vragenlijst</b><span>Waar sta je nu en wat kost wachten</span><em class="tag open">Klik om te openen</em></a>
+    <div class="doc locked"><div class="th"><img src="assets/docs/brief.jpg" width="621" height="877" loading="lazy" alt=""></div><b>Opdrachtbrief</b><span>Wat willen we bereiken en na hoeveel dagen</span><em class="tag">Op aanvraag</em></div>
+    <div class="doc locked"><div class="th"><img src="assets/docs/prijsblad.jpg" width="877" height="621" loading="lazy" alt=""></div><b>Prijsblad</b><span>Wat je krijgt en wat het kost</span><em class="tag">Op aanvraag</em></div>
+    <div class="doc locked"><div class="th"><img src="assets/docs/voorstel.jpg" width="621" height="877" loading="lazy" alt=""></div><b>Voorstel</b><span>Het plan op één pagina</span><em class="tag">Op aanvraag</em></div>
+    <div class="doc locked"><div class="th"><img src="assets/docs/overeenkomst.jpg" width="621" height="877" loading="lazy" alt=""></div><b>Overeenkomst</b><span>Afspraken, helder en kort</span><em class="tag">Op aanvraag</em></div>
+    <a class="doc" href="assets/pdf/onboarding.pdf"><div class="th"><img src="assets/docs/onboarding.jpg" width="621" height="877" loading="lazy" alt=""></div><b>Startlijst</b><span>De eerste stappen, in vaste volgorde</span><em class="tag open">Klik om te openen</em></a>
+    <a class="doc" href="assets/pdf/toegang.pdf"><div class="th"><img src="assets/docs/toegang.jpg" width="877" height="621" loading="lazy" alt=""></div><b>Toegangslijst</b><span>Welke kanalen en welke rechten</span><em class="tag open">Klik om te openen</em></a>
+    <div class="doc locked"><div class="th"><img src="assets/docs/contentplan.jpg" width="621" height="877" loading="lazy" alt=""></div><b>Contentplan</b><span>Wat we maken, waar en wanneer</span><em class="tag">Op aanvraag</em></div>
+    <div class="doc locked"><div class="th"><img src="assets/docs/rapport.jpg" width="621" height="877" loading="lazy" alt=""></div><b>Maandrapport</b><span>Wat het opleverde en wat we nu doen</span><em class="tag">Op aanvraag</em></div>
   </div>
 </div>
 </section>
