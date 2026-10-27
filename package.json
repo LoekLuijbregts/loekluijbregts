@@ -1,0 +1,8 @@
+{
+  "name": "loekluijbregts",
+  "private": true,
+  "description": "Statische site. Alleen nodig voor Netlify Functions (Blobs voor /NYE/).",
+  "dependencies": {
+    "@netlify/blobs": "10.7.13"
+  }
+}

@@ -1,0 +1,686 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NYE bij Irina &amp; Loek</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Oud en nieuw 2026-2027 bij Irina en Loek aan de Oisterwijksebaan. Kies je gang.">
+<meta property="og:title" content="NYE bij Irina &amp; Loek">
+<meta property="og:description" content="31 december aan de Oisterwijksebaan. Kies je gang en neem bubbels mee.">
+<meta property="og:image" content="https://www.loekluijbregts.com/NYE/media/sterretjes.jpg">
+<meta name="theme-color" content="#036A9D">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: de I-homepage (wit, zwart, harde lijnen, roze offset-schaduw), uitgerekt tot een feestavond met één nachtblauwe band voor middernacht. */
+:root{
+  --paper:#FFFFFF; --ink:#111111; --blue:#036A9D; --pink:#F5B5D3; --cyan:#05B1D2; --navy:#0A3550;
+  --muted:#4A4F55; --night-ink:#FFFFFF;
+  --display:'Inter Tight', 'Arial Narrow', Arial, sans-serif;
+  --body:'Inter', Arial, sans-serif;
+  --mono:'IBM Plex Mono', ui-monospace, Menlo, monospace;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)}
+body{margin:0}
+img{max-width:100%}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+[hidden]{display:none!important}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:var(--ink)}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(20px, env(safe-area-inset-left, 0px));padding-right:max(20px, env(safe-area-inset-right, 0px))}
+.mono{font-family:var(--mono);font-size:13px;font-weight:500}
+h1,h2,h3{font-family:var(--display);font-weight:800;margin:0;text-wrap:balance}
+.dot{display:inline-block;width:14px;height:14px;border-radius:50%;flex-shrink:0}
+.sq{display:inline-block;width:14px;height:14px;background:var(--blue);flex-shrink:0}
+:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
+
+/* top */
+.top{display:flex;justify-content:space-between;align-items:center;min-height:56px}
+.top b{font-family:var(--display);font-weight:800;font-size:16px;letter-spacing:-.01em}
+.rule{border-top:1px solid var(--ink)}
+
+/* hero */
+.hero{display:grid;gap:32px;padding-block:24px 0}
+.meta-row{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.meta-row .code{color:var(--blue)}
+.meta-row .end{margin-left:auto}
+.hero h1{font-size:clamp(64px, 13vw, 132px);line-height:.88;letter-spacing:-.045em}
+.hero h1 .p{color:var(--blue)}
+.lede{margin:0;font-size:19px;line-height:1.45;max-width:30ch;margin-left:clamp(0px, 20vw, 110px)}
+.frame{border:3px solid var(--ink);box-shadow:-4px 4px 0 var(--pink);background-color:var(--cyan);background-image:radial-gradient(rgba(17,17,17,.14) .7px, transparent .9px);background-size:3px 3px;padding:14px}
+.frame video,.frame img{display:block;width:100%;height:100%;object-fit:cover;border:2px solid var(--ink);background:var(--navy)}
+.hero-media{display:flex;flex-direction:column;gap:14px;max-width:420px;width:100%}
+.hero-media .frame{aspect-ratio:4/5;max-width:100%}
+.legend{display:flex;align-items:center;gap:14px}
+.legend .dots{display:flex;gap:6px}
+.legend .end{margin-left:auto}
+@media (min-width:900px){
+  .hero{grid-template-columns:1.25fr 1fr;align-items:end;gap:48px}
+  .hero-text{display:flex;flex-direction:column;gap:28px;padding-bottom:8px}
+  .hero-media{justify-self:end}
+}
+@media (max-width:899px){.hero-text{display:flex;flex-direction:column;gap:26px}}
+
+/* stats */
+.stats{display:flex;border-top:1px solid var(--ink);margin-top:36px}
+.stat{flex:1;padding:14px 0 16px 14px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.stat:first-child{padding-left:0}
+.stat+.stat{border-left:1px solid var(--ink)}
+.stat .n{font-family:var(--display);font-weight:800;font-size:clamp(34px, 6vw, 56px);line-height:1;letter-spacing:-.03em;color:var(--blue);font-variant-numeric:tabular-nums}
+.stat .l{font-size:13px}
+.ctas{display:grid;gap:12px;padding-top:4px}
+@media (min-width:700px){.ctas{grid-template-columns:1fr 1fr}}
+.btn{min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 16px;font-family:var(--display);font-weight:700;font-size:18px;text-decoration:none;cursor:pointer;text-align:left}
+.btn-primary{background:var(--blue);color:#FFFFFF;border:0;box-shadow:-3px 3px 0 var(--pink)}
+.btn-primary:hover{background:var(--navy)}
+.btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+.btn-ghost:hover{background:var(--pink)}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+.btn .arrow{font-family:var(--mono);font-size:14px}
+
+/* sections */
+section{padding-block:72px 0}
+.kicker{display:flex;gap:14px;align-items:flex-start}
+.kicker .sq{margin-top:14px}
+.kicker h2{font-size:clamp(36px, 6vw, 56px);line-height:.98;letter-spacing:-.035em}
+.sub{max-width:58ch;font-size:17px;margin:18px 0 0 28px}
+
+/* list rows */
+.list{margin-top:36px}
+.list-head{display:flex;justify-content:space-between;padding-bottom:10px}
+.row{display:flex;align-items:baseline;gap:14px;min-height:64px;padding:12px 0;border-top:1px solid var(--ink)}
+.list-head + .row{border-top-width:4px}
+.row:last-child{border-bottom:1px solid var(--ink)}
+.row .num{color:var(--blue);min-width:26px}
+.row .name{font-family:var(--display);font-weight:700;font-size:clamp(24px, 4vw, 32px);letter-spacing:-.02em;flex-grow:1;line-height:1.1}
+.row .note{font-size:14px;text-align:right;max-width:22ch}
+.two{display:grid;gap:48px}
+@media (min-width:900px){.two{grid-template-columns:1fr 1fr;gap:64px}}
+
+/* handig strip */
+.handig{display:grid;gap:0;margin-top:36px;border-top:4px solid var(--ink)}
+@media (min-width:760px){.handig{grid-template-columns:repeat(4,1fr)}}
+.h-item{padding:16px 0 20px;border-bottom:1px solid var(--ink);display:flex;flex-direction:column;gap:8px}
+@media (min-width:760px){.h-item{padding:16px 16px 20px;border-bottom:0}.h-item+.h-item{border-left:1px solid var(--ink)}.h-item:first-child{padding-left:0}}
+.h-item .mono{color:var(--blue)}
+.h-item p{margin:0;font-size:15px}
+
+/* form card */
+.board-grid{display:grid;gap:40px;margin-top:36px}
+@media (min-width:980px){.board-grid{grid-template-columns:400px 1fr;align-items:start}}
+.card{background:var(--paper);border:3px solid var(--ink);box-shadow:-4px 4px 0 var(--pink);padding:20px;display:flex;flex-direction:column;gap:16px;min-width:0}
+.card h3{font-size:30px;line-height:1;letter-spacing:-.03em}
+.field{display:flex;flex-direction:column;gap:2px}
+.field label,.fs-label{font-size:14px}
+.field input{height:50px;padding:0;background:transparent;border:0;border-bottom:2px solid var(--ink);font-family:var(--body);font-size:18px;color:var(--ink);border-radius:0;width:100%}
+.field input::placeholder{color:#8A8F95}
+.field input:focus{outline:none;border-bottom-color:var(--blue)}
+fieldset{border:0;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;min-width:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip input{position:absolute;opacity:0;pointer-events:none}
+.chip span.c{min-height:44px;padding:0 12px;display:inline-flex;align-items:center;gap:10px;border:1px solid var(--ink);font-size:15px;font-weight:500;cursor:pointer;background:transparent;color:var(--ink);user-select:none}
+.chip span.c small{font-family:var(--mono);font-size:12px;opacity:.7}
+.chip input:checked + span.c{background:var(--ink);color:#FFFFFF}
+.chip input:focus-visible + span.c{outline:3px solid var(--cyan);outline-offset:2px}
+.chip.leeg span.c::after{content:"vrij";font-family:var(--mono);font-size:11px;background:var(--pink);color:var(--ink);padding:1px 5px}
+.stepper{display:flex;align-items:center;gap:0;border:1px solid var(--ink);width:max-content}
+.stepper button{width:48px;height:48px;border:0;background:transparent;font-family:var(--display);font-weight:800;font-size:22px;cursor:pointer;color:var(--ink)}
+.stepper button:hover{background:var(--pink)}
+.stepper output{min-width:56px;text-align:center;font-family:var(--display);font-weight:800;font-size:22px;border-left:1px solid var(--ink);border-right:1px solid var(--ink);line-height:48px;font-variant-numeric:tabular-nums}
+.row-inline{display:flex;gap:16px;align-items:flex-end;flex-wrap:wrap;justify-content:space-between}
+.textlink{background:none;border:0;padding:0;font:inherit;font-size:15px;font-weight:600;text-decoration:underline;text-underline-offset:3px;cursor:pointer;color:var(--blue);min-height:44px}
+.small{font-size:14px;line-height:1.5;color:var(--muted);margin:0}
+.status{font-size:14px;margin:0;min-height:1.5em}
+.status.ok{color:var(--blue);font-weight:600}
+.status.err{color:#A3123A;font-weight:600}
+
+/* board */
+.tally{display:flex;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+.tally .stat .n{font-size:clamp(30px, 5vw, 44px)}
+.cols{display:grid;grid-template-columns:repeat(auto-fit, minmax(190px, 1fr));gap:0;margin-top:24px;border-top:4px solid var(--ink)}
+.col{padding:14px 14px 20px 0;border-bottom:1px solid var(--ink);min-width:0;display:flex;flex-direction:column;gap:10px}
+@media (min-width:640px){.col{padding-left:14px;border-left:1px solid var(--ink)}}
+.col-head{display:flex;align-items:center;gap:10px}
+.col-head b{font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:-.02em;flex:1}
+.col-head .mono{font-size:12px}
+.entry{display:flex;flex-direction:column;gap:2px;padding-top:10px;border-top:1px dashed rgba(17,17,17,.35)}
+.entry .who{font-weight:600;font-size:15px;overflow-wrap:anywhere}
+.entry .who .mono{font-size:12px;color:var(--blue);margin-left:6px}
+.entry .what{font-size:14px;overflow-wrap:anywhere}
+.entry .drink{font-size:13px;color:var(--muted);overflow-wrap:anywhere}
+.entry .del{align-self:flex-start;background:none;border:0;padding:4px 0;font-family:var(--mono);font-size:12px;color:var(--muted);cursor:pointer;text-decoration:underline}
+.entry .del.sure{color:#A3123A}
+.empty{font-size:14px;color:var(--muted);margin:0}
+.notice{border:1px solid var(--ink);padding:14px;font-size:14px;background:var(--paper)}
+.notice b{font-family:var(--display)}
+
+/* archief */
+.archief-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap}
+.masonry{columns:3 260px;column-gap:20px;margin-top:36px}
+.shot{break-inside:avoid;margin:0 0 20px;display:block;width:100%;color:var(--ink)}
+.shot-open{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in}
+.archief-acties{display:flex;gap:12px;flex-wrap:wrap}
+.cap-edit{width:100%;min-height:64px;resize:vertical;font-family:var(--body);font-size:14px;line-height:1.4;color:var(--ink);background:var(--paper);border:0;border-bottom:2px solid var(--blue);padding:4px 0;border-radius:0}
+.cap-edit:focus{outline:none;background:#FDEFF6}
+.edit-bar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:24px;padding:14px;border:3px solid var(--ink);box-shadow:-4px 4px 0 var(--pink)}
+.edit-bar p{margin:0;flex:1;min-width:200px;font-size:14px}
+.shot img{display:block;width:100%;height:auto;border:2px solid var(--ink);transition:transform .2s ease, box-shadow .2s ease}
+.shot:hover img{transform:translate(3px,-3px);box-shadow:-6px 6px 0 var(--pink)}
+.shot .cap{display:flex;gap:10px;padding-top:8px;font-size:14px;line-height:1.35}
+.shot .cap .mono{color:var(--blue);font-size:12px;white-space:nowrap;padding-top:1px}
+dialog{border:3px solid var(--ink);box-shadow:-6px 6px 0 var(--pink);padding:0;max-width:min(92vw, 900px);background:var(--paper);color:var(--ink)}
+dialog::backdrop{background:rgba(10,53,80,.82)}
+dialog img{display:block;max-width:100%;max-height:72vh;margin:0 auto}
+.dlg-bar{display:flex;align-items:center;gap:12px;padding:12px 14px;border-top:2px solid var(--ink)}
+.dlg-bar p{margin:0;flex:1;font-size:15px}
+.dlg-bar button{min-width:44px;min-height:44px;border:1px solid var(--ink);background:transparent;font-family:var(--mono);font-size:14px;cursor:pointer;color:var(--ink)}
+.dlg-bar button:hover{background:var(--pink)}
+
+/* nacht */
+.night{background:var(--navy);color:var(--night-ink);margin-top:80px}
+.night .wrap{display:grid;gap:36px;padding-block:64px}
+@media (min-width:900px){.night .wrap{grid-template-columns:1.3fr 1fr;align-items:center}}
+.night h2{font-size:clamp(44px, 8vw, 92px);line-height:.9;letter-spacing:-.045em}
+.night h2 .p{color:var(--pink)}
+.night p{font-size:18px;max-width:40ch;margin:24px 0 0}
+.night .frame{box-shadow:-4px 4px 0 var(--pink);border-color:var(--night-ink);aspect-ratio:9/12;max-width:380px;width:100%;justify-self:end}
+.night .frame video{border-color:var(--night-ink)}
+.night .mono{color:var(--pink)}
+
+footer .wrap{padding-block:24px 40px}
+footer .inner{border-top:1px solid var(--ink);padding-top:12px;display:flex;flex-wrap:wrap;gap:8px 24px;font-size:14px;justify-content:space-between}
+
+@media (prefers-reduced-motion:reduce){.shot img{transition:none}}
+</style>
+</head>
+<body>
+<header class="wrap top">
+  <b>Irina &amp; Loek</b>
+  <span class="mono">31.12.2026</span>
+</header>
+
+<main>
+  <div class="rule"></div>
+  <div class="wrap">
+    <div class="hero">
+      <div class="hero-text">
+        <div class="mono meta-row"><span class="code">NYE/26</span><span>Oud en nieuw</span><span class="end">Oisterwijksebaan, Tilburg</span></div>
+        <h1>Proost op 2027<span class="p">.</span></h1>
+        <p class="lede">Op 31 december luiden we samen het nieuwe jaar in. Wij regelen het huis, het vuur en de oliebollen. Jullie maken het diner.</p>
+      </div>
+      <div class="hero-media">
+        <div class="frame">
+          <video id="disco" src="media/discobal.mp4" poster="media/discobal-poster.jpg" autoplay muted loop playsinline aria-label="Draaiende discobal met groene lichtjes"></video>
+        </div>
+        <div class="mono legend"><span>NYE/26</span><span class="dots"><span class="dot" style="background:var(--blue)"></span><span class="dot" style="background:var(--pink)"></span><span class="dot" style="background:var(--cyan)"></span><span class="dot" style="background:var(--ink)"></span></span><span class="end">De discobal hangt al</span></div>
+      </div>
+    </div>
+
+    <div class="stats" aria-live="off">
+      <div class="stat"><span class="n" id="cd-d">--</span><span class="l">dagen</span></div>
+      <div class="stat"><span class="n" id="cd-h">--</span><span class="l">uur</span></div>
+      <div class="stat"><span class="n" id="cd-m">--</span><span class="l">minuten</span></div>
+      <div class="stat"><span class="n" id="cd-s">--</span><span class="l" id="cd-label">tot 00:00</span></div>
+    </div>
+    <div class="ctas">
+      <a class="btn btn-primary" href="#gangen">Kies je gang <span class="arrow">↓</span></a>
+      <button class="btn btn-ghost" id="ics-btn" type="button" hidden>Zet het in je agenda <span class="arrow">.ics</span></button>
+    </div>
+
+    <section aria-labelledby="regel">
+      <div class="two">
+        <div>
+          <div class="kicker"><span class="sq"></span><h2 id="regel">Wij zorgen voor.</h2></div>
+          <div class="list">
+            <div class="mono list-head"><span>GASTHEER EN GASTVROUW</span><span>DETAIL</span></div>
+            <div class="row"><span class="mono num">01</span><span class="name">Bier</span><span class="note">Genoeg kratten, zie archief</span></div>
+            <div class="row"><span class="mono num">02</span><span class="name">Fris</span><span class="note">Voor de BOB en de kids</span></div>
+            <div class="row"><span class="mono num">03</span><span class="name">Aankleding</span><span class="note">Lichtjes, boom, discobal</span></div>
+            <div class="row"><span class="mono num">04</span><span class="name">Kampvuur</span><span class="note">Buiten, na middernacht</span></div>
+            <div class="row"><span class="mono num">05</span><span class="name">Glühwein</span><span class="note">Om bij op te warmen</span></div>
+            <div class="row"><span class="mono num">06</span><span class="name">Oliebollen</span><span class="note">Zelfgemaakt, vers uit de pan</span></div>
+          </div>
+        </div>
+        <div>
+          <div class="kicker"><span class="sq" style="background:var(--pink)"></span><h2>Jij neemt mee.</h2></div>
+          <div class="list">
+            <div class="mono list-head"><span>PER GAST</span><span>HOEVEEL</span></div>
+            <div class="row"><span class="mono num">01</span><span class="name">Een gerecht</span><span class="note">Voor jouw gang, voor de hele tafel</span></div>
+            <div class="row"><span class="mono num">02</span><span class="name">Een bijpassend drankje</span><span class="note">Wat jij erbij zou schenken</span></div>
+            <div class="row"><span class="mono num">03</span><span class="name">Bubbels</span><span class="note">Eén fles per persoon</span></div>
+          </div>
+          <p class="sub" style="margin-left:0">Samen wordt dat een diner van vijf gangen, zonder dat iemand een dag in de keuken staat.</p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="handig">
+      <div class="kicker"><span class="sq" style="background:var(--cyan)"></span><h2 id="handig">Zo is het geregeld.</h2></div>
+      <p class="sub">Loek bouwde dit zodat jij alleen nog hoeft te koken.</p>
+      <div class="handig">
+        <div class="h-item"><span class="mono">LIVE</span><p>Het gangenbord ververst vanzelf. Je ziet meteen wie wat meeneemt.</p></div>
+        <div class="h-item"><span class="mono">EERLIJK</span><p>Twijfel je? "Kies voor mij" zet je bij de gang die het hardst iemand nodig heeft.</p></div>
+        <div class="h-item"><span class="mono">REKENT MEE</span><p>Elke aanmelding telt door in de bubbels- en oliebollenteller.</p></div>
+        <div class="h-item"><span class="mono">AGENDA</span><p>In je agenda met één tik, inclusief seintje om de bubbels koud te zetten.</p></div>
+      </div>
+    </section>
+
+    <section id="gangen" aria-labelledby="gangen-h">
+      <div class="kicker"><span class="sq"></span><h2 id="gangen-h">Kies je gang.</h2></div>
+      <p class="sub">Amuse, voor, hoofd, tussen of na. Zet je naam erbij, zodat we niet met vijf tiramisu's eindigen.</p>
+
+      <div class="board-grid">
+        <form class="card" id="form" novalidate>
+          <h3>Ik ben erbij</h3>
+          <div class="field"><label for="f-naam">Je naam (of jullie namen)</label><input id="f-naam" name="naam" maxlength="60" autocomplete="name" required></div>
+          <div class="row-inline">
+            <div class="field"><span class="fs-label" id="pp-label">Met hoeveel personen</span>
+              <div class="stepper" role="group" aria-labelledby="pp-label">
+                <button type="button" id="pp-min" aria-label="Eén persoon minder">−</button>
+                <output id="pp" aria-live="polite">1</output>
+                <button type="button" id="pp-plus" aria-label="Eén persoon meer">+</button>
+              </div>
+            </div>
+            <span class="mono" id="pp-bubbels" style="padding-bottom:14px">= 1 fles bubbels</span>
+          </div>
+          <fieldset>
+            <legend class="fs-label">Jouw gang</legend>
+            <div class="chips" id="chips"></div>
+            <button type="button" class="textlink" id="kies-voor-mij">Ik twijfel. Kies voor mij.</button>
+          </fieldset>
+          <div class="field"><label for="f-gerecht">Wat maak je?</label><input id="f-gerecht" name="gerecht" maxlength="80" placeholder="Mag ook: verrassing"></div>
+          <div class="hp" aria-hidden="true"><label for="f-website">Laat dit veld leeg</label><input id="f-website" name="website" tabindex="-1" autocomplete="off"></div>
+          <div class="field"><label for="f-drank">En wat schenk je erbij?</label><input id="f-drank" name="drank" maxlength="80" placeholder="Bijv. een koude witte"></div>
+          <button class="btn btn-primary" id="submit" type="submit">Zet me op het bord <span class="arrow">→</span></button>
+          <a class="btn btn-ghost" id="wa" href="https://wa.me/31650939434" target="_blank" rel="noopener">Of stuur het via WhatsApp <span class="arrow">↗</span></a>
+          <p class="status" id="status" role="status"></p>
+          <p class="small" id="mode-note">Het bord laadt...</p>
+        </form>
+
+        <div style="min-width:0">
+          <div class="tally">
+            <div class="stat"><span class="n" id="t-gasten">0</span><span class="l">gasten aangemeld</span></div>
+            <div class="stat"><span class="n" id="t-bubbels">0</span><span class="l">flessen bubbels</span></div>
+            <div class="stat"><span class="n" id="t-bollen">6</span><span class="l">oliebollen te bakken</span></div>
+          </div>
+          <div class="cols" id="cols"></div>
+          <p class="small" style="margin-top:12px">Oliebollen gerekend op drie per persoon, gastheer en gastvrouw meegeteld.</p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="archief-h">
+      <div class="archief-head">
+        <div class="kicker"><span class="sq" style="background:var(--pink)"></span><h2 id="archief-h">Uit het archief.</h2></div>
+        <div class="archief-acties">
+          <button class="btn btn-ghost" id="bewerk" type="button" style="min-width:220px" hidden>Teksten aanpassen <span class="arrow">✎</span></button>
+          <button class="btn btn-ghost" id="schud" type="button" style="min-width:220px">Schud het archief <span class="arrow">↻</span></button>
+        </div>
+      </div>
+      <p class="sub">Eerdere jaarwisselingen, voor wie wil weten waar hij aan begint.</p>
+      <div class="edit-bar" id="edit-bar" hidden>
+        <p id="edit-msg">Pas de teksten onder de foto's aan. Maak een veld leeg om de oorspronkelijke tekst terug te zetten. Alleen jij ziet deze knoppen, in deze browser.</p>
+        <button class="btn btn-primary" id="edit-save" type="button">Opslaan <span class="arrow">✓</span></button>
+        <button class="btn btn-ghost" id="edit-cancel" type="button">Annuleren</button>
+      </div>
+      <div class="masonry" id="masonry"></div>
+    </section>
+  </div>
+
+  <div class="night">
+    <div class="wrap">
+      <div>
+        <div class="mono">00:00 / 01.01.2027</div>
+        <h2 style="margin-top:20px">Om middernacht gaan we naar buiten<span class="p">.</span></h2>
+        <p>Bubbels open, kampvuur aan, glühwein in de hand. En daarna nog een oliebol, want die zijn er genoeg.</p>
+      </div>
+      <div class="frame">
+        <video id="vuurwerk" src="media/vuurwerk.mp4" poster="media/vuurwerk-poster.jpg" autoplay muted loop playsinline aria-label="Vuurwerk boven de wijk"></video>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap"><div class="inner"><span>Irina &amp; Loek · Oisterwijksebaan, Tilburg</span><span class="mono">NYE/26 · tot op de 31e</span></div></div>
+</footer>
+
+<dialog id="dlg" aria-label="Foto uit het archief">
+  <img id="dlg-img" alt="">
+  <div class="dlg-bar">
+    <button type="button" id="dlg-prev" aria-label="Vorige foto">←</button>
+    <p id="dlg-cap"></p>
+    <button type="button" id="dlg-next" aria-label="Volgende foto">→</button>
+    <button type="button" id="dlg-close" aria-label="Sluiten">✕</button>
+  </div>
+</dialog>
+
+<script>
+(function(){
+  "use strict";
+  var GANGEN = [
+    {id:"amuse",  naam:"Amuse",  kleur:"var(--pink)"},
+    {id:"voor",   naam:"Voor",   kleur:"var(--cyan)"},
+    {id:"hoofd",  naam:"Hoofd",  kleur:"var(--blue)"},
+    {id:"tussen", naam:"Tussen", kleur:"var(--navy)"},
+    {id:"na",     naam:"Na",     kleur:"var(--ink)"}
+  ];
+  var FOTOS = [
+    {f:"tafel",            c:"Lange tafel, alle gangen. Zo ziet het eruit als iedereen iets meeneemt.", a:"Lange gedekte tafel met toostende gasten"},
+    {f:"installatie",      c:"De vuurwerkinstallatie. Bouwtekening: geen.", a:"Blauwe vuurwerkbuizen in een houten rek in de tuin"},
+    {f:"2015",             c:"Jaarwisseling 2015. De jongste gast hield het het langst vol.", a:"Proosten voor een tv met 2015 in beeld"},
+    {f:"kratten",          c:"De ochtend erna. Statiegeld: aanzienlijk.", a:"Gestapelde kratten Hertog Jan met lege flessen"},
+    {f:"oliebollen-stoom", c:"De oliebollenfabriek draait op volle kracht.", a:"Oliebollen bakken in een dampende keuken"},
+    {f:"sterretjes",       c:"Sterretjes-selfie. Iedereen erop, op één na.", a:"Groepsselfie met sterretjes in het donker"},
+    {f:"gotcha",           c:"Gotcha. De prijs van de avond.", a:"Lachende gast met een speelgoedcadeau"},
+    {f:"zingen",           c:"Het moment dat iemand 'nog één liedje' riep.", a:"Zingende gasten met de armen omhoog"},
+    {f:"oliebollen-proef", c:"Proefronde oliebollen. Goedgekeurd.", a:"Gastvrouw met een oliebol in de keuken"},
+    {f:"lichtjes",         c:"Lichtslingers zijn een verplicht accessoire.", a:"Feestende gasten in een woonkamer met kerstboom"},
+    {f:"vuurwerk-water",   c:"Vuurwerk boven het water. Mooi, maar het onze is dichterbij.", a:"Vuurwerk boven een haven met publiek"},
+    {f:"boom",             c:"De boom staat er al voor je binnenkomt.", a:"Versierde kerstboom voor een bloesemschilderij"},
+    {f:"bier",             c:"Bier geregeld. Check.", a:"Gast drinkt een biertje op de bank"}
+  ];
+
+  function $(id){ return document.getElementById(id); }
+  function el(tag, cls, text){ var e=document.createElement(tag); if(cls) e.className=cls; if(text!=null) e.textContent=text; return e; }
+  function pad(n){ return n<10 ? "0"+n : ""+n; }
+  function lees(k, d){ try { var v=localStorage.getItem(k); return v==null ? d : JSON.parse(v); } catch(e){ return d; } }
+  function schrijf(k, v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch(e){} }
+  var API = "/api/nye";
+
+  /* Countdown naar 1 januari 2027 00:00 in Tilburg (UTC+1) */
+  var TARGET = Date.UTC(2026, 11, 31, 23, 0, 0);
+  function tick(){
+    var ms = TARGET - Date.now();
+    if (ms <= 0){
+      $("cd-d").textContent="20"; $("cd-h").textContent="27"; $("cd-m").textContent="!"; $("cd-s").textContent="🥂";
+      $("cd-label").textContent="Gelukkig nieuwjaar"; return;
+    }
+    var s=Math.floor(ms/1000);
+    $("cd-d").textContent=Math.floor(s/86400);
+    $("cd-h").textContent=pad(Math.floor(s%86400/3600));
+    $("cd-m").textContent=pad(Math.floor(s%3600/60));
+    $("cd-s").textContent=pad(s%60);
+  }
+  tick(); setInterval(tick, 1000);
+
+  if (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches){
+    ["disco","vuurwerk"].forEach(function(id){ var v=$(id); v.removeAttribute("autoplay"); try{ v.pause(); }catch(e){} });
+  }
+
+  /* Beheer: open /NYE/#beheer=SLEUTEL één keer, daarna onthoudt deze browser het */
+  var beheerKey = lees("nye-beheer", null);
+  var isBeheer = false;
+  function leesHash(){
+    var m = location.hash.match(/^#beheer=([A-Za-z0-9-]+)$/);
+    if (!m) return false;
+    beheerKey = m[1]; schrijf("nye-beheer", beheerKey); history.replaceState(null, "", location.pathname);
+    return true;
+  }
+  leesHash();
+
+  /* ---------- Gangenbord ---------- */
+  var entries = [];
+  var personen = 1;
+  var mine = lees("nye-tokens", {}) || {};   /* id -> token van je eigen aanmeldingen */
+  var online = true;
+
+  function counts(){
+    var c={}; GANGEN.forEach(function(g){ c[g.id]=0; });
+    entries.forEach(function(e){ if (c[e.gang]!=null) c[e.gang]++; });
+    return c;
+  }
+  function selectedGang(){ var r=document.querySelector('input[name="gang"]:checked'); return r ? r.value : null; }
+  function gangNaam(id){ for (var i=0;i<GANGEN.length;i++) if (GANGEN[i].id===id) return GANGEN[i].naam; return ""; }
+  function setStatus(t, kind){ var s=$("status"); s.textContent=t||""; s.className="status"+(kind?" "+kind:""); }
+
+  function renderChips(){
+    var c=counts(), sel=selectedGang(), box=$("chips");
+    box.textContent="";
+    GANGEN.forEach(function(g){
+      var lab=el("label","chip"+(c[g.id]===0?" leeg":""));
+      var inp=document.createElement("input"); inp.type="radio"; inp.name="gang"; inp.value=g.id; inp.id="g-"+g.id;
+      if (sel===g.id) inp.checked=true;
+      inp.addEventListener("change", updateWa);
+      var span=el("span","c"); var d=el("span","dot"); d.style.background=g.kleur;
+      if (g.id==="na") d.style.boxShadow="0 0 0 1px #FFFFFF";
+      span.appendChild(d); span.appendChild(document.createTextNode(g.naam));
+      span.appendChild(el("small",null,"("+c[g.id]+")"));
+      lab.appendChild(inp); lab.appendChild(span); box.appendChild(lab);
+    });
+  }
+
+  function renderBoard(){
+    var cols=$("cols"); cols.textContent="";
+    var gasten=0;
+    entries.forEach(function(e){ gasten += e.personen; });
+    $("t-gasten").textContent=gasten;
+    $("t-bubbels").textContent=gasten;
+    $("t-bollen").textContent=(gasten+2)*3;
+    GANGEN.forEach(function(g){
+      var list=entries.filter(function(e){ return e.gang===g.id; });
+      var col=el("div","col");
+      var head=el("div","col-head"); var d=el("span","dot"); d.style.background=g.kleur;
+      head.appendChild(d); head.appendChild(el("b",null,g.naam));
+      head.appendChild(el("span","mono","("+list.length+")"));
+      col.appendChild(head);
+      if (!list.length){ col.appendChild(el("p","empty","Nog vrij. Jouw kans.")); }
+      list.forEach(function(e){
+        var it=el("div","entry");
+        var who=el("div","who",e.naam);
+        if (e.personen>1) who.appendChild(el("span","mono","×"+e.personen));
+        it.appendChild(who);
+        it.appendChild(el("div","what", e.gerecht || "Verrassing"));
+        if (e.drank) it.appendChild(el("div","drink","met "+e.drank));
+        if (isBeheer || mine[e.id]){
+          var del=el("button","del","Haal weg"); del.type="button";
+          del.addEventListener("click", function(){
+            if (!del.classList.contains("sure")){ del.classList.add("sure"); del.textContent="Zeker weten? Tik nog eens"; setTimeout(function(){ del.classList.remove("sure"); del.textContent="Haal weg"; }, 4000); return; }
+            del.disabled=true;
+            var h={}; if (mine[e.id]) h["x-nye-token"]=mine[e.id]; if (isBeheer) h["x-nye-beheer"]=beheerKey;
+            fetch(API+"?id="+encodeURIComponent(e.id), {method:"DELETE", headers:h}).then(function(r){
+              if (!r.ok) throw new Error(r.status);
+              delete mine[e.id]; schrijf("nye-tokens", mine);
+              entries=entries.filter(function(x){ return x.id!==e.id; }); renderBoard();
+            }).catch(function(){ setStatus("Weghalen lukte niet. Probeer het zo nog eens.","err"); del.disabled=false; });
+          });
+          it.appendChild(del);
+        }
+        col.appendChild(it);
+      });
+      cols.appendChild(col);
+    });
+    renderChips();
+  }
+
+  function laad(){
+    return fetch(API, {cache:"no-store"}).then(function(r){ if (!r.ok) throw new Error(r.status); return r.json(); }).then(function(d){
+      online=true;
+      entries=(d.entries||[]).map(function(x){
+        var p=parseInt(x.personen,10); if (!(p>=1&&p<=12)) p=1;
+        return {id:String(x.id), naam:String(x.naam||"Gast"), personen:p, gang:String(x.gang||""), gerecht:String(x.gerecht||""), drank:String(x.drank||"")};
+      });
+      eigen = d.teksten || {};
+      renderBoard();
+      if (!bewerken) renderArchief();
+      noteTekst();
+    }).catch(function(){
+      online=false;
+      $("mode-note").textContent="Het bord is even niet bereikbaar. Probeer het zo nog eens, of stuur je keuze via WhatsApp.";
+    });
+  }
+  function noteTekst(){
+    $("mode-note").textContent = isBeheer
+      ? "Beheer staat aan: je kunt aanmeldingen namens gasten invullen, alles weghalen en de fototeksten aanpassen."
+      : "Je aanmelding is meteen voor iedereen zichtbaar. Verkeerd? Haal je eigen regel weg en vul opnieuw in.";
+  }
+
+  /* personen stepper */
+  function setPersonen(n){
+    personen=Math.max(1, Math.min(12, n));
+    $("pp").textContent=personen;
+    $("pp-bubbels").textContent="= "+personen+(personen===1?" fles":" flessen")+" bubbels";
+    updateWa();
+  }
+  $("pp-min").addEventListener("click", function(){ setPersonen(personen-1); });
+  $("pp-plus").addEventListener("click", function(){ setPersonen(personen+1); });
+
+  /* Kies voor mij: de gang met de minste aanmeldingen */
+  $("kies-voor-mij").addEventListener("click", function(){
+    var c=counts(), min=Infinity;
+    GANGEN.forEach(function(g){ if (c[g.id]<min) min=c[g.id]; });
+    var opties=GANGEN.filter(function(g){ return c[g.id]===min; });
+    var pick=opties[Math.floor(Math.random()*opties.length)];
+    var r=$("g-"+pick.id); if (r){ r.checked=true; r.focus(); }
+    setStatus("Het wordt "+pick.naam.toLowerCase()+(min===0?". Daar stond nog niemand.":". Daar is het nu het rustigst."),"ok");
+    updateWa();
+  });
+
+  /* WhatsApp-route */
+  function updateWa(){
+    var naam=$("f-naam").value.trim(), g=selectedGang();
+    var t="Hoi Loek! "+(naam||"Ik")+" komt naar NYE aan de Oisterwijksebaan, met "+personen+(personen===1?" persoon":" personen")+".";
+    if (g) t+=" Gang: "+gangNaam(g)+".";
+    var ger=$("f-gerecht").value.trim(), dr=$("f-drank").value.trim();
+    if (ger) t+=" Ik maak: "+ger+".";
+    if (dr) t+=" Erbij: "+dr+".";
+    $("wa").href="https://wa.me/31650939434?text="+encodeURIComponent(t);
+  }
+  ["f-naam","f-gerecht","f-drank"].forEach(function(id){ $(id).addEventListener("input", updateWa); });
+  var bewaardeNaam = lees("nye-naam", "");
+  if (bewaardeNaam) $("f-naam").value = bewaardeNaam;
+
+  $("form").addEventListener("submit", function(ev){
+    ev.preventDefault();
+    var naam=$("f-naam").value.trim(), g=selectedGang();
+    if (!naam){ setStatus("Vul je naam in, dan weten we wie er komt.","err"); $("f-naam").focus(); return; }
+    if (!g){ setStatus("Kies een gang, of tik op 'Kies voor mij'.","err"); return; }
+    var btn=$("submit"); btn.disabled=true; setStatus("Even op het bord zetten...");
+    var body={naam:naam, personen:personen, gang:g, gerecht:$("f-gerecht").value.trim(), drank:$("f-drank").value.trim(), website:$("f-website").value};
+    fetch(API, {method:"POST", headers:{"content-type":"application/json"}, body:JSON.stringify(body)}).then(function(r){
+      return r.json().then(function(d){ if (!r.ok) throw d; return d; });
+    }).then(function(d){
+      if (d.token){ mine[d.id]=d.token; schrijf("nye-tokens", mine); }
+      setStatus("Je staat op het bord bij "+gangNaam(g).toLowerCase()+". Tot de 31e!","ok");
+      $("f-gerecht").value=""; $("f-drank").value="";
+      if (isBeheer){ $("f-naam").value=""; setPersonen(1); } else schrijf("nye-naam", naam);
+      var r=document.querySelector('input[name="gang"]:checked'); if (r) r.checked=false;
+      updateWa(); laad();
+    }).catch(function(e){
+      var code=e && e.error;
+      setStatus(code==="vol" ? "Het bord zit vol. Stuur Loek even een WhatsApp." : "Dat lukte niet. Probeer het zo nog eens, of stuur het via WhatsApp.","err");
+    }).then(function(){ btn.disabled=false; });
+  });
+
+  /* Agenda-bestand: gewone download op je eigen site */
+  $("ics-btn").hidden=false;
+  $("ics-btn").addEventListener("click", function(){
+    var g=selectedGang();
+    var mee="Neem mee: je gerecht"+(g?" ("+gangNaam(g).toLowerCase()+")":"")+", een bijpassend drankje en per persoon een fles bubbels. Gangenbord: https://www.loekluijbregts.com/NYE/";
+    var ics=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Irina en Loek//NYE26//NL","CALSCALE:GREGORIAN","BEGIN:VEVENT",
+      "UID:nye26-oisterwijksebaan@loekluijbregts.com","DTSTAMP:"+new Date().toISOString().replace(/[-:]/g,"").replace(/\.\d+/,""),
+      "DTSTART;VALUE=DATE:20261231","DTEND;VALUE=DATE:20270101",
+      "SUMMARY:NYE bij Irina en Loek","LOCATION:Oisterwijksebaan\\, Tilburg",
+      "DESCRIPTION:"+mee.replace(/,/g,"\\,"),
+      "URL:https://www.loekluijbregts.com/NYE/",
+      "BEGIN:VALARM","ACTION:DISPLAY","TRIGGER:-PT6H","DESCRIPTION:Bubbels koud zetten en boodschappen doen voor je gerecht","END:VALARM",
+      "END:VEVENT","END:VCALENDAR"].join("\r\n");
+    var url=URL.createObjectURL(new Blob([ics], {type:"text/calendar"}));
+    var a=document.createElement("a"); a.href=url; a.download="NYE-Irina-en-Loek.ics"; document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(function(){ URL.revokeObjectURL(url); }, 2000);
+  });
+
+  /* ---------- Archief ---------- */
+  var order = FOTOS.map(function(_,i){ return i; });
+  var STANDAARD = {}; FOTOS.forEach(function(f){ STANDAARD[f.f]=f.c; });
+  var eigen = {};
+  var bewerken = false;
+  function tekst(f){ return (eigen[f.f] && String(eigen[f.f]).trim()) ? String(eigen[f.f]).slice(0,200) : STANDAARD[f.f]; }
+
+  function renderArchief(){
+    var m=$("masonry"); m.textContent="";
+    order.forEach(function(idx, pos){
+      var f=FOTOS[idx];
+      var fig=el("figure","shot");
+      var b=el("button","shot-open"); b.type="button"; b.setAttribute("aria-label","Vergroot foto: "+f.a);
+      var img=document.createElement("img"); img.src="media/"+f.f+".jpg"; img.alt=f.a; img.loading="lazy";
+      b.appendChild(img);
+      b.addEventListener("click", function(){ openDlg(pos); });
+      var cap=el("figcaption","cap"); cap.appendChild(el("span","mono","ARC/"+pad(idx+1)));
+      if (bewerken){
+        var ta=document.createElement("textarea"); ta.className="cap-edit"; ta.id="cap-"+f.f; ta.maxLength=200;
+        ta.value=tekst(f); ta.setAttribute("aria-label","Tekst bij ARC/"+pad(idx+1));
+        cap.appendChild(ta);
+      } else {
+        cap.appendChild(el("span",null,tekst(f)));
+      }
+      fig.appendChild(b); fig.appendChild(cap);
+      m.appendChild(fig);
+    });
+  }
+  function zetBewerken(aan){
+    bewerken=aan;
+    $("edit-bar").hidden=!aan; $("bewerk").hidden=aan; $("schud").hidden=aan;
+    renderArchief();
+    if (aan){ var eerste=document.querySelector(".cap-edit"); if (eerste) eerste.focus(); }
+  }
+  $("bewerk").addEventListener("click", function(){ zetBewerken(true); });
+  $("edit-cancel").addEventListener("click", function(){ zetBewerken(false); });
+  $("edit-save").addEventListener("click", function(){
+    var data={};
+    FOTOS.forEach(function(f){
+      var ta=$("cap-"+f.f); if (!ta) return;
+      var v=ta.value.trim().slice(0,200);
+      data[f.f] = (v===STANDAARD[f.f]) ? "" : v;
+    });
+    var btn=$("edit-save"); btn.disabled=true; $("edit-msg").textContent="Opslaan...";
+    fetch(API+"?teksten=1", {method:"PUT", headers:{"content-type":"application/json","x-nye-beheer":beheerKey}, body:JSON.stringify(data)}).then(function(r){
+      if (!r.ok) throw new Error(r.status); return r.json();
+    }).then(function(d){
+      eigen=d.teksten||data; zetBewerken(false);
+    }).catch(function(){
+      $("edit-msg").textContent="Opslaan lukte niet. Je teksten staan nog in de velden, probeer het zo nog eens.";
+    }).then(function(){ btn.disabled=false; });
+  });
+  $("schud").addEventListener("click", function(){
+    for (var i=order.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=order[i]; order[i]=order[j]; order[j]=t; }
+    renderArchief();
+  });
+
+  var dlg=$("dlg"), cur=0;
+  function showDlg(){ var f=FOTOS[order[cur]]; $("dlg-img").src="media/"+f.f+".jpg"; $("dlg-img").alt=f.a; $("dlg-cap").textContent=tekst(f); }
+  function openDlg(pos){ cur=pos; showDlg(); if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open",""); }
+  $("dlg-prev").addEventListener("click", function(){ cur=(cur-1+order.length)%order.length; showDlg(); });
+  $("dlg-next").addEventListener("click", function(){ cur=(cur+1)%order.length; showDlg(); });
+  $("dlg-close").addEventListener("click", function(){ dlg.close ? dlg.close() : dlg.removeAttribute("open"); });
+  dlg.addEventListener("click", function(e){ if (e.target===dlg) dlg.close(); });
+  document.addEventListener("keydown", function(e){
+    if (!dlg.open) return;
+    if (e.key==="ArrowLeft") $("dlg-prev").click();
+    if (e.key==="ArrowRight") $("dlg-next").click();
+  });
+
+  /* Start */
+  renderBoard(); renderArchief(); updateWa();
+  function start(){
+    laad();
+    setInterval(function(){ if (!document.hidden && !bewerken) laad(); }, 15000);
+    document.addEventListener("visibilitychange", function(){ if (!document.hidden) laad(); });
+  }
+  function controleerBeheer(){
+    if (!beheerKey) return Promise.resolve();
+    return fetch(API+"?beheer=1", {headers:{"x-nye-beheer":beheerKey}, cache:"no-store"}).then(function(r){ return r.json(); }).then(function(d){
+      isBeheer=!!(d && d.ok);
+      if (isBeheer) $("bewerk").hidden=false; else { beheerKey=null; schrijf("nye-beheer", null); }
+      renderBoard(); noteTekst();
+    }).catch(function(){});
+  }
+  window.addEventListener("hashchange", function(){ if (leesHash()) controleerBeheer(); });
+  controleerBeheer().then(start);
+})();
+</script>
+</body>
+</html>
