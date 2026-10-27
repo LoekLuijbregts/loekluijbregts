@@ -4,5 +4,6 @@ Disallow: /WaranaFilmCompany/
 Disallow: /example/
 Disallow: /Ventoux/
 Disallow: /ventoux-stijl/
+Disallow: /NYE/
 
 Sitemap: https://loekluijbregts.com/sitemap.xml

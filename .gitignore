@@ -9,3 +9,5 @@ _to_delete/
 /_local/
 
 /.agents/skills/loek-voorbij/
+
+node_modules/
